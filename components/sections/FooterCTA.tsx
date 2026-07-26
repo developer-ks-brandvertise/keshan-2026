@@ -48,7 +48,7 @@ export default function FooterCTA() {
                 </p>
                 <p>
                   <span className="text-text-primary">Email:</span>{" "}
-                  {contact.emails.join(" / ")}
+                  {contact.emails.join(" | ")}
                 </p>
                 <p>
                   <span className="text-text-primary">Hours:</span> {contact.hours}

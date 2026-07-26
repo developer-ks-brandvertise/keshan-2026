@@ -5,13 +5,13 @@ export const brand = {
 
 export const topBar = {
   phone: "+91 40 1234 5678",
-  email: "sales@keshanindustries.com",
+  email: "sales.killp@keshanindustries.com | export@keshanindustries.com",
   address: "Hyderabad, Telangana, India",
 };
 
 export const navLinks = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  { label: "About Keshan", href: "/about" },
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
   { label: "Knowledge Centre", href: "/knowledge-centre" },
@@ -326,7 +326,10 @@ export const milestones = {
 export const contact = {
   address: "Keshan Industries, Plot No. 12, Industrial Area, Hyderabad, Telangana 500001, India",
   phones: ["+91 40 1234 5678", "+91 40 1234 5679"],
-  emails: ["sales@keshanindustries.com", "exports@keshanindustries.com"],
+  emails: [
+    "sales.killp@keshanindustries.com",
+    "export@keshanindustries.com",
+  ],
   hours: "Mon – Sat: 9.00am – 18.00pm IST / Sun: Closed",
 };
 

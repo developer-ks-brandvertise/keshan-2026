@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useEffect, useRef } from "react";
 import { quality } from "@/lib/data";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { Reveal } from "@/components/ui/Reveal";
@@ -22,19 +23,41 @@ const qualityIcons = [
 ];
 
 export function QualitySection() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry) return;
+        if (entry.isIntersecting) {
+          void video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      },
+      { rootMargin: "120px 0px", threshold: 0.05 },
+    );
+
+    observer.observe(video);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="relative overflow-hidden bg-dark-950">
       <CopperWave id="quality" className="-mb-px" />
 
       <div className="relative min-h-[72vh] lg:min-h-[80vh]">
         <video
+          ref={videoRef}
           className="absolute inset-0 h-full w-full object-cover"
           src={QUALITY_BG_VIDEO}
-          autoPlay
           muted
           loop
           playsInline
-          preload="metadata"
+          preload="none"
           aria-hidden
         />
         <div className="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/85 to-dark-950/35" />

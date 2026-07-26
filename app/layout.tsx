@@ -8,12 +8,12 @@ import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { CursorGlow } from "@/components/ui/CursorGlow";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
 
-const clashGrotesk = localFont({
-  src: "./fonts/ClashGrotesk-Variable.woff2",
-  variable: "--font-clash",
-  weight: "200 700",
+const eurostile = localFont({
+  src: "./fonts/Eurostile-BoldExtended.ttf",
+  variable: "--font-eurostile",
+  weight: "700",
   display: "swap",
-  fallback: ["Arial"],
+  fallback: ["Arial Narrow", "Arial", "sans-serif"],
 });
 
 const satoshi = localFont({
@@ -53,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${clashGrotesk.variable} ${satoshi.variable} ${inter.variable} h-full antialiased`}
+      className={`${eurostile.variable} ${satoshi.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-dark-900 text-text-primary">
         <SmoothScrollProvider>

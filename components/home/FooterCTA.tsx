@@ -59,7 +59,7 @@ export function FooterCTASection() {
             </Reveal>
 
             <Reveal variant="fade" delay={0.3}>
-              <div className="mt-10 flex flex-col gap-2 border-t border-dark-100/10 pt-6 text-sm text-text-secondary sm:flex-row sm:items-center sm:gap-6">
+              <div className="mt-10 flex flex-col gap-2 border-t border-dark-100/10 pt-6 text-sm text-text-secondary sm:flex-row sm:flex-wrap sm:items-center sm:gap-x-4 sm:gap-y-2">
                 <a
                   href={`tel:${contact.phones[0].replace(/\s/g, "")}`}
                   className="transition-colors hover:text-copper-base"
@@ -69,12 +69,24 @@ export function FooterCTASection() {
                 <span className="hidden text-dark-100/30 sm:inline" aria-hidden>
                   ·
                 </span>
-                <a
-                  href={`mailto:${contact.emails[0]}`}
-                  className="transition-colors hover:text-copper-base"
-                >
-                  {contact.emails[0]}
-                </a>
+                {contact.emails.map((email, i) => (
+                  <span key={email} className="contents">
+                    {i > 0 ? (
+                      <span
+                        className="hidden text-dark-100/30 sm:inline"
+                        aria-hidden
+                      >
+                        |
+                      </span>
+                    ) : null}
+                    <a
+                      href={`mailto:${email}`}
+                      className="transition-colors hover:text-copper-base"
+                    >
+                      {email}
+                    </a>
+                  </span>
+                ))}
               </div>
             </Reveal>
           </div>

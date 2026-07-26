@@ -7,12 +7,10 @@ import { IndustriesSection } from "@/components/home/Industries";
 import { ClientsSection } from "@/components/home/Clients";
 import { KnowledgeSection } from "@/components/home/Knowledge";
 import { FooterCTASection } from "@/components/home/FooterCTA";
-import { EmberSparks } from "@/components/ui/EmberSparks";
 
 export default function Home() {
   return (
     <main className="relative">
-      <EmberSparks />
       <Hero />
       <ValuePropSection />
       <ProductCategoriesSection />

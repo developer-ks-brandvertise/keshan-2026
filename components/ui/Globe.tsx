@@ -1,23 +1,23 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import createGlobe, { type COBEOptions } from "cobe";
 import { useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const MOVEMENT_DAMPING = 1400;
 
-/** Dark copper globe for Keshan */
+/** Dark copper globe for Keshan — lighter mesh for scroll performance */
 export const COPPER_GLOBE_CONFIG: COBEOptions = {
-  width: 800,
-  height: 800,
+  width: 600,
+  height: 600,
   onRender: () => {},
-  devicePixelRatio: 2,
+  devicePixelRatio: 1,
   phi: 0,
   theta: 0.22,
   dark: 1,
   diffuse: 1.4,
-  mapSamples: 20000,
+  mapSamples: 8000,
   mapBrightness: 2.8,
   baseColor: [0.18, 0.13, 0.08],
   markerColor: [212 / 255, 165 / 255, 116 / 255],
@@ -45,10 +45,12 @@ export function Globe({
   config?: COBEOptions;
 }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const phiRef = useRef(0);
   const widthRef = useRef(0);
   const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
+  const [active, setActive] = useState(false);
 
   const r = useMotionValue(0);
   const rs = useSpring(r, {
@@ -56,6 +58,25 @@ export function Globe({
     damping: 30,
     stiffness: 100,
   });
+
+  // Only init WebGL when near viewport — avoids main-thread freeze on page load
+  useEffect(() => {
+    const node = containerRef.current;
+    if (!node) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry?.isIntersecting) {
+          setActive(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px 0px", threshold: 0.01 },
+    );
+
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, []);
 
   const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value;
@@ -73,6 +94,7 @@ export function Globe({
   };
 
   useEffect(() => {
+    if (!active) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -101,29 +123,32 @@ export function Globe({
       globe.destroy();
       window.removeEventListener("resize", onResize);
     };
-  }, [rs, config]);
+  }, [active, rs, config]);
 
   return (
     <div
+      ref={containerRef}
       className={cn(
         "absolute inset-0 mx-auto aspect-square w-full",
         className,
       )}
     >
-      <canvas
-        ref={canvasRef}
-        className="size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
-        onPointerDown={(e) => {
-          pointerInteracting.current = e.clientX;
-          updatePointerInteraction(e.clientX);
-        }}
-        onPointerUp={() => updatePointerInteraction(null)}
-        onPointerOut={() => updatePointerInteraction(null)}
-        onMouseMove={(e) => updateMovement(e.clientX)}
-        onTouchMove={(e) =>
-          e.touches[0] && updateMovement(e.touches[0].clientX)
-        }
-      />
+      {active ? (
+        <canvas
+          ref={canvasRef}
+          className="size-full opacity-0 transition-opacity duration-500 [contain:layout_paint_size]"
+          onPointerDown={(e) => {
+            pointerInteracting.current = e.clientX;
+            updatePointerInteraction(e.clientX);
+          }}
+          onPointerUp={() => updatePointerInteraction(null)}
+          onPointerOut={() => updatePointerInteraction(null)}
+          onMouseMove={(e) => updateMovement(e.clientX)}
+          onTouchMove={(e) =>
+            e.touches[0] && updateMovement(e.touches[0].clientX)
+          }
+        />
+      ) : null}
     </div>
   );
 }

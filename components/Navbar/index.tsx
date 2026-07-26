@@ -29,7 +29,7 @@ export default function Navbar() {
               <span>{topBar.phone}</span>
             </a>
             <a
-              href={`mailto:${topBar.email}`}
+              href="mailto:sales.killp@keshanindustries.com"
               className="flex items-center gap-2 transition-colors hover:text-copper-base"
             >
               <Mail className="h-3 w-3 text-copper-base" strokeWidth={2} />

@@ -120,7 +120,8 @@ export function RollingText3D({
     );
   }
 
-  const scrollHeight = `${Math.max(items.length * 50, 220)}vh`;
+  // Keep pin shorter so scroll doesn't feel stuck before later sections
+  const scrollHeight = `${Math.max(items.length * 36, 180)}vh`;
 
   return (
     <div

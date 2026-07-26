@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const infoRows = [
   { label: "Address", value: contact.address },
   { label: "Phone", value: contact.phones.join(" / ") },
-  { label: "Email", value: contact.emails.join(" / ") },
+  { label: "Email", value: contact.emails.join(" | ") },
   { label: "Hours", value: contact.hours },
 ];
 
@@ -59,6 +59,13 @@ export default function ContactPage() {
                   className="text-copper-base underline-offset-2 hover:underline"
                 >
                   {contact.emails[0]}
+                </a>
+                {" | "}
+                <a
+                  href={`mailto:${contact.emails[1]}`}
+                  className="text-copper-base underline-offset-2 hover:underline"
+                >
+                  {contact.emails[1]}
                 </a>
               </p>
             </div>

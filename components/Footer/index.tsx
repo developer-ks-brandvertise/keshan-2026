@@ -77,7 +77,7 @@ export default function Footer() {
             <ul className="mt-5 space-y-3 text-body-sm text-text-secondary">
               <li className="max-w-xs">{contact.address}</li>
               <li>{contact.phones.join(" / ")}</li>
-              <li>{contact.emails.join(" / ")}</li>
+              <li>{contact.emails.join(" | ")}</li>
               <li>{contact.hours}</li>
             </ul>
           </div>
