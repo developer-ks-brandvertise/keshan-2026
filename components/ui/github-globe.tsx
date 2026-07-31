@@ -15,8 +15,8 @@ declare module "@react-three/fiber" {
 // Top-level extend moved to client-only useEffect in World for stability
 
 const RING_PROPAGATION_SPEED = 3;
-const aspect = 1.2;
-const cameraZ = 300;
+const aspect = 1;
+const cameraZ = 380;
 
 type Position = {
   order: number;

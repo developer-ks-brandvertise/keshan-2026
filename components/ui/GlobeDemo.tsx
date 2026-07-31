@@ -79,15 +79,14 @@ const sampleArcs: Arc[] = [
 
 const globeConfig: GlobeConfig = {
   pointSize: 4,
-  globeColor: "#000000",
-  // Thin rim only — no soft backside glow that gets clipped by the frame
+  globeColor: "#050505",
   showAtmosphere: true,
   atmosphereColor: "#c9893f",
   atmosphereAltitude: 0.028,
-  emissive: "#000000",
-  emissiveIntensity: 0.04,
+  emissive: "#0a0a0a",
+  emissiveIntensity: 0.06,
   shininess: 0.65,
-  polygonColor: "rgba(245, 197, 138, 0.55)",
+  polygonColor: "rgba(245, 197, 138, 0.65)",
   ambientLight: "#d4a574",
   directionalLeftLight: "#ffe2b0",
   directionalTopLight: "#ffffff",
@@ -103,14 +102,18 @@ const globeConfig: GlobeConfig = {
 
 export function GlobeDemo() {
   return (
-    /* Outer frame shows ~70% of the globe (bottom clipped) */
-    <div className="relative aspect-[10/7] w-full max-w-[700px] justify-self-center overflow-hidden lg:max-w-none lg:justify-self-stretch">
-      {/* Larger square globe — thin atmosphere acts as copper stroke (no soft glow) */}
-      <div className="absolute left-1/2 top-0 z-10 aspect-square w-[155%] -translate-x-1/2">
-        <World data={sampleArcs} globeConfig={globeConfig} />
+    /* Always sit on a dark stage so light theme tokens don't tint the globe */
+    <div className="relative mx-auto w-full max-w-[580px] lg:max-w-none">
+      <div
+        className="relative w-full overflow-hidden bg-[#050505]"
+        style={{ paddingBottom: "72%" }}
+      >
+        <div className="absolute inset-x-0 top-0 aspect-square w-full">
+          <World data={sampleArcs} globeConfig={globeConfig} />
+        </div>
       </div>
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-14 bg-gradient-to-t from-dark-950 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-12 bg-gradient-to-t from-[#050505] to-transparent"
         aria-hidden
       />
     </div>

@@ -85,7 +85,7 @@ export function FooterCTASection() {
           </div>
 
           <Reveal variant="fade" delay={0.12}>
-            <div className="relative w-full">
+            <div className="relative w-full overflow-visible">
               <GlobeDemo />
             </div>
           </Reveal>

@@ -175,6 +175,7 @@ export const products: Product[] = [
     metaTitle: "Copper Wires & Rods Manufacturer | Keshan Industries | India",
     metaDescription:
       "Precision copper wires and rods for electrical, construction, and telecommunications applications. Custom diameter and temper. Request a quote.",
+    modelSrc: "/3d-assets/copper_wire_coil.glb",
   },
   {
     slug: "copper-nuggets",
@@ -221,6 +222,7 @@ export const products: Product[] = [
     metaTitle: "Copper 1 KG Bars Manufacturer | Keshan Industries | 99.9% Pure",
     metaDescription:
       "High-purity copper 1 KG bars for jewellery, electroplating, and laboratory use. Precise weight, stamped purity, traceable batch. Request a quote.",
+    modelSrc: "/3d-assets/copper_bar.glb",
   },
   {
     slug: "copper-anodes",
