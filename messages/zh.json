@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "首页",
+    "about": "关于 Keshan",
+    "products": "产品",
+    "industries": "行业应用",
+    "knowledge": "知识中心",
+    "media": "媒体与证书",
+    "contact": "联系我们",
+    "requestQuote": "获取报价",
+    "viewAllProducts": "查看全部",
+    "allProducts": "全部产品",
+    "copperProducts": "铜产品",
+    "brassProducts": "黄铜产品",
+    "productRange": "产品系列"
+  },
+  "theme": {
+    "light": "浅色模式",
+    "dark": "深色模式",
+    "toggle": "切换主题"
+  },
+  "locale": {
+    "label": "语言",
+    "en": "English",
+    "ar": "العربية",
+    "zh": "中文",
+    "es": "Español"
+  },
+  "chat": {
+    "title": "Keshan 助手",
+    "subtitle": "产品与质量问答",
+    "placeholder": "询问产品、证书或交期…",
+    "open": "打开聊天",
+    "close": "关闭聊天",
+    "send": "发送",
+    "typing": "Keshan 正在输入…",
+    "suggested": "建议问题",
+    "fallback": "我暂时没有该细节。请发邮件至 sales.killp@keshanindustries.com 或 export@keshanindustries.com，或通过联系页面留言，我们将在 24 个工作小时内回复。",
+    "welcome": "可询问铜与黄铜产品、认证、出口市场，或如何索取报价。",
+    "prompts": {
+      "products": "你们生产哪些铜产品？",
+      "certs": "Keshan 持有哪些认证？",
+      "quote": "如何索取报价？",
+      "export": "你们出口到哪些国家？"
+    }
+  },
+  "common": {
+    "exploreManufacturing": "了解我们的制造",
+    "discussApplication": "讨论您的应用",
+    "browseProducts": "浏览产品系列 →",
+    "englishSpecs": "技术规格以英文显示",
+    "comingSoon": "即将推出"
+  }
+}

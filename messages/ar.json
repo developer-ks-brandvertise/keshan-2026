@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "about": "عن كيشان",
+    "products": "المنتجات",
+    "industries": "القطاعات",
+    "knowledge": "مركز المعرفة",
+    "media": "الإعلام والشهادات",
+    "contact": "اتصل بنا",
+    "requestQuote": "طلب عرض سعر",
+    "viewAllProducts": "عرض الكل",
+    "allProducts": "كل المنتجات",
+    "copperProducts": "منتجات النحاس",
+    "brassProducts": "منتجات النحاس الأصفر",
+    "productRange": "مجموعة المنتجات"
+  },
+  "theme": {
+    "light": "الوضع الفاتح",
+    "dark": "الوضع الداكن",
+    "toggle": "تبديل المظهر"
+  },
+  "locale": {
+    "label": "اللغة",
+    "en": "English",
+    "ar": "العربية",
+    "zh": "中文",
+    "es": "Español"
+  },
+  "chat": {
+    "title": "مساعد كيشان",
+    "subtitle": "إجابات عن المنتجات والجودة",
+    "placeholder": "اسأل عن المنتجات أو الشهادات أو مدد التوريد…",
+    "open": "فتح المحادثة",
+    "close": "إغلاق المحادثة",
+    "send": "إرسال",
+    "typing": "كيشان يكتب…",
+    "suggested": "مقترحات",
+    "fallback": "لا تتوفر لدي هذه التفاصيل بعد. راسل sales.killp@keshanindustries.com أو export@keshanindustries.com — أو استخدم صفحة الاتصال وسنرد خلال 24 ساعة عمل.",
+    "welcome": "اسأل عن مجموعة النحاس والنحاس الأصفر، الشهادات، أسواق التصدير، أو كيفية طلب عرض سعر.",
+    "prompts": {
+      "products": "ما منتجات النحاس التي تصنعونها؟",
+      "certs": "ما الشهادات التي تحملها كيشان؟",
+      "quote": "كيف أطلب عرض سعر؟",
+      "export": "إلى أي دول تصدرون؟"
+    }
+  },
+  "common": {
+    "exploreManufacturing": "استكشف التصنيع لدينا",
+    "discussApplication": "ناقش تطبيقك",
+    "browseProducts": "تصفح المنتجات ←",
+    "englishSpecs": "المواصفات الفنية معروضة بالإنجليزية",
+    "comingSoon": "قريباً"
+  }
+}

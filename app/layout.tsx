@@ -2,10 +2,6 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
-import { LMECopperSidebar } from "@/components/ui/LMECopperSidebar";
 
 const eurostile = localFont({
   src: [
@@ -62,19 +58,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${eurostile.variable} ${satoshi.variable} ${inter.variable} h-full antialiased`}
+      suppressHydrationWarning
+      className={`${eurostile.variable} ${satoshi.variable} ${inter.variable} dark h-full antialiased`}
     >
       <body
-        className={`${satoshi.className} min-h-full flex flex-col bg-dark-900 text-text-primary`}
+        className={`${satoshi.className} flex min-h-full flex-col bg-dark-900 text-text-primary`}
       >
-        <SmoothScrollProvider>
-          <LMECopperSidebar />
-          <div className="relative z-10 flex flex-col min-h-full">
-            <Navbar />
-            {children}
-            <Footer />
-          </div>
-        </SmoothScrollProvider>
+        {children}
       </body>
     </html>
   );

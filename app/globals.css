@@ -37,12 +37,54 @@
   /* Phase 1 design system tokens */
   --dark-900: #0a0a0a;
   --dark-950: #080808;
+  --dark-50: #f5f1ec;
+  --dark-100: #e8e2d9;
+  --dark-200: #d4c9b8;
   --copper-base: var(--copper);
   --copper-medium: var(--copper-dark);
-  --copper-deep: #8a5a2b;
   --text-primary: var(--foreground);
   --text-secondary: var(--gray);
   --text-muted: var(--gray-dark);
+  --heading-steel-0: #6b6b6b;
+  --heading-steel-1: #c8c8c8;
+  --heading-steel-2: #f2f2f2;
+  --heading-steel-3: #9a9a9a;
+  --heading-steel-4: #e8e8e8;
+  --heading-steel-5: #7a7a7a;
+  --heading-steel-6: #d4d4d4;
+}
+
+/* Light theme — paper / mill-ticket neutrals, copper retained */
+html.light {
+  --background: #f4f0ea;
+  --foreground: #1c1814;
+  --muted: #ebe4da;
+  --card: #fffdf9;
+  --border: #d4c9b8;
+  --gray: #5c534a;
+  --gray-dark: #8a8074;
+
+  --dark: #f4f0ea;
+  --darker: #ebe4da;
+  --light: #1c1814;
+
+  --dark-900: #f4f0ea;
+  --dark-950: #ebe4da;
+  --dark-50: #2a241c;
+  --dark-100: #3d342a;
+  --dark-200: #5c534a;
+
+  --text-primary: #1c1814;
+  --text-secondary: #5c534a;
+  --text-muted: #8a8074;
+
+  --heading-steel-0: #4a4540;
+  --heading-steel-1: #6b6560;
+  --heading-steel-2: #2a2622;
+  --heading-steel-3: #5a5550;
+  --heading-steel-4: #1c1814;
+  --heading-steel-5: #7a746c;
+  --heading-steel-6: #3d3832;
 }
 
 @theme inline {
@@ -62,9 +104,9 @@
   --color-light: var(--light);
 
   /* Phase 1 design system tokens */
-  --color-dark-50: #F5F1EC;
-  --color-dark-100: #E8E2D9;
-  --color-dark-200: #D4C9B8;
+  --color-dark-50: var(--dark-50);
+  --color-dark-100: var(--dark-100);
+  --color-dark-200: var(--dark-200);
   --color-dark-900: var(--dark-900);
   --color-dark-950: var(--dark-950);
 
@@ -147,13 +189,13 @@
   h3 {
     background-image: linear-gradient(
       115deg,
-      #6b6b6b 0%,
-      #c8c8c8 18%,
-      #f2f2f2 38%,
-      #9a9a9a 52%,
-      #e8e8e8 68%,
-      #7a7a7a 82%,
-      #d4d4d4 100%
+      var(--heading-steel-0) 0%,
+      var(--heading-steel-1) 18%,
+      var(--heading-steel-2) 38%,
+      var(--heading-steel-3) 52%,
+      var(--heading-steel-4) 68%,
+      var(--heading-steel-5) 82%,
+      var(--heading-steel-6) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -206,13 +248,13 @@
   .text-steel-gradient {
     background-image: linear-gradient(
       115deg,
-      #6b6b6b 0%,
-      #c8c8c8 18%,
-      #f2f2f2 38%,
-      #9a9a9a 52%,
-      #e8e8e8 68%,
-      #7a7a7a 82%,
-      #d4d4d4 100%
+      var(--heading-steel-0) 0%,
+      var(--heading-steel-1) 18%,
+      var(--heading-steel-2) 38%,
+      var(--heading-steel-3) 52%,
+      var(--heading-steel-4) 68%,
+      var(--heading-steel-5) 82%,
+      var(--heading-steel-6) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -254,13 +296,13 @@
     letter-spacing: -2px;
     background-image: linear-gradient(
       115deg,
-      #6b6b6b 0%,
-      #c8c8c8 18%,
-      #f2f2f2 38%,
-      #9a9a9a 52%,
-      #e8e8e8 68%,
-      #7a7a7a 82%,
-      #d4d4d4 100%
+      var(--heading-steel-0) 0%,
+      var(--heading-steel-1) 18%,
+      var(--heading-steel-2) 38%,
+      var(--heading-steel-3) 52%,
+      var(--heading-steel-4) 68%,
+      var(--heading-steel-5) 82%,
+      var(--heading-steel-6) 100%
     );
     -webkit-background-clip: text;
     background-clip: text;

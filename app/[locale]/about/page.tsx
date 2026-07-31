@@ -37,9 +37,9 @@ export default function AboutPage() {
 
       {/* Story */}
       <section className="bg-dark-900 py-section px-gutter">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:gap-14">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:gap-16">
           <AnimatedSection className="lg:col-span-5">
-            <div className="relative overflow-hidden">
+            <div className="relative overflow-hidden border border-copper-base/20">
               <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[3/4]">
                 <Image
                   src="/images/img-machining1.jpg"
@@ -48,9 +48,14 @@ export default function AboutPage() {
                   className="object-cover"
                   sizes="(max-width: 1024px) 100vw, 42vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-900 via-transparent to-transparent opacity-70" />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent opacity-80" />
+                <div className="absolute left-4 top-4 border border-copper-base/40 bg-dark-950/80 px-3 py-1.5 backdrop-blur-sm">
+                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
+                    Plant · Hyderabad
+                  </span>
+                </div>
               </div>
-              <div className="absolute inset-x-0 bottom-0 border-t border-copper-base/40 bg-dark-950/90">
+              <div className="absolute inset-x-0 bottom-0 border-t border-copper-base/40 bg-dark-950/92">
                 <div className="grid grid-cols-2 sm:grid-cols-4">
                   {intro.stats.map((stat, i) => (
                     <div
@@ -62,7 +67,7 @@ export default function AboutPage() {
                       <div className="font-heading text-lg text-copper-base">
                         {stat.value}
                       </div>
-                      <div className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.14em] text-text-muted line-clamp-2">
+                      <div className="mt-0.5 line-clamp-2 text-[9px] font-semibold uppercase tracking-[0.14em] text-text-muted">
                         {stat.label.split(" ").slice(0, 2).join(" ")}
                       </div>
                     </div>
@@ -159,12 +164,14 @@ export default function AboutPage() {
           <div className="border-t border-copper-base/30">
             {leadership.team.map((member, i) => (
               <AnimatedSection key={member.name} delay={i * 0.05}>
-                <article className="grid gap-4 border-b border-dark-100/10 py-8 sm:grid-cols-[80px_1fr_auto] sm:gap-8">
-                  <div className="flex h-16 w-16 items-center justify-center border border-copper-base/40 bg-copper-base/10 font-heading text-2xl text-copper-base">
+                <article className="group grid gap-5 border-b border-dark-100/10 py-8 sm:grid-cols-[96px_1fr_auto] sm:gap-8">
+                  <div className="relative flex h-20 w-20 items-center justify-center overflow-hidden border border-copper-base/40 bg-[radial-gradient(circle_at_30%_20%,rgba(184,115,51,0.35),transparent_60%),linear-gradient(160deg,#1a120c,#0a0a0a)] font-heading text-3xl text-copper-base transition-colors group-hover:border-copper-base">
                     {member.name.charAt(0)}
                   </div>
                   <div>
-                    <h3 className="text-xl text-text-primary">{member.name}</h3>
+                    <h3 className="text-xl text-text-primary sm:text-2xl">
+                      {member.name}
+                    </h3>
                     <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
                       {member.title}
                     </p>
@@ -186,8 +193,12 @@ export default function AboutPage() {
       </section>
 
       {/* Global reach */}
-      <section className="bg-dark-950 py-section px-gutter">
-        <div className="mx-auto max-w-6xl">
+      <section className="relative overflow-hidden bg-dark-950 py-section px-gutter">
+        <div
+          className="pointer-events-none absolute right-0 top-1/2 h-[480px] w-[480px] -translate-y-1/2 translate-x-1/4 rounded-full border border-copper-base/20 bg-[radial-gradient(circle,rgba(184,115,51,0.12),transparent_65%)]"
+          aria-hidden
+        />
+        <div className="relative mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2">
             <AnimatedSection>
               <span className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
@@ -201,7 +212,7 @@ export default function AboutPage() {
                 {globalReach.regions.map((region) => (
                   <div
                     key={region}
-                    className="bg-dark-950 px-4 py-5 text-center text-sm text-text-primary"
+                    className="bg-dark-950 px-4 py-5 text-center text-sm text-text-primary transition-colors hover:bg-copper-base/10"
                   >
                     {region}
                   </div>
@@ -222,7 +233,9 @@ export default function AboutPage() {
                     <span className="font-heading text-xs tracking-[0.16em] text-copper-base">
                       {String(i + 1).padStart(2, "0")}
                     </span>
-                    <span className="text-body-sm text-text-primary">{capability}</span>
+                    <span className="text-body-sm text-text-primary">
+                      {capability}
+                    </span>
                   </div>
                 ))}
               </div>

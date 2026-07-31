@@ -90,7 +90,7 @@ export function RollingText3D({
         trigger: container,
         start: "top top",
         end: "bottom bottom",
-        scrub: true,
+        scrub: 0.8,
         invalidateOnRefresh: true,
         onUpdate: (self) => apply(self.progress),
       });
@@ -126,8 +126,8 @@ export function RollingText3D({
     );
   }
 
-  // Shorter scrub distance — avoids mid-page scroll feeling trapped
-  const scrollHeight = `${Math.max(items.length * 22, 140)}vh`;
+  // ~18–25vh per step so the roller is experiential, not rushed
+  const scrollHeight = `${Math.max(items.length * 40, 200)}vh`;
 
   return (
     <div

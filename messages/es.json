@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Sobre Keshan",
+    "products": "Productos",
+    "industries": "Industrias",
+    "knowledge": "Centro de conocimiento",
+    "media": "Medios y certificados",
+    "contact": "Contacto",
+    "requestQuote": "Solicitar cotización",
+    "viewAllProducts": "Ver todo",
+    "allProducts": "Todos los productos",
+    "copperProducts": "Productos de cobre",
+    "brassProducts": "Productos de latón",
+    "productRange": "Gama de productos"
+  },
+  "theme": {
+    "light": "Modo claro",
+    "dark": "Modo oscuro",
+    "toggle": "Cambiar tema"
+  },
+  "locale": {
+    "label": "Idioma",
+    "en": "English",
+    "ar": "العربية",
+    "zh": "中文",
+    "es": "Español"
+  },
+  "chat": {
+    "title": "Asistente Keshan",
+    "subtitle": "Respuestas de producto y calidad",
+    "placeholder": "Pregunte por productos, certificados o plazos…",
+    "open": "Abrir chat",
+    "close": "Cerrar chat",
+    "send": "Enviar",
+    "typing": "Keshan está escribiendo…",
+    "suggested": "Sugerencias",
+    "fallback": "Aún no tengo ese detalle. Escriba a sales.killp@keshanindustries.com o export@keshanindustries.com, o use la página de Contacto; responderemos en 24 horas hábiles.",
+    "welcome": "Pregunte por cobre y latón, certificaciones, mercados de exportación o cómo solicitar una cotización.",
+    "prompts": {
+      "products": "¿Qué productos de cobre fabrican?",
+      "certs": "¿Qué certificaciones tiene Keshan?",
+      "quote": "¿Cómo solicito una cotización?",
+      "export": "¿A qué países exportan?"
+    }
+  },
+  "common": {
+    "exploreManufacturing": "Explorar nuestra fabricación",
+    "discussApplication": "Hablar de su aplicación",
+    "browseProducts": "Ver gama de productos →",
+    "englishSpecs": "Especificaciones técnicas en inglés",
+    "comingSoon": "Próximamente"
+  }
+}

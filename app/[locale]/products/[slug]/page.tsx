@@ -8,13 +8,16 @@ import PageHero from "@/components/ui/PageHero";
 import { ProductModelViewer } from "@/components/products/ProductModelViewer";
 
 interface ProductPageProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string; locale: string }>;
 }
 
 export async function generateStaticParams() {
-  return products.map((product) => ({
-    slug: product.slug,
-  }));
+  return products.flatMap((product) =>
+    ["en", "ar", "zh", "es"].map((locale) => ({
+      slug: product.slug,
+      locale,
+    })),
+  );
 }
 
 export async function generateMetadata({

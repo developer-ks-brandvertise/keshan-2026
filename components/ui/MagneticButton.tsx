@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import { ArrowUpRight } from "lucide-react";
 
 interface MagneticButtonProps {
@@ -80,7 +80,7 @@ export function MagneticButton({
       );
     }
     return (
-      <Link href={href} className={classes}>
+      <Link href={href as "/"} className={classes}>
         {content}
       </Link>
     );

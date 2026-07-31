@@ -1,0 +1,54 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Keshan",
+    "products": "Products",
+    "industries": "Industries",
+    "knowledge": "Knowledge Centre",
+    "media": "Media & Certificates",
+    "contact": "Contact",
+    "requestQuote": "Request a Quote",
+    "viewAllProducts": "View all",
+    "allProducts": "All products",
+    "copperProducts": "Copper Products",
+    "brassProducts": "Brass Products",
+    "productRange": "Product range"
+  },
+  "theme": {
+    "light": "Light mode",
+    "dark": "Dark mode",
+    "toggle": "Toggle color theme"
+  },
+  "locale": {
+    "label": "Language",
+    "en": "English",
+    "ar": "العربية",
+    "zh": "中文",
+    "es": "Español"
+  },
+  "chat": {
+    "title": "Keshan Assist",
+    "subtitle": "Product & quality answers",
+    "placeholder": "Ask about products, certs, lead times…",
+    "open": "Open chat",
+    "close": "Close chat",
+    "send": "Send",
+    "typing": "Keshan is typing…",
+    "suggested": "Suggested",
+    "fallback": "I don't have that detail yet. Email sales.killp@keshanindustries.com or export@keshanindustries.com — or use the Contact page and our team will reply within 24 business hours.",
+    "welcome": "Ask about our copper & brass range, certifications, export markets, or how to request a quote.",
+    "prompts": {
+      "products": "What copper products do you make?",
+      "certs": "What certifications does Keshan hold?",
+      "quote": "How do I request a quote?",
+      "export": "Which countries do you export to?"
+    }
+  },
+  "common": {
+    "exploreManufacturing": "Explore Our Manufacturing",
+    "discussApplication": "Discuss Your Application",
+    "browseProducts": "Browse product range →",
+    "englishSpecs": "Technical specs shown in English",
+    "comingSoon": "Coming soon"
+  }
+}

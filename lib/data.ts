@@ -169,7 +169,7 @@ export const mediaCertificates = {
 export const industries = {
   headline: "Copper at the Core of Critical Industries.",
   subheadline:
-    "From the substation that feeds a city to the motor inside an electric vehicle, Keshan copper is part of the infrastructure that keeps everyday life running. Six industries. One consistent standard.",
+    "From the substation that feeds a city to the motor inside an electric vehicle, Keshan copper is part of the infrastructure that keeps everyday life running. Thirteen industries. One consistent standard.",
   cta: "Explore All Industries",
   featured: [
     {
@@ -207,6 +207,86 @@ export const industries = {
       application: "Sheets, plates, and rods for cladding, earthing, and building systems.",
       icon: "Building2",
       image: "/images/img-factory1.jpg",
+    },
+  ],
+  catalog: [
+    {
+      name: "Electrical & Power Distribution",
+      application: "Busbars, conductors, and distribution components for reliable power flow.",
+      icon: "Zap",
+      image: "/images/service1.jpg",
+    },
+    {
+      name: "Switchgear, Panels & Busducts",
+      application: "Precision copper for switchgear, panel boards, and busbar trunking systems.",
+      icon: "PanelTop",
+      image: "/images/img-machining1.jpg",
+    },
+    {
+      name: "Renewable Energy & Solar Infrastructure",
+      application: "High-conductivity copper for solar inverters, panels, and energy systems.",
+      icon: "Sun",
+      image: "/images/pexels-scottwebb.jpg",
+    },
+    {
+      name: "EV, Charging & Mobility",
+      application: "Copper for EV motors, batteries, charging stations, and power electronics.",
+      icon: "BatteryCharging",
+      image: "/images/home-three1.jpg",
+    },
+    {
+      name: "Cables, Conductors & Wire Manufacturing",
+      application: "CCR, wire rod, and drawn copper for cable and wire producers.",
+      icon: "Cable",
+      image: "/images/process-img1.jpg",
+    },
+    {
+      name: "Construction & Building Infrastructure",
+      application: "Sheets, plates, and rods for cladding, earthing, and building systems.",
+      icon: "Building2",
+      image: "/images/img-factory1.jpg",
+    },
+    {
+      name: "Electronics & PCB Manufacturing",
+      application: "Fine copper strip and foil-ready feedstock for PCB and electronic component lines.",
+      icon: "Cpu",
+      image: "/images/service-img2.jpg",
+    },
+    {
+      name: "Automotive & Industrial Components",
+      application: "Brass and copper forms for terminals, connectors, and precision stamped parts.",
+      icon: "Car",
+      image: "/images/service2.jpg",
+    },
+    {
+      name: "Heat Exchangers & Thermal Systems",
+      application: "Conductive copper for coils, fins, and thermal management assemblies.",
+      icon: "Thermometer",
+      image: "/images/service3.jpg",
+    },
+    {
+      name: "Defence & Aerospace Applications",
+      application: "Traceable, high-purity copper and brass for mission-critical assemblies.",
+      icon: "Shield",
+      image: "/images/service5.jpg",
+    },
+    {
+      name: "Rail & Transportation Infrastructure",
+      application: "Conductors and contact materials for rail electrification and rolling stock.",
+      icon: "TrainFront",
+      image: "/images/project-img1.jpg",
+    },
+    {
+      name: "Telecommunications & Data Networks",
+      application: "Copper conductors supporting telecom cabling and network infrastructure.",
+      icon: "Radio",
+      image: "/images/project-img2.jpg",
+    },
+    {
+      name: "Hardware, Sanitaryware & Decorative",
+      application: "Brass sheets, strips, and circles for fittings, sanitaryware, and decorative work.",
+      icon: "Wrench",
+      image: "/images/service-img4.jpg",
     },
   ],
   all: [
