@@ -13,8 +13,8 @@ export function FooterCTASection() {
       <CopperWave flip id="footer-cta" className="bg-dark-900" />
 
       {/* Globe sits behind content, sunk into the section bottom edge */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full sm:pointer-events-auto sm:w-[58%] lg:w-[52%]">
-        <div className="absolute bottom-[-24%] left-1/2 aspect-square w-[min(920px,135%)] -translate-x-1/2 sm:left-auto sm:right-[-6%] sm:translate-x-0 lg:bottom-[-28%] lg:right-[-4%] lg:w-[min(780px,110%)]">
+      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full sm:pointer-events-auto sm:w-[48%] lg:w-[42%]">
+        <div className="absolute bottom-[-18%] left-1/2 aspect-square w-[min(520px,88%)] -translate-x-1/2 sm:left-auto sm:right-[-2%] sm:translate-x-0 lg:bottom-[-20%] lg:right-0 lg:w-[min(480px,92%)]">
           <Globe />
         </div>
       </div>
@@ -92,11 +92,11 @@ export function FooterCTASection() {
           </div>
 
           {/* Spacer so section height keeps globe visible on the right */}
-          <div className="hidden min-h-[380px] lg:block" aria-hidden />
+          <div className="hidden min-h-[280px] lg:block" aria-hidden />
         </div>
 
         {/* Mobile: reserve space under copy for the globe peek */}
-        <div className="h-[220px] sm:h-[260px] lg:hidden" aria-hidden />
+        <div className="h-[160px] sm:h-[180px] lg:hidden" aria-hidden />
       </div>
     </section>
   );

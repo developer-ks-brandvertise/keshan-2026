@@ -1,10 +1,103 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { hero } from "@/lib/data";
 import Container from "@/components/ui/Container";
+
+const HERO_VIDEOS = [
+  "https://res.cloudinary.com/p4nrvzvp/video/upload/q_auto,w_1920,c_limit/v1785508016/5121742-uhd_2560_1440_25fps_n266f1.mp4",
+  "https://res.cloudinary.com/p4nrvzvp/video/upload/q_auto,w_1920,c_limit/v1785508014/5121753-uhd_2560_1440_25fps_httqja.mp4",
+];
+
+function HeroVideoSlider({ enabled }: { enabled: boolean }) {
+  const [active, setActive] = useState(0);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const sectionVisible = useRef(true);
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    const videos = videoRefs.current.filter(Boolean) as HTMLVideoElement[];
+    if (!videos.length) return;
+
+    const playActive = async () => {
+      for (let i = 0; i < videos.length; i++) {
+        const video = videos[i];
+        if (!video) continue;
+        if (i === active && sectionVisible.current) {
+          try {
+            video.currentTime = 0;
+            await video.play();
+          } catch {
+            // Autoplay may be blocked; muted + playsInline usually works
+          }
+        } else {
+          video.pause();
+        }
+      }
+    };
+
+    void playActive();
+  }, [active, enabled]);
+
+  useEffect(() => {
+    if (!enabled) return;
+
+    const root = videoRefs.current[0]?.closest("section");
+    if (!root) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        sectionVisible.current = Boolean(entry?.isIntersecting);
+        const videos = videoRefs.current.filter(Boolean) as HTMLVideoElement[];
+        videos.forEach((video, i) => {
+          if (i === active && sectionVisible.current) {
+            void video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.15 },
+    );
+
+    observer.observe(root);
+    return () => observer.disconnect();
+  }, [active, enabled]);
+
+  if (!enabled) {
+    return (
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(184,115,51,0.25),transparent_55%),linear-gradient(180deg,#050505,#0a0a0a)]"
+        aria-hidden
+      />
+    );
+  }
+
+  return (
+    <div className="absolute inset-0" aria-hidden>
+      {HERO_VIDEOS.map((src, i) => (
+        <video
+          key={src}
+          ref={(el) => {
+            videoRefs.current[i] = el;
+          }}
+          className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${
+            i === active ? "opacity-100" : "opacity-0"
+          }`}
+          src={src}
+          muted
+          playsInline
+          preload={i === 0 ? "auto" : "metadata"}
+          onEnded={() => setActive((prev) => (prev + 1) % HERO_VIDEOS.length)}
+        />
+      ))}
+    </div>
+  );
+}
 
 export default function Hero() {
   const shouldReduce = useReducedMotion();
@@ -12,25 +105,15 @@ export default function Hero() {
 
   return (
     <section className="relative flex min-h-[calc(100vh-7rem)] items-start overflow-hidden bg-[#050505] pt-[8vh] lg:pt-[10vh]">
-      {/* Lightweight copper atmosphere — no WebGL */}
+      <HeroVideoSlider enabled={!shouldReduce} />
+
+      {/* Readability overlays */}
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(184,115,51,0.22),transparent_55%),radial-gradient(ellipse_at_85%_70%,rgba(138,90,43,0.18),transparent_50%),linear-gradient(180deg,#050505_0%,#0a0a0a_100%)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-b from-dark-950/55 via-dark-950/35 to-dark-950/75"
         aria-hidden
       />
       <div
-        className="pointer-events-none absolute inset-0 opacity-[0.08]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(115deg, transparent 0 18px, rgba(184,115,51,0.35) 18px 19px)",
-        }}
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -right-40 top-16 h-[520px] w-[520px] rounded-full bg-copper/15 blur-[140px]"
-        aria-hidden
-      />
-      <div
-        className="pointer-events-none absolute -left-24 bottom-0 h-[420px] w-[420px] rounded-full bg-copper-dark/15 blur-[120px]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_40%,transparent_20%,rgba(5,5,5,0.55)_100%)]"
         aria-hidden
       />
 
@@ -45,7 +128,7 @@ export default function Hero() {
               delay: 0.1,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
-            className="font-heading text-4xl font-medium leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-heading text-4xl font-medium leading-[1.05] tracking-[-7px] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Every Great Innovation Begins with Copper.
           </motion.h1>

@@ -65,7 +65,7 @@ export default function RootLayout({
       className={`${eurostile.variable} ${satoshi.variable} ${inter.variable} h-full antialiased`}
     >
       <body
-        className={`${eurostile.className} min-h-full flex flex-col bg-dark-900 text-text-primary`}
+        className={`${satoshi.className} min-h-full flex flex-col bg-dark-900 text-text-primary`}
       >
         <SmoothScrollProvider>
           <LMECopperSidebar />
