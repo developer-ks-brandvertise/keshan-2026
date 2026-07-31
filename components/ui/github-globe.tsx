@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Color, Scene, Fog, PerspectiveCamera, Vector3 } from "three";
+import { Color, Scene, PerspectiveCamera, Vector3 } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -16,7 +16,7 @@ declare module "@react-three/fiber" {
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1;
-const cameraZ = 380;
+const cameraZ = 255;
 
 type Position = {
   order: number;
@@ -239,7 +239,8 @@ export function WebGLRendererConfig() {
 export function World(props: WorldProps) {
   const { globeConfig } = props;
   const scene = new Scene();
-  scene.fog = new Fog(0x0a0a0a, 400, 2000);
+  // No fog — keeps the canvas transparent so the page background shows through
+  scene.fog = null;
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
@@ -252,10 +253,11 @@ export function World(props: WorldProps) {
 
   return (
     <Canvas
-      className="h-full w-full"
+      className="h-full w-full !bg-transparent"
       style={{ background: "transparent" }}
       scene={scene}
       camera={new PerspectiveCamera(50, aspect, 180, 1800)}
+      gl={{ antialias: true, alpha: true, premultipliedAlpha: false }}
     >
       <WebGLRendererConfig />
       <ambientLight color={globeConfig.ambientLight} intensity={0.6} />

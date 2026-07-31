@@ -102,18 +102,18 @@ const globeConfig: GlobeConfig = {
 
 export function GlobeDemo() {
   return (
-    /* Always sit on a dark stage so light theme tokens don't tint the globe */
-    <div className="relative mx-auto w-full max-w-[580px] lg:max-w-none">
+    <div className="relative mx-auto w-full max-w-[640px] lg:max-w-none">
+      {/* Transparent stage — no boxed black background */}
       <div
-        className="relative w-full overflow-hidden bg-[#050505]"
-        style={{ paddingBottom: "72%" }}
+        className="relative w-full overflow-hidden bg-transparent"
+        style={{ paddingBottom: "78%" }}
       >
-        <div className="absolute inset-x-0 top-0 aspect-square w-full">
+        <div className="absolute left-1/2 top-0 aspect-square w-[108%] -translate-x-1/2">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-12 bg-gradient-to-t from-[#050505] to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-14 bg-gradient-to-t from-dark-950 to-transparent"
         aria-hidden
       />
     </div>
