@@ -12,15 +12,8 @@ export function FooterCTASection() {
     <section className="relative overflow-hidden bg-dark-950">
       <CopperWave flip id="footer-cta" className="bg-dark-900" />
 
-      {/* Globe sits behind content, sunk into the section bottom edge */}
-      <div className="pointer-events-none absolute inset-y-0 right-0 z-0 w-full sm:pointer-events-auto sm:w-[48%] lg:w-[42%]">
-        <div className="absolute bottom-[-18%] left-1/2 aspect-square w-[min(520px,88%)] -translate-x-1/2 sm:left-auto sm:right-[-2%] sm:translate-x-0 lg:bottom-[-20%] lg:right-0 lg:w-[min(480px,92%)]">
-          <Globe />
-        </div>
-      </div>
-
-      <div className="relative z-10 px-gutter pt-section pb-0">
-        <div className="mx-auto grid max-w-6xl lg:grid-cols-2">
+      <div className="relative z-10 px-gutter pt-section pb-section">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-12">
           <div className="relative max-w-xl text-left lg:max-w-lg">
             <Reveal variant="slide">
               <div className="mb-4 flex items-center gap-3">
@@ -91,12 +84,17 @@ export function FooterCTASection() {
             </Reveal>
           </div>
 
-          {/* Spacer so section height keeps globe visible on the right */}
-          <div className="hidden min-h-[280px] lg:block" aria-hidden />
+          {/* Full globe in column — no hard edge clipping */}
+          <Reveal variant="fade" delay={0.12}>
+            <div className="relative mx-auto aspect-square w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px]">
+              <div
+                className="pointer-events-none absolute inset-[-10%] rounded-full bg-[radial-gradient(circle,rgba(184,115,51,0.22)_0%,transparent_68%)]"
+                aria-hidden
+              />
+              <Globe />
+            </div>
+          </Reveal>
         </div>
-
-        {/* Mobile: reserve space under copy for the globe peek */}
-        <div className="h-[160px] sm:h-[180px] lg:hidden" aria-hidden />
       </div>
     </section>
   );

@@ -144,20 +144,36 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
               <div>
                 <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                  Key specifications
+                  Technical Specifications — Ranges / Types
                 </h3>
-                <div className="border-t border-copper-base/30">
-                  {product.specs.map((spec, i) => (
-                    <div
-                      key={spec}
-                      className="grid grid-cols-[48px_1fr] gap-4 border-b border-dark-100/10 py-3.5"
-                    >
-                      <span className="font-heading text-xs tracking-[0.16em] text-copper-base">
-                        {String(i + 1).padStart(2, "0")}
-                      </span>
-                      <span className="text-body-sm text-text-primary">{spec}</span>
+                <div className="overflow-hidden border border-copper-base/25">
+                  <div className="grid grid-cols-[140px_1fr] border-b border-copper-base/30 bg-copper-base/15 sm:grid-cols-[180px_1fr]">
+                    <span className="border-r border-copper-base/25 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
+                      Product
+                    </span>
+                    <span className="px-4 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
+                      Specification — Ranges / Types
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr]">
+                    <div className="border-r border-dark-100/10 bg-dark-950/60 px-4 py-4 text-sm font-semibold text-text-primary">
+                      {product.name}
                     </div>
-                  ))}
+                    <ul className="space-y-2.5 px-4 py-4">
+                      {product.specs.map((spec) => (
+                        <li
+                          key={spec}
+                          className="flex gap-2.5 text-body-sm text-text-secondary"
+                        >
+                          <span
+                            className="mt-2 h-1 w-1 shrink-0 rounded-full bg-copper-base"
+                            aria-hidden
+                          />
+                          <span className="text-text-primary">{spec}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
 

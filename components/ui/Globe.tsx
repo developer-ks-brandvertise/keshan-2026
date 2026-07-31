@@ -128,10 +128,7 @@ export function Globe({
   return (
     <div
       ref={containerRef}
-      className={cn(
-        "absolute inset-0 mx-auto aspect-square w-full",
-        className,
-      )}
+      className={cn("relative mx-auto aspect-square w-full", className)}
     >
       {active ? (
         <canvas

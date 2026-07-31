@@ -128,7 +128,7 @@ export default function Hero() {
               delay: 0.1,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
-            className="font-heading text-4xl font-medium leading-[1.05] tracking-[-7px] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-heading text-4xl font-medium leading-[1.05] tracking-[-4px] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Every Great Innovation Begins with Copper.
           </motion.h1>
