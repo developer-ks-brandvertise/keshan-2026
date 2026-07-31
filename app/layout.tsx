@@ -7,11 +7,12 @@ import Footer from "@/components/Footer";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
 import { CursorGlow } from "@/components/ui/CursorGlow";
 import { GrainOverlay } from "@/components/ui/GrainOverlay";
+import { LMECopperSidebar } from "@/components/ui/LMECopperSidebar";
 
 const eurostile = localFont({
-  src: "./fonts/Eurostile-BoldExtended.ttf",
+  src: "./fonts/EurostileExtendedBlack.ttf",
   variable: "--font-eurostile",
-  weight: "700",
+  weight: "900",
   display: "swap",
   fallback: ["Arial Narrow", "Arial", "sans-serif"],
 });
@@ -59,6 +60,7 @@ export default function RootLayout({
         <SmoothScrollProvider>
           <CursorGlow />
           <GrainOverlay />
+          <LMECopperSidebar />
           <div className="relative z-10 flex flex-col min-h-full">
             <Navbar />
             {children}

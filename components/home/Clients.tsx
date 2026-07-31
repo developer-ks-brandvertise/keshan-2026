@@ -4,47 +4,27 @@ import Image from "next/image";
 import { clients } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 
-const partners = [
-  { src: "/images/client-img1.png", region: "Belgium" },
-  { src: "/images/client-img2.png", region: "Netherlands" },
-  { src: "/images/client-img3-1.png", region: "India" },
-  { src: "/images/client-img4.png", region: "UAE" },
-  { src: "/images/client-img5.png", region: "Germany" },
-  { src: "/images/client-img6.png", region: "USA" },
+const partnerLogos = [
+  "/images/Clients/Keshan-Clients-01.png",
+  "/images/Clients/Keshan-Clients-03.png",
+  "/images/Clients/Keshan-Clients-04.png",
+  "/images/Clients/Keshan-Clients-05.png",
+  "/images/Clients/Keshan-Clients-06.png",
+  "/images/Clients/Keshan-Clients-07.png",
+  "/images/Clients/Keshan-Clients-08.png",
+  "/images/Clients/Keshan-Clients-09.png",
+  "/images/Clients/Keshan-Clients-10.png",
+  "/images/Clients/Keshan-Clients-11.png",
+  "/images/Clients/Keshan-Clients-12.png",
+  "/images/Clients/Keshan-Clients-13.png",
+  "/images/Clients/Keshan-Clients-14.png",
+  "/images/Clients/Keshan-Clients-15.png",
+  "/images/Clients/Keshan-Clients-16.png",
+  "/images/Clients/Keshan-Clients-17.png",
+  "/images/Clients/Keshan-Clients-18.png",
+  "/images/Clients/Keshan-Clients-19.png",
+  "/images/Clients/Keshan-Clients_Artboard 1 copy.png",
 ];
-
-function LogoTrack({
-  items,
-  ariaHidden = false,
-}: {
-  items: typeof partners;
-  ariaHidden?: boolean;
-}) {
-  return (
-    <div
-      className="flex shrink-0 items-stretch"
-      aria-hidden={ariaHidden || undefined}
-    >
-      {items.map((partner, i) => (
-        <div
-          key={`${partner.src}-${i}`}
-          className="flex w-[200px] shrink-0 flex-col items-center justify-center gap-3 border-r border-copper-base/20 px-8 py-8 sm:w-[220px]"
-        >
-          <Image
-            src={partner.src}
-            alt={ariaHidden ? "" : `${partner.region} partner`}
-            width={140}
-            height={48}
-            className="h-9 w-auto max-w-[140px] object-contain opacity-55 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-          />
-          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-text-muted">
-            {partner.region}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-}
 
 export function ClientsSection() {
   return (
@@ -74,21 +54,23 @@ export function ClientsSection() {
       </div>
 
       <Reveal variant="fade" delay={0.08}>
-        <div className="relative border-y border-copper-base/25">
-          {/* Edge fades */}
-          <div
-            className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-dark-950 to-transparent sm:w-24"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-dark-950 to-transparent sm:w-24"
-            aria-hidden
-          />
-
-          <div className="group flex overflow-hidden">
-            <div className="flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:animate-none">
-              <LogoTrack items={partners} />
-              <LogoTrack items={partners} ariaHidden />
+        <div className="mx-auto max-w-6xl px-gutter">
+          <div className="overflow-hidden rounded-2xl border border-copper-base/20 bg-dark-900/45 p-3 sm:p-4">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+              {partnerLogos.map((src, i) => (
+                <div
+                  key={src}
+                  className="flex h-20 items-center justify-center rounded-xl border border-copper-base/10 bg-dark-950/55 px-4 sm:h-24"
+                >
+                  <Image
+                    src={src}
+                    alt={`Client logo ${i + 1}`}
+                    width={170}
+                    height={70}
+                    className="h-10 w-auto max-w-[170px] object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
