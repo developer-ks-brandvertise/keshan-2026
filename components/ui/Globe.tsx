@@ -17,7 +17,7 @@ export const COPPER_GLOBE_CONFIG: COBEOptions = {
   theta: 0.22,
   dark: 1,
   diffuse: 1.4,
-  mapSamples: 8000,
+  mapSamples: 4000,
   mapBrightness: 2.8,
   baseColor: [0.18, 0.13, 0.08],
   markerColor: [212 / 255, 165 / 255, 116 / 255],

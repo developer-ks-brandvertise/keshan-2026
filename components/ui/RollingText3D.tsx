@@ -90,14 +90,20 @@ export function RollingText3D({
         trigger: container,
         start: "top top",
         end: "bottom bottom",
-        scrub: 0.4,
+        scrub: true,
+        invalidateOnRefresh: true,
         onUpdate: (self) => apply(self.progress),
       });
     }, container);
 
-    ScrollTrigger.refresh();
+    const refresh = () => ScrollTrigger.refresh();
+    requestAnimationFrame(refresh);
+    window.addEventListener("load", refresh);
 
-    return () => ctx.revert();
+    return () => {
+      window.removeEventListener("load", refresh);
+      ctx.revert();
+    };
   }, [angleStep, items.length, perspective, radius, shouldReduce]);
 
   if (shouldReduce) {
@@ -120,8 +126,8 @@ export function RollingText3D({
     );
   }
 
-  // Keep pin shorter so scroll doesn't feel stuck before later sections
-  const scrollHeight = `${Math.max(items.length * 36, 180)}vh`;
+  // Shorter scrub distance — avoids mid-page scroll feeling trapped
+  const scrollHeight = `${Math.max(items.length * 22, 140)}vh`;
 
   return (
     <div

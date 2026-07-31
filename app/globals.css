@@ -79,7 +79,7 @@
   --font-heading: var(--font-eurostile), "Arial Narrow", sans-serif;
   --font-body: var(--font-satoshi), sans-serif;
   --font-ui: var(--font-inter), sans-serif;
-  --font-sans: var(--font-satoshi), var(--font-inter), sans-serif;
+  --font-sans: var(--font-eurostile), var(--font-satoshi), var(--font-inter), sans-serif;
   --font-display: var(--font-eurostile), "Arial Narrow", system-ui, sans-serif;
 
   --text-h1: clamp(2.25rem, 7vw, 4.5rem);
@@ -111,6 +111,14 @@
 }
 
 @layer base {
+  @font-face {
+    font-family: "Eurostile Extended Black";
+    src: url("/fonts/EurostileExtendedBlack.woff2") format("woff2");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
   html {
     /* Native scroll; Lenis handles smoothing when enabled */
     scroll-behavior: auto;
@@ -118,7 +126,8 @@
   body {
     background: var(--dark-900);
     color: var(--text-secondary);
-    font-family: var(--font-satoshi), var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-eurostile), "Eurostile Extended Black", "Arial Narrow",
+      system-ui, sans-serif;
     font-size: var(--text-body);
   }
   h1,
@@ -127,8 +136,9 @@
   h4,
   h5,
   h6 {
-    font-family: var(--font-heading), sans-serif;
-    font-weight: 700;
+    font-family: var(--font-eurostile), "Eurostile Extended Black", "Arial Narrow",
+      sans-serif;
+    font-weight: 900;
     letter-spacing: 0.04em;
     line-height: 1.05;
   }
@@ -486,8 +496,26 @@
     transform: translateX(-50%);
   }
 }
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .animate-marquee {
-  animation: marquee 30s linear infinite;
+  animation: marquee 38s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee-reverse 42s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation: none;
+  }
 }
 
 /* Grain */

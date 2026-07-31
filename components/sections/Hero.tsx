@@ -4,35 +4,35 @@ import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { hero } from "@/lib/data";
-import Beams from "@/components/ui/beams";
 import Container from "@/components/ui/Container";
 
 export default function Hero() {
   const shouldReduce = useReducedMotion();
-
   const fadeUp = shouldReduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 };
 
   return (
-    <section className="relative flex min-h-[calc(100vh-7rem)] items-start overflow-hidden bg-[#000000] pt-[8vh] lg:pt-[10vh]">
-      {/* Beams background */}
-      <div className="pointer-events-none absolute inset-0">
-        <Beams
-          beamWidth={2}
-          beamHeight={15}
-          beamNumber={12}
-          color="#b87333"
-          lightColor="#f5c58a"
-          backgroundColor="#000000"
-          speed={2}
-          noiseIntensity={1.75}
-          scale={0.2}
-          rotation={0}
-        />
-      </div>
-
-      {/* Copper glow accents */}
-      <div className="pointer-events-none absolute -right-40 top-20 h-[600px] w-[600px] rounded-full bg-copper/10 blur-[160px]" />
-      <div className="pointer-events-none absolute -left-20 bottom-0 h-[500px] w-[500px] rounded-full bg-copper-dark/10 blur-[140px]" />
+    <section className="relative flex min-h-[calc(100vh-7rem)] items-start overflow-hidden bg-[#050505] pt-[8vh] lg:pt-[10vh]">
+      {/* Lightweight copper atmosphere — no WebGL */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_20%_0%,rgba(184,115,51,0.22),transparent_55%),radial-gradient(ellipse_at_85%_70%,rgba(138,90,43,0.18),transparent_50%),linear-gradient(180deg,#050505_0%,#0a0a0a_100%)]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.08]"
+        style={{
+          backgroundImage:
+            "repeating-linear-gradient(115deg, transparent 0 18px, rgba(184,115,51,0.35) 18px 19px)",
+        }}
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -right-40 top-16 h-[520px] w-[520px] rounded-full bg-copper/15 blur-[140px]"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute -left-24 bottom-0 h-[420px] w-[420px] rounded-full bg-copper-dark/15 blur-[120px]"
+        aria-hidden
+      />
 
       <Container className="relative z-10 py-20 lg:py-28">
         <div className="mx-auto max-w-4xl text-center">
@@ -40,7 +40,11 @@ export default function Hero() {
             initial={fadeUp}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{
+              duration: 0.7,
+              delay: 0.1,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
             className="font-heading text-4xl font-medium leading-[1.05] tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-5xl md:text-6xl lg:text-7xl"
           >
             Every Great Innovation Begins with Copper.
@@ -50,7 +54,11 @@ export default function Hero() {
             initial={fadeUp}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{
+              duration: 0.7,
+              delay: 0.2,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] sm:text-xl"
           >
             {hero.subheadline}
@@ -60,7 +68,11 @@ export default function Hero() {
             initial={fadeUp}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.7, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+            transition={{
+              duration: 0.7,
+              delay: 0.3,
+              ease: [0.25, 0.46, 0.45, 0.94],
+            }}
             className="mt-8 flex flex-wrap items-center justify-center gap-4"
           >
             <Link

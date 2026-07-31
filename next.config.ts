@@ -12,7 +12,7 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    optimizePackageImports: ["@studio-freight/lenis"],
+    optimizePackageImports: ["lucide-react", "framer-motion"],
   },
 };
 

@@ -5,14 +5,22 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { SmoothScrollProvider } from "@/components/SmoothScrollProvider";
-import { CursorGlow } from "@/components/ui/CursorGlow";
-import { GrainOverlay } from "@/components/ui/GrainOverlay";
 import { LMECopperSidebar } from "@/components/ui/LMECopperSidebar";
 
 const eurostile = localFont({
-  src: "./fonts/EurostileExtendedBlack.ttf",
+  src: [
+    {
+      path: "./fonts/EurostileExtendedBlack.woff2",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "./fonts/EurostileExtendedBlack-web.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
   variable: "--font-eurostile",
-  weight: "900",
   display: "swap",
   fallback: ["Arial Narrow", "Arial", "sans-serif"],
 });
@@ -56,10 +64,10 @@ export default function RootLayout({
       lang="en"
       className={`${eurostile.variable} ${satoshi.variable} ${inter.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-dark-900 text-text-primary">
+      <body
+        className={`${eurostile.className} min-h-full flex flex-col bg-dark-900 text-text-primary`}
+      >
         <SmoothScrollProvider>
-          <CursorGlow />
-          <GrainOverlay />
           <LMECopperSidebar />
           <div className="relative z-10 flex flex-col min-h-full">
             <Navbar />

@@ -23,8 +23,55 @@ const partnerLogos = [
   "/images/Clients/Keshan-Clients-17.png",
   "/images/Clients/Keshan-Clients-18.png",
   "/images/Clients/Keshan-Clients-19.png",
-  "/images/Clients/Keshan-Clients_Artboard 1 copy.png",
 ];
+
+const rowOne = partnerLogos.filter((_, i) => i % 2 === 0);
+const rowTwo = partnerLogos.filter((_, i) => i % 2 === 1);
+
+function LogoTrack({
+  items,
+  reverse = false,
+}: {
+  items: string[];
+  reverse?: boolean;
+}) {
+  const loop = [...items, ...items];
+
+  return (
+    <div className="group relative overflow-hidden border-y border-copper-base/20">
+      <div
+        className="pointer-events-none absolute inset-y-0 left-0 z-10 w-12 bg-gradient-to-r from-dark-950 to-transparent sm:w-20"
+        aria-hidden
+      />
+      <div
+        className="pointer-events-none absolute inset-y-0 right-0 z-10 w-12 bg-gradient-to-l from-dark-950 to-transparent sm:w-20"
+        aria-hidden
+      />
+
+      <div
+        className={`flex w-max group-hover:[animation-play-state:paused] motion-reduce:animate-none ${
+          reverse ? "animate-marquee-reverse" : "animate-marquee"
+        }`}
+      >
+        {loop.map((src, i) => (
+          <div
+            key={`${src}-${i}`}
+            className="flex w-[180px] shrink-0 items-center justify-center border-r border-copper-base/15 px-6 py-6 sm:w-[210px] sm:px-8 sm:py-7"
+            aria-hidden={i >= items.length || undefined}
+          >
+            <Image
+              src={src}
+              alt={i < items.length ? `Client logo ${i + 1}` : ""}
+              width={150}
+              height={56}
+              className="h-8 w-auto max-w-[140px] object-contain opacity-60 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0 sm:h-9"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export function ClientsSection() {
   return (
@@ -54,25 +101,9 @@ export function ClientsSection() {
       </div>
 
       <Reveal variant="fade" delay={0.08}>
-        <div className="mx-auto max-w-6xl px-gutter">
-          <div className="overflow-hidden rounded-2xl border border-copper-base/20 bg-dark-900/45 p-3 sm:p-4">
-            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-              {partnerLogos.map((src, i) => (
-                <div
-                  key={src}
-                  className="flex h-20 items-center justify-center rounded-xl border border-copper-base/10 bg-dark-950/55 px-4 sm:h-24"
-                >
-                  <Image
-                    src={src}
-                    alt={`Client logo ${i + 1}`}
-                    width={170}
-                    height={70}
-                    className="h-10 w-auto max-w-[170px] object-contain opacity-70 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="space-y-0">
+          <LogoTrack items={rowOne} />
+          <LogoTrack items={rowTwo} reverse />
         </div>
       </Reveal>
     </section>

@@ -1,15 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import { quality } from "@/lib/data";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { Reveal } from "@/components/ui/Reveal";
 import CopperHighlight from "@/components/ui/CopperHighlight";
 import { CopperWave } from "@/components/ui/CopperWave";
-
-const QUALITY_BG_VIDEO =
-  "https://res.cloudinary.com/p4nrvzvp/video/upload/v1784382748/0_Abstract_Texture_1920x1080_v6me2a.mp4";
 
 const qualityIcons = [
   "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383454/Asset-7_4x_jj21yw.png",
@@ -23,49 +19,21 @@ const qualityIcons = [
 ];
 
 export function QualitySection() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry) return;
-        if (entry.isIntersecting) {
-          void video.play().catch(() => {});
-        } else {
-          video.pause();
-        }
-      },
-      { rootMargin: "120px 0px", threshold: 0.05 },
-    );
-
-    observer.observe(video);
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="relative overflow-hidden bg-dark-950">
       <CopperWave id="quality" className="-mb-px" />
 
-      <div className="relative min-h-[72vh] lg:min-h-[80vh]">
-        <video
-          ref={videoRef}
-          className="absolute inset-0 h-full w-full object-cover"
-          src={QUALITY_BG_VIDEO}
-          muted
-          loop
-          playsInline
-          preload="none"
+      <div className="relative min-h-[64vh] lg:min-h-[72vh]">
+        {/* Static atmosphere instead of looping HD video (was crashing mid-scroll) */}
+        <div
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_70%_40%,rgba(184,115,51,0.28),transparent_55%),linear-gradient(120deg,#0a0a0a_0%,#1a120c_45%,#0a0a0a_100%)]"
           aria-hidden
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/85 to-dark-950/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-dark-950 via-dark-950/80 to-dark-950/40" />
         <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-dark-950/50" />
 
-        <div className="relative z-10 flex min-h-[72vh] items-end px-gutter pb-10 pt-24 lg:min-h-[80vh] lg:items-center lg:pb-16 lg:pt-28">
+        <div className="relative z-10 flex min-h-[64vh] items-end px-gutter pb-10 pt-24 lg:min-h-[72vh] lg:items-center lg:pb-16 lg:pt-28">
           <div className="mx-auto grid w-full max-w-6xl gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center lg:gap-12 xl:gap-16">
-            {/* Left: copy + CTA */}
             <div className="max-w-xl lg:max-w-none lg:pr-4">
               <Reveal variant="fade">
                 <div className="mb-4 flex items-center gap-3">
@@ -99,25 +67,20 @@ export function QualitySection() {
               </Reveal>
             </div>
 
-            {/* Right: certification icons — sized to balance the copy column */}
             <Reveal variant="fade" delay={0.14} className="lg:justify-self-end">
               <ul
                 className="mx-auto grid w-full max-w-[400px] grid-cols-4 gap-3.5 sm:max-w-[440px] sm:gap-4 md:max-w-[480px] lg:mx-0 lg:w-[480px] lg:max-w-none lg:gap-4"
                 aria-label="Quality certifications"
               >
-                {qualityIcons.map((src, i) => (
+                {qualityIcons.map((src) => (
                   <li key={src} className="aspect-square w-full">
-                    <div
-                      className="copper-circle-shine h-full w-full"
-                      style={{ ["--shine-delay" as string]: `${i * 0.22}s` }}
-                    >
-                      <span className="copper-circle-shine__spin" aria-hidden />
-                      <div className="copper-circle-shine__media">
+                    <div className="relative h-full w-full overflow-hidden rounded-full border border-copper-base/35 bg-dark-900/80 p-[2px]">
+                      <div className="relative h-full w-full overflow-hidden rounded-full bg-dark-950">
                         <Image
                           src={src}
                           alt=""
                           fill
-                          sizes="120px"
+                          sizes="96px"
                           className="object-cover"
                           aria-hidden
                         />

@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
   Zap,
   PanelTop,
@@ -144,29 +143,15 @@ export function IndustriesSection() {
                           isOpen ? "opacity-100" : "opacity-0"
                         }`}
                       >
-                        <motion.div
-                          key={`${item.name}-${isOpen ? "open" : "closed"}`}
-                          className="absolute inset-0"
-                          initial={false}
-                          animate={
-                            isOpen
-                              ? { scale: 1, y: 0, opacity: 1 }
-                              : { scale: 1.06, y: 12, opacity: 0 }
-                          }
-                          transition={{
-                            duration: 0.45,
-                            ease: [0.22, 1, 0.36, 1],
-                          }}
-                        >
+                        {isOpen ? (
                           <Image
                             src={item.image}
-                            alt={isOpen ? item.name : ""}
+                            alt={item.name}
                             fill
                             className="object-cover"
                             sizes="(max-width: 1024px) 100vw, 960px"
-                            priority={index === 0}
                           />
-                        </motion.div>
+                        ) : null}
 
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark-950/80 via-dark-950/15 to-transparent" />
                         <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-copper-base/15 via-transparent to-transparent" />
