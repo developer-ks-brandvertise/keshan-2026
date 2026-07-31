@@ -1,10 +1,10 @@
 "use client";
 
-import { Suspense, useEffect, useState } from "react";
+import { Suspense, useEffect, useLayoutEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
-import { Canvas } from "@react-three/fiber";
+import { Box3, Group, Vector3 } from "three";
+import { Canvas, useThree } from "@react-three/fiber";
 import {
-  Center,
   ContactShadows,
   Environment,
   OrbitControls,
@@ -16,24 +16,58 @@ type ProductModelViewerProps = {
   label?: string;
 };
 
+/** Target max dimension in scene units so any GLB fits in frame */
+const TARGET_SIZE = 2.2;
+
 function Model({ src }: { src: string }) {
   const { scene } = useGLTF(src);
+  const groupRef = useRef<Group>(null);
+
+  useLayoutEffect(() => {
+    const group = groupRef.current;
+    if (!group) return;
+
+    group.scale.setScalar(1);
+    group.position.set(0, 0, 0);
+
+    const box = new Box3().setFromObject(group);
+    const size = box.getSize(new Vector3());
+    const center = box.getCenter(new Vector3());
+    const maxDim = Math.max(size.x, size.y, size.z, 0.0001);
+    const scale = TARGET_SIZE / maxDim;
+
+    group.scale.setScalar(scale);
+    group.position.set(-center.x * scale, -center.y * scale, -center.z * scale);
+  }, [scene]);
+
   return (
-    <Center>
+    <group ref={groupRef}>
       <primitive object={scene} />
-    </Center>
+    </group>
   );
+}
+
+function CameraFit() {
+  const { camera } = useThree();
+
+  useLayoutEffect(() => {
+    camera.position.set(0, 0.85, 5.2);
+    camera.lookAt(0, 0, 0);
+    camera.updateProjectionMatrix();
+  }, [camera]);
+
+  return null;
 }
 
 function ModelScene({ src }: { src: string }) {
   return (
     <>
-      <ambientLight intensity={0.35} color="#d4a574" />
+      <CameraFit />
+      <ambientLight intensity={0.4} color="#d4a574" />
       <directionalLight
         position={[4, 6, 3]}
         intensity={1.35}
         color="#ffe2b0"
-        castShadow
       />
       <directionalLight position={[-4, 2, -2]} intensity={0.55} color="#b87333" />
       <pointLight position={[0, 3, 2]} intensity={0.45} color="#e8a659" />
@@ -42,21 +76,24 @@ function ModelScene({ src }: { src: string }) {
         <Environment preset="city" environmentIntensity={0.35} />
       </Suspense>
       <ContactShadows
-        position={[0, -1.15, 0]}
-        opacity={0.45}
-        scale={8}
-        blur={2.4}
-        far={4}
-        color="#1a120c"
+        position={[0, -1.2, 0]}
+        opacity={0.4}
+        scale={10}
+        blur={2.6}
+        far={5}
+        color="#0a0a0a"
       />
       <OrbitControls
         makeDefault
         enablePan={false}
-        enableZoom={false}
+        enableZoom
+        minDistance={3}
+        maxDistance={10}
         autoRotate
         autoRotateSpeed={0.7}
-        minPolarAngle={Math.PI / 3.2}
-        maxPolarAngle={Math.PI / 1.75}
+        target={[0, 0, 0]}
+        minPolarAngle={Math.PI / 4}
+        maxPolarAngle={Math.PI / 1.7}
       />
     </>
   );
@@ -68,7 +105,7 @@ function ViewerCanvas({ src }: { src: string }) {
       className="h-full w-full touch-none"
       style={{ background: "transparent" }}
       dpr={[1, 1.5]}
-      camera={{ position: [0, 0.6, 3.4], fov: 38, near: 0.1, far: 100 }}
+      camera={{ position: [0, 0.85, 5.2], fov: 42, near: 0.1, far: 200 }}
       gl={{ antialias: true, alpha: true, powerPreference: "high-performance" }}
     >
       <ModelScene src={src} />
@@ -113,7 +150,7 @@ export function ProductModelViewer({
       </div>
 
       <p className="pointer-events-none absolute bottom-3 left-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-text-muted">
-        {label} · drag to rotate
+        {label} · drag to rotate · scroll to zoom
       </p>
     </div>
   );

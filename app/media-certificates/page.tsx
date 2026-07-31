@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { mediaCertificates } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CopperHighlight from "@/components/ui/CopperHighlight";
+import { CertificatesGallery } from "@/components/media/CertificatesGallery";
 
 export const metadata: Metadata = {
   title: "Media & Certificates | Keshan Industries",
@@ -83,36 +83,7 @@ export default function MediaCertificatesPage() {
             </p>
           </AnimatedSection>
 
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {certificates.items.map((cert, index) => (
-              <AnimatedSection key={cert.src} delay={index * 0.05}>
-                <a
-                  href={cert.src}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block border border-dark-100/10 bg-dark-900 transition-colors hover:border-copper-base/50"
-                >
-                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-dark-950">
-                    <Image
-                      src={cert.src}
-                      alt={cert.alt}
-                      fill
-                      sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
-                      className="object-contain p-3 transition-transform duration-500 group-hover:scale-[1.02] sm:p-4"
-                    />
-                  </div>
-                  <div className="flex items-center justify-between border-t border-dark-100/10 px-4 py-3">
-                    <span className="font-heading text-xs tracking-[0.18em] text-copper-base">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.16em] text-text-muted transition-colors group-hover:text-copper-base">
-                      View full
-                    </span>
-                  </div>
-                </a>
-              </AnimatedSection>
-            ))}
-          </div>
+          <CertificatesGallery items={certificates.items} />
         </div>
       </section>
     </main>

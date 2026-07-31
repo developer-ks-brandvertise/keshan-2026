@@ -6,13 +6,13 @@ import type { GlobeConfig } from "@/components/ui/github-globe";
 const World = dynamic(
   () => import("@/components/ui/github-globe").then((m) => m.World),
   {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-full w-full items-center justify-center">
-      <div className="h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(184,115,51,0.25),transparent_70%)]" />
-    </div>
-  ),
-},
+    ssr: false,
+    loading: () => (
+      <div className="flex h-full w-full items-center justify-center">
+        <div className="h-40 w-40 rounded-full bg-[radial-gradient(circle,rgba(184,115,51,0.25),transparent_70%)]" />
+      </div>
+    ),
+  },
 );
 
 const copperColors = ["#b87333", "#d4a574", "#e8a659", "#f5c58a"];
@@ -79,13 +79,13 @@ const sampleArcs: Arc[] = [
 
 const globeConfig: GlobeConfig = {
   pointSize: 4,
-  globeColor: "#1a120c",
+  globeColor: "#000000",
   showAtmosphere: true,
   atmosphereColor: "#b87333",
   atmosphereAltitude: 0.14,
-  emissive: "#5c3a1a",
-  emissiveIntensity: 0.22,
-  shininess: 0.85,
+  emissive: "#000000",
+  emissiveIntensity: 0.05,
+  shininess: 0.7,
   polygonColor: "rgba(245, 197, 138, 0.55)",
   ambientLight: "#d4a574",
   directionalLeftLight: "#ffe2b0",
@@ -102,14 +102,20 @@ const globeConfig: GlobeConfig = {
 
 export function GlobeDemo() {
   return (
-    <div className="relative aspect-square w-full max-w-[520px] justify-self-center lg:max-w-none lg:justify-self-stretch">
+    /* Outer frame shows ~70% of the globe (bottom clipped) */
+    <div className="relative aspect-[10/7] w-full max-w-[640px] justify-self-center overflow-hidden lg:max-w-none lg:justify-self-stretch">
       <div
-        className="pointer-events-none absolute inset-0 scale-110 bg-[radial-gradient(circle_at_50%_48%,rgba(184,115,51,0.28),transparent_58%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_35%,rgba(184,115,51,0.28),transparent_58%)]"
         aria-hidden
       />
-      <div className="absolute inset-0 z-10">
+      {/* Larger square globe, anchored at top so only upper ~70% is visible */}
+      <div className="absolute left-1/2 top-0 z-10 aspect-square w-[130%] -translate-x-1/2">
         <World data={sampleArcs} globeConfig={globeConfig} />
       </div>
+      <div
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-20 h-16 bg-gradient-to-t from-dark-950 to-transparent"
+        aria-hidden
+      />
     </div>
   );
 }

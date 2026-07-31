@@ -33,7 +33,7 @@ export default function Footer() {
         aria-hidden
       />
       <p
-        className="pointer-events-none absolute bottom-16 left-1/2 -translate-x-1/2 select-none font-heading text-[18vw] font-medium leading-none tracking-[-4px] text-dark-100/[0.04] whitespace-nowrap lg:bottom-20 lg:text-[12rem]"
+        className="pointer-events-none absolute bottom-16 left-1/2 -translate-x-1/2 select-none font-heading text-[18vw] font-medium leading-none tracking-[-2px] text-dark-100/[0.04] whitespace-nowrap lg:bottom-20 lg:text-[12rem]"
         aria-hidden
       >
         KESHAN

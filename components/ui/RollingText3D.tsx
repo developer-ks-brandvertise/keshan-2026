@@ -113,7 +113,7 @@ export function RollingText3D({
         <ol className="mt-8 space-y-8">
           {items.map((item) => (
             <li key={item.id} className="border-b border-dark-100/10 pb-8 last:border-0">
-              <div className="text-copper-shimmer font-heading text-2xl tracking-[-4px] md:text-3xl">
+              <div className="text-copper-shimmer font-heading text-2xl tracking-[-2px] md:text-3xl">
                 {item.label}
               </div>
               {item.detail ? (
@@ -163,7 +163,7 @@ export function RollingText3D({
                 className="absolute left-1/2 top-1/2 flex w-full -translate-x-1/2 -translate-y-1/2 items-center justify-center [backface-visibility:hidden]"
                 style={{ transformStyle: "preserve-3d" }}
               >
-                <span className="text-copper-shimmer text-center font-heading text-4xl font-semibold tracking-[-4px] md:text-6xl lg:text-7xl">
+                <span className="text-copper-shimmer text-center font-heading text-4xl font-semibold tracking-[-2px] md:text-6xl lg:text-7xl">
                   {item.label}
                 </span>
               </li>
