@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowUpRight, Download, FileText } from "lucide-react";
 import { products, getProductBySlug } from "@/lib/products";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
+import { ProductModelViewer } from "@/components/products/ProductModelViewer";
 
 interface ProductPageProps {
   params: Promise<{ slug: string }>;
@@ -58,6 +59,21 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       <section className="bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
+          {product.modelSrc ? (
+            <AnimatedSection className="mb-12 lg:mb-16">
+              <div className="mb-4 flex items-center gap-3">
+                <span className="h-px w-8 bg-copper-base" aria-hidden />
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
+                  Interactive model
+                </span>
+              </div>
+              <ProductModelViewer
+                src={product.modelSrc}
+                label={`${product.name} 3D`}
+              />
+            </AnimatedSection>
+          ) : null}
+
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
             <AnimatedSection className="lg:col-span-4">
               <div className="lg:sticky lg:top-28 space-y-8">

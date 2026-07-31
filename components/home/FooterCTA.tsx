@@ -5,7 +5,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { CopperWave } from "@/components/ui/CopperWave";
 import CopperHighlight from "@/components/ui/CopperHighlight";
-import { Globe } from "@/components/ui/Globe";
+import { GlobeDemo } from "@/components/ui/GlobeDemo";
 
 export function FooterCTASection() {
   return (
@@ -13,7 +13,7 @@ export function FooterCTASection() {
       <CopperWave flip id="footer-cta" className="bg-dark-900" />
 
       <div className="relative z-10 px-gutter pt-section pb-section">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
           <div className="relative max-w-xl text-left lg:max-w-lg">
             <Reveal variant="slide">
               <div className="mb-4 flex items-center gap-3">
@@ -84,14 +84,9 @@ export function FooterCTASection() {
             </Reveal>
           </div>
 
-          {/* Full globe in column — no hard edge clipping */}
           <Reveal variant="fade" delay={0.12}>
-            <div className="relative mx-auto aspect-square w-full max-w-[340px] sm:max-w-[400px] lg:max-w-[440px]">
-              <div
-                className="pointer-events-none absolute inset-[-10%] rounded-full bg-[radial-gradient(circle,rgba(184,115,51,0.22)_0%,transparent_68%)]"
-                aria-hidden
-              />
-              <Globe />
+            <div className="relative w-full">
+              <GlobeDemo />
             </div>
           </Reveal>
         </div>

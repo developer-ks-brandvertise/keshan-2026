@@ -15,6 +15,7 @@ export const navLinks = [
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
   { label: "Knowledge Centre", href: "/knowledge-centre" },
+  { label: "Media & Certificates", href: "/media-certificates" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -119,6 +120,50 @@ export const quality = {
     "Compliance with IS, ASTM, DIN, JIS, and BS standards",
   ],
   cta: "View Our Quality Standards",
+};
+
+export const mediaCertificates = {
+  headline: "Proof Behind Every Batch We Ship.",
+  subheadline:
+    "Certifications that back our quality systems — and a media library of plant, product, and partnership moments (coming soon).",
+  media: {
+    headline: "Media Gallery",
+    body: "Facility, product, and event photography will appear here shortly. Check back soon for the full media library.",
+  },
+  certificates: {
+    headline: "Certificates",
+    body: "Official certifications and quality credentials issued to Keshan Industries — ISO systems, compliance, and verified standards.",
+    items: [
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1785512008/2_dmsxnv.png",
+        alt: "Keshan Industries certificate 01",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1785512007/6_lrlvuc.png",
+        alt: "Keshan Industries certificate 02",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1785512007/5_a4hafc.png",
+        alt: "Keshan Industries certificate 03",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1785512007/1_oq5py0.png",
+        alt: "Keshan Industries certificate 04",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1785512007/7_gwo1fz.png",
+        alt: "Keshan Industries certificate 05",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1785512007/3_iqgkow.png",
+        alt: "Keshan Industries certificate 06",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1785512006/4_cjsdxl.png",
+        alt: "Keshan Industries certificate 07",
+      },
+    ],
+  },
 };
 
 export const industries = {

@@ -9,6 +9,8 @@ export interface Product {
   cta: string;
   metaTitle: string;
   metaDescription: string;
+  /** Public path to a GLB/GLTF model shown on the product page */
+  modelSrc?: string;
 }
 
 export const products: Product[] = [
@@ -36,6 +38,7 @@ export const products: Product[] = [
     metaTitle: "Copper Ingots Manufacturer & Exporter | Keshan Industries | High Purity Cu-ETP",
     metaDescription:
       "One of India's largest exporters of copper ingots. High-purity Cu-ETP and Cu-OF for rolling mills, foundries, and alloy manufacturers. IS, ASTM & EN compliant. Request a quote.",
+    modelSrc: "/3d-assets/copper_stone.glb",
   },
   {
     slug: "copper-busbars",
