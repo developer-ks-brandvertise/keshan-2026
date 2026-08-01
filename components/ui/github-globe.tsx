@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { Color, Scene, PerspectiveCamera, Vector3 } from "three";
+import { Color, Scene, PerspectiveCamera, Vector3, MeshBasicMaterial } from "three";
 import ThreeGlobe from "three-globe";
 import { useThree, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -16,7 +16,7 @@ declare module "@react-three/fiber" {
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1;
-const cameraZ = 255;
+const cameraZ = 280;
 
 type Position = {
   order: number;
@@ -102,16 +102,14 @@ export function Globe({ globeConfig, data }: WorldProps) {
   const _buildMaterial = () => {
     if (!globeRef.current) return;
 
-    const globeMaterial = globeRef.current.globeMaterial() as unknown as {
-      color: Color;
-      emissive: Color;
-      emissiveIntensity: number;
-      shininess: number;
-    };
-    globeMaterial.color = new Color(defaultProps.globeColor);
-    globeMaterial.emissive = new Color(defaultProps.emissive);
-    globeMaterial.emissiveIntensity = defaultProps.emissiveIntensity || 0.1;
-    globeMaterial.shininess = defaultProps.shininess || 0.9;
+    // MeshBasicMaterial ignores lights — Phong was leaving a dark “shadow hemisphere”
+    // that read as a black hole on the sphere face / rim.
+    const material = new MeshBasicMaterial({
+      color: new Color(defaultProps.globeColor),
+      transparent: false,
+      depthWrite: true,
+    });
+    globeRef.current.globeMaterial(material);
   };
 
   const _buildData = () => {
@@ -155,13 +153,12 @@ export function Globe({ globeConfig, data }: WorldProps) {
       globeRef.current
         .hexPolygonsData(countries.features)
         .hexPolygonResolution(3)
-        .hexPolygonMargin(0.7)
+        .hexPolygonMargin(0.55)
+        .hexPolygonAltitude(0.01)
         .showAtmosphere(defaultProps.showAtmosphere)
         .atmosphereColor(defaultProps.atmosphereColor)
         .atmosphereAltitude(defaultProps.atmosphereAltitude)
-        .hexPolygonColor((e: any) => {
-          return defaultProps.polygonColor;
-        });
+        .hexPolygonColor(() => defaultProps.polygonColor);
       startAnimation();
     }
   }, [globeData]);
@@ -260,27 +257,23 @@ export function World(props: WorldProps) {
       gl={{ antialias: true, alpha: true, premultipliedAlpha: false }}
     >
       <WebGLRendererConfig />
-      <ambientLight color={globeConfig.ambientLight} intensity={1.15} />
-      {/* Front fill — without this the sphere face reads as a black hole */}
+      {/* Even lighting for hex/arc layers (globe shell itself is MeshBasic) */}
+      <ambientLight color="#f0d4b0" intensity={2.2} />
+      <hemisphereLight args={["#ffe8c8", "#4a3018", 1.4]} />
       <directionalLight
-        color="#ffe8c8"
-        position={new Vector3(0, 80, 400)}
-        intensity={1.35}
+        color="#ffffff"
+        position={new Vector3(0, 0, 400)}
+        intensity={1.6}
       />
       <directionalLight
-        color={globeConfig.directionalLeftLight}
-        position={new Vector3(-400, 100, 400)}
-        intensity={0.85}
+        color="#ffe2b0"
+        position={new Vector3(-200, 300, 200)}
+        intensity={1.0}
       />
       <directionalLight
-        color={globeConfig.directionalTopLight}
-        position={new Vector3(-200, 500, 200)}
-        intensity={0.7}
-      />
-      <pointLight
-        color={globeConfig.pointLight}
-        position={new Vector3(200, 200, 350)}
-        intensity={1.1}
+        color="#d4a574"
+        position={new Vector3(200, -100, 300)}
+        intensity={0.9}
       />
       <Globe {...props} />
       <OrbitControls

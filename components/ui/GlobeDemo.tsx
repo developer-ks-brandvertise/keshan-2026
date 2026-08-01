@@ -79,16 +79,16 @@ const sampleArcs: Arc[] = [
 
 const globeConfig: GlobeConfig = {
   pointSize: 4,
-  // Charcoal + copper undertone — pure black made the front face look like a hole
-  globeColor: "#1c1510",
+  // Mid charcoal — MeshBasic so the shell is evenly visible (no Phong shadow hole)
+  globeColor: "#241c16",
   showAtmosphere: true,
-  atmosphereColor: "#c9893f",
-  atmosphereAltitude: 0.035,
-  emissive: "#3d2818",
-  emissiveIntensity: 0.28,
-  shininess: 0.55,
-  polygonColor: "rgba(245, 197, 138, 0.75)",
-  ambientLight: "#e8c9a0",
+  atmosphereColor: "#b87333",
+  atmosphereAltitude: 0.04,
+  emissive: "#241c16",
+  emissiveIntensity: 0,
+  shininess: 0,
+  polygonColor: "rgba(200, 130, 60, 0.92)",
+  ambientLight: "#f0d4b0",
   directionalLeftLight: "#ffe2b0",
   directionalTopLight: "#ffffff",
   pointLight: "#f0c48a",
