@@ -260,19 +260,27 @@ export function World(props: WorldProps) {
       gl={{ antialias: true, alpha: true, premultipliedAlpha: false }}
     >
       <WebGLRendererConfig />
-      <ambientLight color={globeConfig.ambientLight} intensity={0.6} />
+      <ambientLight color={globeConfig.ambientLight} intensity={1.15} />
+      {/* Front fill — without this the sphere face reads as a black hole */}
+      <directionalLight
+        color="#ffe8c8"
+        position={new Vector3(0, 80, 400)}
+        intensity={1.35}
+      />
       <directionalLight
         color={globeConfig.directionalLeftLight}
         position={new Vector3(-400, 100, 400)}
+        intensity={0.85}
       />
       <directionalLight
         color={globeConfig.directionalTopLight}
         position={new Vector3(-200, 500, 200)}
+        intensity={0.7}
       />
       <pointLight
         color={globeConfig.pointLight}
-        position={new Vector3(-200, 500, 200)}
-        intensity={0.8}
+        position={new Vector3(200, 200, 350)}
+        intensity={1.1}
       />
       <Globe {...props} />
       <OrbitControls
