@@ -16,7 +16,8 @@ declare module "@react-three/fiber" {
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1;
-const cameraZ = 280;
+// Keep camera far enough from the sphere (radius ~100) that near-plane never clips it
+const cameraZ = 300;
 
 type Position = {
   order: number;
@@ -253,7 +254,7 @@ export function World(props: WorldProps) {
       className="h-full w-full !bg-transparent"
       style={{ background: "transparent" }}
       scene={scene}
-      camera={new PerspectiveCamera(50, aspect, 180, 1800)}
+      camera={new PerspectiveCamera(50, aspect, 1, 2000)}
       gl={{ antialias: true, alpha: true, premultipliedAlpha: false }}
     >
       <WebGLRendererConfig />
