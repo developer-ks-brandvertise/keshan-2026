@@ -229,7 +229,7 @@ export function WebGLRendererConfig() {
     gl.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
     gl.setSize(size.width, size.height);
     gl.setClearColor(0x000000, 0);
-  }, []);
+  }, [gl, size.width, size.height]);
 
   return null;
 }
@@ -237,28 +237,32 @@ export function WebGLRendererConfig() {
 export function World(props: WorldProps) {
   const { globeConfig } = props;
   const scene = new Scene();
-  // No fog — keeps the canvas transparent so the page background shows through
   scene.fog = null;
 
   const [mounted, setMounted] = useState(false);
   useEffect(() => {
-    // Dynamically extend here to ensure it only happens on client
     extend({ ThreeGlobe });
     setMounted(true);
   }, []);
 
-  if (!mounted) return null;
+  if (!mounted) {
+    return (
+      <div className="flex h-full min-h-[360px] w-full items-center justify-center">
+        <div className="h-40 w-40 rounded-full border border-copper-base/40" />
+      </div>
+    );
+  }
 
   return (
     <Canvas
       className="h-full w-full !bg-transparent"
-      style={{ background: "transparent" }}
+      style={{ width: "100%", height: "100%", display: "block" }}
       scene={scene}
-      camera={new PerspectiveCamera(50, aspect, 1, 2000)}
+      camera={new PerspectiveCamera(50, aspect, 0.1, 2000)}
       gl={{ antialias: true, alpha: true, premultipliedAlpha: false }}
+      resize={{ scroll: false, debounce: { scroll: 50, resize: 0 } }}
     >
       <WebGLRendererConfig />
-      {/* Even lighting for hex/arc layers (globe shell itself is MeshBasic) */}
       <ambientLight color="#f0d4b0" intensity={2.2} />
       <hemisphereLight args={["#ffe8c8", "#4a3018", 1.4]} />
       <directionalLight

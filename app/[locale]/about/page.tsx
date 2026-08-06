@@ -45,21 +45,22 @@ export default function AboutPage() {
         />
         <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:gap-16">
           <AnimatedSection className="lg:col-span-5">
-            <div className="relative overflow-hidden border border-copper-base/25 shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
-              <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-[3/4]">
-                <Image
-                  src="https://res.cloudinary.com/p4nrvzvp/image/upload/v1786037495/About-Keshan-Image_kw1bkw.png"
-                  alt="Keshan facility"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-transparent to-transparent opacity-80" />
-                <div className="absolute left-4 top-4 border border-copper-base/40 bg-dark-950/80 px-3 py-1.5 backdrop-blur-sm">
-                  <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-                    Plant · Hyderabad
-                  </span>
-                </div>
+            <div className="relative h-full min-h-[420px] overflow-hidden border border-copper-base/25 shadow-[0_24px_80px_rgba(0,0,0,0.35)] sm:min-h-[480px] lg:min-h-[560px]">
+              <Image
+                src="https://res.cloudinary.com/p4nrvzvp/image/upload/v1786037495/About-Keshan-Image_kw1bkw.png"
+                alt="Keshan facility"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent" />
+              <div className="absolute bottom-[5.25rem] left-5 right-5 sm:bottom-24">
+                <p className="font-heading text-[10px] uppercase tracking-[0.28em] text-copper-base">
+                  Since 2019
+                </p>
+                <p className="mt-1 text-lg text-text-primary">
+                  Precision copper. Made in India.
+                </p>
               </div>
               <div className="absolute inset-x-0 bottom-0 border-t border-copper-base/40 bg-dark-950/92">
                 <div className="grid grid-cols-2 sm:grid-cols-4">

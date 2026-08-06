@@ -41,33 +41,29 @@ export function ValuePropSection() {
         <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:items-stretch lg:gap-14 xl:gap-16">
           <div className="relative lg:col-span-5">
             <Reveal variant="slide">
-              <div className="relative overflow-hidden border border-copper-base/25 shadow-[0_28px_80px_rgba(0,0,0,0.4)]">
-                <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-auto lg:min-h-[580px]">
-                  <Image
-                    src={ABOUT_IMAGE}
-                    alt="Keshan manufacturing facility"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 42vw"
-                    priority
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/15 to-transparent" />
-                  <div className="absolute left-4 top-4 border border-copper-base/40 bg-dark-950/80 px-3 py-1.5 backdrop-blur-sm">
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-                      Mill ticket · Hyderabad
-                    </span>
-                  </div>
-                  <div className="absolute bottom-24 left-4 right-4 sm:bottom-28">
-                    <p className="font-heading text-[10px] uppercase tracking-[0.28em] text-copper-base">
-                      Since 2019
-                    </p>
-                    <p className="mt-1 text-lg text-text-primary sm:text-xl">
-                      Precision copper. Made in India.
-                    </p>
-                  </div>
+              <div className="relative h-full min-h-[420px] overflow-hidden border border-copper-base/25 shadow-[0_28px_80px_rgba(0,0,0,0.35)] sm:min-h-[480px] lg:min-h-[600px]">
+                {/* Full-bleed image */}
+                <Image
+                  src={ABOUT_IMAGE}
+                  alt="Keshan manufacturing facility"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 1024px) 100vw, 42vw"
+                  priority
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/25 to-transparent" />
+
+                <div className="absolute bottom-[5.5rem] left-5 right-5 sm:bottom-24 sm:left-6">
+                  <p className="font-heading text-[10px] uppercase tracking-[0.28em] text-copper-base">
+                    Since 2019
+                  </p>
+                  <p className="mt-1 text-lg text-text-primary sm:text-xl">
+                    Precision copper. Made in India.
+                  </p>
                 </div>
 
-                <div className="absolute inset-x-0 bottom-0 border-t border-copper-base/40 bg-dark-950/92 backdrop-blur-sm">
+                {/* Stats overlay — sits on the image */}
+                <div className="absolute inset-x-0 bottom-0 border-t border-copper-base/35 bg-dark-950/90 backdrop-blur-sm">
                   <div className="flex items-stretch">
                     {millStats.map((stat, i) => (
                       <div
@@ -85,7 +81,7 @@ export function ValuePropSection() {
                       </div>
                     ))}
                   </div>
-                  <div className="flex h-1.5 w-full overflow-hidden">
+                  <div className="flex h-1 w-full overflow-hidden">
                     {Array.from({ length: 48 }).map((_, i) => (
                       <span
                         key={i}

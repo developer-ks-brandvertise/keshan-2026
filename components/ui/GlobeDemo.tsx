@@ -8,8 +8,8 @@ const World = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-full min-h-[320px] w-full items-center justify-center lg:min-h-[480px]">
-        <div className="h-48 w-48 rounded-full border border-copper-base/40 lg:h-64 lg:w-64" />
+      <div className="flex h-full w-full items-center justify-center">
+        <div className="h-[55%] w-[55%] rounded-full border border-copper-base/35 bg-copper-base/5" />
       </div>
     ),
   },
@@ -102,9 +102,18 @@ const globeConfig: GlobeConfig = {
 
 export function GlobeDemo() {
   return (
-    <div className="relative mx-auto w-full max-w-[720px] lg:max-w-none">
-      <div className="relative mx-auto aspect-square w-full max-w-[560px] sm:max-w-[640px] lg:max-w-none lg:w-full">
-        <div className="absolute inset-0 scale-[1.12] sm:scale-[1.18] lg:scale-[1.22]">
+    <div className="relative mx-auto w-full">
+      {/* Explicit pixel-friendly stage so R3F Canvas gets real dimensions */}
+      <div
+        className="relative mx-auto w-full overflow-hidden"
+        style={{
+          aspectRatio: "1 / 1",
+          width: "100%",
+          maxWidth: 620,
+          minHeight: 360,
+        }}
+      >
+        <div className="absolute inset-0 h-full w-full">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>

@@ -84,7 +84,7 @@ export function FooterCTASection() {
             </Reveal>
           </div>
 
-          <div className="relative z-10 -mx-4 min-h-[340px] sm:-mx-2 sm:min-h-[400px] lg:mx-0 lg:min-h-[520px]">
+          <div className="relative z-10 -mx-2 min-h-[380px] sm:min-h-[420px] lg:mx-0 lg:min-h-[520px] lg:flex lg:items-center lg:justify-center">
             <GlobeDemo />
           </div>
         </div>

@@ -12,9 +12,9 @@ export function QualitySection() {
     <section className="relative overflow-hidden bg-dark-950">
       <CopperWave id="quality" className="-mb-px" />
 
-      {/* Static copper atmosphere — no video (keeps scroll smooth) */}
+      {/* Theme-aware atmosphere (no hardcoded black — works in light mode) */}
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_75%_40%,rgba(184,115,51,0.22),transparent_55%),radial-gradient(ellipse_at_15%_80%,rgba(92,58,26,0.35),transparent_50%),linear-gradient(160deg,#080808_0%,#12100e_45%,#0a0a0a_100%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_75%_40%,rgba(184,115,51,0.16),transparent_55%),radial-gradient(ellipse_at_15%_80%,rgba(184,115,51,0.08),transparent_50%)]"
         aria-hidden
       />
       <div
@@ -38,7 +38,7 @@ export function QualitySection() {
             </Reveal>
 
             <Reveal variant="slide">
-              <h2 className="text-h2 text-balance">
+              <h2 className="text-h2 text-balance text-text-primary">
                 Quality is Not a Department at Keshan. It is the{" "}
                 <CopperHighlight>Standard</CopperHighlight>.
               </h2>
@@ -55,7 +55,7 @@ export function QualitySection() {
                 {quality.pillars.map((pillar) => (
                   <li
                     key={pillar}
-                    className="border border-copper-base/20 bg-dark-900/60 px-4 py-3 text-body-sm text-text-primary"
+                    className="border border-copper-base/25 bg-dark-900/80 px-4 py-3 text-body-sm text-text-primary"
                   >
                     <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-copper-base align-middle" />
                     {pillar}
@@ -72,15 +72,17 @@ export function QualitySection() {
           </div>
 
           <Reveal variant="fade" delay={0.14}>
-            <div className="relative border border-copper-base/25 bg-dark-900/50 p-5 sm:p-7">
+            <div className="relative border border-copper-base/30 bg-dark-900 p-5 sm:p-7">
               <div
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(184,115,51,0.1),transparent_65%)]"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(184,115,51,0.08),transparent_65%)]"
                 aria-hidden
               />
               <p className="relative mb-5 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
                 Certifications & memberships
               </p>
-              <QualityLogoGrid className="relative max-w-none" />
+              <div className="relative min-h-[220px] w-full sm:min-h-[260px]">
+                <QualityLogoGrid />
+              </div>
             </div>
           </Reveal>
         </div>
