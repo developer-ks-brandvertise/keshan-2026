@@ -7,6 +7,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { CopperWave } from "@/components/ui/CopperWave";
+import CopperHighlight from "@/components/ui/CopperHighlight";
 
 const datasheet = [
   { label: "Control", value: "Metallurgical control on every batch" },
@@ -22,32 +23,47 @@ const millStats = [
   { value: "100%", unit: "QC tested" },
 ];
 
+const ABOUT_IMAGE =
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786037495/About-Keshan-Image_kw1bkw.png";
+
 export function ValuePropSection() {
   const t = useTranslations("common");
 
   return (
     <section className="relative overflow-hidden bg-dark-900">
       <CopperWave flip id="value" className="-mt-px" />
+      <div
+        className="pointer-events-none absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(184,115,51,0.12),transparent_70%)]"
+        aria-hidden
+      />
 
-      <div className="px-gutter py-section">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:items-stretch lg:gap-16">
+      <div className="relative px-gutter py-section">
+        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:items-stretch lg:gap-14 xl:gap-16">
           <div className="relative lg:col-span-5">
             <Reveal variant="slide">
-              <div className="relative overflow-hidden border border-copper-base/20">
-                <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:min-h-full lg:aspect-auto lg:h-full lg:min-h-[560px]">
+              <div className="relative overflow-hidden border border-copper-base/25 shadow-[0_28px_80px_rgba(0,0,0,0.4)]">
+                <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:aspect-auto lg:min-h-[580px]">
                   <Image
-                    src="https://res.cloudinary.com/p4nrvzvp/image/upload/v1786037495/About-Keshan-Image_kw1bkw.png"
+                    src={ABOUT_IMAGE}
                     alt="Keshan manufacturing facility"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 42vw"
                     priority
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/15 to-transparent" />
                   <div className="absolute left-4 top-4 border border-copper-base/40 bg-dark-950/80 px-3 py-1.5 backdrop-blur-sm">
                     <span className="text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
                       Mill ticket · Hyderabad
                     </span>
+                  </div>
+                  <div className="absolute bottom-24 left-4 right-4 sm:bottom-28">
+                    <p className="font-heading text-[10px] uppercase tracking-[0.28em] text-copper-base">
+                      Since 2019
+                    </p>
+                    <p className="mt-1 text-lg text-text-primary sm:text-xl">
+                      Precision copper. Made in India.
+                    </p>
                   </div>
                 </div>
 
@@ -84,7 +100,7 @@ export function ValuePropSection() {
             </Reveal>
           </div>
 
-          <div className="flex flex-col justify-center lg:col-span-7 lg:pl-2 xl:pl-8">
+          <div className="flex flex-col justify-center lg:col-span-7 lg:pl-2 xl:pl-6">
             <SectionHeading
               index="01"
               eyebrow="About Keshan"
@@ -93,14 +109,24 @@ export function ValuePropSection() {
               align="left"
             />
 
-            <Reveal variant="fade" delay={0.12}>
+            <Reveal variant="fade" delay={0.1}>
               <p className="mt-6 max-w-xl text-body-lg leading-relaxed text-text-secondary">
                 {intro.body}
               </p>
             </Reveal>
 
-            <Reveal variant="fade" delay={0.18}>
-              <div className="mt-9 grid gap-3 sm:grid-cols-2">
+            <Reveal variant="fade" delay={0.16}>
+              <blockquote className="mt-8 border-l-2 border-copper-base bg-dark-950/50 py-4 pl-5 pr-4">
+                <p className="font-heading text-lg leading-snug text-text-primary sm:text-xl">
+                  We are a manufacturing partner, not a commodity supplier —{" "}
+                  <CopperHighlight>batch-tested</CopperHighlight> quality on
+                  every order.
+                </p>
+              </blockquote>
+            </Reveal>
+
+            <Reveal variant="fade" delay={0.2}>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {datasheet.map((row) => (
                   <div
                     key={row.label}
@@ -109,7 +135,9 @@ export function ValuePropSection() {
                     <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
                       {row.label}
                     </span>
-                    <p className="mt-2 text-body-sm text-text-primary">{row.value}</p>
+                    <p className="mt-2 text-body-sm text-text-primary">
+                      {row.value}
+                    </p>
                     <div
                       className="pointer-events-none absolute inset-x-0 bottom-0 h-px scale-x-0 bg-copper-gradient transition-transform duration-500 group-hover:scale-x-100"
                       aria-hidden
@@ -119,7 +147,11 @@ export function ValuePropSection() {
               </div>
             </Reveal>
 
-            <Reveal variant="fade" delay={0.24} className="mt-9 flex flex-wrap items-center gap-4">
+            <Reveal
+              variant="fade"
+              delay={0.26}
+              className="mt-9 flex flex-wrap items-center gap-4"
+            >
               <MagneticButton href="/about" variant="primary">
                 {t("exploreManufacturing")}
               </MagneticButton>

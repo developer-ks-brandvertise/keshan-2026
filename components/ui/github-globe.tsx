@@ -16,8 +16,8 @@ declare module "@react-three/fiber" {
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1;
-// Keep camera far enough from the sphere (radius ~100) that near-plane never clips it
-const cameraZ = 300;
+// Closer camera ≈ 25% larger sphere (near plane stays at 1 to avoid face clipping)
+const cameraZ = 240;
 
 type Position = {
   order: number;

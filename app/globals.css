@@ -490,9 +490,9 @@ html.light {
 .copper-circle-shine {
   position: relative;
   border-radius: 9999px;
-  padding: 2px;
   overflow: hidden;
   isolation: isolate;
+  background: #0a0a0a;
 }
 
 .copper-circle-shine__spin {
@@ -518,8 +518,6 @@ html.light {
 .copper-circle-shine__media {
   position: relative;
   z-index: 1;
-  height: 100%;
-  width: 100%;
   overflow: hidden;
   border-radius: inherit;
   background: #0a0a0a;

@@ -15,16 +15,17 @@ export function QualityLogoGrid({
   compact = false,
 }: QualityLogoGridProps) {
   const reduceMotion = useReducedMotion();
+  const size = compact ? 72 : 96;
 
   return (
     <ul
-      className={`mx-auto grid w-full max-w-[440px] grid-cols-4 gap-3 sm:max-w-[480px] sm:gap-4 ${className}`}
+      className={`mx-auto grid w-full max-w-[480px] grid-cols-4 gap-3 sm:gap-4 ${className}`}
       aria-label="Quality certifications"
     >
       {qualityCertificationLogos.map((src, i) => (
-        <li key={src} className="aspect-square w-full">
+        <li key={src} className="relative w-full" style={{ aspectRatio: "1" }}>
           <div
-            className="copper-circle-shine h-full w-full"
+            className="copper-circle-shine absolute inset-0"
             style={
               reduceMotion
                 ? undefined
@@ -33,23 +34,16 @@ export function QualityLogoGrid({
           >
             {!reduceMotion ? (
               <span className="copper-circle-shine__spin" aria-hidden />
-            ) : (
-              <span
-                className="absolute inset-0 rounded-full border border-copper-base/40"
+            ) : null}
+            <div className="copper-circle-shine__media absolute inset-[2px]">
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes={`${size}px`}
+                className="object-contain p-2"
                 aria-hidden
               />
-            )}
-            <div className="copper-circle-shine__media">
-              <div className="relative h-full w-full">
-                <Image
-                  src={src}
-                  alt=""
-                  fill
-                  sizes={compact ? "72px" : "96px"}
-                  className="object-contain p-1.5 sm:p-2"
-                  aria-hidden
-                />
-              </div>
             </div>
           </div>
         </li>

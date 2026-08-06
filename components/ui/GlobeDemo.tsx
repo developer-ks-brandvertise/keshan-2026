@@ -8,8 +8,8 @@ const World = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-full w-full items-center justify-center">
-        <div className="h-40 w-40 rounded-full border border-copper-base/40" />
+      <div className="flex h-full min-h-[320px] w-full items-center justify-center lg:min-h-[480px]">
+        <div className="h-48 w-48 rounded-full border border-copper-base/40 lg:h-64 lg:w-64" />
       </div>
     ),
   },
@@ -79,11 +79,10 @@ const sampleArcs: Arc[] = [
 
 const globeConfig: GlobeConfig = {
   pointSize: 4,
-  // Mid charcoal — MeshBasic so the shell is evenly visible (no Phong shadow hole)
   globeColor: "#241c16",
   showAtmosphere: true,
   atmosphereColor: "#b87333",
-  atmosphereAltitude: 0.04,
+  atmosphereAltitude: 0.05,
   emissive: "#241c16",
   emissiveIntensity: 0,
   shininess: 0,
@@ -103,18 +102,14 @@ const globeConfig: GlobeConfig = {
 
 export function GlobeDemo() {
   return (
-    <div className="relative mx-auto w-full max-w-[640px] lg:max-w-none">
-      {/* Transparent stage — no boxed black background */}
-      <div
-        className="relative w-full overflow-hidden bg-transparent"
-        style={{ paddingBottom: "78%" }}
-      >
-        <div className="absolute left-1/2 top-0 aspect-square w-[108%] -translate-x-1/2">
+    <div className="relative mx-auto w-full max-w-[720px] lg:max-w-none">
+      <div className="relative mx-auto aspect-square w-full max-w-[560px] sm:max-w-[640px] lg:max-w-none lg:w-full">
+        <div className="absolute inset-0 scale-[1.12] sm:scale-[1.18] lg:scale-[1.22]">
           <World data={sampleArcs} globeConfig={globeConfig} />
         </div>
       </div>
       <div
-        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-14 bg-gradient-to-t from-dark-950 to-transparent"
+        className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-16 bg-gradient-to-t from-dark-950 to-transparent"
         aria-hidden
       />
     </div>

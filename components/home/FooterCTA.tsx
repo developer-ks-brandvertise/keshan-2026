@@ -13,8 +13,8 @@ export function FooterCTASection() {
       <CopperWave flip id="footer-cta" className="bg-dark-900" />
 
       <div className="relative z-10 px-gutter pt-section pb-section">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 lg:grid-cols-2 lg:gap-14">
-          <div className="relative max-w-xl text-left lg:max-w-lg">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-12">
+          <div className="relative z-20 max-w-xl text-left lg:max-w-lg">
             <Reveal variant="slide">
               <div className="mb-4 flex items-center gap-3">
                 <span className="font-heading text-xs tracking-[0.25em] text-copper-base">
@@ -84,11 +84,9 @@ export function FooterCTASection() {
             </Reveal>
           </div>
 
-          <Reveal variant="fade" delay={0.12}>
-            <div className="relative w-full overflow-visible">
-              <GlobeDemo />
-            </div>
-          </Reveal>
+          <div className="relative z-10 -mx-4 min-h-[340px] sm:-mx-2 sm:min-h-[400px] lg:mx-0 lg:min-h-[520px]">
+            <GlobeDemo />
+          </div>
         </div>
       </div>
     </section>
