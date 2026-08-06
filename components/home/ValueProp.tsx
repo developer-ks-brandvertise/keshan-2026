@@ -36,7 +36,7 @@ export function ValuePropSection() {
               <div className="relative overflow-hidden border border-copper-base/20">
                 <div className="relative aspect-[4/5] sm:aspect-[4/3] lg:min-h-full lg:aspect-auto lg:h-full lg:min-h-[560px]">
                   <Image
-                    src="/images/img-about1.jpg"
+                    src="https://res.cloudinary.com/p4nrvzvp/image/upload/v1786037495/About-Keshan-Image_kw1bkw.png"
                     alt="Keshan manufacturing facility"
                     fill
                     className="object-cover"
@@ -100,16 +100,20 @@ export function ValuePropSection() {
             </Reveal>
 
             <Reveal variant="fade" delay={0.18}>
-              <div className="mt-9 border-t border-copper-base/35">
+              <div className="mt-9 grid gap-3 sm:grid-cols-2">
                 {datasheet.map((row) => (
                   <div
                     key={row.label}
-                    className="grid grid-cols-[88px_1fr] gap-4 border-b border-dark-100/10 py-4 sm:grid-cols-[120px_1fr]"
+                    className="group relative overflow-hidden border border-copper-base/20 bg-dark-950/70 p-4 transition-colors hover:border-copper-base/45"
                   >
-                    <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-copper-base">
+                    <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
                       {row.label}
                     </span>
-                    <span className="text-body-sm text-text-primary">{row.value}</span>
+                    <p className="mt-2 text-body-sm text-text-primary">{row.value}</p>
+                    <div
+                      className="pointer-events-none absolute inset-x-0 bottom-0 h-px scale-x-0 bg-copper-gradient transition-transform duration-500 group-hover:scale-x-100"
+                      aria-hidden
+                    />
                   </div>
                 ))}
               </div>

@@ -38,7 +38,7 @@ export default function Clients() {
                 alt="Client logo"
                 width={120}
                 height={40}
-                className="opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
+                className="opacity-90 transition-opacity duration-300 hover:opacity-100"
               />
             </div>
           ))}

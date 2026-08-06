@@ -4,6 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CopperHighlight from "@/components/ui/CopperHighlight";
 import { CertificatesGallery } from "@/components/media/CertificatesGallery";
+import { QualityLogoGrid } from "@/components/ui/QualityLogoGrid";
 
 export const metadata: Metadata = {
   title: "Quality & Media | Keshan Industries",
@@ -23,13 +24,41 @@ export default function MediaCertificatesPage() {
         description={mediaCertificates.subheadline}
       />
 
+      {/* Quality logos */}
+      <section className="border-b border-dark-100/10 bg-dark-950 py-section px-gutter">
+        <div className="mx-auto max-w-6xl">
+          <AnimatedSection>
+            <div className="mb-4 flex items-center gap-3">
+              <span className="font-heading text-xs tracking-[0.25em] text-copper-base">
+                01
+              </span>
+              <span className="h-px w-6 bg-copper-base/40" aria-hidden />
+              <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
+                Quality Assurance
+              </p>
+            </div>
+            <h2 className="text-h2 max-w-2xl text-balance">
+              Certified Systems. Verifiable Standards.
+            </h2>
+            <p className="mt-4 max-w-xl text-body-lg text-text-secondary">
+              Memberships and certifications that back every batch we ship — ISO
+              systems, industry associations, and quality credentials.
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={0.08} className="mt-10">
+            <QualityLogoGrid className="mx-auto max-w-[520px] sm:max-w-[560px]" />
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Media — placeholder until assets are ready */}
       <section className="border-b border-dark-100/10 bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
           <AnimatedSection>
             <div className="mb-4 flex items-center gap-3">
               <span className="font-heading text-xs tracking-[0.25em] text-copper-base">
-                01
+                02
               </span>
               <span className="h-px w-6 bg-copper-base/40" aria-hidden />
               <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
@@ -68,7 +97,7 @@ export default function MediaCertificatesPage() {
           <AnimatedSection>
             <div className="mb-4 flex items-center gap-3">
               <span className="font-heading text-xs tracking-[0.25em] text-copper-base">
-                02
+                03
               </span>
               <span className="h-px w-6 bg-copper-base/40" aria-hidden />
               <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">

@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import {
   Zap,
@@ -14,6 +13,7 @@ import {
 import { industries } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { Reveal } from "@/components/ui/Reveal";
 
 const iconMap: Record<string, LucideIcon> = {
   Zap,
@@ -25,25 +25,10 @@ const iconMap: Record<string, LucideIcon> = {
 };
 
 export function IndustriesSection() {
-  const [active, setActive] = useState(0);
-  const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
-
-  const activate = (index: number) => {
-    if (hoverTimer.current) clearTimeout(hoverTimer.current);
-    // Short debounce prevents flicker when the open panel shifts layout under the cursor
-    hoverTimer.current = setTimeout(() => setActive(index), 40);
-  };
-
-  useEffect(() => {
-    return () => {
-      if (hoverTimer.current) clearTimeout(hoverTimer.current);
-    };
-  }, []);
-
   return (
     <section className="relative overflow-hidden bg-dark-900 py-section px-gutter">
       <div
-        className="pointer-events-none absolute inset-y-0 right-0 hidden w-24 bg-gradient-to-l from-copper-base/10 to-transparent lg:block"
+        className="pointer-events-none absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-copper-base/8 to-transparent"
         aria-hidden
       />
 
@@ -63,110 +48,51 @@ export function IndustriesSection() {
           </MagneticButton>
         </div>
 
-        <div className="border-t border-copper-base/30">
+        <div className="flex flex-col gap-5 sm:gap-6">
           {industries.featured.map((item, index) => {
-            const isOpen = active === index;
             const Icon = iconMap[item.icon] ?? Zap;
 
             return (
-              <div
+              <Reveal
                 key={item.name}
-                className={`group relative border-b border-dark-100/10 transition-colors duration-300 ${
-                  isOpen ? "bg-copper-base/[0.06]" : "hover:bg-dark-950/60"
-                }`}
-                onMouseEnter={() => activate(index)}
+                variant="slide"
+                delay={Math.min(index * 0.07, 0.35)}
               >
-                <button
-                  type="button"
-                  onFocus={() => setActive(index)}
-                  onClick={() => setActive(index)}
-                  className="relative flex w-full gap-4 py-5 text-left sm:gap-5 sm:py-6"
-                  aria-expanded={isOpen}
-                >
-                  <span
-                    className={`absolute inset-y-0 left-0 w-[2px] origin-top transition-transform duration-500 ${
-                      isOpen
-                        ? "scale-y-100 bg-copper-base"
-                        : "scale-y-0 bg-copper-base/40"
-                    }`}
-                    aria-hidden
-                  />
-
-                  <span
-                    className={`ml-3 flex h-11 w-11 shrink-0 items-center justify-center rounded-full border transition-all duration-300 sm:ml-4 ${
-                      isOpen
-                        ? "border-copper-base bg-copper-base/15 text-copper-light shadow-[0_0_24px_rgba(184,115,51,0.25)]"
-                        : "border-dark-100/25 text-text-muted group-hover:border-copper-base/40 group-hover:text-copper-base"
-                    }`}
-                  >
-                    <Icon className="h-5 w-5" strokeWidth={1.6} />
-                  </span>
-
-                  <span className="min-w-0 flex-1 pr-3 pt-1.5 sm:pr-4">
-                    <span
-                      className={`block text-lg font-medium tracking-tight transition-colors sm:text-xl ${
-                        isOpen
-                          ? "text-copper-light"
-                          : "text-text-primary group-hover:text-copper-light/90"
-                      }`}
-                    >
-                      {item.name}
-                    </span>
-                    <span
-                      className={`mt-1.5 block text-body-sm text-text-secondary transition-opacity duration-300 ${
-                        isOpen ? "opacity-100" : "opacity-60"
-                      }`}
-                    >
-                      {item.application}
-                    </span>
-                  </span>
-
-                  <span
-                    className={`hidden shrink-0 pt-2 font-heading text-[10px] tracking-[0.2em] sm:block ${
-                      isOpen ? "text-copper-base" : "text-text-muted/50"
-                    }`}
-                  >
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                </button>
-
-                {/* CSS grid expand — stable under hover, no AnimatePresence thrash */}
-                <div
-                  className={`grid transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                    isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
-                  }`}
-                >
-                  <div className="min-h-0 overflow-hidden">
-                    <div className="px-3 pb-6 sm:px-4 sm:pb-8 sm:pl-[4.75rem]">
-                      <div
-                        className={`relative aspect-[16/9] w-full overflow-hidden border border-copper-base/25 transition-opacity duration-300 sm:aspect-[21/9] ${
-                          isOpen ? "opacity-100" : "opacity-0"
-                        }`}
-                      >
-                        {isOpen ? (
-                          <Image
-                            src={item.image}
-                            alt={item.name}
-                            fill
-                            className="object-cover"
-                            sizes="(max-width: 1024px) 100vw, 960px"
-                          />
-                        ) : null}
-
-                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark-950/80 via-dark-950/15 to-transparent" />
-                        <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-copper-base/15 via-transparent to-transparent" />
-
-                        <div className="pointer-events-none absolute inset-x-0 bottom-0 p-4 sm:p-6">
-                          <p className="font-heading text-[10px] uppercase tracking-[0.28em] text-copper-base">
-                            Sector {String(index + 1).padStart(2, "0")} /{" "}
-                            {String(industries.featured.length).padStart(2, "0")}
-                          </p>
-                        </div>
+                <article className="group overflow-hidden border border-copper-base/20 bg-dark-950 transition-colors duration-300 hover:border-copper-base/45 hover:bg-copper-base/[0.04]">
+                  <div className="grid lg:grid-cols-[minmax(0,1.05fr)_minmax(0,1fr)]">
+                    <div className="relative aspect-[4/5] overflow-hidden sm:aspect-[5/4] lg:aspect-auto lg:min-h-[280px]">
+                      <Image
+                        src={item.image}
+                        alt={item.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
+                      />
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark-950/80 via-dark-950/20 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:via-transparent lg:to-dark-950/40" />
+                      <div className="absolute left-4 top-4 flex h-11 w-11 items-center justify-center border border-copper-base/50 bg-dark-950/80 text-copper-base backdrop-blur-sm">
+                        <Icon className="h-5 w-5" strokeWidth={1.6} />
                       </div>
+                      <span className="absolute bottom-4 left-4 font-heading text-[10px] tracking-[0.28em] text-copper-base">
+                        {String(index + 1).padStart(2, "0")} /{" "}
+                        {String(industries.featured.length).padStart(2, "0")}
+                      </span>
+                    </div>
+
+                    <div className="flex flex-col justify-center px-6 py-7 sm:px-8 sm:py-9 lg:px-10">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper-base">
+                        Sector {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <h3 className="mt-3 text-xl text-text-primary transition-colors group-hover:text-copper-light sm:text-2xl">
+                        {item.name}
+                      </h3>
+                      <p className="mt-3 max-w-md text-body text-text-secondary">
+                        {item.application}
+                      </p>
+                      <div className="mt-6 h-px w-16 bg-copper-base/40 transition-all duration-500 group-hover:w-24" />
                     </div>
                   </div>
-                </div>
-              </div>
+                </article>
+              </Reveal>
             );
           })}
         </div>
