@@ -9,8 +9,8 @@ import { ArrowUpRight } from "lucide-react";
 
 const images = ["/images/service1.jpg", "/images/service2.jpg"];
 const specs = [
-  "Cu-ETP · Cu-OF · Busbars · CCR · Sheets · Cathodes",
-  "Ingots · Sheets · Plates · Strips · Circles · Alloys",
+  "Cu-ETP · Cu-OF · Busbars · Upcast · Foils · Cathodes",
+  "Ingots · Sheets · Plates · Strips · Circles · Scrap",
 ];
 
 export function ProductCategoriesSection() {

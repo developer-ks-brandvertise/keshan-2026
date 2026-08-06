@@ -17,7 +17,7 @@ const pillars = [
   {
     icon: <Zap className="w-8 h-8" />,
     title: "Certification",
-    description: "ISO 9001:2015 and ISO 14001:2015 certified.",
+    description: "ISO 9001:2015, ISO 14001:2015, and ISO 45001 certified.",
   },
   {
     icon: <Shield className="w-8 h-8" />,

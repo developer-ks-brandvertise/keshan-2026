@@ -15,7 +15,7 @@ export const navLinks = [
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
   { label: "Knowledge Centre", href: "/knowledge-centre" },
-  { label: "Media & Certificates", href: "/media-certificates" },
+  { label: "Quality & Media", href: "/media-certificates" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -34,9 +34,9 @@ export const hero = {
 
 export const intro = {
   headline: "Precision Copper Manufacturing, Built for the World.",
-  body: "For a decade, Keshan Industries has manufactured precision-engineered copper and brass for some of the most demanding industries in the world — from switchgear manufacturers to solar developers. We are a manufacturing partner, not a commodity supplier: metallurgical control, batch-tested quality, and on-time delivery on every order.",
+  body: "Since 2019, Keshan Industries has manufactured precision-engineered copper and brass for some of the most demanding industries in the world — from switchgear manufacturers to solar developers. We are a manufacturing partner, not a commodity supplier: metallurgical control, batch-tested quality, and on-time delivery on every order.",
   stats: [
-    { value: "10+", label: "Years of Manufacturing Excellence" },
+    { value: "7+", label: "Years of Manufacturing Excellence" },
     { value: "30+", label: "Countries Supplied" },
     { value: "20,000+", label: "MT Annual Production Capacity" },
     { value: "100%", label: "Quality Tested Before Dispatch" },
@@ -51,14 +51,14 @@ export const productCategories = {
     {
       title: "Copper Products",
       description:
-        "Ingots, Busbars, Strips, Sheets, CCR, Wires, Rods, Nuggets, Bars, Anodes & Cathodes — manufactured to international specification.",
+        "Ingots, Busbars, Strips, Sheets & Circles, Upcast Rod, Wires, Rods, Foils, Phosphorous grades, Scrap, Anodes & Cathodes — manufactured to international specification.",
       href: "/products#copper",
       image: "/images/place-copper.jpg",
     },
     {
       title: "Brass Products",
       description:
-        "Ingots, Sheets, Plates, Strips & Circles — precision-alloyed for strength, machinability, and finish across every application.",
+        "Ingots, Sheets, Plates, Strips, Circles & Scrap — precision-alloyed for strength, machinability, and finish across every application.",
       href: "/products#brass",
       image: "/images/place-brass.jpg",
     },
@@ -115,7 +115,7 @@ export const quality = {
   body: "Our in-house testing laboratory runs conductivity, hardness, chemical composition, and dimensional checks on every production batch. No product leaves our facility without a test certificate — every certificate is traceable, every standard is verifiable.",
   pillars: [
     "99.9%+ copper purity on all electrolytic grades",
-    "ISO 9001:2015 and ISO 14001:2015 certified",
+    "ISO 9001:2015, ISO 14001:2015, and ISO 45001 certified",
     "Chemical composition, conductivity, and tensile testing per batch",
     "Compliance with IS, ASTM, DIN, JIS, and BS standards",
   ],
@@ -391,27 +391,43 @@ export const leadership = {
     "Keshan Industries is led by a management team that combines metallurgical expertise with commercial experience and a long-term view of the industry. Their commitment to quality is not a management directive — it is a personal standard.",
   team: [
     {
-      name: "Ramesh Keshan",
-      title: "Founder & Managing Director",
-      bio: "Over 25 years of experience in non-ferrous metals manufacturing and international trade. Built Keshan from a single furnace operation into a multi-product export house.",
+      name: "Vikash Kumar Keshan",
+      title: "Managing Director, Keshan Industries",
+      shortBio:
+        "A builder twice over — of enterprise and of community — whose path from trading to manufacturing has shaped Keshan Industries since 2019.",
+      fullBio: [
+        "Few careers reveal as clean an arc between grit and foresight as that of Vikash Kumar Keshan. A commerce graduate of Calcutta University, Class of 1997, he began on the conventional path of chartered accountancy; before choosing, deliberately, to forge his own. In 2005, that conviction gave rise to Keshan Trading Corporation, a venture in structural steel, GI and MS pipes, tubes, and specialty steel products, through which he cultivated a rare, granular command of the metals trade.",
+        "In 2019, Mr. Keshan and his brother, Rajneesh Keshan, together founded Keshan Industries, a deliberate evolution from trading to manufacturing, animated by the Make in India ethos and a shared conviction that domestic production, fortified by genuine innovation, is India's most enduring advantage. Under his stewardship, the enterprise has grown to command a workforce exceeding 300, distinguished by a dedicated research and innovation team and a leadership ethos rooted in technical mastery, clarity of purpose, and collective endeavour.",
+        "His influence extends well beyond the enterprise. A member of the Agarwal Samaj for fifteen years, he has ascended through its ranks by merit and trust alike — serving as President, North Secunderabad Agarwal Samaj (2023); President, Bihar Agarwal Samaj, Secunderabad (2024); and currently, Secretary, Agarwal Samaj Telangana (2025).",
+        "Vikash Kumar Keshan is, in essence, a builder twice over — of enterprise, and of community — a leader whose ambitions have always pointed outward.",
+      ],
+      image: "",
       linkedIn: "#",
     },
     {
-      name: "Priya Keshan",
-      title: "Chief Operations Officer",
-      bio: "Leads production planning, quality systems, and ISO compliance. Background in metallurgical engineering and supply-chain operations.",
+      name: "Yash Keshan",
+      title: "Next-Generation Leader, Keshan Industries",
+      shortBio:
+        "Numbers first, opinions second — building a corporation on people, product quality, and data-backed conviction.",
+      fullBio: [
+        "Yash Keshan holds a B.Sc. (Honours) in Mathematics, a four-year degree from Ashoka University, following his schooling at Mayo College, Ajmer, where he served as College Academics Captain and was awarded the President's Medal for Academics. It is not a pedigree handed to him lightly, and it shows in how he approaches business: with numbers first, opinions second.",
+        "His early career has been deliberately unglamorous — trade documentation at Global Aluminium, regulatory compliance, and supply-chain coordination across the metals sector, alongside investment research built on fundamental analysis rather than instinct. A student investor in the forex markets on the side, he treats it as another discipline that punishes sloppy thinking and rewards conviction backed by data.",
+        "Yash does not lead by consensus. His view is unambiguous: people and product quality are the two pillars crucial for manufacturing. He holds to Rosalynn Carter's distinction that a great leader takes people not where they want to go, but where they ought to be, and draws his operating model from industrialists like Narotam Sekhsaria — where scale is never an excuse to compromise on sustainability or pollution control. He is here to build a corporation, not manage a comfortable legacy.",
+      ],
+      image: "",
       linkedIn: "#",
     },
     {
-      name: "Dr. Arvind Mehta",
-      title: "Chief Metallurgist",
-      bio: "PhD in Materials Science with deep expertise in copper refining, alloy development, and process control. Heads the in-house testing laboratory.",
-      linkedIn: "#",
-    },
-    {
-      name: "Sarah Lopes",
-      title: "Head of Global Sales",
-      bio: "Drives international partnerships, export documentation, and customer success across 30+ markets. Fluent in cross-border industrial trade.",
+      name: "CA Surya Sudhakar K",
+      title: "Chief Financial Officer, Keshan Industries LLP",
+      shortBio:
+        "Sixteen-plus years steering finance across manufacturing and infrastructure — bringing institutional rigor as Keshan scales.",
+      fullBio: [
+        "A Chartered Accountant with over sixteen years steering finance functions across India's manufacturing and infrastructure landscape, Surya Sudhakar K brings to Keshan Industries a rare blend of technical precision and operational fluency. He qualified as a Chartered Accountant from the Institute of Chartered Accountants of India in 2016, following a B.Com from Andhra University and a formative articleship at Brahmayya & Co., one of Hyderabad's most storied accountancy houses.",
+        "His career reads as a study in scale — from senior finance roles at GVK Power & Infrastructure and GMR Infrastructure, where he managed consolidated reporting, working capital, and banking relationships for diversified conglomerates, to leading finance for Pioneer Aluminium Industries' 1.5 MTPA alumina refinery, and most recently as General Manager (Accounts) at Srinivasa Farms. Along the way, he has held de facto CFO responsibility for an RBI-regulated NBFC, directed statutory and tax compliance across multi-state operations, and built the financial discipline that listed and closely-held enterprises alike depend on.",
+        "At Keshan Industries, Mr. Sudhakar leads the finance and accounts function with a mandate for institutional rigor — treasury, compliance, cost control, and capital strategy — as the company scales into a professionally governed, corporate-grade enterprise.",
+      ],
+      image: "",
       linkedIn: "#",
     },
   ],
@@ -438,11 +454,10 @@ export const globalReach = {
 };
 
 export const milestones = {
-  headline: "A Decade of Growing Stronger.",
+  headline: "Growing Stronger Since 2019.",
   events: [
-    { year: "2016", title: "Founded", description: "First manufacturing facility commissioned in Hyderabad." },
-    { year: "2018", title: "First Export Order", description: "Shipped first container of copper ingots to Southeast Asia." },
-    { year: "2020", title: "ISO Certification", description: "Achieved ISO 9001:2015 and ISO 14001:2015 certification." },
+    { year: "2019", title: "Founded", description: "Keshan Industries founded; first manufacturing facility commissioned in Hyderabad." },
+    { year: "2020", title: "ISO Certification", description: "Achieved ISO 9001:2015, ISO 14001:2015, and ISO 45001 certification." },
     { year: "2022", title: "Capacity Expansion", description: "Expanded annual production capacity beyond 20,000 MT." },
     { year: "2026", title: "30+ Countries", description: "Supplying copper and brass to 30+ countries across six regions." },
   ],

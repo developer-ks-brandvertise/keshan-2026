@@ -29,7 +29,7 @@ export const chatbotFaq: FaqEntry[] = [
       "نحاس",
     ],
     answer:
-      "Keshan manufactures copper and brass forms including ingots, busbars, strips, sheets & plates, continuous cast rod (CCR), wires & rods, nuggets, 1 kg bars, anodes, cathodes, and brass circles. Browse the full range on the Products page.",
+      "Keshan manufactures copper and brass forms including ingots, busbars, strips, sheets, plates & circles, upcast rod, bare & enamel wire, rods, foils, phosphorous grades, biscuits, scrap, anodes, cathodes, and brass circles & scrap. Browse the full range on the Products page.",
   },
   {
     id: "certs",
@@ -40,13 +40,14 @@ export const chatbotFaq: FaqEntry[] = [
       "quality",
       "9001",
       "14001",
+      "45001",
       "认证",
       "证书",
       "certificación",
       "شهادة",
     ],
     answer:
-      "Keshan is ISO 9001:2015 and ISO 14001:2015 certified. Every production batch is tested for conductivity, composition, and dimensions — certificates are traceable. See Media & Certificates for credential documents.",
+      "Keshan is ISO 9001:2015, ISO 14001:2015, and ISO 45001 certified. Every production batch is tested for conductivity, composition, and dimensions — certificates are traceable. See Quality & Media for credential documents.",
   },
   {
     id: "quote",

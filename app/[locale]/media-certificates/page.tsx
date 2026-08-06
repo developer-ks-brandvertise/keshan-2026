@@ -6,7 +6,7 @@ import CopperHighlight from "@/components/ui/CopperHighlight";
 import { CertificatesGallery } from "@/components/media/CertificatesGallery";
 
 export const metadata: Metadata = {
-  title: "Media & Certificates | Keshan Industries",
+  title: "Quality & Media | Keshan Industries",
   description:
     "View Keshan Industries certifications and quality credentials. Media gallery coming soon.",
 };
@@ -17,7 +17,7 @@ export default function MediaCertificatesPage() {
   return (
     <main>
       <PageHero
-        label="Media & Certificates"
+        label="Quality & Media"
         title={mediaCertificates.headline}
         highlight="Every Batch We Ship"
         description={mediaCertificates.subheadline}

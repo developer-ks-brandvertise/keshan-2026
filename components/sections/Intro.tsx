@@ -12,11 +12,11 @@ const highlights = [
   "Metallurgical control on every batch",
   "Batch-tested quality before dispatch",
   "On-time delivery to 30+ countries",
-  "ISO 9001 & ISO 14001 certified",
+  "ISO 9001 & ISO 14001 & ISO 45001 certified",
 ];
 
 const statValues = [
-  { value: 10, suffix: "+", label: "Years of Manufacturing Excellence" },
+  { value: 7, suffix: "+", label: "Years of Manufacturing Excellence" },
   { value: 30, suffix: "+", label: "Countries Supplied" },
   { value: 20000, suffix: "+", label: "MT Annual Production Capacity" },
   { value: 100, suffix: "%", label: "Quality Tested Before Dispatch" },

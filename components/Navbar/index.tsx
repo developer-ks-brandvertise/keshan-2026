@@ -282,7 +282,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="flex items-center gap-2 text-[11px] tracking-wide text-text-muted">
-            <span className="hidden xl:inline">ISO 9001:2015 · ISO 14001:2015</span>
+            <span className="hidden xl:inline">ISO 9001:2015 · ISO 14001:2015 · ISO 45001</span>
             <LocaleSwitcher />
             <ThemeToggle />
           </div>

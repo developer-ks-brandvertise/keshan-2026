@@ -6,6 +6,8 @@ export interface Product {
   description: string;
   applications: string[];
   specs: string[];
+  /** When set, Technical table renders one row per group instead of a single product row */
+  specGroups?: { label: string; items: string[] }[];
   cta: string;
   metaTitle: string;
   metaDescription: string;
@@ -20,24 +22,40 @@ export const products: Product[] = [
     name: "Copper Ingots",
     headline: "The Foundation of Every Copper Application.",
     description:
-      "As one of India’s largest exporters of copper ingots, Keshan produces ingots from high-grade electrolytic copper, melted and cast to precise dimensional and compositional standards. Available in a range of weights and grades, they serve as the primary feedstock for downstream copper processing — from rolling and drawing to alloying.",
+      "As one of India’s largest exporters of copper ingots, Keshan produces ingots from high-grade electrolytic copper, melted and cast to precise dimensional and compositional standards. Available as pure copper and alloy grades across a range of weights, they serve as the primary feedstock for downstream copper processing — from rolling and drawing to alloying.",
     applications: [
       "Wire rod and strip rolling mills",
       "Copper alloy and brass manufacturers",
       "Foundry and casting operations",
       "Export and re-melt customers",
     ],
-    specs: [
-      "Small Ingot: 250 mm × 225 mm × 50 mm, weight 22–25 kgs",
-      "Medium Ingot: 380 mm × 330 mm × 50 mm, weight 50–60 kgs",
-      "Super D Ingot: 1500 mm × 100 mm × 100 mm, weight 200–255 kgs",
-      "Purity: 99.9% minimum (Cu-ETP grade available)",
-      "Standards: IS 191, ASTM B115, EN 1978",
+    specs: [],
+    specGroups: [
+      {
+        label: "Pure Copper Ingots",
+        items: [
+          "Small Ingot: 250 mm × 225 mm × 50 mm, weight 22–25 kgs",
+          "Medium Ingot: 380 mm × 330 mm × 50 mm, weight 50–60 kgs",
+          "Large Ingots: 1500 mm × 100 mm × 100 mm, weight 200–255 kgs",
+          "Purity: 99.9% minimum",
+          "Standards: IS 191, ASTM B115, EN 1978",
+        ],
+      },
+      {
+        label: "Alloy Ingots",
+        items: [
+          "Copper-based alloy compositions tailored to customer melt chemistry",
+          "Typical grades for brass, bronze, and specialty copper alloys",
+          "Small / Medium formats for foundry and remelt charging",
+          "Screened for controlled trace elements and consistent pour chemistry",
+          "Standards aligned to IS, ASTM, and EN alloy specifications on request",
+        ],
+      },
     ],
     cta: "Request a Quote for Copper Ingots",
-    metaTitle: "Copper Ingots Manufacturer & Exporter | Keshan Industries | High Purity Cu-ETP",
+    metaTitle: "Copper Ingots Manufacturer & Exporter | Keshan Industries | High Purity",
     metaDescription:
-      "One of India's largest exporters of copper ingots. High-purity Cu-ETP and Cu-OF for rolling mills, foundries, and alloy manufacturers. IS, ASTM & EN compliant. Request a quote.",
+      "One of India's largest exporters of copper ingots. Pure copper and alloy ingots for rolling mills, foundries, and alloy manufacturers. IS, ASTM & EN compliant. Request a quote.",
     modelSrc: "/3d-assets/copper_stone.glb",
   },
   {
@@ -89,7 +107,6 @@ export const products: Product[] = [
       "Purity: 99.9% min Cu-ETP",
       "Width: 5 mm to 400 mm (custom slit to order)",
       "Thickness: 0.1 mm to 10 mm",
-      "Copper Foil — Width: 15–150 mm; Thickness: 0.1 to 1 mm",
       "Temper: Soft annealed (O61), Half-hard (H02), Hard (H04)",
       "Standards: IS 613, EN 1652, ASTM B152",
     ],
@@ -101,37 +118,37 @@ export const products: Product[] = [
   {
     slug: "copper-sheets-plates",
     category: "copper",
-    name: "Copper Sheets & Plates",
+    name: "Copper Sheet, Plates & Circles",
     headline: "Flat, True, and Application-Ready.",
     description:
-      "Keshan copper sheets and plates are produced to precise thickness and flatness tolerances, with a clean mill finish or polished surface as required — suited to applications from architectural cladding and heat transfer equipment to electrical shielding and precision fabrication.",
+      "Keshan copper sheets, plates, and circles are produced to precise thickness and flatness tolerances, with a clean mill finish or polished surface as required — suited to applications from architectural cladding and heat transfer equipment to electrical shielding, cookware blanks, and precision fabrication.",
     applications: [
       "Architectural cladding, roofing, and decorative applications",
       "Heat exchangers and thermal management systems",
       "Electrical shielding and EMI enclosures",
-      "Chemical process equipment and distillation",
-      "Custom fabricated electrical components",
+      "Circle blanks for spinning, pressing, and deep drawing",
+      "Chemical process equipment and custom fabrication",
     ],
     specs: [
       "Width: 101.6 mm × 101.6 mm to 1219.2 × 1219.2 mm",
       "Thickness: 0.3 mm to 16 mm",
-      "Circle Sheet: Dia 1220 mm, Thickness: 0.3–8 mm",
+      "Circle Sheet: Dia up to 1220 mm, Thickness: 0.3–8 mm",
       "Temper: Soft / Half-hard / Hard",
       "Surface: Mill finish, bright polished, or brushed",
       "Standards: IS 1545, ASTM B152, EN 1652",
     ],
-    cta: "Request a Quote for Copper Sheets & Plates",
-    metaTitle: "Copper Sheets & Plates Manufacturer | Keshan Industries | India",
+    cta: "Request a Quote for Copper Sheet, Plates & Circles",
+    metaTitle: "Copper Sheet, Plates & Circles Manufacturer | Keshan Industries | India",
     metaDescription:
-      "Precision copper sheets and plates for cladding, heat exchangers, and electrical fabrication. Custom thickness, width, and finish. Request a quote from Keshan Industries.",
+      "Precision copper sheets, plates, and circles for cladding, heat exchangers, and fabrication. Custom thickness, width, diameter, and finish. Request a quote from Keshan Industries.",
   },
   {
-    slug: "continuous-cast-rod",
+    slug: "copper-upcast-rod",
     category: "copper",
-    name: "Continuous Cast Rod (CCR)",
-    headline: "The CCR That Draws Clean. Every Coil. Every Time.",
+    name: "Copper Upcast Rod",
+    headline: "The Rod That Draws Clean. Every Coil. Every Time.",
     description:
-      "Keshan Continuous Cast Rod (CCR) is produced via the Upcast or Contirod process from high-purity electrolytic copper, delivering superior surface quality, consistent grain structure, and excellent drawability — the preferred input material for wire and cable manufacturers.",
+      "Keshan Copper Upcast Rod is produced via the Upcast continuous casting process from high-purity electrolytic copper, delivering superior surface quality, consistent grain structure, and excellent drawability — the preferred input material for wire and cable manufacturers.",
     applications: [
       "Enamelled winding wire (magnet wire) production",
       "Electrical cables and conductors",
@@ -142,63 +159,261 @@ export const products: Product[] = [
       "Dia: 4 mm, 8 mm, 12.5 mm",
       "Purity: 99.99% Cu-OF or Cu-ETP",
       "Coil weight: Up to 5,000 kg",
+      "Process: Upcast continuous casting",
       "Surface: Scale-free, bright finish",
       "Standards: EN 1977, ASTM B49",
     ],
-    cta: "Request a Quote for Continuous Cast Rod",
-    metaTitle: "Continuous Cast Rod (CCR) Manufacturer | Keshan Industries | Wire Rod Grade",
+    cta: "Request a Quote for Copper Upcast Rod",
+    metaTitle: "Copper Upcast Rod Manufacturer | Keshan Industries | Wire Rod Grade",
     metaDescription:
-      "High-purity continuous cast copper rod for wire and cable manufacturers. Upcast/Contirod process, 8mm standard, EN 1977 & ASTM B49. Request a quote.",
+      "High-purity copper upcast rod for wire and cable manufacturers. Upcast process, 8mm standard, EN 1977 & ASTM B49. Request a quote.",
   },
   {
-    slug: "copper-wires-rods",
+    slug: "bare-copper-wire",
     category: "copper",
-    name: "Copper Wires & Rods",
-    headline: "Drawn to Spec. Wound to Your World.",
+    name: "Bare Copper Wire",
+    headline: "Drawn to Spec. Conductivity Without Compromise.",
     description:
-      "Keshan copper wires and rods are produced from continuously cast rod through precision drawing dies, delivering consistent diameter, smooth surface finish, and high-conductivity performance. Available across a range of diameters, tempers, and coil configurations for electrical, construction, and telecommunications applications.",
+      "Keshan bare copper wire is drawn from continuously cast rod through precision dies, delivering consistent diameter, smooth surface finish, and high-conductivity performance for power cables, building wire, earthing, and telecommunications.",
     applications: [
       "Power cables and flexible cords",
       "Building and construction wiring",
       "Overhead conductors and earthing systems",
-      "Winding wires and motor windings",
       "Telecommunications and data cables",
     ],
     specs: [
       "Size: 0 to 36 SWG",
-      "Diameter: 0.1 mm (fine wire) to 10 mm (rod)",
+      "Diameter: 0.1 mm (fine wire) to 10 mm",
       "Conductivity: Min 58 MS/m (100% IACS)",
       "Temper: Soft annealed (O61), Hard drawn (H04)",
-      "Standards: IS 8130, IS 1897, IEC 60228, ASTM B3, EN 13602",
+      "Standards: IS 8130, IEC 60228, ASTM B3, EN 13602",
     ],
-    cta: "Request a Quote for Copper Wires & Rods",
-    metaTitle: "Copper Wires & Rods Manufacturer | Keshan Industries | India",
+    cta: "Request a Quote for Bare Copper Wire",
+    metaTitle: "Bare Copper Wire Manufacturer | Keshan Industries | India",
     metaDescription:
-      "Precision copper wires and rods for electrical, construction, and telecommunications applications. Custom diameter and temper. Request a quote.",
+      "High-conductivity bare copper wire for electrical, construction, and telecom applications. Custom diameter and temper. Request a quote.",
     modelSrc: "/3d-assets/copper_wire_coil.glb",
   },
   {
-    slug: "copper-nuggets",
+    slug: "copper-rod",
     category: "copper",
-    name: "Copper Nuggets",
+    name: "Copper Rod",
+    headline: "Solid Section. Reliable Conductivity.",
+    description:
+      "Keshan copper rod is produced for electrical and industrial applications that demand consistent diameter, high conductivity, and clean surface quality — from earthing and bus connections to machining stock and fabrication.",
+    applications: [
+      "Earthing and grounding systems",
+      "Electrical connectors and terminals",
+      "Machining and fabrication stock",
+      "Industrial current-carrying components",
+    ],
+    specs: [
+      "Diameter: typically 6 mm to 90 mm (custom on request)",
+      "Purity: 99.9% minimum",
+      "Conductivity: Min 58 MS/m (100% IACS)",
+      "Temper: Soft / Half-hard / Hard",
+      "Standards: IS 1897, ASTM B187, EN 13601",
+    ],
+    cta: "Request a Quote for Copper Rod",
+    metaTitle: "Copper Rod Manufacturer | Keshan Industries | India",
+    metaDescription:
+      "Precision copper rod for earthing, connectors, and industrial fabrication. High conductivity, custom diameters. Request a quote.",
+  },
+  {
+    slug: "copper-hex-square-round-rods",
+    category: "copper",
+    name: "Copper Hex, Square, Round Rods",
+    headline: "Shaped Stock. Ready for Precision Machining.",
+    description:
+      "Keshan supplies copper rods in hexagonal, square, and round sections for machining, forging, and component manufacturing — with controlled chemistry, consistent cross-section, and finish suited to CNC and conventional machine shops.",
+    applications: [
+      "CNC and conventional machining stock",
+      "Electrical hardware and fasteners",
+      "Valve, fitting, and connector blanks",
+      "Industrial and decorative fabricated parts",
+    ],
+    specs: [
+      "Shapes: Hexagonal, Square, Round",
+      "Size range: custom across common metric sections",
+      "Purity: 99.9% minimum",
+      "Temper: Soft / Half-hard / Hard",
+      "Standards: IS / ASTM / EN on request",
+    ],
+    cta: "Request a Quote for Copper Hex, Square & Round Rods",
+    metaTitle: "Copper Hex, Square & Round Rods | Keshan Industries",
+    metaDescription:
+      "Copper hex, square, and round rods for machining and electrical hardware. Consistent section and chemistry. Request a quote.",
+  },
+  {
+    slug: "enamel-copper-wire",
+    category: "copper",
+    name: "Enamel Copper Wire",
+    headline: "Magnet Wire Built for Windings That Last.",
+    description:
+      "Keshan enamel copper wire (magnet wire) is produced from high-purity copper with uniform enamel insulation for motors, transformers, generators, and coil windings — delivering dielectric integrity, thermal class performance, and consistent drawability.",
+    applications: [
+      "Motor and generator windings",
+      "Transformer and inductor coils",
+      "Solenoids and electromagnetic devices",
+      "Automotive and appliance motors",
+    ],
+    specs: [
+      "Conductor: High-purity bare copper",
+      "Insulation: Enamel (polyester / polyurethane / polyimide classes available)",
+      "Thermal class: Class F / H and as specified",
+      "Diameter: fine to medium winding gauges",
+      "Standards: IEC 60317, IS / NEMA equivalents on request",
+    ],
+    cta: "Request a Quote for Enamel Copper Wire",
+    metaTitle: "Enamel Copper Wire Manufacturer | Keshan Industries | Magnet Wire",
+    metaDescription:
+      "Enamel copper magnet wire for motors, transformers, and coils. Uniform insulation, high conductivity. Request a quote.",
+  },
+  {
+    slug: "copper-blister",
+    category: "copper",
+    name: "Copper Blister",
+    headline: "Intermediate Copper. Ready for the Next Refine.",
+    description:
+      "Keshan copper blister is supplied as an intermediate refined copper form for further pyro-metallurgical or electrolytic refining, alloying, and remelt operations — with controlled impurity levels suited to downstream processing.",
+    applications: [
+      "Electrolytic refining feedstock",
+      "Secondary copper refining",
+      "Alloy and brass manufacturing charge",
+      "Export remelt customers",
+    ],
+    specs: [
+      "Form: Blister copper cakes / plates as available",
+      "Copper content: typically 98%+ (lot-certified)",
+      "Impurity profile: screened and batch-documented",
+      "Packaging: strapped bundles or as agreed",
+    ],
+    cta: "Request a Quote for Copper Blister",
+    metaTitle: "Copper Blister Supplier | Keshan Industries",
+    metaDescription:
+      "Copper blister for refining, remelt, and alloy manufacturing. Lot-certified chemistry. Request a quote from Keshan Industries.",
+  },
+  {
+    slug: "paper-insulated-copper-conductors-strips",
+    category: "copper",
+    name: "Paper Insulated Copper Conductors Strips",
+    headline: "Insulated Strip for High-Reliability Windings.",
+    description:
+      "Keshan paper-insulated copper conductor (PICC) strips combine high-conductivity copper strip with kraft or specialized paper insulation for transformer and reactor windings — delivering dielectric strength, oil compatibility, and dimensional consistency.",
+    applications: [
+      "Power and distribution transformer windings",
+      "Reactor and choke coils",
+      "Oil-immersed electrical equipment",
+      "Specialty high-voltage winding applications",
+    ],
+    specs: [
+      "Conductor: High-purity copper strip",
+      "Insulation: Kraft / crepe paper layers as specified",
+      "Width and thickness: custom to winding design",
+      "Edge: Burr-controlled for winding integrity",
+      "Standards: IS / IEC transformer conductor practices on request",
+    ],
+    cta: "Request a Quote for Paper Insulated Copper Conductor Strips",
+    metaTitle: "Paper Insulated Copper Conductor Strips | Keshan Industries",
+    metaDescription:
+      "PICC strips for transformer and reactor windings. High-conductivity copper with paper insulation. Request a quote.",
+  },
+  {
+    slug: "copper-foils",
+    category: "copper",
+    name: "Copper Foils",
+    headline: "Thin Gauge. Uniform Thickness. Clean Surface.",
+    description:
+      "Keshan copper foils are rolled and slit to thin gauges for electronics, shielding, flexible circuits, and precision laminates — with tight thickness tolerance, clean edges, and surface finish suited to downstream lamination and etching.",
+    applications: [
+      "PCB and flexible circuit manufacturing",
+      "EMI / RFI shielding",
+      "Battery and energy storage components",
+      "Decorative and architectural laminates",
+    ],
+    specs: [
+      "Width: 15–150 mm (custom slit available)",
+      "Thickness: 0.1 mm to 1 mm",
+      "Purity: 99.9% minimum",
+      "Temper: Soft annealed / as specified",
+      "Standards: ASTM B152, EN 1652, IS equivalents",
+    ],
+    cta: "Request a Quote for Copper Foils",
+    metaTitle: "Copper Foils Manufacturer | Keshan Industries",
+    metaDescription:
+      "Precision copper foils for electronics, shielding, and laminates. Tight thickness control. Request a quote.",
+  },
+  {
+    slug: "phosphorous-copper-bar",
+    category: "copper",
+    name: "Phosphorous Copper Bar",
+    headline: "Deoxidised Copper. Controlled Phosphorus. Clean Melts.",
+    description:
+      "Keshan phosphorous copper bars are formulated with controlled phosphorus content for deoxidation and alloying additions in foundries and melt shops — delivering consistent P levels and reliable melt behaviour batch after batch.",
+    applications: [
+      "Copper and brass melt deoxidation",
+      "Alloy manufacturing charge additions",
+      "Foundry phosphorus master alloy use",
+      "Electroplating and specialty melts",
+    ],
+    specs: [
+      "Form: Bars / sticks for furnace charging",
+      "Phosphorus content: typically 8–15% P (grades on request)",
+      "Balance: High-purity copper",
+      "Packaging: Bundled / boxed for foundry handling",
+    ],
+    cta: "Request a Quote for Phosphorous Copper Bar",
+    metaTitle: "Phosphorous Copper Bar | Keshan Industries | Deoxidiser Grade",
+    metaDescription:
+      "Phosphorous copper bars for melt deoxidation and alloy additions. Controlled P content. Request a quote.",
+  },
+  {
+    slug: "phosphorous-copper-nuggets",
+    category: "copper",
+    name: "Phosphorous Copper Nuggets",
     headline: "Consistent Chemistry. Clean Charge. Every Batch.",
     description:
-      "Keshan copper nuggets are produced from high-purity copper and are batch-tested for use as a charge material in foundries, alloy manufacturers, and brass producers. Their compact form ensures easy handling and consistent charging in induction and reverberatory furnaces.",
+      "Keshan phosphorous copper nuggets are produced with controlled phosphorus levels for foundry and alloy charge applications. Their compact form ensures easy handling and consistent charging in induction and reverberatory furnaces.",
     applications: [
       "Brass and copper alloy manufacturing",
-      "Foundry charge material",
-      "Electroplating anodes and bath additions",
+      "Foundry charge and deoxidation additions",
+      "Electroplating bath chemistry adjustments",
       "Chemical copper applications",
     ],
     specs: [
-      "Purity: 99.5% to 99.9%",
-      "Size: 20–80mm typical",
+      "Purity / Cu base: high-purity copper with controlled P",
+      "Phosphorus content: graded to customer melt requirements",
+      "Size: 20–80 mm typical",
       "Packaging: Bulk bags or wooden pallets",
     ],
-    cta: "Request a Quote for Copper Nuggets",
-    metaTitle: "Copper Nuggets Supplier | Keshan Industries | Foundry Charge Material",
+    cta: "Request a Quote for Phosphorous Copper Nuggets",
+    metaTitle: "Phosphorous Copper Nuggets | Keshan Industries | Foundry Charge",
     metaDescription:
-      "High-purity copper nuggets for foundries, alloy manufacturers, and brass producers. Batch-tested, consistent chemistry. Request a quote.",
+      "Phosphorous copper nuggets for foundries and alloy manufacturers. Batch-tested chemistry. Request a quote.",
+  },
+  {
+    slug: "copper-5kg-biscuits",
+    category: "copper",
+    name: "5KG Copper Biscuits",
+    headline: "Portioned Purity. Traceable to the Pour.",
+    description:
+      "Keshan 5 KG copper biscuits are cast to precise weight and purity for jewellery, electroplating, laboratory, and small-batch remelt applications. Each biscuit is portioned for clean handling and batch traceability.",
+    applications: [
+      "Jewellery and decorative arts",
+      "Electroplating and surface treatment baths",
+      "Laboratory and small-batch remelt",
+      "Artisanal copper casting",
+    ],
+    specs: [
+      "Weight: 5 KG ± tolerance per biscuit",
+      "Purity: 99.9% minimum",
+      "Form: Biscuit / cake for easy charging",
+      "Packaging: Shrink-wrapped, boxed or palletised",
+    ],
+    cta: "Request a Quote for 5KG Copper Biscuits",
+    metaTitle: "5KG Copper Biscuits | Keshan Industries | 99.9% Pure",
+    metaDescription:
+      "5 KG copper biscuits for jewellery, electroplating, and remelt. Precise weight, high purity. Request a quote.",
   },
   {
     slug: "copper-1kg-bars",
@@ -271,6 +486,30 @@ export const products: Product[] = [
     metaTitle: "Copper Cathodes Supplier | Keshan Industries | LME Grade A",
     metaDescription:
       "LME Grade A copper cathodes with 99.99% purity. Feedstock for downstream copper manufacturing and commodity trading. Request a quote.",
+  },
+  {
+    slug: "copper-scrap",
+    category: "copper",
+    name: "Copper Scrap",
+    headline: "Sorted. Graded. Ready for the Furnace.",
+    description:
+      "Keshan copper scrap is sourced, sorted, and graded for remelt and recycling streams — supplying mills, foundries, and secondary processors with consistent feedstock and transparent grade classification.",
+    applications: [
+      "Secondary copper remelt",
+      "Foundry charge material",
+      "Brass and alloy manufacturing",
+      "Recycling and circular supply chains",
+    ],
+    specs: [
+      "Grades: Birch / Cliff / Candy / equivalent ISRI classes as available",
+      "Form: Wire, sheet, tube, mixed — sorted by lot",
+      "Contamination: screened and documented",
+      "Packaging: Baled, bundled, or loose as agreed",
+    ],
+    cta: "Request a Quote for Copper Scrap",
+    metaTitle: "Copper Scrap Supplier | Keshan Industries",
+    metaDescription:
+      "Sorted and graded copper scrap for remelt, foundries, and recycling. Transparent grades. Request a quote.",
   },
   {
     slug: "brass-ingots",
@@ -371,6 +610,30 @@ export const products: Product[] = [
     metaTitle: "Brass Circles Manufacturer | Keshan Industries | Cookware & Sanitaryware",
     metaDescription:
       "Brass circles blanked to custom diameter and thickness for cookware, sanitaryware, and decorative components. Burr-free, press-ready. Request a quote.",
+  },
+  {
+    slug: "brass-scrap",
+    category: "brass",
+    name: "Brass Scrap",
+    headline: "Sorted Brass. Graded for Remelt.",
+    description:
+      "Keshan brass scrap is sorted and graded for foundries, remelters, and recycling partners — supplying consistent Cu/Zn feedstock with transparent grade classification for efficient melting and alloying.",
+    applications: [
+      "Brass foundry remelt",
+      "Secondary alloy manufacturing",
+      "Recycling and circular supply chains",
+      "Hardware and sanitaryware melt shops",
+    ],
+    specs: [
+      "Grades: Honey / mixed yellow / ISRI-equivalent classes as available",
+      "Form: Turnings, solids, mixed — sorted by lot",
+      "Contamination: screened and documented",
+      "Packaging: Baled, bundled, or loose as agreed",
+    ],
+    cta: "Request a Quote for Brass Scrap",
+    metaTitle: "Brass Scrap Supplier | Keshan Industries",
+    metaDescription:
+      "Sorted and graded brass scrap for foundries and remelt. Transparent grades. Request a quote from Keshan Industries.",
   },
 ];
 

@@ -12,11 +12,11 @@ const datasheet = [
   { label: "Control", value: "Metallurgical control on every batch" },
   { label: "Testing", value: "Batch-tested quality before dispatch" },
   { label: "Reach", value: "On-time delivery to 30+ countries" },
-  { label: "Certs", value: "ISO 9001:2015 & ISO 14001:2015" },
+  { label: "Certs", value: "ISO 9001 · 14001 · 45001" },
 ];
 
 const millStats = [
-  { value: "10+", unit: "Years" },
+  { value: "7+", unit: "Years" },
   { value: "30+", unit: "Countries" },
   { value: "20k+", unit: "MT / yr" },
   { value: "100%", unit: "QC tested" },

@@ -10,14 +10,18 @@ import CopperHighlight from "@/components/ui/CopperHighlight";
 import { CopperWave } from "@/components/ui/CopperWave";
 
 const qualityIcons = [
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383454/Asset-7_4x_jj21yw.png",
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383454/Asset-8_4x_na2ont.png",
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383453/Asset-6_4x_nvhpza.png",
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383453/Asset-4_4x_ee9j7a.png",
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383454/Asset-5_4x_tngosg.png",
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383453/Asset-3_4x_c53s6t.png",
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383453/Asset-2_4x_vyfyrh.png",
-  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1784383452/Asset-1_4x_bepe0i.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027947/Certification_Logos-02_o7uxzn.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027951/Certification_Logos-03_dwyjco.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027951/Certification_Logos-01_f1cbcx.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027953/Certification_Logos-05_w1gy3s.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027951/Certification_Logos-08_ebcx72.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027951/Certification_Logos-04_wujy6u.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027949/Certification_Logos-07_tbdxyh.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027954/Certification_Logos-06_jv1jae.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027956/Certification_Logos-11_zb6kbm.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027959/Certification_Logos-09_i4sovh.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786027960/Certification_Logos-10_vgilpn.png",
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1786028395/Certification_Logos_xhtn9h.png",
 ];
 
 /** Optimized loop — pause when off-screen to avoid scroll jank */
@@ -125,7 +129,7 @@ export function QualitySection() {
 
             <Reveal variant="fade" delay={0.14} className="lg:justify-self-end">
               <ul
-                className="mx-auto grid w-full max-w-[400px] grid-cols-4 gap-3.5 sm:max-w-[440px] sm:gap-4 md:max-w-[480px] lg:mx-0 lg:w-[480px] lg:max-w-none lg:gap-4"
+                className="mx-auto grid w-full max-w-[420px] grid-cols-4 gap-3 sm:max-w-[520px] sm:grid-cols-6 sm:gap-3.5 md:max-w-[560px] lg:mx-0 lg:w-[520px] lg:max-w-none lg:gap-3.5"
                 aria-label="Quality certifications"
               >
                 {qualityIcons.map((src) => (
@@ -136,8 +140,8 @@ export function QualitySection() {
                           src={src}
                           alt=""
                           fill
-                          sizes="96px"
-                          className="object-cover"
+                          sizes="80px"
+                          className="object-contain p-1.5"
                           aria-hidden
                         />
                       </div>

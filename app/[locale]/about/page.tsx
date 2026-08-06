@@ -12,11 +12,12 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 import CopperHighlight from "@/components/ui/CopperHighlight";
 import PageHero from "@/components/ui/PageHero";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import TeamGrid from "@/components/about/TeamGrid";
 
 export const metadata: Metadata = {
   title: "About Keshan Industries | Copper Manufacturer | Made in India",
   description:
-    "Keshan Industries is a precision copper and brass manufacturer based in India, and one of the country's largest exporters of copper ingots. ISO 9001 & ISO 14001 certified.",
+    "Keshan Industries is a precision copper and brass manufacturer based in India, and one of the country's largest exporters of copper ingots. ISO 9001, ISO 14001 & ISO 45001 certified.",
 };
 
 const storySheet = [
@@ -161,34 +162,9 @@ export default function AboutPage() {
             </p>
           </AnimatedSection>
 
-          <div className="border-t border-copper-base/30">
-            {leadership.team.map((member, i) => (
-              <AnimatedSection key={member.name} delay={i * 0.05}>
-                <article className="group grid gap-5 border-b border-dark-100/10 py-8 sm:grid-cols-[96px_1fr_auto] sm:gap-8">
-                  <div className="relative flex h-20 w-20 items-center justify-center overflow-hidden border border-copper-base/40 bg-[radial-gradient(circle_at_30%_20%,rgba(184,115,51,0.35),transparent_60%),linear-gradient(160deg,#1a120c,#0a0a0a)] font-heading text-3xl text-copper-base transition-colors group-hover:border-copper-base">
-                    {member.name.charAt(0)}
-                  </div>
-                  <div>
-                    <h3 className="text-xl text-text-primary sm:text-2xl">
-                      {member.name}
-                    </h3>
-                    <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-                      {member.title}
-                    </p>
-                    <p className="mt-3 max-w-2xl text-body-sm text-text-secondary">
-                      {member.bio}
-                    </p>
-                  </div>
-                  <a
-                    href={member.linkedIn}
-                    className="self-start text-[11px] font-bold uppercase tracking-[0.14em] text-text-muted transition-colors hover:text-copper-base sm:self-center"
-                  >
-                    LinkedIn →
-                  </a>
-                </article>
-              </AnimatedSection>
-            ))}
-          </div>
+          <AnimatedSection>
+            <TeamGrid />
+          </AnimatedSection>
         </div>
       </section>
 

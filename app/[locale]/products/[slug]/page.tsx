@@ -174,25 +174,37 @@ export default async function ProductPage({ params }: ProductPageProps) {
                       Specification — Ranges / Types
                     </span>
                   </div>
-                  <div className="grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr]">
-                    <div className="border-r border-dark-100/10 bg-dark-950/60 px-4 py-4 text-sm font-semibold text-text-primary">
-                      {product.name}
+                  {(product.specGroups?.length
+                    ? product.specGroups
+                    : [{ label: product.name, items: product.specs }]
+                  ).map((group, groupIndex, groups) => (
+                    <div
+                      key={group.label}
+                      className={`grid grid-cols-[140px_1fr] sm:grid-cols-[180px_1fr] ${
+                        groupIndex < groups.length - 1
+                          ? "border-b border-dark-100/10"
+                          : ""
+                      }`}
+                    >
+                      <div className="border-r border-dark-100/10 bg-dark-950/60 px-4 py-4 text-sm font-semibold text-text-primary">
+                        {group.label}
+                      </div>
+                      <ul className="space-y-2.5 px-4 py-4">
+                        {group.items.map((spec) => (
+                          <li
+                            key={spec}
+                            className="flex gap-2.5 text-body-sm text-text-secondary"
+                          >
+                            <span
+                              className="mt-2 h-1 w-1 shrink-0 rounded-full bg-copper-base"
+                              aria-hidden
+                            />
+                            <span className="text-text-primary">{spec}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-                    <ul className="space-y-2.5 px-4 py-4">
-                      {product.specs.map((spec) => (
-                        <li
-                          key={spec}
-                          className="flex gap-2.5 text-body-sm text-text-secondary"
-                        >
-                          <span
-                            className="mt-2 h-1 w-1 shrink-0 rounded-full bg-copper-base"
-                            aria-hidden
-                          />
-                          <span className="text-text-primary">{spec}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  ))}
                 </div>
               </div>
 
