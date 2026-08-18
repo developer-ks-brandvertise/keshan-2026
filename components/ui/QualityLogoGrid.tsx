@@ -16,13 +16,13 @@ export function QualityLogoGrid({ className = "", size = "default" }: QualityLog
 
   return (
     <ul
-      className={`mx-auto grid w-full grid-cols-4 gap-4 sm:gap-5 ${isLarge ? "max-w-[560px]" : ""} ${className}`}
+      className={`mx-auto grid w-full grid-cols-3 gap-5 sm:gap-6 ${isLarge ? "max-w-[680px]" : "max-w-[520px]"} ${className}`}
       aria-label="Quality certifications"
     >
       {qualityCertificationLogos.map((src, i) => (
         <li key={src} className="w-full">
           <div
-            className={`relative w-full overflow-hidden rounded-full bg-copper-gradient shadow-[0_0_24px_rgba(202,94,46,0.2)] ${isLarge ? "p-[3px]" : "border border-copper-base/40 p-[2px]"}`}
+            className={`relative w-full overflow-hidden rounded-full bg-copper-gradient shadow-[0_0_28px_rgba(202,94,46,0.22)] ${isLarge ? "p-[4px]" : "border border-copper-base/40 p-[2px]"}`}
             style={{ aspectRatio: "1 / 1" }}
           >
             {!reduceMotion && !isLarge ? (
@@ -40,12 +40,12 @@ export function QualityLogoGrid({ className = "", size = "default" }: QualityLog
               />
             ) : null}
 
-            <div className={`relative z-[1] h-full w-full overflow-hidden rounded-full bg-dark-900 ${isLarge ? "p-2.5 sm:p-3" : "p-1.5 sm:p-2"}`}>
+            <div className={`relative z-[1] h-full w-full overflow-hidden rounded-full bg-dark-900 ${isLarge ? "p-3 sm:p-3.5" : "p-2 sm:p-2.5"}`}>
               <Image
                 src={src}
                 alt={`Certification logo ${i + 1}`}
                 fill
-                sizes={isLarge ? "120px" : "80px"}
+                sizes={isLarge ? "180px" : "140px"}
                 className="object-contain"
               />
             </div>

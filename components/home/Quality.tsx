@@ -11,7 +11,7 @@ import { quality } from "@/lib/data";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { Reveal } from "@/components/ui/Reveal";
 import CopperHighlight from "@/components/ui/CopperHighlight";
-import { QualityLogoGrid } from "@/components/ui/QualityLogoGrid";
+import { CertifiedSystems } from "@/components/ui/CertifiedSystems";
 import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 
 const pillarIcons = [Beaker, Award, ClipboardCheck, FileBadge];
@@ -36,7 +36,7 @@ export function QualitySection() {
       />
 
       <div className="relative z-10 px-gutter py-section">
-        <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-14 xl:gap-16">
+        <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:gap-14 xl:gap-16">
           <div className="max-w-xl lg:max-w-none">
             <Reveal variant="fade">
               <div className="mb-4 flex items-center gap-3">
@@ -84,20 +84,7 @@ export function QualitySection() {
           </div>
 
           <Reveal variant="fade" delay={0.14}>
-            <div className="relative">
-              <p className="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-                Certified systems
-              </p>
-              <h3 className="text-center text-lg text-text-primary">
-                ISO Compliant, Traceable, Batch-Tested
-              </h3>
-              <p className="mx-auto mt-2 max-w-xs text-center text-[12px] text-text-secondary">
-                Full process documentation and test certificates with every dispatch.
-              </p>
-              <div className="relative mt-8 w-full">
-                <QualityLogoGrid size="large" />
-              </div>
-            </div>
+            <CertifiedSystems />
           </Reveal>
         </div>
       </div>

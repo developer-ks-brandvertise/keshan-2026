@@ -31,73 +31,76 @@ export function ValuePropSection() {
       />
 
       <div className="relative px-gutter py-section">
-        <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:items-stretch lg:gap-14 xl:gap-16">
-          <div className="relative lg:col-span-5">
-            <Reveal variant="slide">
-              <div className="relative h-full min-h-[420px] overflow-hidden border border-copper-base/25 shadow-[0_28px_80px_rgba(0,0,0,0.35)] sm:min-h-[480px] lg:min-h-[600px]">
-                <Image
-                  src={ABOUT_IMAGE}
-                  alt="Keshan manufacturing facility"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 1024px) 100vw, 42vw"
-                  priority
-                />
-              </div>
-            </Reveal>
-          </div>
+        <div className="mx-auto max-w-6xl">
+          <SectionHeading
+            index="01"
+            eyebrow="About Keshan"
+            title={intro.headline}
+            highlight="Built for the World"
+            align="left"
+            className="max-w-4xl"
+          />
 
-          <div className="flex flex-col justify-center lg:col-span-7 lg:pl-2 xl:pl-6">
-            <SectionHeading
-              index="01"
-              eyebrow="About Keshan"
-              title={intro.headline}
-              highlight="Built for the World"
-              align="left"
-            />
-
-            <Reveal variant="fade" delay={0.1}>
-              <p className="mt-6 max-w-xl text-body-lg leading-relaxed text-text-secondary">
-                {intro.body}
-              </p>
-            </Reveal>
-
-            <Reveal variant="fade" delay={0.16}>
-              <blockquote className="mt-8 border-l-2 border-copper-base bg-dark-950/50 py-4 pl-5 pr-4">
-                <p className="font-heading text-lg leading-snug text-text-primary sm:text-xl">
-                  We are a manufacturing partner, not a commodity supplier —{" "}
-                  <CopperHighlight>batch-tested</CopperHighlight> quality on
-                  every order.
-                </p>
-              </blockquote>
-            </Reveal>
-
-            <Reveal variant="fade" delay={0.2}>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {statCards.map((row) => (
-                  <IconFeatureCard
-                    key={row.title}
-                    icon={row.icon}
-                    highlight={row.highlight}
-                    title={row.title}
-                    description={row.description}
+          <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-stretch lg:gap-12 xl:gap-14">
+            <div className="relative min-h-[360px] sm:min-h-[420px] lg:col-span-5 lg:min-h-0">
+              <Reveal variant="slide" className="absolute inset-0">
+                <div className="relative h-full overflow-hidden border border-copper-base/25 shadow-[0_28px_80px_rgba(0,0,0,0.35)]">
+                  <Image
+                    src={ABOUT_IMAGE}
+                    alt="Keshan manufacturing facility"
+                    fill
+                    className="object-cover object-center"
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    priority
                   />
-                ))}
-              </div>
-            </Reveal>
+                </div>
+              </Reveal>
+            </div>
 
-            <Reveal
-              variant="fade"
-              delay={0.26}
-              className="mt-9 flex flex-wrap items-center gap-4"
-            >
-              <MagneticButton href="/about" variant="primary">
-                {t("exploreManufacturing")}
-              </MagneticButton>
-              <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-text-muted">
-                ISO · ASTM · EN · JIS
-              </span>
-            </Reveal>
+            <div className="flex flex-col lg:col-span-7">
+              <Reveal variant="fade" delay={0.1}>
+                <p className="max-w-xl text-body-lg leading-relaxed text-text-secondary">
+                  {intro.body}
+                </p>
+              </Reveal>
+
+              <Reveal variant="fade" delay={0.16}>
+                <blockquote className="mt-6 border-l-2 border-copper-base bg-dark-950/50 py-4 pl-5 pr-4">
+                  <p className="font-heading text-lg leading-snug text-text-primary sm:text-xl">
+                    We are a manufacturing partner, not a commodity supplier —{" "}
+                    <CopperHighlight>batch-tested</CopperHighlight> quality on
+                    every order.
+                  </p>
+                </blockquote>
+              </Reveal>
+
+              <Reveal variant="fade" delay={0.2}>
+                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                  {statCards.map((row) => (
+                    <IconFeatureCard
+                      key={row.title}
+                      icon={row.icon}
+                      highlight={row.highlight}
+                      title={row.title}
+                      description={row.description}
+                    />
+                  ))}
+                </div>
+              </Reveal>
+
+              <Reveal
+                variant="fade"
+                delay={0.26}
+                className="mt-8 flex flex-wrap items-center gap-4"
+              >
+                <MagneticButton href="/about" variant="primary">
+                  {t("exploreManufacturing")}
+                </MagneticButton>
+                <span className="text-[11px] font-semibold uppercase tracking-[0.16em] text-text-muted">
+                  ISO · ASTM · EN · JIS
+                </span>
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>
