@@ -13,6 +13,8 @@ export interface Product {
   metaDescription: string;
   /** Public path to a GLB/GLTF model shown on the product page */
   modelSrc?: string;
+  /** Optional page-specific note block */
+  note?: string;
 }
 
 export const products: Product[] = [
@@ -74,14 +76,16 @@ export const products: Product[] = [
       "EV charging stations and power electronics",
     ],
     specs: [
-      "Size: Width 10 mm – 300 mm, Thickness 3 mm – 25 mm",
-      "Round Rod: 8 mm – 90 mm Dia",
-      "Shape: Rectangular, Rounded edge and Semi-circle",
+      "Cross section: up to 3000 mm",
+      "Width: up to 300 mm",
+      "Thickness: up to 50 mm",
+      "Shape: Rectangular, square, round-edge, and custom corner radius",
       "Hardness: Soft or Half-hard copper busbars",
       "Packing: Pancake coils or Straight lengths of custom sizes",
-      "Coating: Customized based on requirements",
-      "Conductivity: Minimum 58 MS/m (100% IACS)",
-      "Standards: IS 613, IEC 60317, EN 13601, ASTM B187",
+      "Material: OFC / ETP with minimum 99.90% Cu",
+      "Conductivity: Minimum 100% IACS (soft), minimum 97% (hard)",
+      "Tin coating: minimum 8 microns; silver coating: minimum 0.5 microns",
+      "Standards: IS, BS, DIN, EN, ASTM and customer standards",
     ],
     cta: "Request a Quote for Copper Busbars",
     metaTitle: "Copper Busbars Manufacturer India | Keshan Industries | IS 613 Compliant",
@@ -258,11 +262,10 @@ export const products: Product[] = [
       "Automotive and appliance motors",
     ],
     specs: [
-      "Conductor: High-purity bare copper",
-      "Insulation: Enamel (polyester / polyurethane / polyimide classes available)",
-      "Thermal class: Class F / H and as specified",
-      "Diameter: fine to medium winding gauges",
-      "Standards: IEC 60317, IS / NEMA equivalents on request",
+      "Sizes: 0.55 mm to 3.65 mm (24 SWG to 9 SWG)",
+      "Insulation thickness: Grade 1, Grade 2, Grade 3",
+      "Insulation thermal class: polyesterimide 180°C, polyesterimide-imide overcoat 200°C",
+      "Standards: IEC 60317-16, IS 13730-16",
     ],
     cta: "Request a Quote for Enamel Copper Wire",
     metaTitle: "Enamel Copper Wire Manufacturer | Keshan Industries | Magnet Wire",
@@ -307,11 +310,11 @@ export const products: Product[] = [
       "Specialty high-voltage winding applications",
     ],
     specs: [
-      "Conductor: High-purity copper strip",
-      "Insulation: Kraft / crepe paper layers as specified",
-      "Width and thickness: custom to winding design",
+      "Copper strips: width 3 mm – 16 mm, thickness 1.2 mm – 6 mm",
+      "Copper wires: diameter 1.2 mm – 2.5 mm",
+      "Insulation: Thermokraft IEC 554-2 / VDE 0311 / Nomex T-410 / Cindus (as required)",
       "Edge: Burr-controlled for winding integrity",
-      "Standards: IS / IEC transformer conductor practices on request",
+      "Standards: DIN EN 13601, DIN 46434, DIN 46452, IS-8572:1993",
     ],
     cta: "Request a Quote for Paper Insulated Copper Conductor Strips",
     metaTitle: "Paper Insulated Copper Conductor Strips | Keshan Industries",
@@ -392,51 +395,28 @@ export const products: Product[] = [
       "Phosphorous copper nuggets for foundries and alloy manufacturers. Batch-tested chemistry. Request a quote.",
   },
   {
-    slug: "copper-5kg-biscuits",
+    slug: "copper-bar-1kg-5kg",
     category: "copper",
-    name: "5KG Copper Biscuits",
-    headline: "Portioned Purity. Traceable to the Pour.",
+    name: "Copper Bar 1kg & 5kg",
+    headline: "Stamped for Purity. Sized for Flexible Charging.",
     description:
-      "Keshan 5 KG copper biscuits are cast to precise weight and purity for jewellery, electroplating, laboratory, and small-batch remelt applications. Each biscuit is portioned for clean handling and batch traceability.",
+      "Keshan copper bars in 1kg and 5kg formats are cast to precise weight and purity standards for foundries, electroplating, laboratory use, and small-to-medium remelt charging. Each bar is batch-traceable for dependable chemistry and clean handling.",
     applications: [
-      "Jewellery and decorative arts",
+      "Foundries and remelt charging",
+      "Automotive and industrial component remelt stock",
       "Electroplating and surface treatment baths",
-      "Laboratory and small-batch remelt",
-      "Artisanal copper casting",
+      "Laboratory and small-scale manufacturing",
     ],
     specs: [
-      "Weight: 5 KG ± tolerance per biscuit",
+      "Weight options: 1 KG bars and 5 KG bars",
       "Purity: 99.9% minimum",
-      "Form: Biscuit / cake for easy charging",
-      "Packaging: Shrink-wrapped, boxed or palletised",
+      "Form: Cast bars / biscuits for easy charging",
+      "Packaging: Shrink-wrapped, boxed, or palletised",
     ],
-    cta: "Request a Quote for 5KG Copper Biscuits",
-    metaTitle: "5KG Copper Biscuits | Keshan Industries | 99.9% Pure",
+    cta: "Request a Quote for Copper Bar 1kg & 5kg",
+    metaTitle: "Copper Bar 1kg & 5kg | Keshan Industries | 99.9% Pure",
     metaDescription:
-      "5 KG copper biscuits for jewellery, electroplating, and remelt. Precise weight, high purity. Request a quote.",
-  },
-  {
-    slug: "copper-1kg-bars",
-    category: "copper",
-    name: "Copper 1 KG Bars",
-    headline: "Stamped for Purity. Traceable to the Pour.",
-    description:
-      "Keshan copper 1 KG bars are cast to precise weight and purity standards for use in jewellery manufacturing, electroplating, laboratory applications, and artisanal copper work. Each bar carries a purity stamp and is traceable to its production batch.",
-    applications: [
-      "Jewellery and decorative arts",
-      "Electroplating and surface treatment baths",
-      "Laboratory reference material",
-      "Artisanal copper casting and craft applications",
-    ],
-    specs: [
-      "Weight: 1 KG ± 5g per bar",
-      "Purity: 99.9% minimum",
-      "Packaging: Shrink-wrapped, boxed",
-    ],
-    cta: "Request a Quote for Copper 1 KG Bars",
-    metaTitle: "Copper 1 KG Bars Manufacturer | Keshan Industries | 99.9% Pure",
-    metaDescription:
-      "High-purity copper 1 KG bars for jewellery, electroplating, and laboratory use. Precise weight, stamped purity, traceable batch. Request a quote.",
+      "High-purity copper bars in 1kg and 5kg formats for foundry, remelt, and electroplating applications. Request a quote.",
     modelSrc: "/3d-assets/copper_bar.glb",
   },
   {
@@ -493,7 +473,7 @@ export const products: Product[] = [
     name: "Copper Scrap",
     headline: "Sorted. Graded. Ready for the Furnace.",
     description:
-      "Keshan copper scrap is sourced, sorted, and graded for remelt and recycling streams — supplying mills, foundries, and secondary processors with consistent feedstock and transparent grade classification.",
+      "Keshan copper scrap is sourced from verified suppliers, then inspected, sorted, and graded for remelt and recycling streams. We support circular manufacturing with transparent grade classification and lot-level quality checks before processing.",
     applications: [
       "Secondary copper remelt",
       "Foundry charge material",
@@ -505,6 +485,7 @@ export const products: Product[] = [
       "Form: Wire, sheet, tube, mixed — sorted by lot",
       "Contamination: screened and documented",
       "Packaging: Baled, bundled, or loose as agreed",
+      "Annual copper and brass recycling capability: approximately 36,000 MT",
     ],
     cta: "Request a Quote for Copper Scrap",
     metaTitle: "Copper Scrap Supplier | Keshan Industries",
@@ -517,18 +498,21 @@ export const products: Product[] = [
     name: "Brass Ingots",
     headline: "Precisely Alloyed. Ready to Cast.",
     description:
-      "Keshan brass ingots are produced from controlled compositions of copper and zinc — with alloying additions as required — delivering consistent melt chemistry for brass foundries, die casters, and alloy manufacturers. Ingots are screened for trace elements and cast to standard shapes for easy furnace charging.",
+      "Keshan brass ingots are manufactured using high-purity copper and zinc with precisely controlled alloying additions to ensure consistent chemical composition and metallurgical quality. Each batch is spectrometrically analysed for composition and trace element control to match customer and international standards.",
     applications: [
       "Brass foundries and gravity die casting",
-      "Pressure die casting for hardware and fittings",
-      "Sanitary fittings, valves, and taps",
-      "Decorative components and architectural hardware",
+      "Pressure die casting for hardware and engineering components",
+      "Sanitary fittings, valves, faucets, and plumbing accessories",
+      "Electrical and electronic components",
+      "Decorative and architectural hardware",
+      "Automotive and industrial engineering applications",
     ],
     specs: [
       "Small Ingot: 250 mm × 225 mm × 50 mm, weight 22 kgs",
       "Medium Ingot: 380 mm × 330 mm × 50 mm, weight 50 kgs",
-      "Grades: CuZn37 (MS63), CuZn40 (MS60), CuZn30, and custom alloys",
-      "Standards: IS 292, ASTM B30, EN 1982",
+      "Grades: CuZn37 (MS63), CuZn40 (MS60), CuZn30, leaded and aluminium brass grades",
+      "Element ranges: Cu 55-65, Sn up to 1.0%, Pb 0-1.5%, Zn balance, Ni/Al/Fe as specified",
+      "Standards: IS 292, ASTM B30, EN 1982, JIS (custom grades available)",
     ],
     cta: "Request a Quote for Brass Ingots",
     metaTitle: "Brass Ingots Manufacturer | Keshan Industries | CuZn37 & CuZn40",
@@ -617,7 +601,7 @@ export const products: Product[] = [
     name: "Brass Scrap",
     headline: "Sorted Brass. Graded for Remelt.",
     description:
-      "Keshan brass scrap is sorted and graded for foundries, remelters, and recycling partners — supplying consistent Cu/Zn feedstock with transparent grade classification for efficient melting and alloying.",
+      "Keshan brass scrap is sorted and graded for foundries, remelters, and recycling partners, supplying consistent Cu/Zn feedstock with transparent grade classification for efficient melting and alloying.",
     applications: [
       "Brass foundry remelt",
       "Secondary alloy manufacturing",
@@ -629,6 +613,7 @@ export const products: Product[] = [
       "Form: Turnings, solids, mixed — sorted by lot",
       "Contamination: screened and documented",
       "Packaging: Baled, bundled, or loose as agreed",
+      "Annual copper and brass recycling capability: approximately 36,000 MT",
     ],
     cta: "Request a Quote for Brass Scrap",
     metaTitle: "Brass Scrap Supplier | Keshan Industries",
@@ -644,3 +629,101 @@ export function getProductBySlug(slug: string): Product | undefined {
 export function getProductsByCategory(category: "copper" | "brass"): Product[] {
   return products.filter((p) => p.category === category);
 }
+
+export const productIndustriesMap: Record<
+  string,
+  { industries: string[]; note?: string }
+> = {
+  "copper-ingots": {
+    industries: ["Electronics & PCB", "Construction", "Automotive & Industrial"],
+  },
+  "copper-busbars": {
+    industries: ["Electrical & Power", "Switchgear & Panels", "Renewable Energy", "Rail"],
+  },
+  "copper-strips": {
+    industries: ["Switchgear & Panels", "Electronics & PCB", "Rail"],
+  },
+  "copper-sheets-plates": {
+    industries: ["Construction", "Defense & Aerospace", "Heat Exchangers"],
+  },
+  "copper-upcast-rod": {
+    industries: ["Cable", "Electrical & Power"],
+  },
+  "bare-copper-wire": {
+    industries: ["Cable", "Electrical & Power", "Telecommunications"],
+  },
+  "copper-rod": {
+    industries: ["Cable", "Automotive & Industrial"],
+  },
+  "copper-hex-square-round-rods": {
+    industries: ["Switchgear & Panels", "Automotive & Industrial", "Defense & Aerospace"],
+  },
+  "enamel-copper-wire": {
+    industries: ["EV Charging", "Electrical & Power", "Automotive (motor windings)"],
+  },
+  "copper-blister": {
+    industries: [],
+    note: "Internal feedstock only (refining input); not a customer-facing industries-served item.",
+  },
+  "paper-insulated-copper-conductors-strips": {
+    industries: ["Rail", "Power Transmission / Electrical & Power"],
+  },
+  "copper-foils": {
+    industries: ["Electronics & PCB", "Telecommunications"],
+  },
+  "phosphorous-copper-bar": {
+    industries: [],
+    note: "Alloying input for foundries; not an end-industry facing product.",
+  },
+  "phosphorous-copper-nuggets": {
+    industries: [],
+    note: "Alloying/foundry input product; not an end-industry facing product.",
+  },
+  "copper-bar-1kg-5kg": {
+    industries: ["Foundries", "Automotive & Industrial", "Small-scale Manufacturing"],
+  },
+  "copper-scrap": {
+    industries: ["Foundries", "Secondary Refiners", "Alloy Manufacturers"],
+  },
+  "brass-ingots": {
+    industries: ["Foundries & Die-Casting", "Plumbing & Sanitaryware", "Automotive & Industrial"],
+  },
+  "brass-sheets-plates": {
+    industries: ["Architectural & Decorative Hardware", "Construction"],
+  },
+  "brass-strips": {
+    industries: [
+      "Electrical & Electronics",
+      "Switchgear & Electrical Accessories",
+      "Telecommunications",
+    ],
+  },
+  "brass-circles": {
+    industries: ["Plumbing & Sanitaryware", "Foundries & Die-Casting"],
+  },
+  "brass-scrap": {
+    industries: [],
+    note: "Internal feedstock/raw material for recycling and remelt, not an industries-served item.",
+  },
+};
+
+export const scrapGrades: Record<string, { grade: string; description: string }[]> = {
+  "copper-scrap": [
+    { grade: "Barley", description: "No.1 bare bright copper wire grade as per ISRI." },
+    { grade: "Berry", description: "Clean untinned/uncoated copper wire and cable grade." },
+    { grade: "Birch", description: "Miscellaneous unalloyed wire grade with nominal 96% Cu." },
+    { grade: "Cliff", description: "Copper solids/tubing grade with nominal 96% Cu." },
+    { grade: "Candy", description: "No.2 heavy copper solids and tubing grade." },
+    { grade: "Clove", description: "No.1 copper wire nodules grade, high-copper chopped wire." },
+    { grade: "Cobra", description: "No.2 copper wire nodules grade." },
+    { grade: "Cocoa", description: "Unalloyed wire nodules, typically 99% copper grade." },
+    { grade: "Dream", description: "Light copper grade with nominal 92% Cu." },
+  ],
+  "brass-scrap": [
+    { grade: "Honey", description: "Mixed yellow brass solids grade as per ISRI." },
+    { grade: "Label", description: "New brass clippings grade." },
+    { grade: "Pallu", description: "Aluminum brass condenser tubes grade." },
+    { grade: "Night", description: "Yellow brass rod turnings grade." },
+    { grade: "Nomad", description: "Yellow brass turnings grade." },
+  ],
+};

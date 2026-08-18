@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import { redirect } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Download, FileText } from "lucide-react";
-import { products, getProductBySlug } from "@/lib/products";
+import {
+  products,
+  getProductBySlug,
+  productIndustriesMap,
+  scrapGrades,
+} from "@/lib/products";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
 import { ProductModelViewer } from "@/components/products/ProductModelViewer";
@@ -33,9 +39,14 @@ export async function generateMetadata({
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
-  const { slug } = await params;
+  const { slug, locale } = await params;
+  if (slug === "copper-1kg-bars" || slug === "copper-5kg-biscuits") {
+    redirect(`/${locale}/products/copper-bar-1kg-5kg`);
+  }
   const product = getProductBySlug(slug);
   if (!product) return notFound();
+  const industriesBlock = productIndustriesMap[product.slug];
+  const gradeRows = scrapGrades[product.slug];
 
   const siblings = products.filter((p) => p.category === product.category);
   const currentIndex = siblings.findIndex((p) => p.slug === slug);
@@ -160,6 +171,53 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   ))}
                 </div>
               </div>
+
+              <div>
+                <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
+                  Industries Served
+                </h3>
+                {industriesBlock?.industries?.length ? (
+                  <div className="flex flex-wrap gap-2">
+                    {industriesBlock.industries.map((industry) => (
+                      <span
+                        key={industry}
+                        className="inline-flex border border-copper-base/30 bg-dark-950 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.08em] text-text-primary"
+                      >
+                        {industry}
+                      </span>
+                    ))}
+                  </div>
+                ) : null}
+                {industriesBlock?.note ? (
+                  <p className="mt-3 border-l-2 border-copper-base pl-3 text-body-sm text-text-secondary">
+                    {industriesBlock.note}
+                  </p>
+                ) : null}
+              </div>
+
+              {gradeRows?.length ? (
+                <div>
+                  <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
+                    Scrap Grades
+                  </h3>
+                  <div className="mb-5 flex h-36 items-center justify-center border border-dashed border-copper-base/35 bg-dark-950/60 text-[11px] font-semibold uppercase tracking-[0.2em] text-copper-base">
+                    Image Placeholder
+                  </div>
+                  <div className="overflow-hidden border border-copper-base/25">
+                    {gradeRows.map((row) => (
+                      <div
+                        key={row.grade}
+                        className="grid grid-cols-[110px_1fr] gap-3 border-b border-dark-100/10 px-4 py-3 last:border-b-0"
+                      >
+                        <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
+                          {row.grade}
+                        </span>
+                        <span className="text-body-sm text-text-primary">{row.description}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
 
               <div>
                 <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">

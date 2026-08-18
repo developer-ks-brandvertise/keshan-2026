@@ -10,23 +10,21 @@
   --gray-dark: #666666;
 
   /* Copper palette */
-  --copper: #b87333;
-  --copper-light: #d4a574;
-  --copper-bright: #f5c58a;
-  --copper-dark: #8a5a2b;
-  --copper-deep: #5c3a1a;
-  --copper-highlight: #ffe2b0;
+  --copper: #ca5e2e;
+  --copper-light: #ffda9a;
+  --copper-bright: #ffda9a;
+  --copper-dark: #b24e1f;
+  --copper-deep: #7f3517;
+  --copper-highlight: #ffda9a;
   --copper-gradient: linear-gradient(
     125deg,
-    #5c3a1a 0%,
-    #8a5a2b 14%,
-    #b87333 28%,
-    #e8b87a 42%,
-    #ffe2b0 50%,
-    #d4a574 58%,
-    #b87333 72%,
-    #8a5a2b 86%,
-    #6b4226 100%
+    #7f3517 0%,
+    #b24e1f 16%,
+    #ca5e2e 34%,
+    #ffda9a 52%,
+    #ca5e2e 70%,
+    #b24e1f 84%,
+    #7f3517 100%
   );
 
   --primary: var(--copper);
@@ -234,11 +232,11 @@ html.light {
   .text-copper-gradient {
     background-image: linear-gradient(
       110deg,
-      #8a5a2b 0%,
-      #b87333 25%,
-      #ffe2b0 50%,
-      #d4a574 75%,
-      #8a5a2b 100%
+      #b24e1f 0%,
+      #ca5e2e 28%,
+      #ffda9a 50%,
+      #ca5e2e 72%,
+      #b24e1f 100%
     );
     -webkit-background-clip: text;
     background-clip: text;
@@ -266,12 +264,11 @@ html.light {
   .text-copper-shimmer {
     background-image: linear-gradient(
       110deg,
-      #8a5a2b 0%,
-      #b87333 22%,
-      #f5c58a 42%,
-      #d4a574 55%,
-      #b87333 72%,
-      #8a5a2b 100%
+      #b24e1f 0%,
+      #ca5e2e 24%,
+      #ffda9a 44%,
+      #ca5e2e 70%,
+      #b24e1f 100%
     );
     background-size: 220% 100%;
     -webkit-background-clip: text;
@@ -319,22 +316,20 @@ html.light {
   .bg-copper-gradient {
     background-image: linear-gradient(
       125deg,
-      #5c3a1a 0%,
-      #8a5a2b 12%,
-      #b87333 26%,
-      #e8b87a 40%,
-      #ffe2b0 50%,
-      #d4a574 60%,
-      #b87333 74%,
-      #8a5a2b 88%,
-      #6b4226 100%
+      #7f3517 0%,
+      #b24e1f 14%,
+      #ca5e2e 34%,
+      #ffda9a 52%,
+      #ca5e2e 70%,
+      #b24e1f 86%,
+      #7f3517 100%
     );
     background-size: 200% 200%;
     background-position: 0% 50%;
     box-shadow:
-      inset 0 1px 0 rgba(255, 226, 176, 0.35),
-      inset 0 -1px 0 rgba(92, 58, 26, 0.35),
-      0 0 20px rgba(184, 115, 51, 0.22);
+      inset 0 1px 0 rgba(255, 218, 154, 0.35),
+      inset 0 -1px 0 rgba(127, 53, 23, 0.35),
+      0 0 20px rgba(202, 94, 46, 0.25);
     transition:
       background-position 0.6s ease,
       box-shadow 0.3s ease,
@@ -344,21 +339,21 @@ html.light {
   .bg-copper-gradient:hover {
     background-position: 100% 50%;
     box-shadow:
-      inset 0 1px 0 rgba(255, 226, 176, 0.45),
-      inset 0 -1px 0 rgba(92, 58, 26, 0.3),
-      0 0 28px rgba(232, 166, 89, 0.4);
+      inset 0 1px 0 rgba(255, 218, 154, 0.45),
+      inset 0 -1px 0 rgba(127, 53, 23, 0.3),
+      0 0 28px rgba(202, 94, 46, 0.45);
     filter: brightness(1.05);
   }
 
   .bg-copper-gradient-shine {
     background-image: linear-gradient(
       135deg,
-      #5c3a1a 0%,
-      #b87333 25%,
-      #ffe2b0 45%,
-      #d4a574 55%,
-      #8a5a2b 75%,
-      #6b4226 100%
+      #7f3517 0%,
+      #ca5e2e 30%,
+      #ffda9a 48%,
+      #ca5e2e 66%,
+      #b24e1f 82%,
+      #7f3517 100%
     );
     background-size: 220% 220%;
     animation: copper-metal-sheen 6s ease-in-out infinite;
@@ -367,11 +362,11 @@ html.light {
   .border-copper-gradient {
     border-image: linear-gradient(
         90deg,
-        #8a5a2b,
-        #b87333,
-        #ffe2b0,
-        #d4a574,
-        #8a5a2b
+        #b24e1f,
+        #ca5e2e,
+        #ffda9a,
+        #ca5e2e,
+        #b24e1f
       )
       1;
   }
@@ -401,7 +396,7 @@ html.light {
     background: linear-gradient(
       90deg,
       transparent,
-      rgba(184, 115, 51, 0.55),
+      rgba(202, 94, 46, 0.55),
       transparent
     );
   }
@@ -410,8 +405,8 @@ html.light {
     height: 1px;
     background: linear-gradient(
       90deg,
-      rgba(184, 115, 51, 0.6),
-      rgba(212, 165, 116, 0.25),
+      rgba(202, 94, 46, 0.6),
+      rgba(255, 218, 154, 0.25),
       transparent
     );
   }
@@ -502,10 +497,10 @@ html.light {
     from 0deg,
     transparent 0%,
     transparent 68%,
-    rgba(245, 197, 138, 0.35) 74%,
-    #f5c58a 80%,
-    #b87333 86%,
-    #8a5a2b 90%,
+    rgba(255, 218, 154, 0.35) 74%,
+    #ffda9a 80%,
+    #ca5e2e 86%,
+    #b24e1f 90%,
     transparent 96%,
     transparent 100%
   );
@@ -528,9 +523,9 @@ html.light {
     animation: none;
     background: conic-gradient(
       from 120deg,
-      rgba(184, 115, 51, 0.35),
-      #f5c58a,
-      rgba(184, 115, 51, 0.35)
+      rgba(202, 94, 46, 0.35),
+      #ffda9a,
+      rgba(202, 94, 46, 0.35)
     );
   }
 }

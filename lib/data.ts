@@ -38,7 +38,7 @@ export const intro = {
   stats: [
     { value: "7+", label: "Years of Manufacturing Excellence" },
     { value: "30+", label: "Countries Supplied" },
-    { value: "20,000+", label: "MT Annual Production Capacity" },
+    { value: "24,000+", label: "MT Annual Production Capacity" },
     { value: "100%", label: "Quality Tested Before Dispatch" },
   ],
 };
@@ -458,19 +458,43 @@ export const milestones = {
   events: [
     { year: "2019", title: "Founded", description: "Keshan Industries founded; first manufacturing facility commissioned in Hyderabad." },
     { year: "2020", title: "ISO Certification", description: "Achieved ISO 9001:2015, ISO 14001:2015, and ISO 45001 certification." },
-    { year: "2022", title: "Capacity Expansion", description: "Expanded annual production capacity beyond 20,000 MT." },
+    { year: "2022", title: "Capacity Expansion", description: "Expanded annual production capacity beyond 24,000 MT." },
     { year: "2026", title: "30+ Countries", description: "Supplying copper and brass to 30+ countries across six regions." },
   ],
 };
 
 export const contact = {
-  address: "Keshan Industries, Plot No. 12, Industrial Area, Hyderabad, Telangana 500001, India",
+  address:
+    "Corporate Office: 1-8-271, 505, 5th Floor, Ashoka Bhoopal Chambers, Begumpet, Hyderabad 500003, Telangana",
   phones: ["+91 40 1234 5678", "+91 40 1234 5679"],
   emails: [
     "sales.killp@keshanindustries.com",
     "export@keshanindustries.com",
   ],
   hours: "Mon – Sat: 9.00am – 18.00pm IST / Sun: Closed",
+  locations: [
+    {
+      label: "Corporate Office",
+      address:
+        "1-8-271, 505, 5th Floor, Ashoka Bhoopal Chambers, Begumpet, Hyderabad 500003, Telangana",
+      mapEmbed:
+        "https://www.google.com/maps?q=1-8-271,+Ashoka+Bhoopal+Chambers,+Begumpet,+Hyderabad+500003&output=embed",
+    },
+    {
+      label: "Manufacturing Unit 1",
+      address:
+        "Sy No. 354, Plot No. 26/F, TSIIC, Muppireddy Pally (V), Toopran, Medak District - 502336, Telangana",
+      mapEmbed:
+        "https://www.google.com/maps?q=TSIIC,+Muppireddy+Pally,+Toopran,+Medak+502336&output=embed",
+    },
+    {
+      label: "Manufacturing Unit 2",
+      address:
+        "Plot No. 5/B7, Sy. No. 148, Automotive Park, Kallakal, Toopran, Medak District, Telangana",
+      mapEmbed:
+        "https://www.google.com/maps?q=Automotive+Park,+Kallakal,+Toopran,+Medak&output=embed",
+    },
+  ],
 };
 
 export const footer = {

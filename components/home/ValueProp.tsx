@@ -19,7 +19,7 @@ const datasheet = [
 const millStats = [
   { value: "7+", unit: "Years" },
   { value: "30+", unit: "Countries" },
-  { value: "20k+", unit: "MT / yr" },
+  { value: "24k+", unit: "MT / yr" },
   { value: "100%", unit: "QC tested" },
 ];
 

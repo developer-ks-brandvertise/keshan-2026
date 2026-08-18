@@ -4,7 +4,6 @@ import {
   about,
   visionMission,
   leadership,
-  globalReach,
   milestones,
   intro,
 } from "@/lib/data";
@@ -116,7 +115,25 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 02 — Vision / Mission / Values */}
+      {/* 02 — Leadership */}
+      <section className="bg-dark-950 py-section px-gutter">
+        <div className="mx-auto max-w-6xl">
+          <AnimatedSection className="mb-12 max-w-3xl">
+            <span className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
+              02 — Leadership
+            </span>
+            <h2 className="text-h2">{leadership.headline}</h2>
+            <p className="mt-5 text-body-lg text-text-secondary">
+              {leadership.subheadline}
+            </p>
+          </AnimatedSection>
+          <AnimatedSection>
+            <TeamGrid />
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* 03 — Vision / Mission / Values */}
       <section className="relative overflow-hidden bg-dark-950 py-section px-gutter">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-copper-base/50 to-transparent"
@@ -126,7 +143,7 @@ export default function AboutPage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
             <AnimatedSection className="relative overflow-hidden border border-copper-base/25 bg-dark-900 p-8 sm:p-10 lg:col-span-5">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
-                02 — Vision
+                03 — Vision
               </span>
               <h2 className="mt-4 text-h2">{visionMission.visionHeadline}</h2>
               <p className="mt-5 text-body-lg text-text-secondary">
@@ -182,91 +199,10 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* 03 — Partners / Clients */}
-      <ClientsSection index="03" tone="dark-900" />
+      {/* 04 — Partners / Clients */}
+      <ClientsSection index="04" tone="dark-900" />
 
-      {/* 04 — Leadership */}
-      <section className="bg-dark-950 py-section px-gutter">
-        <div className="mx-auto max-w-6xl">
-          <AnimatedSection className="mb-12 max-w-3xl">
-            <span className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
-              04 — Leadership
-            </span>
-            <h2 className="text-h2">{leadership.headline}</h2>
-            <p className="mt-5 text-body-lg text-text-secondary">
-              {leadership.subheadline}
-            </p>
-          </AnimatedSection>
-
-          <AnimatedSection>
-            <TeamGrid />
-          </AnimatedSection>
-        </div>
-      </section>
-
-      {/* 05 — Global reach */}
-      <section className="relative overflow-hidden bg-dark-900 py-section px-gutter">
-        <div
-          className="pointer-events-none absolute right-0 top-1/2 h-[520px] w-[520px] -translate-y-1/2 translate-x-1/4 rounded-full border border-copper-base/15 bg-[radial-gradient(circle,rgba(184,115,51,0.14),transparent_65%)]"
-          aria-hidden
-        />
-        <div className="relative mx-auto max-w-6xl">
-          <AnimatedSection className="mb-10 max-w-3xl">
-            <span className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
-              05 — Global Reach
-            </span>
-            <h2 className="text-h2">{globalReach.headline}</h2>
-            <p className="mt-5 text-body-lg text-text-secondary">
-              {globalReach.body}
-            </p>
-          </AnimatedSection>
-
-          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
-            <AnimatedSection className="lg:col-span-7">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                Regions we supply
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {globalReach.regions.map((region) => (
-                  <span
-                    key={region}
-                    className="inline-flex items-center gap-2 border border-copper-base/35 bg-dark-950/80 px-4 py-3 text-sm text-text-primary transition-all hover:border-copper-base hover:bg-copper-base/10 hover:shadow-[0_0_20px_rgba(184,115,51,0.15)]"
-                  >
-                    <span
-                      className="h-1.5 w-1.5 rounded-full bg-copper-base"
-                      aria-hidden
-                    />
-                    {region}
-                  </span>
-                ))}
-              </div>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.1} className="lg:col-span-5">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                Export capabilities
-              </p>
-              <div className="relative space-y-0 pl-6">
-                <div
-                  className="absolute bottom-3 left-[7px] top-3 w-px bg-gradient-to-b from-copper-base via-copper-base/40 to-transparent"
-                  aria-hidden
-                />
-                {globalReach.capabilities.map((capability) => (
-                  <div key={capability} className="relative pb-6 last:pb-0">
-                    <span
-                      className="absolute -left-6 top-1.5 h-3 w-3 border border-copper-base bg-dark-900"
-                      aria-hidden
-                    />
-                    <p className="text-body-sm text-text-primary">{capability}</p>
-                  </div>
-                ))}
-              </div>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-
-      {/* 06 — Milestones — copper rail timeline */}
+      {/* 05 — Milestones — arrow timeline */}
       <section className="relative overflow-hidden bg-dark-950 py-section px-gutter">
         <div
           className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-copper-base/40 to-transparent"
@@ -275,22 +211,16 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl">
           <AnimatedSection className="mb-12 max-w-2xl">
             <span className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
-              06 — Milestones
+              05 — Milestones
             </span>
             <h2 className="text-h2">{milestones.headline}</h2>
           </AnimatedSection>
 
-          <div className="relative">
-            {/* Desktop copper rail */}
-            <div
-              className="absolute left-0 right-0 top-[2.25rem] hidden h-px bg-gradient-to-r from-copper-base/10 via-copper-base/60 to-copper-base/10 lg:block"
-              aria-hidden
-            />
-            <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+          <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {milestones.events.map((event, index) => (
                 <AnimatedSection key={event.year} delay={index * 0.07}>
-                  <li className="group relative flex h-full flex-col border border-copper-base/20 bg-dark-900 p-6 pt-8 transition-colors hover:border-copper-base/50">
-                    <span className="absolute left-6 top-0 -translate-y-1/2 flex h-9 w-9 items-center justify-center border border-copper-base bg-dark-950 font-heading text-[10px] text-copper-base shadow-[0_0_20px_rgba(184,115,51,0.25)] lg:left-1/2 lg:-translate-x-1/2">
+                  <li className="group relative flex h-full flex-col border border-copper-base/25 bg-dark-900 p-6 transition-colors hover:border-copper-base/55">
+                    <span className="mb-4 inline-flex h-9 w-9 items-center justify-center border border-copper-base bg-dark-950 font-heading text-[10px] text-copper-base">
                       {String(index + 1).padStart(2, "0")}
                     </span>
                     <p className="font-heading text-3xl text-copper-base">
@@ -300,11 +230,16 @@ export default function AboutPage() {
                     <p className="mt-2 flex-1 text-body-sm text-text-secondary">
                       {event.description}
                     </p>
+                    {index < milestones.events.length - 1 ? (
+                      <span
+                        className="pointer-events-none absolute -right-4 top-1/2 hidden h-0 w-0 -translate-y-1/2 border-b-[12px] border-l-[18px] border-t-[12px] border-b-transparent border-l-copper-base/70 border-t-transparent lg:block"
+                        aria-hidden
+                      />
+                    ) : null}
                   </li>
                 </AnimatedSection>
               ))}
-            </ol>
-          </div>
+          </ol>
 
           <AnimatedSection className="mt-12">
             <MagneticButton href="/contact" variant="primary">

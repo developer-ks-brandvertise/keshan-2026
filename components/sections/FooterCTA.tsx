@@ -41,7 +41,7 @@ export default function FooterCTA() {
                 Contact Information
               </h3>
               <div className="space-y-4 text-sm text-text-secondary">
-                <p>{contact.address}</p>
+                <p>{contact.locations?.[0]?.address ?? contact.address}</p>
                 <p>
                   <span className="text-text-primary">Phone:</span>{" "}
                   {contact.phones.join(" / ")}

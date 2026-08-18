@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { contact } from "@/lib/data";
+import { contact, globalReach } from "@/lib/data";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import PageHero from "@/components/ui/PageHero";
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 const infoRows = [
-  { label: "Address", value: contact.address },
+  { label: "Office", value: contact.locations[0]?.address ?? contact.address },
   { label: "Phone", value: contact.phones.join(" / ") },
   { label: "Email", value: contact.emails.join(" | ") },
   { label: "Hours", value: contact.hours },
@@ -98,6 +98,80 @@ export default function ContactPage() {
             </p>
             <ContactForm />
           </AnimatedSection>
+        </div>
+      </section>
+
+      <section className="bg-dark-950 py-section px-gutter">
+        <div className="mx-auto max-w-6xl">
+          <AnimatedSection className="mb-10 max-w-3xl">
+            <span className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
+              Global Reach
+            </span>
+            <h2 className="text-h2">{globalReach.headline}</h2>
+            <p className="mt-5 text-body-lg text-text-secondary">{globalReach.body}</p>
+          </AnimatedSection>
+          <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
+            <AnimatedSection className="lg:col-span-7">
+              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
+                Regions we supply
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {globalReach.regions.map((region) => (
+                  <span
+                    key={region}
+                    className="inline-flex items-center gap-2 border border-copper-base/35 bg-dark-900 px-4 py-3 text-sm text-text-primary"
+                  >
+                    <span className="h-1.5 w-1.5 rounded-full bg-copper-base" aria-hidden />
+                    {region}
+                  </span>
+                ))}
+              </div>
+            </AnimatedSection>
+            <AnimatedSection delay={0.1} className="lg:col-span-5">
+              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
+                Export capabilities
+              </p>
+              <ul className="space-y-3">
+                {globalReach.capabilities.map((capability) => (
+                  <li key={capability} className="border border-copper-base/20 bg-dark-900 px-4 py-3 text-body-sm text-text-primary">
+                    {capability}
+                  </li>
+                ))}
+              </ul>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-dark-900 py-section px-gutter">
+        <div className="mx-auto max-w-6xl">
+          <AnimatedSection className="mb-10">
+            <h2 className="text-h2">Our Locations</h2>
+            <p className="mt-4 max-w-2xl text-body-lg text-text-secondary">
+              Visit our corporate office and manufacturing units across Telangana.
+            </p>
+          </AnimatedSection>
+          <div className="grid gap-8 lg:grid-cols-3">
+            {contact.locations.map((location, index) => (
+              <AnimatedSection key={location.label} delay={Math.min(index * 0.06, 0.18)}>
+                <article className="overflow-hidden border border-copper-base/25 bg-dark-950">
+                  <div className="border-b border-copper-base/25 px-4 py-3">
+                    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
+                      {location.label}
+                    </p>
+                  </div>
+                  <p className="px-4 py-4 text-body-sm text-text-primary">{location.address}</p>
+                  <iframe
+                    title={`${location.label} map`}
+                    src={location.mapEmbed}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    className="h-56 w-full border-0"
+                  />
+                </article>
+              </AnimatedSection>
+            ))}
+          </div>
         </div>
       </section>
     </main>

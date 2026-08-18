@@ -23,7 +23,7 @@ export function QualitySection() {
       />
 
       <div className="relative z-10 px-gutter py-section">
-        <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:gap-14 xl:gap-16">
+        <div className="mx-auto grid w-full max-w-6xl gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:items-start lg:gap-14 xl:gap-16">
           <div className="max-w-xl lg:max-w-none">
             <Reveal variant="fade">
               <div className="mb-4 flex items-center gap-3">
@@ -39,8 +39,8 @@ export function QualitySection() {
 
             <Reveal variant="slide">
               <h2 className="text-h2 text-balance text-text-primary">
-                Quality is Not a Department at Keshan. It is the{" "}
-                <CopperHighlight>Standard</CopperHighlight>.
+                Quality Assurance Built Into Every{" "}
+                <CopperHighlight>Production Stage</CopperHighlight>.
               </h2>
             </Reveal>
 
@@ -51,12 +51,16 @@ export function QualitySection() {
             </Reveal>
 
             <Reveal variant="fade" delay={0.18}>
-              <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
                 {quality.pillars.map((pillar) => (
                   <li
                     key={pillar}
-                    className="border border-copper-base/25 bg-dark-900/80 px-4 py-3 text-body-sm text-text-primary"
+                    className="relative overflow-hidden border border-copper-base/25 bg-dark-900/90 px-4 py-3 text-body-sm text-text-primary"
                   >
+                    <span
+                      className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-copper-base/60 to-transparent"
+                      aria-hidden
+                    />
                     <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-copper-base align-middle" />
                     {pillar}
                   </li>
@@ -74,13 +78,19 @@ export function QualitySection() {
           <Reveal variant="fade" delay={0.14}>
             <div className="relative border border-copper-base/30 bg-dark-900 p-5 sm:p-7">
               <div
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(184,115,51,0.08),transparent_65%)]"
+                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(202,94,46,0.14),transparent_65%)]"
                 aria-hidden
               />
-              <p className="relative mb-5 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-                Certifications & memberships
+              <p className="relative mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
+                Certified systems
               </p>
-              <div className="relative min-h-[220px] w-full sm:min-h-[260px]">
+              <h3 className="relative text-center text-lg text-text-primary">
+                ISO Compliant, Traceable, Batch-Tested
+              </h3>
+              <p className="relative mx-auto mt-2 max-w-xs text-center text-[12px] text-text-secondary">
+                Full process documentation and test certificates with every dispatch.
+              </p>
+              <div className="relative mt-5 min-h-[220px] w-full sm:min-h-[260px]">
                 <QualityLogoGrid />
               </div>
             </div>

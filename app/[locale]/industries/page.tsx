@@ -44,6 +44,28 @@ const iconMap: Record<string, LucideIcon> = {
   Wrench,
 };
 
+const copperProductIndustries = [
+  ["Copper Ingots", "Electronics & PCB, Construction, Automotive & Industrial"],
+  ["Copper Busbars", "Electrical & Power, Switchgear & Panels, Renewable Energy, Rail"],
+  ["Copper Strips", "Switchgear & Panels, Electronics & PCB, Rail"],
+  ["Copper Sheet, Plates & Circles", "Construction, Defense & Aerospace, Heat Exchangers"],
+  ["Copper Upcast Rod", "Cable, Electrical & Power"],
+  ["Bare Copper Wire", "Cable, Electrical & Power, Telecommunications"],
+  ["Copper Rod", "Cable, Automotive & Industrial"],
+  ["Copper Hex, Square, Round Rods", "Switchgear & Panels, Automotive & Industrial, Defense & Aerospace"],
+  ["Enamel Copper Wire", "EV Charging, Electrical & Power, Automotive (motor windings)"],
+  ["Paper Insulated Copper Conductors (PICC) Strips", "Rail, Power Transmission / Electrical & Power"],
+  ["Copper Foils", "Electronics & PCB, Telecommunications"],
+  ["Copper Bar 1kg & 5kg", "Foundries, Automotive & Industrial, Small-scale manufacturing"],
+];
+
+const brassProductIndustries = [
+  ["Brass Ingots", "Foundries & Die-Casting, Plumbing & Sanitaryware, Automotive & Industrial"],
+  ["Brass Sheets & Plates", "Architectural & Decorative Hardware, Construction"],
+  ["Brass Strips", "Electrical & Electronics, Switchgear & Electrical Accessories, Telecommunications"],
+  ["Brass Circles", "Plumbing & Sanitaryware, Foundries & Die-Casting"],
+];
+
 export default function IndustriesPage() {
   return (
     <main>
@@ -112,6 +134,30 @@ export default function IndustriesPage() {
             >
               Browse product range →
             </Link>
+          </AnimatedSection>
+
+          <AnimatedSection className="mt-16">
+            <h2 className="text-h3">Copper Products → Industries</h2>
+            <div className="mt-5 overflow-hidden border border-copper-base/25">
+              {copperProductIndustries.map(([product, sector]) => (
+                <div key={product} className="grid grid-cols-[220px_1fr] gap-4 border-b border-dark-100/10 px-4 py-3 last:border-b-0">
+                  <p className="text-sm font-semibold text-text-primary">{product}</p>
+                  <p className="text-body-sm text-text-secondary">{sector}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+
+          <AnimatedSection className="mt-12">
+            <h2 className="text-h3">Brass Products → Industries</h2>
+            <div className="mt-5 overflow-hidden border border-copper-base/25">
+              {brassProductIndustries.map(([product, sector]) => (
+                <div key={product} className="grid grid-cols-[220px_1fr] gap-4 border-b border-dark-100/10 px-4 py-3 last:border-b-0">
+                  <p className="text-sm font-semibold text-text-primary">{product}</p>
+                  <p className="text-body-sm text-text-secondary">{sector}</p>
+                </div>
+              ))}
+            </div>
           </AnimatedSection>
         </div>
       </section>

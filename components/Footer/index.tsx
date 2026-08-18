@@ -75,7 +75,9 @@ export default function Footer() {
               Contact
             </h4>
             <ul className="mt-5 space-y-3 text-body-sm text-text-secondary">
-              <li className="max-w-xs">{contact.address}</li>
+              <li className="max-w-xs">
+                {contact.locations?.[0]?.address ?? contact.address}
+              </li>
               <li>{contact.phones.join(" / ")}</li>
               <li>{contact.emails.join(" | ")}</li>
               <li>{contact.hours}</li>
