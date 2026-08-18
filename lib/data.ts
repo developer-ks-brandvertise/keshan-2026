@@ -53,14 +53,16 @@ export const productCategories = {
       description:
         "Ingots, Busbars, Strips, Sheets & Circles, Upcast Rod, Wires, Rods, Foils, Phosphorous grades, Scrap, Anodes & Cathodes — manufactured to international specification.",
       href: "/products#copper",
-      image: "/images/place-copper.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787055341/Copper-Home-Page_us9tqh.png",
     },
     {
       title: "Brass Products",
       description:
         "Ingots, Sheets, Plates, Strips, Circles & Scrap — precision-alloyed for strength, machinability, and finish across every application.",
       href: "/products#brass",
-      image: "/images/place-brass.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787055341/Brass-Home-Page_ad5rzx.png",
     },
   ],
 };

@@ -7,7 +7,6 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArrowUpRight } from "lucide-react";
 
-const images = ["/images/service1.jpg", "/images/service2.jpg"];
 const specs = [
   "Cu-ETP · Cu-OF · Busbars · Upcast · Foils · Cathodes",
   "Ingots · Sheets · Plates · Strips · Circles · Scrap",
@@ -42,7 +41,7 @@ export function ProductCategoriesSection() {
               >
                 <div className="relative min-h-[240px] overflow-hidden lg:min-h-0">
                   <Image
-                    src={images[index] ?? images[0]}
+                    src={category.image}
                     alt={category.title}
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
