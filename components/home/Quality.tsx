@@ -1,20 +1,33 @@
 "use client";
 
+import {
+  Award,
+  Beaker,
+  ClipboardCheck,
+  FileBadge,
+  ShieldCheck,
+} from "lucide-react";
 import { quality } from "@/lib/data";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { Reveal } from "@/components/ui/Reveal";
 import CopperHighlight from "@/components/ui/CopperHighlight";
-import { CopperWave } from "@/components/ui/CopperWave";
 import { QualityLogoGrid } from "@/components/ui/QualityLogoGrid";
+import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
+
+const pillarIcons = [Beaker, Award, ClipboardCheck, FileBadge];
+
+const pillarMeta = [
+  { title: "Purity", description: "99.9%+ copper purity on all electrolytic grades" },
+  { title: "Certified", description: "ISO 9001:2015, ISO 14001:2015, and ISO 45001 certified" },
+  { title: "Testing", description: "Chemical composition, conductivity, and tensile testing per batch" },
+  { title: "Standards", description: "Compliance with IS, ASTM, DIN, JIS, and BS standards" },
+];
 
 export function QualitySection() {
   return (
     <section className="relative overflow-hidden bg-dark-950">
-      <CopperWave id="quality" className="-mb-px" />
-
-      {/* Theme-aware atmosphere (no hardcoded black — works in light mode) */}
       <div
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_75%_40%,rgba(184,115,51,0.16),transparent_55%),radial-gradient(ellipse_at_15%_80%,rgba(184,115,51,0.08),transparent_50%)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_75%_40%,rgba(202,94,46,0.16),transparent_55%),radial-gradient(ellipse_at_15%_80%,rgba(202,94,46,0.08),transparent_50%)]"
         aria-hidden
       />
       <div
@@ -51,21 +64,16 @@ export function QualitySection() {
             </Reveal>
 
             <Reveal variant="fade" delay={0.18}>
-              <ul className="mt-8 grid gap-4 sm:grid-cols-2">
-                {quality.pillars.map((pillar) => (
-                  <li
-                    key={pillar}
-                    className="relative overflow-hidden border border-copper-base/25 bg-dark-900/90 px-4 py-3 text-body-sm text-text-primary"
-                  >
-                    <span
-                      className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-copper-base/60 to-transparent"
-                      aria-hidden
-                    />
-                    <span className="mr-2 inline-block h-1.5 w-1.5 rounded-full bg-copper-base align-middle" />
-                    {pillar}
-                  </li>
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {pillarMeta.map((pillar, i) => (
+                  <IconFeatureCard
+                    key={pillar.title}
+                    icon={pillarIcons[i] ?? ShieldCheck}
+                    title={pillar.title}
+                    description={pillar.description}
+                  />
                 ))}
-              </ul>
+              </div>
             </Reveal>
 
             <Reveal variant="fade" delay={0.24} className="mt-8">
@@ -76,22 +84,18 @@ export function QualitySection() {
           </div>
 
           <Reveal variant="fade" delay={0.14}>
-            <div className="relative border border-copper-base/30 bg-dark-900 p-5 sm:p-7">
-              <div
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(202,94,46,0.14),transparent_65%)]"
-                aria-hidden
-              />
-              <p className="relative mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
+            <div className="relative">
+              <p className="mb-3 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
                 Certified systems
               </p>
-              <h3 className="relative text-center text-lg text-text-primary">
+              <h3 className="text-center text-lg text-text-primary">
                 ISO Compliant, Traceable, Batch-Tested
               </h3>
-              <p className="relative mx-auto mt-2 max-w-xs text-center text-[12px] text-text-secondary">
+              <p className="mx-auto mt-2 max-w-xs text-center text-[12px] text-text-secondary">
                 Full process documentation and test certificates with every dispatch.
               </p>
-              <div className="relative mt-5 min-h-[220px] w-full sm:min-h-[260px]">
-                <QualityLogoGrid />
+              <div className="relative mt-8 w-full">
+                <QualityLogoGrid size="large" />
               </div>
             </div>
           </Reveal>

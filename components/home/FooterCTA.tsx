@@ -3,15 +3,12 @@
 import { footerCta, contact } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { CopperWave } from "@/components/ui/CopperWave";
 import CopperHighlight from "@/components/ui/CopperHighlight";
 import { GlobeDemo } from "@/components/ui/GlobeDemo";
 
 export function FooterCTASection() {
   return (
     <section className="relative overflow-hidden bg-dark-950">
-      <CopperWave flip id="footer-cta" className="bg-dark-900" />
-
       <div className="relative z-10 px-gutter pt-section pb-section">
         <div className="mx-auto grid max-w-6xl items-center gap-8 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-12">
           <div className="relative z-20 max-w-xl text-left lg:max-w-lg">
@@ -57,7 +54,7 @@ export function FooterCTASection() {
                   href={`tel:${contact.phones[0].replace(/\s/g, "")}`}
                   className="transition-colors hover:text-copper-base"
                 >
-                  {contact.phones[0]}
+                  {contact.phones.join(" | ")}
                 </a>
                 <span className="hidden text-dark-100/30 sm:inline" aria-hidden>
                   ·

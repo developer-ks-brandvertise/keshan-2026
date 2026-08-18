@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Download, FileText } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import {
   products,
   getProductBySlug,
@@ -12,6 +12,7 @@ import {
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
 import { ProductModelViewer } from "@/components/products/ProductModelViewer";
+import { ScrapGradeCards } from "@/components/products/ScrapGradeCards";
 
 interface ProductPageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -112,27 +113,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   </div>
                 </div>
 
-                <div>
-                  <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                    Downloads
-                  </p>
-                  <div className="space-y-2">
-                    {["Product Datasheet", "Quality Certificate"].map((label) => (
-                      <button
-                        key={label}
-                        type="button"
-                        className="flex w-full items-center justify-between border border-dark-100/15 px-4 py-3.5 text-left text-sm text-text-primary transition-colors hover:border-copper-base hover:text-copper-base"
-                      >
-                        <span className="flex items-center gap-2">
-                          <FileText className="h-4 w-4 text-copper-base" />
-                          {label}
-                        </span>
-                        <Download className="h-4 w-4" />
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
                 <Link
                   href="/contact"
                   className="group inline-flex h-12 w-full items-center justify-center gap-2.5 bg-copper-gradient text-[11px] font-bold uppercase tracking-[0.12em] text-dark-900 transition-all hover:shadow-[0_0_24px_rgba(232,166,89,0.35)]"
@@ -200,22 +180,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
                     Scrap Grades
                   </h3>
-                  <div className="mb-5 flex h-36 items-center justify-center border border-dashed border-copper-base/35 bg-dark-950/60 text-[11px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-                    Image Placeholder
-                  </div>
-                  <div className="overflow-hidden border border-copper-base/25">
-                    {gradeRows.map((row) => (
-                      <div
-                        key={row.grade}
-                        className="grid grid-cols-[110px_1fr] gap-3 border-b border-dark-100/10 px-4 py-3 last:border-b-0"
-                      >
-                        <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
-                          {row.grade}
-                        </span>
-                        <span className="text-body-sm text-text-primary">{row.description}</span>
-                      </div>
-                    ))}
-                  </div>
+                  <ScrapGradeCards items={gradeRows} />
                 </div>
               ) : null}
 

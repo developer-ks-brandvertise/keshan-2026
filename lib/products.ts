@@ -707,23 +707,128 @@ export const productIndustriesMap: Record<
   },
 };
 
-export const scrapGrades: Record<string, { grade: string; description: string }[]> = {
+export type ScrapGradeItem = {
+  grade: string;
+  title: string;
+  description: string;
+  image: string;
+};
+
+export const scrapGrades: Record<string, ScrapGradeItem[]> = {
   "copper-scrap": [
-    { grade: "Barley", description: "No.1 bare bright copper wire grade as per ISRI." },
-    { grade: "Berry", description: "Clean untinned/uncoated copper wire and cable grade." },
-    { grade: "Birch", description: "Miscellaneous unalloyed wire grade with nominal 96% Cu." },
-    { grade: "Cliff", description: "Copper solids/tubing grade with nominal 96% Cu." },
-    { grade: "Candy", description: "No.2 heavy copper solids and tubing grade." },
-    { grade: "Clove", description: "No.1 copper wire nodules grade, high-copper chopped wire." },
-    { grade: "Cobra", description: "No.2 copper wire nodules grade." },
-    { grade: "Cocoa", description: "Unalloyed wire nodules, typically 99% copper grade." },
-    { grade: "Dream", description: "Light copper grade with nominal 92% Cu." },
+    {
+      grade: "Barley",
+      title: "Copper Scrap Barley (as per ISRI)",
+      image: "/images/inner-img2.jpg",
+      description:
+        "COPPER WIRE. Consists of No. 1 bare, uncoated, unalloyed copper wire (Bare Bright). Wire gauge is subject to buyer-seller agreement. Includes green copper wire and hydraulically compacted material.",
+    },
+    {
+      grade: "Berry",
+      title: "Copper Scrap Berry (as per ISRI)",
+      image: "/images/project-img1.jpg",
+      description:
+        "COPPER WIRE. Consists of clean, untinned, uncoated, unalloyed copper wire and cable, free of brittle burnt wire and free of copper tubing. Includes hydraulically briquetted copper.",
+    },
+    {
+      grade: "Birch",
+      title: "Copper Scrap Birch (as per ISRI)",
+      image: "/images/project-img2.jpg",
+      description:
+        "COPPER WIRE. Miscellaneous unalloyed copper wire with nominal 96% copper (minimum 94%) by electrolytic assay. Free of excessively leaded/tinned/soldered wire, brass/bronze wire, excess oil, iron, non-metallics, burnt wire, insulation, hair wire, brittle burnt wire, and ash.",
+    },
+    {
+      grade: "Cliff",
+      title: "Copper Scrap Cliff (as per ISRI)",
+      image: "/images/service1.jpg",
+      description:
+        "COPPER SOLIDS AND TUBING. Miscellaneous unalloyed copper scrap with nominal 96% copper (minimum 94%) by electrolytic assay. Free of excessively leaded/tinned/soldered scrap, brasses/bronzes, excess oil, iron, non-metallics, non-copper tube connections, insulation, burnt wire, and ash.",
+    },
+    {
+      grade: "Birch/Cliff",
+      title: "Copper Scrap Birch/Cliff (as per ISRI)",
+      image: "/images/service2.jpg",
+      description:
+        "A combination of copper wire and copper solids as defined in Birch and Cliff grades.",
+    },
+    {
+      grade: "Candy",
+      title: "Copper Scrap Candy (as per ISRI)",
+      image: "/images/service3.jpg",
+      description:
+        "NO. 2 HEAVY COPPER SOLIDS AND TUBING. Consists of clean, unalloyed, uncoated copper clippings, punchings, bus bars, commutator segments, and clean copper tubing. Includes hydraulically briquetted copper.",
+    },
+    {
+      grade: "Berry/Candy",
+      title: "Copper Scrap Berry/Candy (as per ISRI)",
+      image: "/images/service5.jpg",
+      description:
+        "A combination of copper wire and heavy copper as defined in Berry and Candy grades.",
+    },
+    {
+      grade: "Clove",
+      title: "Copper Scrap Clove (as per ISRI)",
+      image: "/images/service-img2.jpg",
+      description:
+        "COPPER WIRE NODULES. No. 1 bare, uncoated, unalloyed copper wire nodules, chopped/shredded. Free of tin, lead, zinc, aluminum, iron, insulation, and foreign contamination. Minimum copper 99%. Gauge smaller than No.16 B&S wire.",
+    },
+    {
+      grade: "Cobra",
+      title: "Copper Scrap Cobra (as per ISRI)",
+      image: "/images/service-img4.jpg",
+      description:
+        "COPPER WIRE NODULES. No. 2 unalloyed copper wire nodules, chopped/shredded, minimum 97% copper. Metal impurities not to exceed 0.50% aluminum and 1% each of other metals or insulation.",
+    },
+    {
+      grade: "Cocoa",
+      title: "Copper Scrap Cocoa (as per ISRI)",
+      image: "/images/img-machining1.jpg",
+      description:
+        "COPPER WIRE NODULES. Unalloyed copper wire nodules, chopped/shredded, minimum 99% copper. Free of excessive insulation and other non-metallics.",
+    },
+    {
+      grade: "Dream",
+      title: "Copper Scrap Dream (as per ISRI)",
+      image: "/images/img-factory1.jpg",
+      description:
+        "LIGHT COPPER. Miscellaneous unalloyed copper scrap with nominal 92% copper (minimum 88%) by electrolytic assay. Includes sheet copper, gutters, downspouts, kettles, and similar scrap. Excludes burnt wire, copper clad, plating racks, grindings, radiators, shells, screening, excessively leaded/tinned/soldered scrap, brass/bronze, excess oil/iron/non-metallics, and ash.",
+    },
   ],
   "brass-scrap": [
-    { grade: "Honey", description: "Mixed yellow brass solids grade as per ISRI." },
-    { grade: "Label", description: "New brass clippings grade." },
-    { grade: "Pallu", description: "Aluminum brass condenser tubes grade." },
-    { grade: "Night", description: "Yellow brass rod turnings grade." },
-    { grade: "Nomad", description: "Yellow brass turnings grade." },
+    {
+      grade: "Honey",
+      title: "Brass Scrap Honey (as per ISRI)",
+      image: "/images/service3.jpg",
+      description:
+        "YELLOW BRASS SCRAP. Mixed yellow brass solids including castings, rolled brass, rod brass, tubing and miscellaneous yellow brasses (including plated brass). Free of manganese-bronze, aluminum bronze, unsweated radiators/parts, iron, and excessively dirty or corroded material.",
+    },
+    {
+      grade: "Label",
+      title: "Brass Scrap Label (as per ISRI)",
+      image: "/images/cmrcn-img1.jpg",
+      description:
+        "NEW BRASS CLIPPINGS. Cuttings of new unleaded yellow brass sheet/plate, clean and free from foreign substances, and not containing over 10% clean brass punchings under 1/4 inch. Free of Muntz metal and naval brass.",
+    },
+    {
+      grade: "Pallu",
+      title: "Brass Scrap Pallu (as per ISRI)",
+      image: "/images/cmrcn-img2.jpg",
+      description:
+        "ALUMINUM BRASS CONDENSER TUBES. Clean sound condenser tubing, plated or unplated, free of nickel alloy and corroded material.",
+    },
+    {
+      grade: "Night",
+      title: "Brass Scrap Night (as per ISRI)",
+      image: "/images/service-img4.jpg",
+      description:
+        "YELLOW BRASS ROD TURNINGS. Strictly rod turnings, free of aluminum, manganese, composition, Tobin and Muntz metal turnings; not containing over 3% free iron, oil or moisture; free of grindings and babbitts; with limited tin and alloyed iron.",
+    },
+    {
+      grade: "Nomad",
+      title: "Brass Scrap Nomad (as per ISRI)",
+      image: "/images/service-img2.jpg",
+      description:
+        "YELLOW BRASS TURNINGS. Yellow brass turnings, free of aluminum, manganese, and composition turnings; not containing over 3% free iron, oil or moisture; free of grindings and babbitts.",
+    },
   ],
 };

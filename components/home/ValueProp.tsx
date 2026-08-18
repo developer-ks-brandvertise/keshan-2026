@@ -2,25 +2,19 @@
 
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Calendar, Factory, Globe2, ShieldCheck } from "lucide-react";
 import { intro } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { CopperWave } from "@/components/ui/CopperWave";
 import CopperHighlight from "@/components/ui/CopperHighlight";
+import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 
-const datasheet = [
-  { label: "Control", value: "Metallurgical control on every batch" },
-  { label: "Testing", value: "Batch-tested quality before dispatch" },
-  { label: "Reach", value: "On-time delivery to 30+ countries" },
-  { label: "Certs", value: "ISO 9001 · 14001 · 45001" },
-];
-
-const millStats = [
-  { value: "7+", unit: "Years" },
-  { value: "30+", unit: "Countries" },
-  { value: "24k+", unit: "MT / yr" },
-  { value: "100%", unit: "QC tested" },
+const statCards = [
+  { icon: Calendar, highlight: "7+", title: "Years", description: "Years of manufacturing excellence since 2019." },
+  { icon: Globe2, highlight: "30+", title: "Countries", description: "On-time delivery to 30+ countries worldwide." },
+  { icon: Factory, highlight: "24k+", title: "MT / Year", description: "Annual production capacity across copper and brass." },
+  { icon: ShieldCheck, highlight: "100%", title: "QC Tested", description: "Batch-tested quality before every dispatch." },
 ];
 
 const ABOUT_IMAGE =
@@ -31,9 +25,8 @@ export function ValuePropSection() {
 
   return (
     <section className="relative overflow-hidden bg-dark-900">
-      <CopperWave flip id="value" className="-mt-px" />
       <div
-        className="pointer-events-none absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(184,115,51,0.12),transparent_70%)]"
+        className="pointer-events-none absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-[radial-gradient(circle,rgba(202,94,46,0.12),transparent_70%)]"
         aria-hidden
       />
 
@@ -42,7 +35,6 @@ export function ValuePropSection() {
           <div className="relative lg:col-span-5">
             <Reveal variant="slide">
               <div className="relative h-full min-h-[420px] overflow-hidden border border-copper-base/25 shadow-[0_28px_80px_rgba(0,0,0,0.35)] sm:min-h-[480px] lg:min-h-[600px]">
-                {/* Full-bleed image */}
                 <Image
                   src={ABOUT_IMAGE}
                   alt="Keshan manufacturing facility"
@@ -51,47 +43,6 @@ export function ValuePropSection() {
                   sizes="(max-width: 1024px) 100vw, 42vw"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/25 to-transparent" />
-
-                <div className="absolute bottom-[5.5rem] left-5 right-5 sm:bottom-24 sm:left-6">
-                  <p className="font-heading text-[10px] uppercase tracking-[0.28em] text-copper-base">
-                    Since 2019
-                  </p>
-                  <p className="mt-1 text-lg text-text-primary sm:text-xl">
-                    Precision copper. Made in India.
-                  </p>
-                </div>
-
-                {/* Stats overlay — sits on the image */}
-                <div className="absolute inset-x-0 bottom-0 border-t border-copper-base/35 bg-dark-950/90 backdrop-blur-sm">
-                  <div className="flex items-stretch">
-                    {millStats.map((stat, i) => (
-                      <div
-                        key={stat.unit}
-                        className={`flex flex-1 flex-col items-center justify-center px-2 py-4 ${
-                          i > 0 ? "border-l border-copper-base/25" : ""
-                        }`}
-                      >
-                        <span className="font-heading text-xl text-copper-base md:text-2xl">
-                          {stat.value}
-                        </span>
-                        <span className="mt-0.5 text-[9px] font-semibold uppercase tracking-[0.16em] text-text-muted">
-                          {stat.unit}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="flex h-1 w-full overflow-hidden">
-                    {Array.from({ length: 48 }).map((_, i) => (
-                      <span
-                        key={i}
-                        className={`h-full flex-1 ${
-                          i % 4 === 0 ? "bg-copper-base/50" : "bg-copper-base/15"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </div>
               </div>
             </Reveal>
           </div>
@@ -123,22 +74,14 @@ export function ValuePropSection() {
 
             <Reveal variant="fade" delay={0.2}>
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
-                {datasheet.map((row) => (
-                  <div
-                    key={row.label}
-                    className="group relative overflow-hidden border border-copper-base/20 bg-dark-950/70 p-4 transition-colors hover:border-copper-base/45"
-                  >
-                    <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
-                      {row.label}
-                    </span>
-                    <p className="mt-2 text-body-sm text-text-primary">
-                      {row.value}
-                    </p>
-                    <div
-                      className="pointer-events-none absolute inset-x-0 bottom-0 h-px scale-x-0 bg-copper-gradient transition-transform duration-500 group-hover:scale-x-100"
-                      aria-hidden
-                    />
-                  </div>
+                {statCards.map((row) => (
+                  <IconFeatureCard
+                    key={row.title}
+                    icon={row.icon}
+                    highlight={row.highlight}
+                    title={row.title}
+                    description={row.description}
+                  />
                 ))}
               </div>
             </Reveal>

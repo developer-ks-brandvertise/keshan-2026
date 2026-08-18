@@ -5,7 +5,11 @@ import { ArrowUpRight, CheckCircle2 } from "lucide-react";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
-export default function ContactForm() {
+type ContactFormProps = {
+  embedded?: boolean;
+};
+
+export default function ContactForm({ embedded = false }: ContactFormProps) {
   const [state, setState] = useState<FormState>("idle");
   const [error, setError] = useState("");
 
@@ -73,19 +77,25 @@ export default function ContactForm() {
   }
 
   const fieldClass =
-    "h-12 w-full border border-dark-100/15 bg-dark-900 px-4 text-sm text-text-primary placeholder:text-text-muted/50 outline-none focus:border-copper-base";
+    embedded
+      ? "h-12 w-full border border-copper-base/25 bg-dark-900 px-4 text-sm text-text-primary placeholder:text-text-muted/50 outline-none focus:border-copper-base"
+      : "h-12 w-full border border-dark-100/15 bg-dark-900 px-4 text-sm text-text-primary placeholder:text-text-muted/50 outline-none focus:border-copper-base";
 
   return (
     <form
-      className="border border-copper-base/25 bg-dark-950 p-6 lg:p-8"
+      className={embedded ? "" : "border border-copper-base/25 bg-dark-950 p-6 lg:p-8"}
       onSubmit={onSubmit}
       noValidate
     >
-      <h2 className="text-h3">Send an Inquiry</h2>
-      <p className="mt-2 text-body-sm text-text-secondary">
-        Specification, quantity, and delivery terms help us reply faster.
-      </p>
-      <div className="mt-6 grid gap-5 sm:grid-cols-2">
+      {!embedded ? (
+        <>
+          <h2 className="text-h3">Send an Inquiry</h2>
+          <p className="mt-2 text-body-sm text-text-secondary">
+            Specification, quantity, and delivery terms help us reply faster.
+          </p>
+        </>
+      ) : null}
+      <div className={`grid gap-5 sm:grid-cols-2 ${embedded ? "mt-2" : "mt-6"}`}>
         <div className="space-y-2">
           <label htmlFor="name" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
             Full Name *
@@ -132,7 +142,7 @@ export default function ContactForm() {
             required
             rows={4}
             placeholder="Tell us your specifications, quantities, delivery terms, and any standards required."
-            className="w-full border border-dark-100/15 bg-dark-900 px-4 py-3 text-sm text-text-primary placeholder:text-text-muted/50 outline-none focus:border-copper-base"
+            className={`w-full border px-4 py-3 text-sm text-text-primary placeholder:text-text-muted/50 outline-none focus:border-copper-base ${embedded ? "border-copper-base/25 bg-dark-900" : "border-dark-100/15 bg-dark-900"}`}
           />
         </div>
       </div>
