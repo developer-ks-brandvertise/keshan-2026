@@ -178,37 +178,43 @@ export const industries = {
       name: "Electrical & Power Distribution",
       application: "Busbars, conductors, and distribution components for reliable power flow.",
       icon: "Zap",
-      image: "/images/service1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Electrical_Power_Distribution_nm38nw.png",
     },
     {
       name: "Switchgear, Panels & Busducts",
       application: "Precision copper for switchgear, panel boards, and busbar trunking systems.",
       icon: "PanelTop",
-      image: "/images/img-machining1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Switchgear_Panels_Busducts_j800uz.png",
     },
     {
       name: "Renewable Energy & Solar Infrastructure",
       application: "High-conductivity copper for solar inverters, panels, and energy systems.",
       icon: "Sun",
-      image: "/images/pexels-scottwebb.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Renewable_Energy_Solar_Infrastructure_vonzvv.png",
     },
     {
       name: "EV, Charging & Mobility",
       application: "Copper for EV motors, batteries, charging stations, and power electronics.",
       icon: "BatteryCharging",
-      image: "/images/home-three1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/EV_Charging_Mobility_cfb3xe.png",
     },
     {
       name: "Cables, Conductors & Wire Manufacturing",
       application: "CCR, wire rod, and drawn copper for cable and wire producers.",
       icon: "Cable",
-      image: "/images/process-img1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Cables_Conductors_Wire_Manufacturing_drehfq.png",
     },
     {
       name: "Construction & Building Infrastructure",
       application: "Sheets, plates, and rods for cladding, earthing, and building systems.",
       icon: "Building2",
-      image: "/images/img-factory1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Construction_Building_Infrastructure_mbmaeg.png",
     },
   ],
   catalog: [
@@ -216,37 +222,43 @@ export const industries = {
       name: "Electrical & Power Distribution",
       application: "Busbars, conductors, and distribution components for reliable power flow.",
       icon: "Zap",
-      image: "/images/service1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Electrical_Power_Distribution_nm38nw.png",
     },
     {
       name: "Switchgear, Panels & Busducts",
       application: "Precision copper for switchgear, panel boards, and busbar trunking systems.",
       icon: "PanelTop",
-      image: "/images/img-machining1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Switchgear_Panels_Busducts_j800uz.png",
     },
     {
       name: "Renewable Energy & Solar Infrastructure",
       application: "High-conductivity copper for solar inverters, panels, and energy systems.",
       icon: "Sun",
-      image: "/images/pexels-scottwebb.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Renewable_Energy_Solar_Infrastructure_vonzvv.png",
     },
     {
       name: "EV, Charging & Mobility",
       application: "Copper for EV motors, batteries, charging stations, and power electronics.",
       icon: "BatteryCharging",
-      image: "/images/home-three1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/EV_Charging_Mobility_cfb3xe.png",
     },
     {
       name: "Cables, Conductors & Wire Manufacturing",
       application: "CCR, wire rod, and drawn copper for cable and wire producers.",
       icon: "Cable",
-      image: "/images/process-img1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Cables_Conductors_Wire_Manufacturing_drehfq.png",
     },
     {
       name: "Construction & Building Infrastructure",
       application: "Sheets, plates, and rods for cladding, earthing, and building systems.",
       icon: "Building2",
-      image: "/images/img-factory1.jpg",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Construction_Building_Infrastructure_mbmaeg.png",
     },
     {
       name: "Electronics & PCB Manufacturing",
