@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "ケシャンについて",
+    "products": "製品",
+    "industries": "産業",
+    "knowledge": "ナレッジセンター",
+    "media": "品質とメディア",
+    "contact": "お問い合わせ",
+    "requestQuote": "お見積り依頼",
+    "viewAllProducts": "すべて見る",
+    "allProducts": "全製品",
+    "copperProducts": "銅製品",
+    "brassProducts": "黄銅製品",
+    "productRange": "製品ラインナップ"
+  },
+  "theme": {
+    "light": "ライトモード",
+    "dark": "ダークモード",
+    "toggle": "カラーテーマを切替"
+  },
+  "locale": {
+    "label": "言語",
+    "en": "English",
+    "ar": "العربية",
+    "zh": "中文",
+    "es": "Español",
+    "ja": "日本語"
+  },
+  "chat": {
+    "title": "Keshan アシスタント",
+    "subtitle": "製品・品質に関する回答",
+    "placeholder": "製品、認証、納期についてご質問ください…",
+    "open": "チャットを開く",
+    "close": "チャットを閉じる",
+    "send": "送信",
+    "typing": "Keshan が入力中…",
+    "suggested": "おすすめの質問",
+    "fallback": "その詳細はまだありません。sales.killp@keshanindustries.com または export@keshanindustries.com へメールいただくか、お問い合わせページからご連絡ください。営業日24時間以内にご返信します。",
+    "welcome": "銅・黄銅製品、認証、輸出市場、お見積りの方法についてご質問ください。",
+    "prompts": {
+      "products": "どのような銅製品を製造していますか？",
+      "certs": "Keshan はどのような認証を取得していますか？",
+      "quote": "お見積りはどのように依頼できますか？",
+      "export": "どの国へ輸出していますか？"
+    }
+  },
+  "common": {
+    "exploreManufacturing": "製造について見る",
+    "discussApplication": "用途について相談する",
+    "browseProducts": "製品ラインナップを見る →",
+    "englishSpecs": "技術仕様は英語で表示されます",
+    "comingSoon": "近日公開"
+  }
+}

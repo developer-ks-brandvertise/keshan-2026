@@ -9,6 +9,7 @@ import {
   productIndustriesMap,
   scrapGrades,
 } from "@/lib/products";
+import { routing } from "@/i18n/routing";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
 import { ProductModelViewer } from "@/components/products/ProductModelViewer";
@@ -20,7 +21,7 @@ interface ProductPageProps {
 
 export async function generateStaticParams() {
   return products.flatMap((product) =>
-    ["en", "ar", "zh", "es"].map((locale) => ({
+    routing.locales.map((locale) => ({
       slug: product.slug,
       locale,
     })),

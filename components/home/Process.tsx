@@ -37,7 +37,7 @@ export function ProcessSection() {
         className="mx-auto max-w-6xl px-gutter"
         header={
           <SectionHeading
-            index="03"
+            index="04"
             eyebrow="Manufacturing Process"
             title="Precision at Every Stage."
             highlight="Every Stage"

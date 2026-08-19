@@ -4,7 +4,7 @@ export const brand = {
 };
 
 export const topBar = {
-  phone: "040-35512949 | 040-35209193",
+  phone: "040-35512949 | 040-35209193 | +91 9908171560",
   email: "sales.killp@keshanindustries.com | export@keshanindustries.com",
   address: "Hyderabad, Telangana, India",
 };
@@ -480,7 +480,7 @@ export const milestones = {
 export const contact = {
   address:
     "Corporate Office: 1-8-271, 505, 5th Floor, Ashoka Bhoopal Chambers, Begumpet, Hyderabad 500003, Telangana",
-  phones: ["040-35512949", "040-35209193"],
+  phones: ["040-35512949", "040-35209193", "+91 9908171560"],
   emails: [
     "sales.killp@keshanindustries.com",
     "export@keshanindustries.com",

@@ -18,7 +18,7 @@ export function ProductCategoriesSection() {
       <div className="px-gutter pt-section pb-8 lg:pb-10">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
-            index="02"
+            index="03"
             eyebrow="Product Range"
             title={productCategories.headline}
             highlight="Every Grade"

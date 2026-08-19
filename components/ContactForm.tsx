@@ -51,7 +51,7 @@ export default function ContactForm({ embedded = false }: ContactFormProps) {
     } catch {
       setState("error");
       setError(
-        "Could not send right now. Email sales.killp@keshanindustries.com directly.",
+        "Could not send right now. Please try again later.",
       );
     }
   }

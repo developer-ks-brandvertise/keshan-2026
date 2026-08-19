@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/:locale(ar|zh|es)/products/continuous-cast-rod",
+        source: "/:locale(ar|zh|es|ja)/products/continuous-cast-rod",
         destination: "/:locale/products/copper-upcast-rod",
         permanent: true,
       },
@@ -35,7 +35,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/:locale(ar|zh|es)/products/copper-nuggets",
+        source: "/:locale(ar|zh|es|ja)/products/copper-nuggets",
         destination: "/:locale/products/phosphorous-copper-nuggets",
         permanent: true,
       },
@@ -45,7 +45,7 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
-        source: "/:locale(ar|zh|es)/products/copper-wires-rods",
+        source: "/:locale(ar|zh|es|ja)/products/copper-wires-rods",
         destination: "/:locale/products/bare-copper-wire",
         permanent: true,
       },

@@ -13,11 +13,11 @@ export default function Home() {
     <main className="relative">
       <Hero />
       <ValuePropSection />
+      <ClientsSection index="02" />
       <ProductCategoriesSection />
       <ProcessSection />
       <QualitySection />
       <IndustriesSection />
-      <ClientsSection />
       <KnowledgeSection />
       <FooterCTASection />
     </main>

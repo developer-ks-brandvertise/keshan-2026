@@ -51,7 +51,7 @@ export function IndustriesSection() {
       <div className="mx-auto max-w-6xl">
         <div className="mb-12 flex flex-col gap-6 lg:mb-14 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
-            index="05"
+            index="06"
             eyebrow="Industries Served"
             title={industries.headline}
             highlight="Critical Industries"

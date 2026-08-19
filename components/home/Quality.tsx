@@ -41,7 +41,7 @@ export function QualitySection() {
             <Reveal variant="fade">
               <div className="mb-4 flex items-center gap-3">
                 <span className="font-heading text-xs tracking-[0.25em] text-copper-base">
-                  04
+                  05
                 </span>
                 <span className="h-px w-6 bg-copper-base/40" />
                 <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
