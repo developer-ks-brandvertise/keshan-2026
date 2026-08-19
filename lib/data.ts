@@ -338,29 +338,88 @@ export const clients = {
 export const knowledge = {
   headline: "The Keshan Knowledge Centre",
   subheadline:
-    "Copper market updates, technical guides, and industry insights from Keshan’s team of metallurgists and industry specialists.",
+    "Copper and brass market notes, technical guides, and mill-floor insight from Keshan metallurgists — written for buyers, not traders.",
   cta: "Visit the Knowledge Centre",
   articles: [
     {
-      title: "Understanding Copper Conductivity Standards",
+      title: "Copper trapped near highs: what mill buyers should watch this week",
+      date: "18 Aug 2026",
+      category: "Market",
+      source: "Keshan Desk",
+      excerpt:
+        "Spot vs 3-month structure, cathode availability, and how a tight contango changes busbar and rod lead times.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787055341/Copper-Home-Page_us9tqh.png",
+    },
+    {
+      title: "Brass vs copper: when alloy premium is worth the spec change",
+      date: "14 Aug 2026",
+      category: "Application",
+      source: "Keshan Desk",
+      excerpt:
+        "Machinability, colour, and conductivity trade-offs for strips, circles, and sanitaryware feedstock.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787055341/Brass-Home-Page_ad5rzx.png",
+    },
+    {
+      title: "Understanding copper conductivity standards (IACS)",
       date: "12 Jul 2026",
       category: "Technical",
+      source: "Keshan Lab",
       excerpt:
         "A practical guide to IACS, conductivity testing, and why it matters for electrical applications.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Electrical_Power_Distribution_nm38nw.png",
     },
     {
-      title: "How to Choose the Right Copper Grade for Your Application",
+      title: "How to choose the right copper grade for your application",
       date: "05 Jul 2026",
       category: "Application",
+      source: "Keshan Lab",
       excerpt:
         "Cu-ETP, Cu-OF, Cu-FRHC — what sets them apart and when to specify each grade.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Cables_Conductors_Wire_Manufacturing_drehfq.png",
     },
     {
-      title: "LME Copper Cathodes: What Buyers Should Know",
+      title: "LME copper cathodes: what buyers should know",
       date: "28 Jun 2026",
       category: "Market",
+      source: "Keshan Desk",
       excerpt:
         "Grade A cathodes, warehouse standards, and the role of cathodes in downstream manufacturing.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Renewable_Energy_Solar_Infrastructure_vonzvv.png",
+    },
+    {
+      title: "EV charging copper: busbars, enamel wire, and thermal load",
+      date: "19 Jun 2026",
+      category: "Industry",
+      source: "Keshan Desk",
+      excerpt:
+        "Why charging hardware punishes underspecified copper — and which mill forms actually ship on time.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/EV_Charging_Mobility_cfb3xe.png",
+    },
+    {
+      title: "Switchgear copper: dimensional tolerance vs conductivity",
+      date: "08 Jun 2026",
+      category: "Technical",
+      source: "Keshan Lab",
+      excerpt:
+        "Panel builders lose days to warped busbar. How Keshan batches keep both IACS and millimetres honest.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Switchgear_Panels_Busducts_j800uz.png",
+    },
+    {
+      title: "Building copper: earthing, cladding, and site-ready lengths",
+      date: "30 May 2026",
+      category: "Industry",
+      source: "Keshan Desk",
+      excerpt:
+        "Sheets, plates, and rods for infrastructure work — what contractors should put on the RFQ.",
+      image:
+        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Construction_Building_Infrastructure_mbmaeg.png",
     },
   ],
 };

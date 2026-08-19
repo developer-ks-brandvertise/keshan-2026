@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { knowledge } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { CopperMarketChart } from "@/components/knowledge/CopperMarketChart";
+import { LiveRatesPanel } from "@/components/knowledge/LiveRatesPanel";
 
 export const metadata: Metadata = {
   title: "Knowledge Centre | Keshan Industries | Copper Insights & Technical Guides",
   description:
-    "Copper market updates, technical guides, and industry insights from Keshan’s team of metallurgists and industry specialists.",
+    "Copper and brass market notes, live rates, charts, and technical guides from Keshan metallurgists.",
 };
 
 export default function KnowledgePage() {
@@ -16,51 +19,73 @@ export default function KnowledgePage() {
     <main>
       <PageHero
         label="Knowledge Centre"
-        title="Copper Insights From Keshan Specialists."
-        highlight="Copper Insights"
+        title="Copper & Brass Desk — Notes, Charts, Live Rates."
+        highlight="Copper & Brass Desk"
         description={knowledge.subheadline}
       />
 
       <section className="bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
-          <AnimatedSection className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-            <p className="max-w-xl text-body text-text-secondary">
-              Technical notes and market context from the people who melt, roll, and certify the metal.
-            </p>
-            <MagneticButton href="/contact" variant="primary" className="shrink-0">
-              Ask Our Metallurgists
-            </MagneticButton>
-          </AnimatedSection>
-
-          <div className="border-t border-copper-base/30">
-            {knowledge.articles.map((article, index) => (
-              <AnimatedSection key={article.title} delay={index * 0.06}>
-                <Link
-                  href="/knowledge-centre"
-                  className="group grid grid-cols-[48px_1fr] gap-4 border-b border-dark-100/10 py-8 transition-colors hover:bg-copper-base/[0.04] sm:grid-cols-[64px_1fr_auto] sm:gap-8"
-                >
-                  <span className="pt-1 font-heading text-sm tracking-[0.2em] text-copper-base">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <div className="min-w-0">
-                    <div className="flex flex-wrap items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-text-muted">
-                      <span className="text-copper-base">{article.category}</span>
-                      <span aria-hidden>·</span>
-                      <span>{article.date}</span>
-                    </div>
-                    <h2 className="mt-2 text-xl font-medium tracking-tight text-text-primary transition-colors group-hover:text-copper-light sm:text-2xl">
-                      {article.title}
-                    </h2>
-                    <p className="mt-2 max-w-2xl text-body-sm text-text-secondary">
-                      {article.excerpt}
-                    </p>
-                  </div>
-                  <span className="hidden items-center self-center text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base opacity-0 transition-opacity group-hover:opacity-100 sm:flex">
-                    Read →
-                  </span>
-                </Link>
+          <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
+            <div className="lg:col-span-8">
+              <AnimatedSection>
+                <CopperMarketChart />
               </AnimatedSection>
-            ))}
+
+              <AnimatedSection className="mt-10 mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                <div>
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
+                    Copper & brass news
+                  </p>
+                  <h2 className="mt-2 text-h3">Latest from the mill desk</h2>
+                </div>
+                <MagneticButton href="/contact" variant="primary" className="shrink-0">
+                  Ask Our Metallurgists
+                </MagneticButton>
+              </AnimatedSection>
+
+              <div className="grid gap-0 sm:grid-cols-2 sm:gap-x-8">
+                {knowledge.articles.map((article, index) => (
+                  <AnimatedSection key={article.title} delay={Math.min(index * 0.04, 0.2)}>
+                    <Link
+                      href="/knowledge-centre"
+                      className="group grid grid-cols-[1fr_92px] items-start gap-4 border-b border-dark-100/10 py-5 sm:grid-cols-[1fr_108px]"
+                    >
+                      <div className="min-w-0">
+                        <h3 className="text-[15px] font-semibold leading-snug text-text-primary transition-colors group-hover:text-copper-light sm:text-base">
+                          {article.title}
+                        </h3>
+                        <p className="mt-2 text-[11px] text-text-muted">
+                          <span className="text-copper-base">{article.source}</span>
+                          <span aria-hidden> · </span>
+                          <span>{article.date}</span>
+                          <span aria-hidden> · </span>
+                          <span>{article.category}</span>
+                        </p>
+                      </div>
+                      <div className="relative h-[72px] w-[92px] shrink-0 overflow-hidden border border-copper-base/20 sm:h-[80px] sm:w-[108px]">
+                        <Image
+                          src={article.image}
+                          alt=""
+                          fill
+                          sizes="108px"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        />
+                      </div>
+                    </Link>
+                  </AnimatedSection>
+                ))}
+              </div>
+            </div>
+
+            <div className="lg:col-span-4">
+              <div className="lg:sticky lg:top-28">
+                <LiveRatesPanel />
+                <p className="mt-4 text-[11px] leading-relaxed text-text-muted">
+                  Charts via TradingView. Rates refresh every two minutes when the metals feed is configured.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>

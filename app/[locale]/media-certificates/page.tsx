@@ -4,7 +4,7 @@ import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CopperHighlight from "@/components/ui/CopperHighlight";
 import { CertificatesGallery } from "@/components/media/CertificatesGallery";
-import { CertifiedSystems } from "@/components/ui/CertifiedSystems";
+import { QualityLogoMarquee } from "@/components/media/QualityLogoMarquee";
 
 export const metadata: Metadata = {
   title: "Quality & Media | Keshan Industries",
@@ -24,13 +24,24 @@ export default function MediaCertificatesPage() {
         description={mediaCertificates.subheadline}
       />
 
-      {/* Quality logos — same Certified Systems block as homepage */}
-      <section className="border-b border-dark-100/10 bg-dark-950 py-section px-gutter">
-        <div className="mx-auto max-w-6xl">
+      {/* Quality logos — scrolling, same motion language as partners */}
+      <section className="overflow-hidden border-b border-dark-100/10 bg-dark-950 py-section">
+        <div className="mx-auto max-w-6xl px-gutter">
           <AnimatedSection>
-            <CertifiedSystems />
+            <p className="text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
+              Certified systems
+            </p>
+            <h2 className="mt-3 text-center text-h3 text-text-primary">
+              ISO Compliant, Traceable, Batch-Tested
+            </h2>
+            <p className="mx-auto mt-3 max-w-xl text-center text-body-sm text-text-secondary">
+              Full process documentation and test certificates with every dispatch.
+            </p>
           </AnimatedSection>
         </div>
+        <AnimatedSection delay={0.08} className="mt-10">
+          <QualityLogoMarquee fadeFrom="from-dark-950" />
+        </AnimatedSection>
       </section>
 
       {/* Media — placeholder until assets are ready */}

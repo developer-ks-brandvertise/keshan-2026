@@ -31,7 +31,7 @@ export function KnowledgeSection() {
         </div>
 
         <div className="grid gap-5 md:grid-cols-3 md:gap-6">
-          {knowledge.articles.map((article, index) => (
+          {knowledge.articles.slice(0, 3).map((article, index) => (
             <Reveal key={article.title} variant="slide" delay={index * 0.08}>
               <Link
                 href="/knowledge-centre"
