@@ -1,6 +1,8 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import { useTheme } from "next-themes";
 import type { GlobeConfig } from "@/components/ui/github-globe";
 
 const World = dynamic(
@@ -77,7 +79,7 @@ const sampleArcs: Arc[] = [
   arc(13, 52.52, 13.405, 22.3193, 114.1694, 0.3, 3),
 ];
 
-const globeConfig: GlobeConfig = {
+const darkGlobeConfig: GlobeConfig = {
   pointSize: 4,
   globeColor: "#241c16",
   showAtmosphere: true,
@@ -91,6 +93,7 @@ const globeConfig: GlobeConfig = {
   directionalLeftLight: "#ffe2b0",
   directionalTopLight: "#ffffff",
   pointLight: "#f0c48a",
+  groundColor: "#4a3018",
   arcTime: 1800,
   arcLength: 0.9,
   rings: 1,
@@ -100,10 +103,31 @@ const globeConfig: GlobeConfig = {
   autoRotateSpeed: 0.45,
 };
 
+const lightGlobeConfig: GlobeConfig = {
+  ...darkGlobeConfig,
+  globeColor: "#f8f3eb",
+  emissive: "#f8f3eb",
+  atmosphereColor: "#ca5e2e",
+  atmosphereAltitude: 0.045,
+  polygonColor: "rgba(138, 58, 24, 0.9)",
+  ambientLight: "#fff8ef",
+  directionalLeftLight: "#f3e4cf",
+  directionalTopLight: "#ffffff",
+  pointLight: "#ca5e2e",
+  groundColor: "#d4c9b8",
+};
+
 export function GlobeDemo() {
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => setMounted(true), []);
+
+  const isLight = mounted && resolvedTheme === "light";
+  const globeConfig = isLight ? lightGlobeConfig : darkGlobeConfig;
+
   return (
     <div className="relative mx-auto w-full">
-      {/* Explicit pixel-friendly stage so R3F Canvas gets real dimensions */}
       <div
         className="relative mx-auto w-full overflow-hidden"
         style={{
@@ -114,7 +138,11 @@ export function GlobeDemo() {
         }}
       >
         <div className="absolute inset-0 h-full w-full">
-          <World data={sampleArcs} globeConfig={globeConfig} />
+          <World
+            key={isLight ? "light" : "dark"}
+            data={sampleArcs}
+            globeConfig={globeConfig}
+          />
         </div>
       </div>
       <div

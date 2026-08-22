@@ -7,11 +7,8 @@ import {
   Factory,
   Globe2,
   Layers,
-  Leaf,
   Shield,
-  Target,
   TrendingUp,
-  Truck,
 } from "lucide-react";
 import {
   about,
@@ -19,6 +16,7 @@ import {
   leadership,
   milestones,
   intro,
+  aboutHeaderImage,
 } from "@/lib/data";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CopperHighlight from "@/components/ui/CopperHighlight";
@@ -27,6 +25,7 @@ import { MagneticButton } from "@/components/ui/MagneticButton";
 import TeamGrid from "@/components/about/TeamGrid";
 import { ClientsSection } from "@/components/home/Clients";
 import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
+import { VisionBeams } from "@/components/about/VisionBeams";
 
 export const metadata: Metadata = {
   title: "About Keshan Industries | Copper Manufacturer | Made in India",
@@ -35,8 +34,6 @@ export const metadata: Metadata = {
 };
 
 const statIcons = [Calendar, Globe2, Factory, Shield];
-
-const valueIcons = [Target, Shield, Truck, Leaf, TrendingUp];
 
 const milestoneIcons = [Building2, Layers, Award, Factory, Globe2, TrendingUp];
 
@@ -47,6 +44,8 @@ export default function AboutPage() {
         label="About Keshan"
         title="Built on the Belief That Quality Is Not Negotiable."
         highlight="Quality Is Not Negotiable"
+        backgroundImage={aboutHeaderImage}
+        backgroundPriority
       />
 
       {/* 01 — Story */}
@@ -114,13 +113,14 @@ export default function AboutPage() {
 
       {/* 03 — Vision / Mission / Values */}
       <section className="relative overflow-hidden bg-dark-950 py-section px-gutter">
+        <VisionBeams />
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-copper-base/50 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 z-10 h-px bg-gradient-to-r from-transparent via-copper-base/50 to-transparent"
           aria-hidden
         />
-        <div className="mx-auto max-w-6xl">
+        <div className="relative z-10 mx-auto max-w-6xl">
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-8">
-            <AnimatedSection className="relative overflow-hidden border border-copper-base/25 bg-dark-900 p-8 sm:p-10 lg:col-span-5">
+            <AnimatedSection className="relative overflow-hidden border border-copper-base/25 bg-dark-900/80 p-8 backdrop-blur-[2px] sm:p-10 lg:col-span-5">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
                 03 — Vision
               </span>
@@ -136,14 +136,14 @@ export default function AboutPage() {
 
             <AnimatedSection
               delay={0.08}
-              className="relative flex flex-col justify-center overflow-hidden border border-copper-base/25 bg-[linear-gradient(145deg,rgba(202,94,46,0.14),transparent_55%),#0a0a0a] p-8 sm:p-10 lg:col-span-7"
+              className="relative flex flex-col justify-center overflow-hidden border border-copper-base/25 bg-dark-900/70 p-8 backdrop-blur-[2px] sm:p-10 lg:col-span-7"
             >
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
                 Mission
               </span>
               <p
                 className="mt-6 font-heading text-2xl leading-snug text-text-primary sm:text-3xl lg:text-[2.1rem] lg:leading-[1.25]"
-                style={{ letterSpacing: "2px" }}
+                style={{ letterSpacing: "-1px" }}
               >
                 {visionMission.missionStatement}
               </p>
@@ -151,18 +151,30 @@ export default function AboutPage() {
             </AnimatedSection>
           </div>
 
-          <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {visionMission.values.map((value, i) => (
-              <AnimatedSection key={value.title} delay={i * 0.05}>
-                <IconFeatureCard
-                  icon={valueIcons[i] ?? Target}
-                  title={value.title}
-                  description={value.description}
-                  index={i}
-                />
-              </AnimatedSection>
-            ))}
-          </div>
+          <AnimatedSection className="mt-10">
+            <div className="grid grid-cols-5 border border-copper-base/25 bg-dark-900/75 backdrop-blur-[2px]">
+              {visionMission.values.map((value, i) => (
+                <article
+                  key={value.title}
+                  className={`flex flex-col px-2 py-4 sm:px-4 sm:py-6 ${
+                    i < visionMission.values.length - 1
+                      ? "border-r border-copper-base/20"
+                      : ""
+                  }`}
+                >
+                  <span className="font-heading text-[10px] tracking-[0.16em] text-copper-base sm:text-xs">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <h3 className="mt-2 text-[10px] font-semibold uppercase leading-snug tracking-[0.1em] text-text-primary sm:mt-3 sm:text-xs">
+                    {value.title}
+                  </h3>
+                  <p className="mt-2 hidden text-[13px] leading-relaxed text-text-secondary sm:block">
+                    {value.description}
+                  </p>
+                </article>
+              ))}
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 

@@ -129,14 +129,18 @@ export default function Footer() {
             </Link>
             . All rights reserved.
           </p>
-          <div className="flex gap-6">
-            <Link href="/" className="hover:text-text-primary">
-              Site map
-            </Link>
-            <Link href="/contact" className="hover:text-text-primary">
-              Contact
-            </Link>
-          </div>
+          <p className="text-center sm:text-right">
+            Developed & Marketed by Brandvertise Agency (
+            <a
+              href="https://brandvertiseagency.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-copper-base hover:underline"
+            >
+              brandvertiseagency.com
+            </a>
+            )
+          </p>
         </Container>
       </div>
     </footer>

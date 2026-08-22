@@ -47,13 +47,6 @@ export function ProductCategoriesSection() {
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
-                  <div
-                    className={`absolute inset-0 ${
-                      reverse
-                        ? "bg-gradient-to-l from-dark-950 via-dark-950/40 to-transparent"
-                        : "bg-gradient-to-r from-dark-950 via-dark-950/40 to-transparent"
-                    } max-lg:bg-gradient-to-t max-lg:from-dark-950 max-lg:via-dark-950/50 max-lg:to-transparent`}
-                  />
                 </div>
 
                 <div

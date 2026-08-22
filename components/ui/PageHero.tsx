@@ -40,11 +40,7 @@ export default function PageHero({
             className="object-cover object-center"
           />
           <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-dark-950/90 via-dark-950/70 to-dark-950/45"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-dark-950/30"
+            className="page-hero-photo-overlay pointer-events-none absolute inset-0"
             aria-hidden
           />
         </>

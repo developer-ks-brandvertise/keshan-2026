@@ -43,6 +43,7 @@ export type GlobeConfig = {
   directionalLeftLight?: string;
   directionalTopLight?: string;
   pointLight?: string;
+  groundColor?: string;
   arcTime?: number;
   arcLength?: number;
   rings?: number;
@@ -99,6 +100,27 @@ export function Globe({ globeConfig, data }: WorldProps) {
       _buildMaterial();
     }
   }, [globeRef.current]);
+
+  useEffect(() => {
+    if (globeRef.current) {
+      _buildMaterial();
+    }
+  }, [globeConfig.globeColor]);
+
+  useEffect(() => {
+    if (!globeRef.current || !globeData) return;
+    globeRef.current
+      .showAtmosphere(defaultProps.showAtmosphere)
+      .atmosphereColor(defaultProps.atmosphereColor)
+      .atmosphereAltitude(defaultProps.atmosphereAltitude)
+      .hexPolygonColor(() => defaultProps.polygonColor);
+  }, [
+    globeData,
+    globeConfig.showAtmosphere,
+    globeConfig.atmosphereColor,
+    globeConfig.atmosphereAltitude,
+    globeConfig.polygonColor,
+  ]);
 
   const _buildMaterial = () => {
     if (!globeRef.current) return;
@@ -263,20 +285,26 @@ export function World(props: WorldProps) {
       resize={{ scroll: false, debounce: { scroll: 50, resize: 0 } }}
     >
       <WebGLRendererConfig />
-      <ambientLight color="#f0d4b0" intensity={2.2} />
-      <hemisphereLight args={["#ffe8c8", "#4a3018", 1.4]} />
+      <ambientLight color={globeConfig.ambientLight ?? "#f0d4b0"} intensity={2.2} />
+      <hemisphereLight
+        args={[
+          globeConfig.directionalTopLight ?? "#ffe8c8",
+          globeConfig.groundColor ?? "#4a3018",
+          1.4,
+        ]}
+      />
       <directionalLight
-        color="#ffffff"
+        color={globeConfig.directionalTopLight ?? "#ffffff"}
         position={new Vector3(0, 0, 400)}
         intensity={1.6}
       />
       <directionalLight
-        color="#ffe2b0"
+        color={globeConfig.directionalLeftLight ?? "#ffe2b0"}
         position={new Vector3(-200, 300, 200)}
         intensity={1.0}
       />
       <directionalLight
-        color="#d4a574"
+        color={globeConfig.pointLight ?? "#d4a574"}
         position={new Vector3(200, -100, 300)}
         intensity={0.9}
       />

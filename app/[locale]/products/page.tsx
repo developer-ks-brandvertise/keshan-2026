@@ -11,34 +11,6 @@ import AnimatedSection from "@/components/ui/AnimatedSection";
 const copperProducts = products.filter((p) => p.category === "copper");
 const brassProducts = products.filter((p) => p.category === "brass");
 
-const productImages: Record<string, string> = {
-  "copper-ingots": "/images/inner-img1.jpg",
-  "copper-busbars": "/images/inner-img2.jpg",
-  "copper-strips": "/images/inner-img3.jpg",
-  "copper-sheets-plates": "/images/cmrcn-img1.jpg",
-  "copper-upcast-rod": "/images/cmrcn-img2.jpg",
-  "bare-copper-wire": "/images/project-img1.jpg",
-  "copper-rod": "/images/project-img1.jpg",
-  "copper-hex-square-round-rods": "/images/project-img2.jpg",
-  "enamel-copper-wire": "/images/project-img1.jpg",
-  "copper-blister": "/images/inner-img1.jpg",
-  "paper-insulated-copper-conductors-strips": "/images/inner-img3.jpg",
-  "copper-foils": "/images/cmrcn-img1.jpg",
-  "phosphorous-copper-bar": "/images/service-img2.jpg",
-  "phosphorous-copper-nuggets": "/images/project-img2.jpg",
-  "copper-bar-1kg-5kg": "/images/service-img2.jpg",
-  "copper-anode-plates": "/images/service-img4.jpg",
-  "copper-cathodes": "/images/service1.jpg",
-  "copper-profile": "/images/inner-img2.jpg",
-  "copper-scrap": "/images/inner-img2.jpg",
-  "brass-ingots": "/images/service2.jpg",
-  "brass-sheets-plates": "/images/service3.jpg",
-  "brass-strips": "/images/service5.jpg",
-  "brass-circles": "/images/service-img4.jpg",
-  "brass-wires": "/images/project-img1.jpg",
-  "brass-scrap": "/images/service3.jpg",
-};
-
 const tabs = [
   { id: "copper" as const, label: "Copper Products", count: copperProducts.length },
   { id: "brass" as const, label: "Brass Products", count: brassProducts.length },
@@ -111,17 +83,16 @@ export default function ProductsPage() {
                   href={`/products/${product.slug}`}
                   className="group flex h-full flex-col overflow-hidden border border-copper-base/20 bg-dark-950 transition-all duration-300 hover:border-copper-base/50 hover:bg-copper-base/[0.04] hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
                 >
-                  <div className="relative aspect-[16/11] overflow-hidden">
-                    <Image
-                      src={
-                        productImages[product.slug] || "/images/bg-header01.jpg"
-                      }
-                      alt={product.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-dark-950 via-dark-950/20 to-transparent opacity-80" />
+                  <div className="relative aspect-[16/11] overflow-hidden bg-dark-900">
+                    {product.imageSrc ? (
+                      <Image
+                        src={product.imageSrc}
+                        alt={product.name}
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      />
+                    ) : null}
                     <span className="absolute left-4 top-4 font-heading text-[10px] tracking-[0.22em] text-copper-base">
                       {String(index + 1).padStart(2, "0")}
                     </span>

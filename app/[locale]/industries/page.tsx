@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { industries } from "@/lib/data";
+import { industries, industriesHeaderImage } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { MagneticButton } from "@/components/ui/MagneticButton";
@@ -21,6 +21,8 @@ export default function IndustriesPage() {
         title="Copper at the Core of Critical Industries."
         highlight="Critical Industries"
         description={industries.subheadline}
+        backgroundImage={industriesHeaderImage}
+        backgroundPriority
       />
 
       <section className="bg-dark-900 py-section px-gutter">

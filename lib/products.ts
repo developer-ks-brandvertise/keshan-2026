@@ -58,6 +58,8 @@ export const products: Product[] = [
     metaTitle: "Copper Ingots Manufacturer & Exporter | Keshan Industries | High Purity",
     metaDescription:
       "One of India's largest exporters of copper ingots. Pure copper and alloy ingots for rolling mills, foundries, and alloy manufacturers. IS, ASTM & EN compliant. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787426304/Copper-Ingots_p65yzh.png",
   },
   {
     slug: "copper-busbars",
@@ -521,6 +523,8 @@ export const products: Product[] = [
     metaTitle: "Copper Profile Manufacturer | Keshan Industries",
     metaDescription:
       "Custom copper profiles for electrical, architectural, and industrial applications. Tight sections, high conductivity. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787426307/Copper-Profile_vffm3f.png",
   },
   {
     slug: "copper-scrap",
@@ -694,6 +698,8 @@ export const products: Product[] = [
     metaTitle: "Brass Wires Manufacturer | Keshan Industries",
     metaDescription:
       "Drawn brass wires for electrical hardware, fasteners, and industrial forming. Quarter Hard temper. Request a quote from Keshan Industries.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787426359/Brass-Wires_e1lpcx.png",
   },
   {
     slug: "brass-scrap",

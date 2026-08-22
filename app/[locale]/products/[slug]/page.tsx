@@ -9,7 +9,7 @@ import {
   productIndustriesMap,
   scrapGrades,
 } from "@/lib/products";
-import { copperHeaderImage } from "@/lib/data";
+import { brassHeaderImage, copperHeaderImage } from "@/lib/data";
 import { Link, routing } from "@/i18n/routing";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
@@ -76,9 +76,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
         title={product.name}
         description={product.headline}
         backgroundImage={
-          product.category === "copper" ? copperHeaderImage : undefined
+          product.category === "copper"
+            ? copperHeaderImage
+            : product.category === "brass"
+              ? brassHeaderImage
+              : undefined
         }
-        backgroundPriority={product.category === "copper"}
+        backgroundPriority
       />
 
       <section className="bg-dark-900 py-section px-gutter">
