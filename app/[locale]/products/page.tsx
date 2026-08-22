@@ -27,13 +27,15 @@ const productImages: Record<string, string> = {
   "phosphorous-copper-bar": "/images/service-img2.jpg",
   "phosphorous-copper-nuggets": "/images/project-img2.jpg",
   "copper-bar-1kg-5kg": "/images/service-img2.jpg",
-  "copper-anodes": "/images/service-img4.jpg",
+  "copper-anode-plates": "/images/service-img4.jpg",
   "copper-cathodes": "/images/service1.jpg",
+  "copper-profile": "/images/inner-img2.jpg",
   "copper-scrap": "/images/inner-img2.jpg",
   "brass-ingots": "/images/service2.jpg",
   "brass-sheets-plates": "/images/service3.jpg",
   "brass-strips": "/images/service5.jpg",
   "brass-circles": "/images/service-img4.jpg",
+  "brass-wires": "/images/project-img1.jpg",
   "brass-scrap": "/images/service3.jpg",
 };
 
@@ -50,9 +52,9 @@ export default function ProductsPage() {
     <main>
       <PageHero
         label="Product Range"
-        title="Copper & Brass. Quality-Engineered."
-        highlight="Quality-Engineered"
-        description="From high-conductivity copper busbars for power distribution to quality brass strips for component manufacturing — Keshan manufactures every form, every grade, to the standards your application demands."
+        title="Copper & Brass. Pure Quality-Engineered."
+        highlight="Pure Quality-Engineered"
+        description="From high-conductivity copper busbars for power distribution to pure quality brass strips for component manufacturing — Keshan manufactures every form, every grade, to the standards your application demands."
       />
 
       <section className="bg-dark-900 py-section px-gutter">

@@ -11,7 +11,7 @@ import CopperHighlight from "@/components/ui/CopperHighlight";
 import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 
 const statCards = [
-  { icon: Calendar, highlight: "7+", title: "Years", description: "Years of manufacturing excellence since 2019." },
+  { icon: Calendar, highlight: "10+", title: "Years", description: "Years of manufacturing excellence since 2016." },
   { icon: Globe2, highlight: "30+", title: "Countries", description: "On-time delivery to 30+ countries worldwide." },
   { icon: Factory, highlight: "24k+", title: "MT / Year", description: "Annual production capacity across copper and brass." },
   { icon: ShieldCheck, highlight: "100%", title: "QC Tested", description: "Batch-tested quality before every dispatch." },

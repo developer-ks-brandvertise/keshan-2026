@@ -110,7 +110,7 @@ export default function Process() {
         <div className="max-w-6xl mx-auto">
           <SectionHeading
             eyebrow="Manufacturing Process"
-            title="Quality at Every Stage."
+            title="Pure Quality at Every Stage."
             subtitle="From raw material to final dispatch, every step of the Keshan manufacturing process is specification-led and monitored by experienced metallurgists."
             className="mb-16"
           />
@@ -160,7 +160,7 @@ export default function Process() {
       <div className="absolute inset-0 flex flex-col justify-center px-gutter">
         <SectionHeading
           eyebrow="Manufacturing Process"
-          title="Quality at Every Stage."
+          title="Pure Quality at Every Stage."
           subtitle="From raw material to final dispatch, every step of the Keshan manufacturing process is specification-led and monitored by experienced metallurgists."
           align="center"
           className="mb-8"

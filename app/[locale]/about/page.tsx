@@ -6,6 +6,7 @@ import {
   Calendar,
   Factory,
   Globe2,
+  Layers,
   Leaf,
   Shield,
   Target,
@@ -30,14 +31,14 @@ import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 export const metadata: Metadata = {
   title: "About Keshan Industries | Copper Manufacturer | Made in India",
   description:
-    "Keshan Industries is a quality copper and brass manufacturer based in India, and one of the country's largest exporters of copper ingots. ISO 9001, ISO 14001 & ISO 45001 certified.",
+    "Keshan Industries is a pure quality copper and brass manufacturer based in India, and one of the country's largest exporters of copper ingots. ISO 9001, ISO 14001 & ISO 45001 certified.",
 };
 
 const statIcons = [Calendar, Globe2, Factory, Shield];
 
 const valueIcons = [Target, Shield, Truck, Leaf, TrendingUp];
 
-const milestoneIcons = [Building2, Award, TrendingUp, Globe2];
+const milestoneIcons = [Building2, Layers, Award, Factory, Globe2, TrendingUp];
 
 export default function AboutPage() {
   return (
@@ -182,7 +183,7 @@ export default function AboutPage() {
             <h2 className="text-h2">{milestones.headline}</h2>
           </AnimatedSection>
 
-          <ol className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <ol className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {milestones.events.map((event, index) => {
               const Icon = milestoneIcons[index] ?? Building2;
               return (
@@ -198,12 +199,6 @@ export default function AboutPage() {
                     <p className="mt-2 flex-1 text-body-sm text-text-secondary">
                       {event.description}
                     </p>
-                    {index < milestones.events.length - 1 ? (
-                      <span
-                        className="pointer-events-none absolute -right-4 top-1/2 hidden h-0 w-0 -translate-y-1/2 border-b-[12px] border-l-[18px] border-t-[12px] border-b-transparent border-l-copper-base/70 border-t-transparent lg:block"
-                        aria-hidden
-                      />
-                    ) : null}
                   </li>
                 </AnimatedSection>
               );

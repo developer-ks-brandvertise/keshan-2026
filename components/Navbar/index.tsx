@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
   ArrowUpRight,
@@ -160,28 +159,13 @@ function ProductsDropdown({
                           <Link
                             href={href}
                             onClick={() => setOpen(false)}
-                            className={`group/item flex items-center gap-3 px-2 py-2 transition-colors hover:bg-copper-base/[0.07] hover:text-copper-base ${
+                            className={`block px-2 py-2.5 text-base leading-snug transition-colors hover:bg-copper-base/[0.07] hover:text-copper-base ${
                               itemActive
                                 ? "bg-copper-base/[0.07] text-copper-base"
                                 : "text-text-secondary"
                             }`}
                           >
-                            {product.imageSrc ? (
-                              <span className="relative h-10 w-10 shrink-0 overflow-hidden border border-dark-100/15 bg-dark-950">
-                                <Image
-                                  src={product.imageSrc}
-                                  alt=""
-                                  fill
-                                  sizes="40px"
-                                  className="object-contain p-1"
-                                />
-                              </span>
-                            ) : (
-                              <span className="h-10 w-10 shrink-0 border border-dark-100/15 bg-dark-950" />
-                            )}
-                            <span className="text-[13px] leading-snug">
-                              {product.name}
-                            </span>
+                            {product.name}
                           </Link>
                         </li>
                       );
@@ -252,7 +236,7 @@ function MobileProductsAccordion({
                       <Link
                         href={href}
                         onClick={onNavigate}
-                        className={`block py-1.5 text-sm transition-colors ${
+                        className={`block py-2 text-base transition-colors ${
                           active
                             ? "text-copper-base"
                             : "text-text-secondary hover:text-copper-base"

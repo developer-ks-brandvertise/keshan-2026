@@ -40,6 +40,16 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: "/products/copper-anodes",
+        destination: "/products/copper-anode-plates",
+        permanent: true,
+      },
+      {
+        source: "/:locale(ar|zh|es|ja)/products/copper-anodes",
+        destination: "/:locale/products/copper-anode-plates",
+        permanent: true,
+      },
+      {
         source: "/products/copper-wires-rods",
         destination: "/products/bare-copper-wire",
         permanent: true,

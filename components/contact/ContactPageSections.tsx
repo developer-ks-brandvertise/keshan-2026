@@ -189,7 +189,7 @@ export function ContactPageSections() {
           <AnimatedSection className="mb-10">
             <h2 className="text-h2">Our Locations</h2>
             <p className="mt-4 max-w-2xl text-body-lg text-text-secondary">
-              Head Office, Unit-1 and Unit-2 across Telangana.
+              Head Office, Manufacturing Unit-1 and Manufacturing Unit-2 across Telangana.
             </p>
           </AnimatedSection>
           <div className="grid gap-8 lg:grid-cols-3">

@@ -8,8 +8,8 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ArrowUpRight } from "lucide-react";
 
 const specs = [
-  "Cu-ETP · Cu-OF · Busbars · Upcast · Foils · Cathodes",
-  "Ingots · Sheets · Plates · Strips · Circles · Scrap",
+  "Cu-ETP · Cu-OF · Busbars · Profiles · Anode Plates · Cathodes",
+  "Ingots · Sheets · Plates · Strips · Circles · Wires · Scrap",
 ];
 
 export function ProductCategoriesSection() {

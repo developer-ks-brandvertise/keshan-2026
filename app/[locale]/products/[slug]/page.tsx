@@ -45,6 +45,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
   if (slug === "copper-1kg-bars" || slug === "copper-5kg-biscuits") {
     redirect(`/${locale}/products/copper-bar-1kg-5kg`);
   }
+  if (slug === "copper-anodes") {
+    redirect(`/${locale}/products/copper-anode-plates`);
+  }
   const product = getProductBySlug(slug);
   if (!product) return notFound();
   const industriesBlock = productIndustriesMap[product.slug];
@@ -119,7 +122,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                     alt={product.name}
                     fill
                     sizes="(max-width: 1024px) 100vw, 640px"
-                    className="object-contain p-4 sm:p-6"
+                    className="object-cover"
                     priority
                   />
                 </div>

@@ -75,7 +75,7 @@ export const products: Product[] = [
       "EV charging stations and power electronics",
     ],
     specs: [
-      "Cross section: up to 3000 mm",
+      "Cross section: up to 150 mm",
       "Width: up to 300 mm",
       "Thickness: up to 50 mm",
       "Shape: Rectangular, square, round-edge, and custom corner radius",
@@ -108,17 +108,16 @@ export const products: Product[] = [
       "Electronic components and PCB fabrication",
     ],
     specs: [
-      "Size: 0 to 36 SWG",
+      "Thickness: 1 mm to 10 mm",
       "Purity: 99.9% min Cu-ETP",
-      "Width: 5 mm to 400 mm (custom slit to order)",
-      "Thickness: 0.1 mm to 10 mm",
-      "Temper: Soft annealed (O61), Half-hard (H02), Hard (H04)",
+      "Width: 6 mm to 100 mm",
+      "Temper: Quarter Hard",
       "Standards: IS 613, EN 1652, ASTM B152",
     ],
     cta: "Request a Quote for Copper Strips",
     metaTitle: "Copper Strips Manufacturer | Keshan Industries | Transformer & Motor Grade",
     metaDescription:
-      "Quality copper strips for transformer winding, motor coils, and electronic components. Custom width and thickness. IS 613, ASTM B152, EN 1652. Request a quote.",
+      "Pure quality copper strips for transformer winding, motor coils, and electronic components. Custom width and thickness. IS 613, ASTM B152, EN 1652. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/copper_strips_vqnaqd.png",
   },
@@ -137,17 +136,18 @@ export const products: Product[] = [
       "Chemical process equipment and custom fabrication",
     ],
     specs: [
-      "Width: 101.6 mm × 101.6 mm to 1219.2 × 1219.2 mm",
-      "Thickness: 0.3 mm to 16 mm",
-      "Circle Sheet: Dia up to 1220 mm, Thickness: 0.3–8 mm",
-      "Temper: Soft / Half-hard / Hard",
+      "Width: 100 mm × 100 mm to 1200 mm × 1200 mm",
+      "Thickness: 0.3 mm to 12 mm",
+      "Plate: 150 mm × 150 mm to 1250 mm × 1250 mm",
+      "Circle: 150 mm to 1000 mm",
+      "Temper: Quarter Hard",
       "Surface: Mill finish, bright polished, or brushed",
       "Standards: IS 1545, ASTM B152, EN 1652",
     ],
     cta: "Request a Quote for Copper Sheet, Plates & Circles",
     metaTitle: "Copper Sheet, Plates & Circles Manufacturer | Keshan Industries | India",
     metaDescription:
-      "Quality copper sheets, plates, and circles for cladding, heat exchangers, and fabrication. Custom thickness, width, diameter, and finish. Request a quote from Keshan Industries.",
+      "Pure quality copper sheets, plates, and circles for cladding, heat exchangers, and fabrication. Custom thickness, width, diameter, and finish. Request a quote from Keshan Industries.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Copper_Sheet_Plates_Circles_f4hjs6.png",
   },
@@ -165,9 +165,9 @@ export const products: Product[] = [
       "Flexible conductors and braided cables",
     ],
     specs: [
-      "Dia: 4 mm, 8 mm, 12.5 mm",
-      "Purity: 99.99% Cu-OF or Cu-ETP",
-      "Coil weight: Up to 5,000 kg",
+      "Dia: 4 mm, 8 mm, 12.5 mm, 16 mm, 20 mm, 22 mm, 25 mm",
+      "Purity: 99.90%",
+      "Coil weight: 500 kg to 5,000 kg",
       "Process: Upcast continuous casting",
       "Surface: Scale-free, bright finish",
       "Standards: EN 1977, ASTM B49",
@@ -175,7 +175,7 @@ export const products: Product[] = [
     cta: "Request a Quote for Copper Upcast Rod",
     metaTitle: "Copper Upcast Rod Manufacturer | Keshan Industries | Wire Rod Grade",
     metaDescription:
-      "High-purity copper upcast rod for wire and cable manufacturers. Upcast process, 8mm standard, EN 1977 & ASTM B49. Request a quote.",
+      "High-purity copper upcast rod for wire and cable manufacturers. Diameters 4 mm to 25 mm, 99.90% purity. EN 1977 & ASTM B49. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Copper_Upcast_Rod_lyadw1.png",
   },
@@ -193,10 +193,10 @@ export const products: Product[] = [
       "Telecommunications and data cables",
     ],
     specs: [
-      "Size: 0 to 36 SWG",
+      "Size: 0 to 42 SWG",
       "Diameter: 0.1 mm (fine wire) to 10 mm",
       "Conductivity: Min 58 MS/m (100% IACS)",
-      "Temper: Soft annealed (O61), Hard drawn (H04)",
+      "Temper: Quarter Hard",
       "Standards: IS 8130, IEC 60228, ASTM B3, EN 13602",
     ],
     cta: "Request a Quote for Bare Copper Wire",
@@ -220,16 +220,16 @@ export const products: Product[] = [
       "Industrial current-carrying components",
     ],
     specs: [
-      "Diameter: typically 6 mm to 90 mm (custom on request)",
+      "Diameter: typically 6 mm to 100 mm (custom on request)",
       "Purity: 99.9% minimum",
       "Conductivity: Min 58 MS/m (100% IACS)",
-      "Temper: Soft / Half-hard / Hard",
+      "Temper: Quarter Hard",
       "Standards: IS 1897, ASTM B187, EN 13601",
     ],
     cta: "Request a Quote for Copper Rod",
     metaTitle: "Copper Rod Manufacturer | Keshan Industries | India",
     metaDescription:
-      "Quality copper rod for earthing, connectors, and industrial fabrication. High conductivity, custom diameters. Request a quote.",
+      "Pure quality copper rod for earthing, connectors, and industrial fabrication. High conductivity, custom diameters. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Copper_Rod_tfuiwf.png",
   },
@@ -237,7 +237,7 @@ export const products: Product[] = [
     slug: "copper-hex-square-round-rods",
     category: "copper",
     name: "Copper Hex, Square, Round Rods",
-    headline: "Shaped Stock. Ready for Quality Machining.",
+    headline: "Shaped Stock. Ready for Pure Quality Machining.",
     description:
       "Keshan supplies copper rods in hexagonal, square, and round sections for machining, forging, and component manufacturing — with controlled chemistry, consistent cross-section, and finish suited to CNC and conventional machine shops.",
     applications: [
@@ -250,7 +250,7 @@ export const products: Product[] = [
       "Shapes: Hexagonal, Square, Round",
       "Size range: custom across common metric sections",
       "Purity: 99.9% minimum",
-      "Temper: Soft / Half-hard / Hard",
+      "Temper: Quarter Hard",
       "Standards: IS / ASTM / EN on request",
     ],
     cta: "Request a Quote for Copper Hex, Square & Round Rods",
@@ -301,7 +301,7 @@ export const products: Product[] = [
     ],
     specs: [
       "Form: Blister copper cakes / plates as available",
-      "Copper content: typically 98%+ (lot-certified)",
+      "Copper content: typically 99%+ (lot-certified)",
       "Impurity profile: screened and batch-documented",
       "Packaging: strapped bundles or as agreed",
     ],
@@ -356,13 +356,13 @@ export const products: Product[] = [
       "Width: 15–150 mm (custom slit available)",
       "Thickness: 0.1 mm to 1 mm",
       "Purity: 99.9% minimum",
-      "Temper: Soft annealed / as specified",
+      "Temper: Quarter Hard",
       "Standards: ASTM B152, EN 1652, IS equivalents",
     ],
     cta: "Request a Quote for Copper Foils",
     metaTitle: "Copper Foils Manufacturer | Keshan Industries",
     metaDescription:
-      "Quality copper foils for electronics, shielding, and laminates. Tight thickness control. Request a quote.",
+      "Pure quality copper foils for electronics, shielding, and laminates. Tight thickness control. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Copper_Foils_qehivz.png",
   },
@@ -408,7 +408,8 @@ export const products: Product[] = [
     specs: [
       "Purity / Cu base: high-purity copper with controlled P",
       "Phosphorus content: graded to customer melt requirements",
-      "Size: 20–80 mm typical",
+      "Length: 20-50 mm",
+      "Dia: 12.5-50 mm",
       "Packaging: Bulk bags or wooden pallets",
     ],
     cta: "Request a Quote for Phosphorous Copper Nuggets",
@@ -445,12 +446,12 @@ export const products: Product[] = [
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Copper_Bar_1kg_5kg_c75sql.png",
   },
   {
-    slug: "copper-anodes",
+    slug: "copper-anode-plates",
     category: "copper",
-    name: "Copper Anodes",
+    name: "Copper Anode Plates",
     headline: "The Starting Point for Every Electrodeposited Copper Surface.",
     description:
-      "Keshan copper anodes are manufactured from high-purity oxygen-free copper, cast to precise dimensional specifications for use in electroplating, electrolytic refining, and printed circuit board manufacturing. A controlled microstructure and high purity ensure smooth, consistent dissolution during the plating process.",
+      "Keshan copper anode plates are manufactured from high-purity oxygen-free copper, cast to precise dimensional specifications for use in electroplating, electrolytic refining, and printed circuit board manufacturing. A controlled microstructure and high purity ensure smooth, consistent dissolution during the plating process.",
     applications: [
       "Electroplating of copper onto ferrous and non-ferrous substrates",
       "PCB copper electrodeposition",
@@ -460,13 +461,13 @@ export const products: Product[] = [
     specs: [
       "Purity: 99.9% to 99.99% Cu-OF",
       "Phosphorus content: 0.04–0.065% for phosphorised grade",
-      "Form: Plate anodes, ball anodes, nugget anodes",
+      "Form: Anode plates",
       "Standards: ASTM B115, EN 1978",
     ],
-    cta: "Request a Quote for Copper Anodes",
-    metaTitle: "Copper Anodes Manufacturer | Keshan Industries | Electroplating Grade",
+    cta: "Request a Quote for Copper Anode Plates",
+    metaTitle: "Copper Anode Plates Manufacturer | Keshan Industries | Electroplating Grade",
     metaDescription:
-      "High-purity oxygen-free copper anodes for electroplating, PCB manufacturing, and electrolytic refining. ASTM B115 & EN 1978 compliant. Request a quote.",
+      "High-purity oxygen-free copper anode plates for electroplating, PCB manufacturing, and electrolytic refining. ASTM B115 & EN 1978 compliant. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Copper_Anodes_tnpmog.png",
   },
@@ -495,6 +496,31 @@ export const products: Product[] = [
       "LME Grade A copper cathodes with 99.99% purity. Feedstock for downstream copper manufacturing and commodity trading. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399559/Copper_Cathodes_lkwexl.png",
+  },
+  {
+    slug: "copper-profile",
+    category: "copper",
+    name: "Copper Profile",
+    headline: "Custom Sections. Drawn and Extruded to Spec.",
+    description:
+      "Keshan copper profiles are produced in custom cross-sections for electrical, architectural, and industrial fabrication. Tight dimensional control, high conductivity, and a clean mill finish make them ready for machining, assembly, and installation without extra dressing.",
+    applications: [
+      "Electrical switchgear and bus assemblies",
+      "Architectural and decorative metalwork",
+      "Heat transfer and thermal management sections",
+      "Industrial machine components and fittings",
+    ],
+    specs: [
+      "Sections: custom extruded and drawn profiles",
+      "Purity: 99.9% minimum",
+      "Temper: Quarter Hard",
+      "Finish: Mill finish or as specified",
+      "Standards: IS, ASTM, EN on request",
+    ],
+    cta: "Request a Quote for Copper Profile",
+    metaTitle: "Copper Profile Manufacturer | Keshan Industries",
+    metaDescription:
+      "Custom copper profiles for electrical, architectural, and industrial applications. Tight sections, high conductivity. Request a quote.",
   },
   {
     slug: "copper-scrap",
@@ -538,17 +564,24 @@ export const products: Product[] = [
       "Decorative and architectural hardware",
       "Automotive and industrial engineering applications",
     ],
-    specs: [
-      "Small Ingot: 250 mm × 225 mm × 50 mm, weight 22 kgs",
-      "Medium Ingot: 380 mm × 330 mm × 50 mm, weight 50 kgs",
-      "Grades: CuZn37 (MS63), CuZn40 (MS60), CuZn30, leaded and aluminium brass grades",
-      "Element ranges: Cu 55-65, Sn up to 1.0%, Pb 0-1.5%, Zn balance, Ni/Al/Fe as specified",
-      "Standards: IS 292, ASTM B30, EN 1982, JIS (custom grades available)",
+    specs: [],
+    specGroups: [
+      {
+        label: "Brass Ingots",
+        items: [
+          "Small Ingot: 250 mm × 225 mm × 50 mm, weight 22–25 kgs",
+          "Medium Ingot: 380 mm × 330 mm × 50 mm, weight 50–60 kgs",
+          "Large Ingots: 1500 mm × 100 mm × 100 mm, weight 200–255 kgs",
+          "Grades: CuZn37 (MS63), CuZn40 (MS60), CuZn30, leaded and aluminium brass grades",
+          "Element ranges: Cu 55-65, Sn up to 1.0%, Pb 0-1.5%, Zn balance, Ni/Al/Fe as specified",
+          "Standards: IS 292, ASTM B30, EN 1982, JIS (custom grades available)",
+        ],
+      },
     ],
     cta: "Request a Quote for Brass Ingots",
     metaTitle: "Brass Ingots Manufacturer | Keshan Industries | CuZn37 & CuZn40",
     metaDescription:
-      "Quality-alloyed brass ingots for foundries, die casters, and hardware manufacturers. CuZn37, CuZn40, custom alloys. IS 292, ASTM B30, EN 1982. Request a quote.",
+      "Pure quality alloyed brass ingots for foundries, die casters, and hardware manufacturers. CuZn37, CuZn40, custom alloys. IS 292, ASTM B30, EN 1982. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/Brass_Ingots_cjtzuh.png",
   },
@@ -567,10 +600,12 @@ export const products: Product[] = [
       "Chemical process vessels and liners",
     ],
     specs: [
-      "Width: 101.6 mm × 101.6 mm to 1219.2 × 1219.2 mm",
-      "Thickness: 0.3 mm to 16 mm",
+      "Width: 100 mm × 100 mm to 1200 mm × 1200 mm",
+      "Thickness: 0.3 mm to 12 mm",
+      "Plate: 150 mm × 150 mm to 1250 mm × 1250 mm",
+      "Circle: 150 mm to 1000 mm",
       "Alloy: CuZn37 (MS63) standard; others available",
-      "Temper: Soft / Half-hard / Hard",
+      "Temper: Quarter Hard",
       "Standards: IS 1385, ASTM B36, EN 1652",
     ],
     cta: "Request a Quote for Brass Sheets & Plates",
@@ -584,7 +619,7 @@ export const products: Product[] = [
     slug: "brass-strips",
     category: "brass",
     name: "Brass Strips",
-    headline: "Quality Slit. Press-Ready. Stamp-Ready.",
+    headline: "Pure Quality Slit. Press-Ready. Stamp-Ready.",
     description:
       "Keshan brass strips are slit to precise widths from high-quality brass coil, delivering consistent width tolerance and edge quality for stamping, pressing, and deep drawing operations. Uniform mechanical properties across the coil make them suited to high-volume parts manufacturing.",
     applications: [
@@ -596,14 +631,15 @@ export const products: Product[] = [
     ],
     specs: [
       "Alloy: CuZn37, CuZn30, CuZn28, and others",
-      "Width: 5mm to 400mm",
-      "Thickness: 0.1mm to 5mm",
+      "Width: 15 mm to 50 mm",
+      "Thickness: 1 mm to 6 mm",
+      "Temper: Quarter Hard",
       "Standards: IS 1385, ASTM B36, EN 1652",
     ],
     cta: "Request a Quote for Brass Strips",
-    metaTitle: "Brass Strips Manufacturer | Keshan Industries | Quality Slit",
+    metaTitle: "Brass Strips Manufacturer | Keshan Industries | Pure Quality Slit",
     metaDescription:
-      "Quality-slit brass strips for stamping, pressing, and deep drawing. CuZn37, CuZn30, custom alloys. Request a quote from Keshan Industries.",
+      "Pure quality slit brass strips for stamping, pressing, and deep drawing. CuZn37, CuZn30, custom alloys. Request a quote from Keshan Industries.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Brass_Strips_w7umhw.png",
   },
@@ -621,10 +657,10 @@ export const products: Product[] = [
       "Automotive and industrial housings",
     ],
     specs: [
-      "Width: 101.6 mm × 101.6 mm to 1219.2 × 1219.2 mm",
-      "Thickness: 0.3 mm to 16 mm",
-      "Diameter: 50 mm to 1,000 mm",
+      "Circle: 150 mm to 1000 mm",
+      "Thickness: 0.3 mm to 12 mm",
       "Alloy: CuZn37, CuZn30",
+      "Temper: Quarter Hard",
       "Edge: Clean shear edge, burr-free",
     ],
     cta: "Request a Quote for Brass Circles",
@@ -633,6 +669,31 @@ export const products: Product[] = [
       "Brass circles blanked to custom diameter and thickness for cookware, sanitaryware, and decorative components. Burr-free, press-ready. Request a quote.",
     imageSrc:
       "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/Brass_Circles_txog8d.png",
+  },
+  {
+    slug: "brass-wires",
+    category: "brass",
+    name: "Brass Wires",
+    headline: "Drawn Brass. Consistent Diameter. Clean Finish.",
+    description:
+      "Keshan brass wires are drawn from controlled brass rod for electrical hardware, fasteners, decorative work, and industrial weaving. Uniform diameter, Quarter Hard temper, and a clean surface finish support high-volume forming and winding.",
+    applications: [
+      "Electrical pins, terminals, and connectors",
+      "Fasteners, rivets, and formed hardware",
+      "Decorative and architectural wire work",
+      "Industrial mesh, springs, and brushes",
+    ],
+    specs: [
+      "Alloy: CuZn37, CuZn30, and custom brass grades",
+      "Size: 0 to 42 SWG",
+      "Temper: Quarter Hard",
+      "Finish: Bright drawn / as specified",
+      "Standards: IS 4171, ASTM B134, EN 12166",
+    ],
+    cta: "Request a Quote for Brass Wires",
+    metaTitle: "Brass Wires Manufacturer | Keshan Industries",
+    metaDescription:
+      "Drawn brass wires for electrical hardware, fasteners, and industrial forming. Quarter Hard temper. Request a quote from Keshan Industries.",
   },
   {
     slug: "brass-scrap",
@@ -722,6 +783,12 @@ export const productIndustriesMap: Record<
   "copper-bar-1kg-5kg": {
     industries: ["Foundries", "Automotive & Industrial", "Small-scale Manufacturing"],
   },
+  "copper-anode-plates": {
+    industries: ["Electronics & PCB", "Electrical & Power"],
+  },
+  "copper-profile": {
+    industries: ["Electrical & Power", "Switchgear & Panels", "Construction"],
+  },
   "copper-scrap": {
     industries: ["Foundries", "Secondary Refiners", "Alloy Manufacturers"],
   },
@@ -740,6 +807,9 @@ export const productIndustriesMap: Record<
   },
   "brass-circles": {
     industries: ["Plumbing & Sanitaryware", "Foundries & Die-Casting"],
+  },
+  "brass-wires": {
+    industries: ["Electrical & Electronics", "Automotive & Industrial"],
   },
   "brass-scrap": {
     industries: [],

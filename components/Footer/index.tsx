@@ -15,14 +15,14 @@ export default function Footer() {
         aria-hidden
       />
 
-      <Container className="relative z-10 py-16 lg:py-20">
-        <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:col-span-4">
+      <Container className="relative z-10 py-14 lg:py-16">
+        <div className="grid gap-10 lg:grid-cols-12 lg:items-start lg:gap-10">
+          <div className="lg:col-span-5">
             <Logo className="my-2 h-[4.8rem]" />
-            <p className="mt-6 max-w-sm text-body-sm leading-relaxed text-text-secondary">
+            <p className="mt-5 max-w-md text-body-sm leading-relaxed text-text-secondary">
               {footer.description}
             </p>
-            <dl className="mt-8 grid grid-cols-3 gap-3 border-t border-copper-base/20 pt-6">
+            <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-copper-base/20 pt-5">
               {intro.stats.slice(1, 4).map((stat) => (
                 <div key={stat.label}>
                   <dt className="font-heading text-lg text-copper-base sm:text-xl">
@@ -38,61 +38,11 @@ export default function Footer() {
 
           <div className="lg:col-span-3">
             <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-text-primary">
-              Products
-            </h4>
-            <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-6">
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-                  Copper
-                </p>
-                <ul className="mt-3 space-y-2 text-body-sm text-text-secondary">
-                  {copperProducts.slice(0, 8).map((product) => (
-                    <li key={product.slug}>
-                      <Link
-                        href={`/products/${product.slug}`}
-                        className="transition-colors hover:text-copper-base"
-                      >
-                        {product.name}
-                      </Link>
-                    </li>
-                  ))}
-                  <li>
-                    <Link
-                      href="/products#copper"
-                      className="text-copper-base hover:text-copper-bright"
-                    >
-                      All copper
-                    </Link>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-                  Brass
-                </p>
-                <ul className="mt-3 space-y-2 text-body-sm text-text-secondary">
-                  {brassProducts.map((product) => (
-                    <li key={product.slug}>
-                      <Link
-                        href={`/products/${product.slug}`}
-                        className="transition-colors hover:text-copper-base"
-                      >
-                        {product.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-2">
-            <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-text-primary">
               Company
             </h4>
-            <ul className="mt-5 space-y-2.5 text-body-sm text-text-secondary">
+            <ul className="mt-4 columns-2 gap-x-6 space-y-2 text-sm text-text-secondary">
               {navLinks.map((link) => (
-                <li key={link.label}>
+                <li key={link.label} className="break-inside-avoid">
                   <Link
                     href={link.href}
                     className="transition-colors hover:text-copper-base"
@@ -104,32 +54,68 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-4">
             <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-text-primary">
-              Locations
+              Contact
             </h4>
-            <ul className="mt-5 space-y-5 text-body-sm text-text-secondary">
-              {contact.locations.map((location) => (
-                <li key={location.label}>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-                    {location.label}
-                  </p>
-                  <p className="mt-1.5 leading-relaxed text-text-primary/85">
-                    {location.address}
-                  </p>
+            <ul className="mt-4 space-y-2 text-sm text-text-secondary">
+              <li>{contact.phones.join(" / ")}</li>
+              <li className="break-all">{contact.emails.join(" | ")}</li>
+              <li>{contact.hours}</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-10 grid gap-4 border-t border-dark-100/10 pt-8 sm:grid-cols-2 lg:grid-cols-3">
+          {contact.locations.map((location) => (
+            <div
+              key={location.label}
+              className="border border-copper-base/20 bg-dark-900/60 p-4"
+            >
+              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
+                {location.label}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-text-primary/90">
+                {location.address}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-8 grid gap-6 border-t border-dark-100/10 pt-8 lg:grid-cols-2">
+          <div>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
+              Copper
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
+              {copperProducts.map((product) => (
+                <li key={product.slug}>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="transition-colors hover:text-copper-base"
+                  >
+                    {product.name}
+                  </Link>
                 </li>
               ))}
             </ul>
-            <div className="mt-6 border-t border-dark-100/10 pt-5">
-              <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-text-primary">
-                Contact
-              </h4>
-              <ul className="mt-3 space-y-2 text-body-sm text-text-secondary">
-                <li>{contact.phones.join(" / ")}</li>
-                <li>{contact.emails.join(" | ")}</li>
-                <li>{contact.hours}</li>
-              </ul>
-            </div>
+          </div>
+          <div>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
+              Brass
+            </p>
+            <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
+              {brassProducts.map((product) => (
+                <li key={product.slug}>
+                  <Link
+                    href={`/products/${product.slug}`}
+                    className="transition-colors hover:text-copper-base"
+                  >
+                    {product.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </Container>

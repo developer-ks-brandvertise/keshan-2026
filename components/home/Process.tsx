@@ -39,7 +39,7 @@ export function ProcessSection() {
           <SectionHeading
             index="04"
             eyebrow="Manufacturing Process"
-            title="Quality at Every Stage."
+            title="Pure Quality at Every Stage."
             highlight="Every Stage"
             subtitle="From raw material to final dispatch, every step of the Keshan manufacturing process is specification-led and monitored by experienced metallurgists."
             align="left"

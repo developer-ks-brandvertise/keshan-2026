@@ -29,7 +29,7 @@ export const chatbotFaq: FaqEntry[] = [
       "نحاس",
     ],
     answer:
-      "Keshan manufactures copper and brass forms including ingots, busbars, strips, sheets, plates & circles, upcast rod, bare & enamel wire, rods, foils, phosphorous grades, biscuits, scrap, anodes, cathodes, and brass circles & scrap. Browse the full range on the Products page.",
+      "Keshan manufactures copper and brass forms including ingots, busbars, strips, sheets, plates & circles, upcast rod, bare & enamel wire, rods, profiles, foils, phosphorous grades, biscuits, scrap, anode plates, cathodes, brass wires, circles & scrap. Browse the full range on the Products page.",
   },
   {
     id: "certs",

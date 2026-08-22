@@ -16,7 +16,7 @@ const highlights = [
 ];
 
 const statValues = [
-  { value: 7, suffix: "+", label: "Years of Manufacturing Excellence" },
+  { value: 10, suffix: "+", label: "Years of Manufacturing Excellence" },
   { value: 30, suffix: "+", label: "Countries Supplied" },
   { value: 24000, suffix: "+", label: "MT Annual Production Capacity" },
   { value: 100, suffix: "%", label: "Quality Tested Before Dispatch" },
