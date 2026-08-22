@@ -52,10 +52,10 @@ export default function KnowledgePage() {
                       className="group grid grid-cols-[1fr_92px] items-start gap-4 border-b border-dark-100/10 py-5 sm:grid-cols-[1fr_108px]"
                     >
                       <div className="min-w-0">
-                        <h3 className="text-[15px] font-semibold leading-snug text-text-primary transition-colors group-hover:text-copper-light sm:text-base">
+                        <h3 className="text-lg leading-snug text-text-primary transition-colors group-hover:text-copper-light">
                           {article.title}
                         </h3>
-                        <p className="mt-2 text-[11px] text-text-muted">
+                        <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-text-muted">
                           <span className="text-copper-base">{article.source}</span>
                           <span aria-hidden> · </span>
                           <span>{article.date}</span>

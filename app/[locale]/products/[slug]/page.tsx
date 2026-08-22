@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { redirect } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import {
@@ -12,7 +13,6 @@ import {
 import { routing } from "@/i18n/routing";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
-import { ProductModelViewer } from "@/components/products/ProductModelViewer";
 import { ScrapGradeCards } from "@/components/products/ScrapGradeCards";
 
 interface ProductPageProps {
@@ -75,21 +75,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       <section className="bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
-          {product.modelSrc ? (
-            <AnimatedSection className="mb-12 lg:mb-16">
-              <div className="mb-4 flex items-center gap-3">
-                <span className="h-px w-8 bg-copper-base" aria-hidden />
-                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
-                  Interactive model
-                </span>
-              </div>
-              <ProductModelViewer
-                src={product.modelSrc}
-                label={`${product.name} 3D`}
-              />
-            </AnimatedSection>
-          ) : null}
-
           <div className="grid gap-12 lg:grid-cols-12 lg:gap-14">
             <AnimatedSection className="lg:col-span-4">
               <div className="lg:sticky lg:top-28 space-y-8">
@@ -127,6 +112,19 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </AnimatedSection>
 
             <AnimatedSection delay={0.1} className="lg:col-span-8 space-y-12">
+              {product.imageSrc ? (
+                <div className="relative aspect-[16/10] overflow-hidden border border-copper-base/25 bg-dark-950">
+                  <Image
+                    src={product.imageSrc}
+                    alt={product.name}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 640px"
+                    className="object-contain p-4 sm:p-6"
+                    priority
+                  />
+                </div>
+              ) : null}
+
               <div>
                 <h2 className="text-h3">Product Overview</h2>
                 <p className="mt-4 text-body-lg text-text-secondary">

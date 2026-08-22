@@ -2,28 +2,10 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import {
-  Zap,
-  PanelTop,
-  Sun,
-  BatteryCharging,
-  Cable,
-  Building2,
-  type LucideIcon,
-} from "lucide-react";
 import { useReducedMotion } from "framer-motion";
 import { industries } from "@/lib/data";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-
-const iconMap: Record<string, LucideIcon> = {
-  Zap,
-  PanelTop,
-  Sun,
-  BatteryCharging,
-  Cable,
-  Building2,
-};
 
 export function IndustriesSection() {
   const [active, setActive] = useState(0);
@@ -64,14 +46,12 @@ export function IndustriesSection() {
           </MagneticButton>
         </div>
 
-        {/* Desktop / tablet: horizontal accordion with vertical titles */}
         <div
           className="hidden h-[520px] gap-2 md:flex lg:h-[560px] lg:gap-2.5"
           onMouseLeave={() => activate(0)}
         >
           {industries.featured.map((item, index) => {
             const isOpen = active === index;
-            const Icon = iconMap[item.icon] ?? Zap;
 
             return (
               <button
@@ -107,17 +87,13 @@ export function IndustriesSection() {
                   }`}
                 />
 
-                {/* Collapsed: vertical industry name */}
                 <div
-                  className={`absolute inset-0 flex flex-col items-center justify-between py-6 transition-opacity duration-300 ${
+                  className={`absolute inset-0 flex items-center justify-center px-3 py-6 transition-opacity duration-300 ${
                     isOpen ? "pointer-events-none opacity-0" : "opacity-100"
                   }`}
                 >
-                  <span className="font-heading text-[10px] tracking-[0.22em] text-copper-base">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
                   <span
-                    className="max-h-[70%] overflow-hidden text-sm font-semibold uppercase tracking-[0.22em] text-text-primary"
+                    className="max-h-[80%] overflow-hidden text-sm font-medium text-text-primary"
                     style={{
                       writingMode: "vertical-rl",
                       textOrientation: "mixed",
@@ -126,12 +102,8 @@ export function IndustriesSection() {
                   >
                     {item.name}
                   </span>
-                  <span className="flex h-9 w-9 items-center justify-center border border-copper-base/40 text-copper-base">
-                    <Icon className="h-4 w-4" strokeWidth={1.6} />
-                  </span>
                 </div>
 
-                {/* Expanded: content reveal */}
                 <div
                   className={`absolute inset-0 flex flex-col justify-end p-6 transition-all duration-500 lg:p-8 ${
                     isOpen
@@ -139,16 +111,8 @@ export function IndustriesSection() {
                       : "pointer-events-none translate-y-6 opacity-0"
                   }`}
                 >
-                  <div className="mb-4 flex h-11 w-11 items-center justify-center border border-copper-base/50 bg-dark-950/70 text-copper-base backdrop-blur-sm">
-                    <Icon className="h-5 w-5" strokeWidth={1.6} />
-                  </div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-copper-base">
-                    Sector {String(index + 1).padStart(2, "0")}
-                  </p>
-                  <h3 className="mt-2 max-w-md text-2xl text-text-primary lg:text-3xl">
-                    {item.name}
-                  </h3>
-                  <p className="mt-3 max-w-md text-body-sm text-text-secondary lg:text-body">
+                  <h3 className="max-w-md text-h2 text-text-primary">{item.name}</h3>
+                  <p className="mt-4 max-w-md text-body text-text-secondary">
                     {item.application}
                   </p>
                 </div>
@@ -157,11 +121,9 @@ export function IndustriesSection() {
           })}
         </div>
 
-        {/* Mobile: vertical stack with expand */}
         <div className="flex flex-col gap-2 md:hidden">
           {industries.featured.map((item, index) => {
             const isOpen = active === index;
-            const Icon = iconMap[item.icon] ?? Zap;
 
             return (
               <button
@@ -190,14 +152,8 @@ export function IndustriesSection() {
                       : "bg-dark-950/80"
                   }`}
                 />
-                <div className="relative z-10 flex items-center gap-4 px-4 py-5">
-                  <span className="font-heading text-[10px] tracking-[0.2em] text-copper-base">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="flex-1 text-sm font-semibold uppercase tracking-[0.12em] text-text-primary">
-                    {item.name}
-                  </span>
-                  <Icon className="h-4 w-4 shrink-0 text-copper-base" strokeWidth={1.6} />
+                <div className="relative z-10 px-4 py-5">
+                  <span className="block text-lg text-text-primary">{item.name}</span>
                 </div>
                 {isOpen ? (
                   <div className="relative z-10 px-4 pb-6">

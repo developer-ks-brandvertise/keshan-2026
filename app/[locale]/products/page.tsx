@@ -50,9 +50,9 @@ export default function ProductsPage() {
     <main>
       <PageHero
         label="Product Range"
-        title="Copper & Brass. Precision-Engineered."
-        highlight="Precision-Engineered"
-        description="From high-conductivity copper busbars for power distribution to precision brass strips for component manufacturing — Keshan manufactures every form, every grade, to the standards your application demands."
+        title="Copper & Brass. Quality-Engineered."
+        highlight="Quality-Engineered"
+        description="From high-conductivity copper busbars for power distribution to quality brass strips for component manufacturing — Keshan manufactures every form, every grade, to the standards your application demands."
       />
 
       <section className="bg-dark-900 py-section px-gutter">

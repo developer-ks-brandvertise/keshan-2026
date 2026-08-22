@@ -11,8 +11,8 @@ export interface Product {
   cta: string;
   metaTitle: string;
   metaDescription: string;
-  /** Public path to a GLB/GLTF model shown on the product page */
-  modelSrc?: string;
+  /** Cloudinary product photo shown above Product Overview */
+  imageSrc?: string;
   /** Optional page-specific note block */
   note?: string;
 }
@@ -58,7 +58,6 @@ export const products: Product[] = [
     metaTitle: "Copper Ingots Manufacturer & Exporter | Keshan Industries | High Purity",
     metaDescription:
       "One of India's largest exporters of copper ingots. Pure copper and alloy ingots for rolling mills, foundries, and alloy manufacturers. IS, ASTM & EN compliant. Request a quote.",
-    modelSrc: "/3d-assets/copper_stone.glb",
   },
   {
     slug: "copper-busbars",
@@ -91,6 +90,8 @@ export const products: Product[] = [
     metaTitle: "Copper Busbars Manufacturer India | Keshan Industries | IS 613 Compliant",
     metaDescription:
       "High-conductivity copper busbars for switchgear, panels, busducts, and transformers. IS 613, IEC 60317, ASTM B187 compliant. Custom dimensions. Request a quote from Keshan Industries.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/Copper_Busbars_zw5ayx.png",
   },
   {
     slug: "copper-strips",
@@ -117,7 +118,9 @@ export const products: Product[] = [
     cta: "Request a Quote for Copper Strips",
     metaTitle: "Copper Strips Manufacturer | Keshan Industries | Transformer & Motor Grade",
     metaDescription:
-      "Precision copper strips for transformer winding, motor coils, and electronic components. Custom width and thickness. IS 613, ASTM B152, EN 1652. Request a quote.",
+      "Quality copper strips for transformer winding, motor coils, and electronic components. Custom width and thickness. IS 613, ASTM B152, EN 1652. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/copper_strips_vqnaqd.png",
   },
   {
     slug: "copper-sheets-plates",
@@ -144,7 +147,9 @@ export const products: Product[] = [
     cta: "Request a Quote for Copper Sheet, Plates & Circles",
     metaTitle: "Copper Sheet, Plates & Circles Manufacturer | Keshan Industries | India",
     metaDescription:
-      "Precision copper sheets, plates, and circles for cladding, heat exchangers, and fabrication. Custom thickness, width, diameter, and finish. Request a quote from Keshan Industries.",
+      "Quality copper sheets, plates, and circles for cladding, heat exchangers, and fabrication. Custom thickness, width, diameter, and finish. Request a quote from Keshan Industries.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Copper_Sheet_Plates_Circles_f4hjs6.png",
   },
   {
     slug: "copper-upcast-rod",
@@ -171,6 +176,8 @@ export const products: Product[] = [
     metaTitle: "Copper Upcast Rod Manufacturer | Keshan Industries | Wire Rod Grade",
     metaDescription:
       "High-purity copper upcast rod for wire and cable manufacturers. Upcast process, 8mm standard, EN 1977 & ASTM B49. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Copper_Upcast_Rod_lyadw1.png",
   },
   {
     slug: "bare-copper-wire",
@@ -196,7 +203,8 @@ export const products: Product[] = [
     metaTitle: "Bare Copper Wire Manufacturer | Keshan Industries | India",
     metaDescription:
       "High-conductivity bare copper wire for electrical, construction, and telecom applications. Custom diameter and temper. Request a quote.",
-    modelSrc: "/3d-assets/copper_wire_coil.glb",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/Bare_Copper_Wire_moxiyy.png",
   },
   {
     slug: "copper-rod",
@@ -221,13 +229,15 @@ export const products: Product[] = [
     cta: "Request a Quote for Copper Rod",
     metaTitle: "Copper Rod Manufacturer | Keshan Industries | India",
     metaDescription:
-      "Precision copper rod for earthing, connectors, and industrial fabrication. High conductivity, custom diameters. Request a quote.",
+      "Quality copper rod for earthing, connectors, and industrial fabrication. High conductivity, custom diameters. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Copper_Rod_tfuiwf.png",
   },
   {
     slug: "copper-hex-square-round-rods",
     category: "copper",
     name: "Copper Hex, Square, Round Rods",
-    headline: "Shaped Stock. Ready for Precision Machining.",
+    headline: "Shaped Stock. Ready for Quality Machining.",
     description:
       "Keshan supplies copper rods in hexagonal, square, and round sections for machining, forging, and component manufacturing — with controlled chemistry, consistent cross-section, and finish suited to CNC and conventional machine shops.",
     applications: [
@@ -247,6 +257,8 @@ export const products: Product[] = [
     metaTitle: "Copper Hex, Square & Round Rods | Keshan Industries",
     metaDescription:
       "Copper hex, square, and round rods for machining and electrical hardware. Consistent section and chemistry. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Copper_Hex_Square_Round_Rods_jmzth2.png",
   },
   {
     slug: "enamel-copper-wire",
@@ -271,6 +283,8 @@ export const products: Product[] = [
     metaTitle: "Enamel Copper Wire Manufacturer | Keshan Industries | Magnet Wire",
     metaDescription:
       "Enamel copper magnet wire for motors, transformers, and coils. Uniform insulation, high conductivity. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399559/Enamel_Copper_Wire_ql4rev.png",
   },
   {
     slug: "copper-blister",
@@ -295,6 +309,8 @@ export const products: Product[] = [
     metaTitle: "Copper Blister Supplier | Keshan Industries",
     metaDescription:
       "Copper blister for refining, remelt, and alloy manufacturing. Lot-certified chemistry. Request a quote from Keshan Industries.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/Copper_Blister_avs8sc.png",
   },
   {
     slug: "paper-insulated-copper-conductors-strips",
@@ -320,6 +336,8 @@ export const products: Product[] = [
     metaTitle: "Paper Insulated Copper Conductor Strips | Keshan Industries",
     metaDescription:
       "PICC strips for transformer and reactor windings. High-conductivity copper with paper insulation. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Paper_Insulated_Copper_Conductors_Strips_uyy5sk.png",
   },
   {
     slug: "copper-foils",
@@ -344,7 +362,9 @@ export const products: Product[] = [
     cta: "Request a Quote for Copper Foils",
     metaTitle: "Copper Foils Manufacturer | Keshan Industries",
     metaDescription:
-      "Precision copper foils for electronics, shielding, and laminates. Tight thickness control. Request a quote.",
+      "Quality copper foils for electronics, shielding, and laminates. Tight thickness control. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Copper_Foils_qehivz.png",
   },
   {
     slug: "phosphorous-copper-bar",
@@ -369,6 +389,8 @@ export const products: Product[] = [
     metaTitle: "Phosphorous Copper Bar | Keshan Industries | Deoxidiser Grade",
     metaDescription:
       "Phosphorous copper bars for melt deoxidation and alloy additions. Controlled P content. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399559/Phosphorous_Copper_Bar_ih99ut.png",
   },
   {
     slug: "phosphorous-copper-nuggets",
@@ -393,6 +415,8 @@ export const products: Product[] = [
     metaTitle: "Phosphorous Copper Nuggets | Keshan Industries | Foundry Charge",
     metaDescription:
       "Phosphorous copper nuggets for foundries and alloy manufacturers. Batch-tested chemistry. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787400483/Phosphorous_Copper_Nuggets_lkjcay.png",
   },
   {
     slug: "copper-bar-1kg-5kg",
@@ -417,7 +441,8 @@ export const products: Product[] = [
     metaTitle: "Copper Bar 1kg & 5kg | Keshan Industries | 99.9% Pure",
     metaDescription:
       "High-purity copper bars in 1kg and 5kg formats for foundry, remelt, and electroplating applications. Request a quote.",
-    modelSrc: "/3d-assets/copper_bar.glb",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Copper_Bar_1kg_5kg_c75sql.png",
   },
   {
     slug: "copper-anodes",
@@ -442,6 +467,8 @@ export const products: Product[] = [
     metaTitle: "Copper Anodes Manufacturer | Keshan Industries | Electroplating Grade",
     metaDescription:
       "High-purity oxygen-free copper anodes for electroplating, PCB manufacturing, and electrolytic refining. ASTM B115 & EN 1978 compliant. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Copper_Anodes_tnpmog.png",
   },
   {
     slug: "copper-cathodes",
@@ -466,6 +493,8 @@ export const products: Product[] = [
     metaTitle: "Copper Cathodes Supplier | Keshan Industries | LME Grade A",
     metaDescription:
       "LME Grade A copper cathodes with 99.99% purity. Feedstock for downstream copper manufacturing and commodity trading. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399559/Copper_Cathodes_lkwexl.png",
   },
   {
     slug: "copper-scrap",
@@ -491,6 +520,8 @@ export const products: Product[] = [
     metaTitle: "Copper Scrap Supplier | Keshan Industries",
     metaDescription:
       "Sorted and graded copper scrap for remelt, foundries, and recycling. Transparent grades. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399559/Copper_Scrap_aa3enh.png",
   },
   {
     slug: "brass-ingots",
@@ -517,7 +548,9 @@ export const products: Product[] = [
     cta: "Request a Quote for Brass Ingots",
     metaTitle: "Brass Ingots Manufacturer | Keshan Industries | CuZn37 & CuZn40",
     metaDescription:
-      "Precision-alloyed brass ingots for foundries, die casters, and hardware manufacturers. CuZn37, CuZn40, custom alloys. IS 292, ASTM B30, EN 1982. Request a quote.",
+      "Quality-alloyed brass ingots for foundries, die casters, and hardware manufacturers. CuZn37, CuZn40, custom alloys. IS 292, ASTM B30, EN 1982. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/Brass_Ingots_cjtzuh.png",
   },
   {
     slug: "brass-sheets-plates",
@@ -544,12 +577,14 @@ export const products: Product[] = [
     metaTitle: "Brass Sheets & Plates Manufacturer | Keshan Industries | India",
     metaDescription:
       "Brass sheets and plates for architecture, instruments, and electrical components. Custom thickness, width, and temper. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399559/Brass_Sheets_Plates_i4loqw.png",
   },
   {
     slug: "brass-strips",
     category: "brass",
     name: "Brass Strips",
-    headline: "Precision Slit. Press-Ready. Stamp-Ready.",
+    headline: "Quality Slit. Press-Ready. Stamp-Ready.",
     description:
       "Keshan brass strips are slit to precise widths from high-quality brass coil, delivering consistent width tolerance and edge quality for stamping, pressing, and deep drawing operations. Uniform mechanical properties across the coil make them suited to high-volume parts manufacturing.",
     applications: [
@@ -566,9 +601,11 @@ export const products: Product[] = [
       "Standards: IS 1385, ASTM B36, EN 1652",
     ],
     cta: "Request a Quote for Brass Strips",
-    metaTitle: "Brass Strips Manufacturer | Keshan Industries | Precision Slit",
+    metaTitle: "Brass Strips Manufacturer | Keshan Industries | Quality Slit",
     metaDescription:
-      "Precision-slit brass strips for stamping, pressing, and deep drawing. CuZn37, CuZn30, custom alloys. Request a quote from Keshan Industries.",
+      "Quality-slit brass strips for stamping, pressing, and deep drawing. CuZn37, CuZn30, custom alloys. Request a quote from Keshan Industries.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399557/Brass_Strips_w7umhw.png",
   },
   {
     slug: "brass-circles",
@@ -594,6 +631,8 @@ export const products: Product[] = [
     metaTitle: "Brass Circles Manufacturer | Keshan Industries | Cookware & Sanitaryware",
     metaDescription:
       "Brass circles blanked to custom diameter and thickness for cookware, sanitaryware, and decorative components. Burr-free, press-ready. Request a quote.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399556/Brass_Circles_txog8d.png",
   },
   {
     slug: "brass-scrap",
@@ -613,12 +652,13 @@ export const products: Product[] = [
       "Form: Turnings, solids, mixed — sorted by lot",
       "Contamination: screened and documented",
       "Packaging: Baled, bundled, or loose as agreed",
-      "Annual copper and brass recycling capability: approximately 36,000 MT",
     ],
     cta: "Request a Quote for Brass Scrap",
     metaTitle: "Brass Scrap Supplier | Keshan Industries",
     metaDescription:
       "Sorted and graded brass scrap for foundries and remelt. Transparent grades. Request a quote from Keshan Industries.",
+    imageSrc:
+      "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787399558/Brass_Scrap_jxxgky.png",
   },
 ];
 

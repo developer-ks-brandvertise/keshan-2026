@@ -38,7 +38,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Keshan Industries | Copper & Brass Manufacturers",
   description:
-    "Keshan Industries is a leading Indian manufacturer of copper and brass products, delivering precision-engineered metals to 30+ countries.",
+    "Keshan Industries is a leading Indian manufacturer of copper and brass products, delivering quality-engineered metals to 30+ countries.",
   keywords: [
     "Keshan Industries",
     "copper manufacturer",

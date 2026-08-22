@@ -38,10 +38,7 @@ export function KnowledgeSection() {
                 className="group relative flex h-full flex-col overflow-hidden border border-copper-base/20 bg-dark-950 transition-all duration-300 hover:border-copper-base/50 hover:shadow-[0_16px_48px_rgba(0,0,0,0.35)]"
               >
                 <div className="relative h-28 overflow-hidden border-b border-copper-base/15 bg-[linear-gradient(135deg,rgba(184,115,51,0.22),transparent_60%),#111]">
-                  <span className="absolute left-5 top-5 font-heading text-5xl text-copper-base/25 transition-colors group-hover:text-copper-base/40">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
+                  <span className="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
                     {article.category}
                   </span>
                   <span className="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted">
@@ -49,7 +46,7 @@ export function KnowledgeSection() {
                   </span>
                 </div>
                 <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-xl font-medium tracking-tight text-text-primary transition-colors group-hover:text-copper-light">
+                  <h3 className="text-lg text-text-primary transition-colors group-hover:text-copper-light sm:text-xl">
                     {article.title}
                   </h3>
                   <p className="mt-3 flex-1 text-body-sm text-text-secondary">

@@ -15,8 +15,6 @@ export const partnerLogos = [
   "/images/Clients/Keshan-Clients-09.png",
   "/images/Clients/Keshan-Clients-10.png",
   "/images/Clients/Keshan-Clients-11.png",
-  "/images/Clients/Keshan-Clients-12.png",
-  "/images/Clients/Keshan-Clients-13.png",
   "/images/Clients/Keshan-Clients-14.png",
   "/images/Clients/Keshan-Clients-15.png",
   "/images/Clients/Keshan-Clients-16.png",

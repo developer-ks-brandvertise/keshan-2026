@@ -30,7 +30,7 @@ import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 export const metadata: Metadata = {
   title: "About Keshan Industries | Copper Manufacturer | Made in India",
   description:
-    "Keshan Industries is a precision copper and brass manufacturer based in India, and one of the country's largest exporters of copper ingots. ISO 9001, ISO 14001 & ISO 45001 certified.",
+    "Keshan Industries is a quality copper and brass manufacturer based in India, and one of the country's largest exporters of copper ingots. ISO 9001, ISO 14001 & ISO 45001 certified.",
 };
 
 const statIcons = [Calendar, Globe2, Factory, Shield];

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
   ArrowUpRight,
@@ -111,12 +112,12 @@ function ProductsDropdown({
 
       {open ? (
         <div
-          className="absolute left-1/2 top-full z-50 w-[min(92vw,560px)] -translate-x-1/2 pt-2"
+          className="absolute left-1/2 top-full z-50 w-[min(96vw,1100px)] -translate-x-[min(42%,calc(50vw-24px))] pt-2 lg:-translate-x-1/2"
           onMouseEnter={clearClose}
           onMouseLeave={scheduleClose}
         >
-          <div className="border border-dark-100/10 bg-dark-900/95 shadow-[0_24px_60px_rgba(0,0,0,0.55)] backdrop-blur-md">
-            <div className="flex items-center justify-between border-b border-dark-100/10 px-5 py-3.5">
+          <div className="max-h-[min(72vh,720px)] overflow-y-auto border border-dark-100/10 bg-dark-900/97 shadow-[0_28px_80px_rgba(0,0,0,0.6)] backdrop-blur-md">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-dark-100/10 bg-dark-900/95 px-5 py-3.5">
               <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
                 {t("productRange")}
               </p>
@@ -129,20 +130,28 @@ function ProductsDropdown({
               </Link>
             </div>
 
-            <div className="grid gap-0 sm:grid-cols-2">
+            <div className="grid gap-0 lg:grid-cols-12">
               {productGroups.map((group, groupIndex) => (
                 <div
                   key={group.id}
-                  className={`px-5 py-4 ${
+                  className={`px-5 py-5 ${
+                    group.id === "copper" ? "lg:col-span-8" : "lg:col-span-4"
+                  } ${
                     groupIndex > 0
-                      ? "border-t border-dark-100/10 sm:border-l sm:border-t-0"
+                      ? "border-t border-dark-100/10 lg:border-l lg:border-t-0"
                       : ""
                   }`}
                 >
-                  <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-text-muted">
                     {t(group.labelKey)}
                   </p>
-                  <ul className="space-y-0.5">
+                  <ul
+                    className={
+                      group.id === "copper"
+                        ? "grid gap-1 sm:grid-cols-2 xl:grid-cols-3"
+                        : "grid gap-1"
+                    }
+                  >
                     {group.items.map((product) => {
                       const href = `/products/${product.slug}` as const;
                       const itemActive = pathname === href;
@@ -151,13 +160,28 @@ function ProductsDropdown({
                           <Link
                             href={href}
                             onClick={() => setOpen(false)}
-                            className={`block px-2 py-2 text-[12px] transition-colors hover:bg-copper-base/[0.07] hover:text-copper-base ${
+                            className={`group/item flex items-center gap-3 px-2 py-2 transition-colors hover:bg-copper-base/[0.07] hover:text-copper-base ${
                               itemActive
                                 ? "bg-copper-base/[0.07] text-copper-base"
                                 : "text-text-secondary"
                             }`}
                           >
-                            {product.name}
+                            {product.imageSrc ? (
+                              <span className="relative h-10 w-10 shrink-0 overflow-hidden border border-dark-100/15 bg-dark-950">
+                                <Image
+                                  src={product.imageSrc}
+                                  alt=""
+                                  fill
+                                  sizes="40px"
+                                  className="object-contain p-1"
+                                />
+                              </span>
+                            ) : (
+                              <span className="h-10 w-10 shrink-0 border border-dark-100/15 bg-dark-950" />
+                            )}
+                            <span className="text-[13px] leading-snug">
+                              {product.name}
+                            </span>
                           </Link>
                         </li>
                       );

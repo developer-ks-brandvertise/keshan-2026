@@ -1,6 +1,6 @@
 export const brand = {
   name: "Keshan Industries",
-  tagline: "Precision Copper. Made in India.",
+  tagline: "Quality Copper. Made in India.",
 };
 
 export const topBar = {
@@ -22,7 +22,7 @@ export const navLinks = [
 export const hero = {
   headline: "Every Great Innovation Begins with Copper.",
   subheadline:
-    "Keshan Industries manufactures and supplies precision copper and brass products trusted by manufacturers, engineers, and contractors building tomorrow’s electrical grid, electric vehicles, renewable energy infrastructure, and beyond.",
+    "Keshan Industries manufactures and supplies quality copper and brass products trusted by manufacturers, engineers, and contractors building tomorrow’s electrical grid, electric vehicles, renewable energy infrastructure, and beyond.",
   primaryCta: "Explore Our Manufacturing",
   primaryHref: "/about",
   secondaryCta: "Browse Products",
@@ -33,8 +33,8 @@ export const hero = {
 };
 
 export const intro = {
-  headline: "Precision Copper Manufacturing, Built for the World.",
-  body: "Since 2019, Keshan Industries has manufactured precision-engineered copper and brass for some of the most demanding industries in the world — from switchgear manufacturers to solar developers. We are a manufacturing partner, not a commodity supplier: metallurgical control, batch-tested quality, and on-time delivery on every order.",
+  headline: "Quality Copper Manufacturing, Built for the World.",
+  body: "Since 2019, Keshan Industries has manufactured quality-engineered copper and brass for some of the most demanding industries in the world — from switchgear manufacturers to solar developers. We are a manufacturing partner, not a commodity supplier: metallurgical control, batch-tested quality, and on-time delivery on every order.",
   stats: [
     { value: "7+", label: "Years of Manufacturing Excellence" },
     { value: "30+", label: "Countries Supplied" },
@@ -46,7 +46,7 @@ export const intro = {
 export const productCategories = {
   headline: "Copper & Brass. Every Form. Every Grade.",
   subheadline:
-    "High-conductivity copper busbars for power distribution, precision brass strips for component manufacturing — Keshan has the product, the grade, and the capacity to deliver.",
+    "High-conductivity copper busbars for power distribution, quality brass strips for component manufacturing — Keshan has the product, the grade, and the capacity to deliver.",
   categories: [
     {
       title: "Copper Products",
@@ -59,7 +59,7 @@ export const productCategories = {
     {
       title: "Brass Products",
       description:
-        "Ingots, Sheets, Plates, Strips, Circles & Scrap — precision-alloyed for strength, machinability, and finish across every application.",
+        "Ingots, Sheets, Plates, Strips, Circles & Scrap — quality-alloyed for strength, machinability, and finish across every application.",
       href: "/products#brass",
       image:
         "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787055341/Brass-Home-Page_ad5rzx.png",
@@ -183,7 +183,7 @@ export const industries = {
     },
     {
       name: "Switchgear, Panels & Busducts",
-      application: "Precision copper for switchgear, panel boards, and busbar trunking systems.",
+      application: "Quality copper for switchgear, panel boards, and busbar trunking systems.",
       icon: "PanelTop",
       image:
         "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Switchgear_Panels_Busducts_j800uz.png",
@@ -227,7 +227,7 @@ export const industries = {
     },
     {
       name: "Switchgear, Panels & Busducts",
-      application: "Precision copper for switchgear, panel boards, and busbar trunking systems.",
+      application: "Quality copper for switchgear, panel boards, and busbar trunking systems.",
       icon: "PanelTop",
       image:
         "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787056418/Switchgear_Panels_Busducts_j800uz.png",
@@ -436,9 +436,9 @@ export const about = {
   headline: "Built on the Belief That Quality Is Not Negotiable.",
   body: `Keshan Industries was founded with a single conviction: that Indian manufacturing could meet — and exceed — the quality standards demanded by the world’s most exacting industries.
 
-What began as a focused copper manufacturing operation has grown into a respected name in India’s non-ferrous metals industry — manufacturing precision copper and brass for power utilities, infrastructure developers, EV manufacturers, and industrial groups, with supply reaching more than 30 countries.
+What began as a focused copper manufacturing operation has grown into a respected name in India’s non-ferrous metals industry — manufacturing quality copper and brass for power utilities, infrastructure developers, EV manufacturers, and industrial groups, with supply reaching more than 30 countries.
 
-We have never chased volume for its own sake. Every tonne we produce reflects our commitment to purity, precision, and end-use performance. That approach has earned us long-term partnerships with some of the biggest metallurgical companies across the globe.
+We have never chased volume for its own sake. Every tonne we produce reflects our commitment to purity, quality, and end-use performance. That approach has earned us long-term partnerships with some of the biggest metallurgical companies across the globe.
 
 Today, Keshan Industries operates a manufacturing facility in Hyderabad equipped with modern melting, rolling, and testing infrastructure — capable of producing the full range of copper and brass products to international specifications and customer requirements.`,
 };
@@ -446,11 +446,11 @@ Today, Keshan Industries operates a manufacturing facility in Hyderabad equipped
 export const visionMission = {
   visionHeadline: "To Touch Every Copper Wire Lighting Our Future.",
   visionBody:
-    "Every light that switches on, every vehicle that charges, every solar panel that feeds the grid — somewhere in that chain is copper made right. Keshan exists to be part of that chain: precision copper and brass, manufactured with integrity, for a future that runs on electricity.",
+    "Every light that switches on, every vehicle that charges, every solar panel that feeds the grid — somewhere in that chain is copper made right. Keshan exists to be part of that chain: quality copper and brass, manufactured with integrity, for a future that runs on electricity.",
   missionStatement:
-    "To manufacture precision copper and brass products of consistent, certified quality, delivered on time, backed by quality documentation, and supported by the technical consistency our customers need to build with confidence.",
+    "To manufacture quality copper and brass products of consistent, certified specification, delivered on time, backed by quality documentation, and supported by the technical consistency our customers need to build with confidence.",
   values: [
-    { title: "Precision", description: "Dimensional accuracy and metallurgical control in every batch." },
+    { title: "Quality", description: "Dimensional accuracy and metallurgical control in every batch." },
     { title: "Integrity", description: "Traceable quality, transparent documentation, and honest commitments." },
     { title: "Reliability", description: "On-time delivery, specification-led production, and responsive service." },
     { title: "Responsible Manufacturing", description: "Certified processes, safe operations, and efficient resource use." },
@@ -491,14 +491,15 @@ export const leadership = {
       linkedIn: "#",
     },
     {
-      name: "CA Surya Sudhakar K",
-      title: "Chief Financial Officer, Keshan Industries LLP",
+      name: "Suren Reddy",
+      title: "Chief Executive Officer, Keshan Industries",
       shortBio:
-        "Sixteen-plus years steering finance across manufacturing and infrastructure — bringing institutional rigor as Keshan scales.",
+        "A senior business leader with 25 years across manufacturing, international trading, and Fortune 500 global sourcing.",
       fullBio: [
-        "A Chartered Accountant with over sixteen years steering finance functions across India's manufacturing and infrastructure landscape, Surya Sudhakar K brings to Keshan Industries a rare blend of technical precision and operational fluency. He qualified as a Chartered Accountant from the Institute of Chartered Accountants of India in 2016, following a B.Com from Andhra University and a formative articleship at Brahmayya & Co., one of Hyderabad's most storied accountancy houses.",
-        "His career reads as a study in scale — from senior finance roles at GVK Power & Infrastructure and GMR Infrastructure, where he managed consolidated reporting, working capital, and banking relationships for diversified conglomerates, to leading finance for Pioneer Aluminium Industries' 1.5 MTPA alumina refinery, and most recently as General Manager (Accounts) at Srinivasa Farms. Along the way, he has held de facto CFO responsibility for an RBI-regulated NBFC, directed statutory and tax compliance across multi-state operations, and built the financial discipline that listed and closely-held enterprises alike depend on.",
-        "At Keshan Industries, Mr. Sudhakar leads the finance and accounts function with a mandate for institutional rigor — treasury, compliance, cost control, and capital strategy — as the company scales into a professionally governed, corporate-grade enterprise.",
+        "Suren Reddy is Chief Executive Officer at Keshan Industries and a senior business leader with 25 years of diverse experience across manufacturing in metallurgy, building materials, beverages, automotive components, international trading, and global sourcing in Fortune 500 companies.",
+        "His leadership approach is centered on building efficient processes, developing capable teams, leveraging technology, and creating measurable improvements in Cost, Quality and Delivery. He is a commercially driven and transformation-oriented leader capable of taking ownership of complex business operations, strengthening the supply chain, reducing structural costs, improving service levels and building scalable systems.",
+        "With an MBA in International Business from a Tier 1 institute, the Indian Institute of Foreign Trade, New Delhi, he combines business education with extensive practical experience across diverse industries.",
+        "At Keshan, he spearheaded the development of integrated manufacturing capabilities for Copper Ingots, Strips, Bus Bars, and the entire Wiring Division, covering the complete value chain from raw material to finished products.",
       ],
       image: "",
       linkedIn: "#",
@@ -508,7 +509,7 @@ export const leadership = {
 
 export const globalReach = {
   headline: "Made in India. Trusted Across the World.",
-  body: "From our manufacturing base in India, Keshan Industries is one of India’s largest exporters of copper ingots, supplying precision copper and brass to customers across South Asia, the Middle East, Southeast Asia, China, Africa, and Europe. Our export capability is backed by experienced logistics partners, complete quality documentation, and a customer service team fluent in the requirements of cross-border industrial trade.",
+  body: "From our manufacturing base in India, Keshan Industries is one of India’s largest exporters of copper ingots, supplying quality copper and brass to customers across South Asia, the Middle East, Southeast Asia, China, Africa, and Europe. Our export capability is backed by experienced logistics partners, complete quality documentation, and a customer service team fluent in the requirements of cross-border industrial trade.",
   regions: [
     "South Asia",
     "Middle East",
@@ -538,41 +539,41 @@ export const milestones = {
 
 export const contact = {
   address:
-    "Corporate Office: 1-8-271, 505, 5th Floor, Ashoka Bhoopal Chambers, Begumpet, Hyderabad 500003, Telangana",
+    "Head Office: 1-8-271,272/504,504/A,505 & 505/A, 5th Floor, Ashok Bhoopal Chambers, S.P. Road, Begumpet, Secunderabad - 500003, Telangana, India",
   phones: ["040-35512949", "040-35209193", "+91 9908171560"],
   emails: [
     "sales.killp@keshanindustries.com",
     "export@keshanindustries.com",
   ],
-  hours: "Mon – Sat: 9.00am – 18.00pm IST / Sun: Closed",
+  hours: "Mon - Sat: 10:00am - 19:00 IST / Sun: Closed",
   locations: [
     {
-      label: "Corporate Office",
+      label: "Head Office",
       address:
-        "1-8-271, 505, 5th Floor, Ashoka Bhoopal Chambers, Begumpet, Hyderabad 500003, Telangana",
+        "1-8-271,272/504,504/A,505 & 505/A, 5th Floor, Ashok Bhoopal Chambers, S.P. Road, Begumpet, Secunderabad - 500003, Telangana, India",
       mapEmbed:
-        "https://www.google.com/maps?q=1-8-271,+Ashoka+Bhoopal+Chambers,+Begumpet,+Hyderabad+500003&output=embed",
+        "https://www.google.com/maps?q=Ashok+Bhoopal+Chambers,+S.P.+Road,+Begumpet,+Secunderabad+500003&output=embed",
     },
     {
-      label: "Manufacturing Unit 1",
+      label: "Unit-1",
       address:
-        "Sy No. 354, Plot No. 26/F, TSIIC, Muppireddy Pally (V), Toopran, Medak District - 502336, Telangana",
+        "Sy No. 354, Plot No. 26/F, TSIIC Industrial Park, Muppireddy Pally (V), Toopran (M), Medak District - 502336, Telangana, India",
       mapEmbed:
-        "https://www.google.com/maps?q=TSIIC,+Muppireddy+Pally,+Toopran,+Medak+502336&output=embed",
+        "https://www.google.com/maps?q=TSIIC+Industrial+Park,+Muppireddy+Pally,+Toopran,+Medak+502336&output=embed",
     },
     {
-      label: "Manufacturing Unit 2",
+      label: "Unit-2",
       address:
-        "Plot No. 5/B7, Sy. No. 148, Automotive Park, Kallakal, Toopran, Medak District, Telangana",
+        "5/B6/1, TSIIC Automotive Park, Hyderabad 502336, Telangana, India",
       mapEmbed:
-        "https://www.google.com/maps?q=Automotive+Park,+Kallakal,+Toopran,+Medak&output=embed",
+        "https://www.google.com/maps?q=TSIIC+Automotive+Park,+Hyderabad+502336&output=embed",
     },
   ],
 };
 
 export const footer = {
   description:
-    "Keshan Industries manufactures precision copper and brass products for power, energy, automotive, electronics, and industrial applications. Made in India. Supplied worldwide.",
+    "Keshan Industries manufactures quality copper and brass for power, energy, automotive, electronics, and industrial applications. 24,000+ MT annual capacity. ISO 9001, 14001 and 45001 certified. Made in India. Supplied to 30+ countries.",
   quickLinks: [
     "About Us",
     "Products",
