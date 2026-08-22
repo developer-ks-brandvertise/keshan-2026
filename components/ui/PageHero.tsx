@@ -1,3 +1,4 @@
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import Container from "./Container";
 import CopperHighlight from "./CopperHighlight";
@@ -8,6 +9,8 @@ interface PageHeroProps {
   description?: string;
   highlight?: string;
   className?: string;
+  backgroundImage?: string;
+  backgroundPriority?: boolean;
 }
 
 export default function PageHero({
@@ -16,6 +19,8 @@ export default function PageHero({
   description,
   highlight,
   className = "",
+  backgroundImage,
+  backgroundPriority = false,
 }: PageHeroProps) {
   const highlighted = highlight ? title.replace(highlight, `{{${highlight}}}`) : title;
   const parts = highlighted.split(/\{\{|\}\}/).filter(Boolean);
@@ -24,11 +29,34 @@ export default function PageHero({
     <section
       className={`relative overflow-hidden border-b border-dark-100/10 bg-dark-900 pt-24 pb-16 lg:pt-32 lg:pb-24 ${className}`}
     >
-      <div
-        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.12]"
-        style={{ backgroundImage: "url('/images/bg-page-title1.jpg')" }}
-      />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-dark-900 via-dark-900/85 to-dark-900/40" />
+      {backgroundImage ? (
+        <>
+          <Image
+            src={backgroundImage}
+            alt=""
+            fill
+            priority={backgroundPriority}
+            sizes="100vw"
+            className="object-cover object-center"
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-r from-dark-950/90 via-dark-950/70 to-dark-950/45"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-dark-950/30"
+            aria-hidden
+          />
+        </>
+      ) : (
+        <>
+          <div
+            className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.12]"
+            style={{ backgroundImage: "url('/images/bg-page-title1.jpg')" }}
+          />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-dark-900 via-dark-900/85 to-dark-900/40" />
+        </>
+      )}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px hairline-copper" />
 
       <Container className="relative z-10">

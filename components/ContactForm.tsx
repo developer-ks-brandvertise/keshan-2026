@@ -7,9 +7,13 @@ type FormState = "idle" | "submitting" | "success" | "error";
 
 type ContactFormProps = {
   embedded?: boolean;
+  defaultProduct?: string;
 };
 
-export default function ContactForm({ embedded = false }: ContactFormProps) {
+export default function ContactForm({
+  embedded = false,
+  defaultProduct = "",
+}: ContactFormProps) {
   const [state, setState] = useState<FormState>("idle");
   const [error, setError] = useState("");
 
@@ -128,6 +132,7 @@ export default function ContactForm({ embedded = false }: ContactFormProps) {
             id="product"
             name="product"
             type="text"
+            defaultValue={defaultProduct}
             placeholder="e.g. Copper busbars, Cu-ETP, custom dimensions"
             className={fieldClass}
           />

@@ -8,7 +8,17 @@ export const metadata: Metadata = {
     "Get in touch with Keshan Industries for copper and brass product inquiries, quotes, and export support. Hyderabad, India.",
 };
 
-export default function ContactPage() {
+interface ContactPageProps {
+  searchParams: Promise<{ product?: string | string[] }>;
+}
+
+export default async function ContactPage({ searchParams }: ContactPageProps) {
+  const params = await searchParams;
+  const productParam = params.product;
+  const defaultProduct = Array.isArray(productParam)
+    ? productParam[0]
+    : productParam;
+
   return (
     <main>
       <PageHero
@@ -18,7 +28,7 @@ export default function ContactPage() {
         description="Tell us your specification, quantity, and delivery terms. Our team will respond within 24 business hours with product availability, pricing, and lead time."
       />
 
-      <ContactPageSections />
+      <ContactPageSections defaultProduct={defaultProduct} />
     </main>
   );
 }

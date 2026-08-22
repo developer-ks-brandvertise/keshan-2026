@@ -34,7 +34,11 @@ const dispatchRows = [
   },
 ];
 
-export function ContactPageSections() {
+export function ContactPageSections({
+  defaultProduct = "",
+}: {
+  defaultProduct?: string;
+}) {
   return (
     <>
       <section className="relative overflow-hidden bg-dark-900 py-section px-gutter">
@@ -129,7 +133,7 @@ export function ContactPageSections() {
                   <p className="mt-2 text-body-sm text-text-secondary">
                     Specification, quantity, and delivery terms help us reply faster.
                   </p>
-                  <ContactForm embedded />
+                  <ContactForm embedded defaultProduct={defaultProduct} />
                 </div>
               </div>
             </AnimatedSection>

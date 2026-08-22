@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { redirect } from "next/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import {
   products,
@@ -10,9 +9,11 @@ import {
   productIndustriesMap,
   scrapGrades,
 } from "@/lib/products";
-import { routing } from "@/i18n/routing";
+import { copperHeaderImage } from "@/lib/data";
+import { Link, routing } from "@/i18n/routing";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
+import { MagneticButton } from "@/components/ui/MagneticButton";
 import { ScrapGradeCards } from "@/components/products/ScrapGradeCards";
 
 interface ProductPageProps {
@@ -74,6 +75,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
         label={product.category}
         title={product.name}
         description={product.headline}
+        backgroundImage={
+          product.category === "copper" ? copperHeaderImage : undefined
+        }
+        backgroundPriority={product.category === "copper"}
       />
 
       <section className="bg-dark-900 py-section px-gutter">
@@ -102,15 +107,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   </div>
                 </div>
 
-                <Link
-                  href="/contact"
-                  className="group inline-flex h-12 w-full items-center justify-center gap-2.5 bg-copper-gradient text-[11px] font-bold uppercase tracking-[0.12em] text-dark-900 transition-all hover:shadow-[0_0_24px_rgba(232,166,89,0.35)]"
+                <MagneticButton
+                  href={`/contact?product=${encodeURIComponent(product.name)}`}
+                  variant="primary"
+                  size="lg"
+                  className="w-full"
                 >
-                  {product.cta}
-                  <span className="flex h-5 w-5 items-center justify-center border border-dark-900/30 transition-transform group-hover:rotate-45">
-                    <ArrowUpRight className="h-3 w-3" strokeWidth={2.5} />
-                  </span>
-                </Link>
+                  Request a Quote
+                </MagneticButton>
               </div>
             </AnimatedSection>
 

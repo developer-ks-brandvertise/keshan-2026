@@ -43,6 +43,9 @@ export const intro = {
   ],
 };
 
+export const copperHeaderImage =
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787412482/Copper-Header_ljvoyl.png";
+
 export const productCategories = {
   headline: "Copper & Brass. Every Form. Every Grade.",
   subheadline:
@@ -53,8 +56,7 @@ export const productCategories = {
       description:
         "Ingots, Busbars, Strips, Sheets & Circles, Upcast Rod, Wires, Rods, Foils, Phosphorous grades, Profiles, Scrap, Anode Plates & Cathodes — manufactured to international specification.",
       href: "/products#copper",
-      image:
-        "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787412482/Copper-Header_ljvoyl.png",
+      image: copperHeaderImage,
     },
     {
       title: "Brass Products",
