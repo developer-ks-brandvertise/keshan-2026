@@ -38,7 +38,7 @@ export default function PageHero({
             {background}
           </div>
           <div
-            className="page-hero-photo-overlay pointer-events-none absolute inset-0"
+            className="page-hero-photo-overlay page-hero-silk-overlay pointer-events-none absolute inset-0"
             aria-hidden
           />
         </>
