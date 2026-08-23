@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-import { hero } from "@/lib/data";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/routing";
 import Container from "@/components/ui/Container";
 
 const HERO_VIDEOS = [
@@ -100,6 +100,7 @@ function HeroVideoSlider({ enabled }: { enabled: boolean }) {
 }
 
 export default function Hero() {
+  const t = useTranslations("home.hero");
   const shouldReduce = useReducedMotion();
   const fadeUp = shouldReduce ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 };
 
@@ -130,7 +131,7 @@ export default function Hero() {
             }}
             className="font-heading text-4xl font-medium leading-[1.05] tracking-[-2px] text-white [background-image:none] [-webkit-text-fill-color:#fff] drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)] sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Every Great Innovation Begins with Copper.
+            {t("headline")}
           </motion.h1>
 
           <motion.p
@@ -144,7 +145,7 @@ export default function Hero() {
             }}
             className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] sm:text-xl"
           >
-            {hero.subheadline}
+            {t("subheadline")}
           </motion.p>
 
           <motion.div
@@ -159,20 +160,20 @@ export default function Hero() {
             className="mt-8 flex flex-wrap items-center justify-center gap-4"
           >
             <Link
-              href={hero.primaryHref}
+              href="/about"
               className="group inline-flex h-14 items-center gap-3 bg-copper-gradient px-7 text-sm font-bold uppercase tracking-wider text-[#0a0a0a] transition-all duration-300 hover:shadow-[0_0_40px_rgba(184,115,51,0.35)]"
             >
-              {hero.primaryCta}
+              {t("primaryCta")}
               <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#0a0a0a]/30 transition-transform duration-300 group-hover:rotate-45">
                 <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.5} />
               </span>
             </Link>
 
             <Link
-              href={hero.secondaryHref}
+              href="/products"
               className="group inline-flex h-14 items-center gap-3 border border-white/35 px-7 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:border-copper-light hover:text-copper-light"
             >
-              {hero.secondaryCta}
+              {t("secondaryCta")}
               <ArrowDownRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />
             </Link>
           </motion.div>

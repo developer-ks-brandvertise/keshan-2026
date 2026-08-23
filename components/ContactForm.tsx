@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { ArrowUpRight, CheckCircle2 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type FormState = "idle" | "submitting" | "success" | "error";
 
@@ -14,6 +15,7 @@ export default function ContactForm({
   embedded = false,
   defaultProduct = "",
 }: ContactFormProps) {
+  const t = useTranslations("contactPage");
   const [state, setState] = useState<FormState>("idle");
   const [error, setError] = useState("");
 
@@ -33,12 +35,12 @@ export default function ContactForm({
 
     if (!payload.name || !payload.email || !payload.message) {
       setState("error");
-      setError("Name, email, and message are required.");
+      setError(t("required"));
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(payload.email)) {
       setState("error");
-      setError("Enter a valid email address.");
+      setError(t("invalidEmail"));
       return;
     }
 
@@ -54,9 +56,7 @@ export default function ContactForm({
       form.reset();
     } catch {
       setState("error");
-      setError(
-        "Could not send right now. Please try again later.",
-      );
+      setError(t("sendFail"));
     }
   }
 
@@ -64,17 +64,16 @@ export default function ContactForm({
     return (
       <div className="border border-copper-base/30 bg-dark-950 p-8 text-center lg:p-10">
         <CheckCircle2 className="mx-auto h-10 w-10 text-copper-base" />
-        <h2 className="mt-4 text-h3">Inquiry received</h2>
+        <h2 className="mt-4 text-h3">{t("received")}</h2>
         <p className="mx-auto mt-3 max-w-md text-body text-text-secondary">
-          Our team will respond within 24 business hours with availability,
-          pricing, and lead time.
+          {t("receivedBody")}
         </p>
         <button
           type="button"
           onClick={() => setState("idle")}
           className="mt-6 text-xs font-bold uppercase tracking-[0.14em] text-copper-base"
         >
-          Send another inquiry
+          {t("another")}
         </button>
       </div>
     );
@@ -93,60 +92,60 @@ export default function ContactForm({
     >
       {!embedded ? (
         <>
-          <h2 className="text-h3">Send an Inquiry</h2>
+          <h2 className="text-h3">{t("inquiryTitle")}</h2>
           <p className="mt-2 text-body-sm text-text-secondary">
-            Specification, quantity, and delivery terms help us reply faster.
+            {t("inquiryBody")}
           </p>
         </>
       ) : null}
       <div className={`grid gap-5 sm:grid-cols-2 ${embedded ? "mt-2" : "mt-6"}`}>
         <div className="space-y-2">
           <label htmlFor="name" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-            Full Name *
+            {t("name")}
           </label>
-          <input id="name" name="name" type="text" required placeholder="John Smith" className={fieldClass} />
+          <input id="name" name="name" type="text" required placeholder={t("namePh")} className={fieldClass} />
         </div>
         <div className="space-y-2">
           <label htmlFor="company" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-            Company
+            {t("company")}
           </label>
-          <input id="company" name="company" type="text" placeholder="Company name" className={fieldClass} />
+          <input id="company" name="company" type="text" placeholder={t("companyPh")} className={fieldClass} />
         </div>
         <div className="space-y-2">
           <label htmlFor="email" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-            Email *
+            {t("emailField")}
           </label>
-          <input id="email" name="email" type="email" required placeholder="email@company.com" className={fieldClass} />
+          <input id="email" name="email" type="email" required placeholder={t("emailPh")} className={fieldClass} />
         </div>
         <div className="space-y-2">
           <label htmlFor="phone" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-            Phone
+            {t("phoneField")}
           </label>
-          <input id="phone" name="phone" type="tel" placeholder="+1 234 567 890" className={fieldClass} />
+          <input id="phone" name="phone" type="tel" placeholder={t("phonePh")} className={fieldClass} />
         </div>
         <div className="space-y-2 sm:col-span-2">
           <label htmlFor="product" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-            Product / Requirement
+            {t("product")}
           </label>
           <input
             id="product"
             name="product"
             type="text"
             defaultValue={defaultProduct}
-            placeholder="e.g. Copper busbars, Cu-ETP, custom dimensions"
+            placeholder={t("productPh")}
             className={fieldClass}
           />
         </div>
         <div className="space-y-2 sm:col-span-2">
           <label htmlFor="message" className="text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-            Message *
+            {t("message")}
           </label>
           <textarea
             id="message"
             name="message"
             required
             rows={4}
-            placeholder="Tell us your specifications, quantities, delivery terms, and any standards required."
+            placeholder={t("messagePh")}
             className={`w-full border px-4 py-3 text-sm text-text-primary placeholder:text-text-muted/50 outline-none focus:border-copper-base ${embedded ? "border-copper-base/25 bg-dark-900" : "border-dark-100/15 bg-dark-900"}`}
           />
         </div>
@@ -163,7 +162,7 @@ export default function ContactForm({
         disabled={state === "submitting"}
         className="group mt-6 inline-flex h-12 w-full items-center justify-center gap-2.5 bg-copper-gradient text-[11px] font-bold uppercase tracking-[0.12em] text-dark-900 transition-all hover:shadow-[0_0_24px_rgba(232,166,89,0.35)] disabled:opacity-60"
       >
-        {state === "submitting" ? "Sending…" : "Submit Inquiry"}
+        {state === "submitting" ? t("sending") : t("submit")}
         <span className="flex h-5 w-5 items-center justify-center border border-dark-900/30 transition-transform group-hover:rotate-45">
           <ArrowUpRight className="h-3 w-3" strokeWidth={2.5} />
         </span>

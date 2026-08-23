@@ -1,28 +1,43 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { productCategories } from "@/lib/data";
+import { Link } from "@/i18n/routing";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Reveal } from "@/components/ui/Reveal";
 import { ArrowUpRight } from "lucide-react";
 
-const specs = [
-  "Cu-ETP · Cu-OF · Busbars · Profiles · Anode Plates · Cathodes",
-  "Ingots · Sheets · Plates · Strips · Circles · Wires · Scrap",
-];
-
 export function ProductCategoriesSection() {
+  const t = useTranslations("home.range");
+
+  const cards = [
+    {
+      title: t("copperTitle"),
+      description: t("copperBody"),
+      specs: t("copperSpecs"),
+      href: "/products#copper" as const,
+      image: productCategories.categories[0].image,
+    },
+    {
+      title: t("brassTitle"),
+      description: t("brassBody"),
+      specs: t("brassSpecs"),
+      href: "/products#brass" as const,
+      image: productCategories.categories[1].image,
+    },
+  ];
+
   return (
     <section className="bg-dark-950">
       <div className="px-gutter pt-section pb-8 lg:pb-10">
         <div className="mx-auto max-w-6xl">
           <SectionHeading
             index="03"
-            eyebrow="Product Range"
-            title={productCategories.headline}
-            highlight="Every Grade"
-            subtitle={productCategories.subheadline}
+            eyebrow={t("eyebrow")}
+            title={t("headline")}
+            highlight={t("highlight")}
+            subtitle={t("subheadline")}
             align="left"
             className="max-w-3xl"
           />
@@ -30,10 +45,10 @@ export function ProductCategoriesSection() {
       </div>
 
       <div className="flex flex-col">
-        {productCategories.categories.map((category, index) => {
+        {cards.map((category, index) => {
           const reverse = index % 2 === 1;
           return (
-            <Reveal key={category.title} variant="fade" delay={index * 0.08}>
+            <Reveal key={category.href} variant="fade" delay={index * 0.08}>
               <article
                 className={`group relative grid min-h-[340px] lg:min-h-[420px] lg:grid-cols-2 ${
                   reverse ? "lg:[&>*:first-child]:order-2" : ""
@@ -70,7 +85,7 @@ export function ProductCategoriesSection() {
                       reverse ? "lg:ml-auto" : ""
                     }`}
                   >
-                    {specs[index]}
+                    {category.specs}
                   </p>
                   <Link
                     href={category.href}
@@ -78,7 +93,7 @@ export function ProductCategoriesSection() {
                       reverse ? "lg:flex-row-reverse" : ""
                     }`}
                   >
-                    Explore range
+                    {t("explore")}
                     <ArrowUpRight className="h-3.5 w-3.5" strokeWidth={2.25} />
                   </Link>
                 </div>

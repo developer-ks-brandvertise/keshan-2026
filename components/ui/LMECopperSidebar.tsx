@@ -2,9 +2,11 @@
 
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Pin, PinOff } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { liveQuoteSymbols, tradingViewMiniSrc } from "@/lib/market-symbols";
 
 export function LMECopperSidebar() {
+  const t = useTranslations("common");
   const [isPinned, setIsPinned] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const isOpen = isPinned || isHovered;
@@ -12,7 +14,7 @@ export function LMECopperSidebar() {
   return (
     <aside
       className="pointer-events-none fixed right-0 top-1/2 z-40 -translate-y-1/2"
-      aria-label="Copper market sidebar"
+      aria-label={t("marketSidebar")}
     >
       <div
         className={`pointer-events-auto flex items-stretch transition-transform duration-300 ${
@@ -26,7 +28,7 @@ export function LMECopperSidebar() {
           onClick={() => setIsPinned((v) => !v)}
           className="group flex w-11 flex-col items-center justify-center gap-2 rounded-l-lg border border-r-0 border-copper-base/35 bg-dark-950/95 px-1 py-3 text-copper-base shadow-[0_0_22px_rgba(184,115,51,0.28)] backdrop-blur-md transition-colors hover:text-copper-bright"
           aria-expanded={isOpen}
-          aria-label={isPinned ? "Unpin copper market panel" : "Pin copper market panel"}
+          aria-label={isPinned ? t("unpinMarket") : t("pinMarket")}
         >
           {isOpen ? (
             <ChevronRight className="h-4 w-4" strokeWidth={2.2} />
@@ -34,7 +36,7 @@ export function LMECopperSidebar() {
             <ChevronLeft className="h-4 w-4" strokeWidth={2.2} />
           )}
           <span className="font-heading text-[10px] uppercase tracking-[0.22em] [writing-mode:vertical-rl]">
-            Copper Desk
+            {t("copperDesk")}
           </span>
         </button>
 
@@ -51,12 +53,12 @@ export function LMECopperSidebar() {
               {isPinned ? (
                 <>
                   <PinOff className="h-3.5 w-3.5" />
-                  Unpin
+                  {t("unpin")}
                 </>
               ) : (
                 <>
                   <Pin className="h-3.5 w-3.5" />
-                  Pin
+                  {t("pin")}
                 </>
               )}
             </button>
@@ -80,7 +82,7 @@ export function LMECopperSidebar() {
           </div>
 
           <p className="mt-3 px-1 text-[10px] text-text-muted">
-            Live TradingView quotes. Indicative only.
+            {t("liveQuotes")}
           </p>
         </div>
       </div>

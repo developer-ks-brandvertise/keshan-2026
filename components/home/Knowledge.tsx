@@ -1,13 +1,18 @@
 "use client";
 
-import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { knowledge } from "@/lib/data";
+import { articleKeys } from "@/lib/i18n-keys";
+import { Link } from "@/i18n/routing";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { Reveal } from "@/components/ui/Reveal";
 
 export function KnowledgeSection() {
+  const t = useTranslations("home.knowledge");
+  const ta = useTranslations("knowledgePage");
+
   return (
     <section className="relative overflow-hidden bg-dark-900 py-section px-gutter">
       <div
@@ -18,48 +23,51 @@ export function KnowledgeSection() {
         <div className="mb-12 flex flex-col justify-between gap-6 sm:mb-14 sm:flex-row sm:items-end">
           <SectionHeading
             index="07"
-            eyebrow="Knowledge Centre"
-            title={knowledge.headline}
-            highlight="Knowledge Centre"
-            subtitle={knowledge.subheadline}
+            eyebrow={t("eyebrow")}
+            title={t("headline")}
+            highlight={t("highlight")}
+            subtitle={t("subheadline")}
             align="left"
             className="max-w-2xl"
           />
           <MagneticButton href="/knowledge-centre" variant="primary" className="shrink-0">
-            {knowledge.cta}
+            {t("cta")}
           </MagneticButton>
         </div>
 
         <div className="grid gap-5 md:grid-cols-3 md:gap-6">
-          {knowledge.articles.slice(0, 3).map((article, index) => (
-            <Reveal key={article.title} variant="slide" delay={index * 0.08}>
-              <Link
-                href="/knowledge-centre"
-                className="group relative flex h-full flex-col overflow-hidden border border-copper-base/20 bg-dark-950 transition-all duration-300 hover:border-copper-base/50 hover:shadow-[0_16px_48px_rgba(0,0,0,0.35)]"
-              >
-                <div className="relative h-28 overflow-hidden border-b border-copper-base/15 bg-[linear-gradient(135deg,rgba(184,115,51,0.22),transparent_60%),#111]">
-                  <span className="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-                    {article.category}
-                  </span>
-                  <span className="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted">
-                    {article.date}
-                  </span>
-                </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-lg text-text-primary transition-colors group-hover:text-copper-light sm:text-xl">
-                    {article.title}
-                  </h3>
-                  <p className="mt-3 flex-1 text-body-sm text-text-secondary">
-                    {article.excerpt}
-                  </p>
-                  <span className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
-                    Read article
-                    <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  </span>
-                </div>
-              </Link>
-            </Reveal>
-          ))}
+          {knowledge.articles.slice(0, 3).map((article, index) => {
+            const key = articleKeys[index];
+            return (
+              <Reveal key={key} variant="slide" delay={index * 0.08}>
+                <Link
+                  href="/knowledge-centre"
+                  className="group relative flex h-full flex-col overflow-hidden border border-copper-base/20 bg-dark-950 transition-all duration-300 hover:border-copper-base/50 hover:shadow-[0_16px_48px_rgba(0,0,0,0.35)]"
+                >
+                  <div className="relative h-28 overflow-hidden border-b border-copper-base/15 bg-[linear-gradient(135deg,rgba(184,115,51,0.22),transparent_60%),#111]">
+                    <span className="absolute bottom-4 left-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
+                      {ta(`categories.${article.category}`)}
+                    </span>
+                    <span className="absolute bottom-4 right-5 text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted">
+                      {article.date}
+                    </span>
+                  </div>
+                  <div className="flex flex-1 flex-col p-6">
+                    <h3 className="text-lg text-text-primary transition-colors group-hover:text-copper-light sm:text-xl">
+                      {ta(`articles.${key}.title`)}
+                    </h3>
+                    <p className="mt-3 flex-1 text-body-sm text-text-secondary">
+                      {ta(`articles.${key}.excerpt`)}
+                    </p>
+                    <span className="mt-6 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
+                      {ta("readArticle")}
+                      <ArrowUpRight className="h-3.5 w-3.5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    </span>
+                  </div>
+                </Link>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

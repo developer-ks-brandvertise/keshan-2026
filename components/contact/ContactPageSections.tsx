@@ -7,38 +7,47 @@ import {
   MapPin,
   Ship,
 } from "lucide-react";
-import { brand, contact, globalReach } from "@/lib/data";
+import { useTranslations } from "next-intl";
+import { brand, contact } from "@/lib/data";
+import { locationKeys, regionKeys } from "@/lib/i18n-keys";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import ContactForm from "@/components/ContactForm";
 import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 
 const capabilityIcons = [Ship, FileCheck, Anchor, Globe2, MapPin];
 
-const dispatchRows = [
-  {
-    label: "Head Office",
-    value: contact.locations[0].address,
-  },
-  {
-    label: "Phone",
-    value: contact.phones.join(" | "),
-    href: `tel:${contact.phones[0].replace(/\s/g, "")}`,
-  },
-  {
-    label: "Email",
-    value: contact.emails.join(" | "),
-  },
-  {
-    label: "Hours",
-    value: contact.hours,
-  },
-];
-
 export function ContactPageSections({
   defaultProduct = "",
 }: {
   defaultProduct?: string;
 }) {
+  const t = useTranslations("contactPage");
+  const capabilities = t.raw("reach.capabilities") as string[];
+
+  const dispatchRows = [
+    {
+      id: "headOffice",
+      label: t("headOffice"),
+      value: contact.locations[0].address,
+    },
+    {
+      id: "phone",
+      label: t("phone"),
+      value: contact.phones.join(" | "),
+      href: `tel:${contact.phones[0].replace(/\s/g, "")}`,
+    },
+    {
+      id: "email",
+      label: t("email"),
+      value: contact.emails.join(" | "),
+    },
+    {
+      id: "hours",
+      label: t("hours"),
+      value: t("hoursValue"),
+    },
+  ];
+
   return (
     <>
       <section className="relative overflow-hidden bg-dark-900 py-section px-gutter">
@@ -50,7 +59,7 @@ export function ContactPageSections({
           <div className="grid gap-10 lg:grid-cols-12 lg:gap-12">
             <AnimatedSection className="lg:col-span-5">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-copper-base">
-                Dispatch Label
+                {t("dispatch")}
               </p>
 
               <div className="relative mt-4 border border-copper-base/40 bg-dark-950">
@@ -68,13 +77,13 @@ export function ContactPageSections({
                     {brand.name.toUpperCase()}
                   </p>
                   <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.24em] text-text-muted">
-                    Export · Domestic · Technical
+                    {t("modes")}
                   </p>
                 </div>
 
                 <div className="divide-y divide-copper-base/20">
                   {dispatchRows.map((row) => (
-                    <div key={row.label} className="px-6 py-4 pl-8">
+                    <div key={row.id} className="px-6 py-4 pl-8">
                       <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
                         {row.label}
                       </p>
@@ -85,7 +94,7 @@ export function ContactPageSections({
                         >
                           {row.value}
                         </a>
-                      ) : row.label === "Email" ? (
+                      ) : row.id === "email" ? (
                         <p className="mt-2 text-body-sm leading-relaxed text-text-primary">
                           {contact.emails.map((email, i) => (
                             <span key={email}>
@@ -112,7 +121,7 @@ export function ContactPageSections({
               </div>
 
               <p className="mt-5 text-body-sm text-text-secondary">
-                Prefer email? Write to{" "}
+                {t("preferEmail")}{" "}
                 <a
                   href={`mailto:${contact.emails[0]}`}
                   className="text-copper-base transition-colors hover:text-copper-light"
@@ -124,14 +133,14 @@ export function ContactPageSections({
 
             <AnimatedSection delay={0.1} className="lg:col-span-7">
               <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-copper-base">
-                Inquiry Form
+                {t("inquiryEyebrow")}
               </p>
               <div className="relative mt-4 overflow-hidden border border-copper-base/35 bg-dark-950">
                 <div className="h-1 w-full bg-copper-gradient" aria-hidden />
                 <div className="p-6 sm:p-8">
-                  <h2 className="text-h3">Send an Inquiry</h2>
+                  <h2 className="text-h3">{t("inquiryTitle")}</h2>
                   <p className="mt-2 text-body-sm text-text-secondary">
-                    Specification, quantity, and delivery terms help us reply faster.
+                    {t("inquiryBody")}
                   </p>
                   <ContactForm embedded defaultProduct={defaultProduct} />
                 </div>
@@ -149,19 +158,19 @@ export function ContactPageSections({
         <div className="mx-auto max-w-6xl">
           <AnimatedSection className="mb-12 max-w-3xl">
             <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-copper-base">
-              Global Reach
+              {t("reach.eyebrow")}
             </p>
-            <h2 className="mt-3 text-h2">{globalReach.headline}</h2>
-            <p className="mt-5 text-body-lg text-text-secondary">{globalReach.body}</p>
+            <h2 className="mt-3 text-h2">{t("reach.headline")}</h2>
+            <p className="mt-5 text-body-lg text-text-secondary">{t("reach.body")}</p>
           </AnimatedSection>
 
           <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {globalReach.regions.map((region, i) => (
-              <AnimatedSection key={region} delay={Math.min(i * 0.05, 0.2)}>
+            {regionKeys.map((key, i) => (
+              <AnimatedSection key={key} delay={Math.min(i * 0.05, 0.2)}>
                 <IconFeatureCard
                   icon={Globe2}
-                  title={region}
-                  description="Active supply routes and distributor partnerships."
+                  title={t(`reach.regions.${key}`)}
+                  description={t("reach.regionBody")}
                 />
               </AnimatedSection>
             ))}
@@ -169,7 +178,7 @@ export function ContactPageSections({
 
           <AnimatedSection delay={0.12} className="mt-10">
             <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-              {globalReach.capabilities.map((capability, i) => {
+              {capabilities.map((capability, i) => {
                 const Icon = capabilityIcons[i % capabilityIcons.length];
                 return (
                   <li
@@ -191,32 +200,36 @@ export function ContactPageSections({
       <section className="bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
           <AnimatedSection className="mb-10">
-            <h2 className="text-h2">Our Locations</h2>
+            <h2 className="text-h2">{t("locationsTitle")}</h2>
             <p className="mt-4 max-w-2xl text-body-lg text-text-secondary">
-              Head Office, Manufacturing Unit-1 and Manufacturing Unit-2 across Telangana.
+              {t("locationsBody")}
             </p>
           </AnimatedSection>
           <div className="grid gap-8 lg:grid-cols-3">
-            {contact.locations.map((location, index) => (
-              <AnimatedSection key={location.label} delay={Math.min(index * 0.06, 0.18)}>
-                <article className="overflow-hidden border border-copper-base/25 bg-dark-950">
-                  <div className="flex items-center gap-2 border-b border-copper-base/25 px-4 py-3">
-                    <MapPin className="h-4 w-4 text-copper-base" />
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
-                      {location.label}
-                    </p>
-                  </div>
-                  <p className="px-4 py-4 text-body-sm text-text-primary">{location.address}</p>
-                  <iframe
-                    title={`${location.label} map`}
-                    src={location.mapEmbed}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    className="h-56 w-full border-0"
-                  />
-                </article>
-              </AnimatedSection>
-            ))}
+            {contact.locations.map((location, index) => {
+              const key = locationKeys[index];
+              const label = t(key);
+              return (
+                <AnimatedSection key={key} delay={Math.min(index * 0.06, 0.18)}>
+                  <article className="overflow-hidden border border-copper-base/25 bg-dark-950">
+                    <div className="flex items-center gap-2 border-b border-copper-base/25 px-4 py-3">
+                      <MapPin className="h-4 w-4 text-copper-base" />
+                      <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
+                        {label}
+                      </p>
+                    </div>
+                    <p className="px-4 py-4 text-body-sm text-text-primary">{location.address}</p>
+                    <iframe
+                      title={`${label} map`}
+                      src={location.mapEmbed}
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                      className="h-56 w-full border-0"
+                    />
+                  </article>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>

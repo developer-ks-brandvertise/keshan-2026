@@ -1,12 +1,13 @@
 "use client";
 
-import { footerCta, contact } from "@/lib/data";
+import { useTranslations } from "next-intl";
+import { contact } from "@/lib/data";
 import { Reveal } from "@/components/ui/Reveal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import CopperHighlight from "@/components/ui/CopperHighlight";
 import { GlobeDemo } from "@/components/ui/GlobeDemo";
 
 export function FooterCTASection() {
+  const t = useTranslations("home.cta");
   return (
     <section className="relative overflow-hidden bg-dark-950">
       <div className="relative z-10 px-gutter pt-section pb-section">
@@ -19,31 +20,30 @@ export function FooterCTASection() {
                 </span>
                 <span className="h-px w-6 bg-copper-base/40" aria-hidden />
                 <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
-                  Global Supply
+                  {t("eyebrow")}
                 </p>
               </div>
             </Reveal>
 
             <Reveal variant="slide" delay={0.05}>
               <h2 className="text-h2 text-balance">
-                Ready to Source Premium{" "}
-                <CopperHighlight>Copper & Brass</CopperHighlight>?
+                {t("headline")}
               </h2>
             </Reveal>
 
             <Reveal variant="fade" delay={0.1}>
               <p className="mt-5 max-w-lg text-body-lg text-text-secondary">
-                {footerCta.subheadline}
+                {t("subheadline")}
               </p>
             </Reveal>
 
             <Reveal variant="fade" delay={0.2}>
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <MagneticButton href="/contact" variant="primary" size="lg">
-                  {footerCta.primaryCta}
+                  {t("primary")}
                 </MagneticButton>
                 <MagneticButton href="/products" variant="primary" size="lg">
-                  {footerCta.secondaryCta}
+                  {t("secondary")}
                 </MagneticButton>
               </div>
             </Reveal>

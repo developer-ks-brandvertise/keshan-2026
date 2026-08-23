@@ -50,6 +50,868 @@
     "discussApplication": "Discuss Your Application",
     "browseProducts": "Browse product range →",
     "englishSpecs": "Technical specs shown in English",
-    "comingSoon": "Coming soon"
+    "comingSoon": "Coming soon",
+    "requestQuote": "Request a Quote",
+    "viewProduct": "View product",
+    "selectCategory": "Select category",
+    "allRights": "All rights reserved.",
+    "copyright": "Copyright © 2026",
+    "developedBy": "Developed & Marketed by",
+    "company": "Company",
+    "copper": "Copper",
+    "brass": "Brass",
+    "toggleMenu": "Toggle menu",
+    "locationHyderabad": "Hyderabad, Telangana, India",
+    "madeInIndia": "Made in India",
+    "copperDesk": "Copper Desk",
+    "pin": "Pin",
+    "unpin": "Unpin",
+    "pinMarket": "Pin copper market panel",
+    "unpinMarket": "Unpin copper market panel",
+    "marketSidebar": "Copper market sidebar",
+    "liveQuotes": "Live TradingView quotes. Indicative only."
+  },
+  "home": {
+    "hero": {
+      "headline": "Every Great Innovation Begins with Copper.",
+      "subheadline": "Keshan Industries manufactures and supplies pure quality copper and brass products trusted by manufacturers, engineers, and contractors building tomorrow's electrical grid, electric vehicles, renewable energy infrastructure, and beyond.",
+      "primaryCta": "Explore Our Manufacturing",
+      "secondaryCta": "Browse Products"
+    },
+    "about": {
+      "eyebrow": "About Keshan",
+      "headline": "Pure Quality Copper Manufacturing, Built for the World.",
+      "highlight": "Built for the World",
+      "body": "Since 2016, Keshan Industries has manufactured pure quality copper and brass for some of the most demanding industries in the world. From switchgear manufacturers to solar developers, we are a manufacturing partner, not a commodity supplier: metallurgical control, batch-tested quality, and on-time delivery on every order.",
+      "quote": "We are a manufacturing partner, not a commodity supplier.",
+      "quoteHighlight": "batch-tested",
+      "quoteEnd": "quality on every order.",
+      "imageAlt": "Keshan manufacturing facility",
+      "stats": {
+        "yearsTitle": "Years",
+        "yearsBody": "Years of manufacturing excellence since 2016.",
+        "countriesTitle": "Countries",
+        "countriesBody": "On-time delivery to 30+ countries worldwide.",
+        "capacityTitle": "MT / Year",
+        "capacityBody": "Annual production capacity across copper and brass.",
+        "qcTitle": "QC Tested",
+        "qcBody": "Batch-tested quality before every dispatch."
+      }
+    },
+    "partners": {
+      "eyebrow": "Our Partners",
+      "headline": "Long-Term Partnerships with Leading Metallurgical Companies Worldwide.",
+      "caption": "Keshan supplies manufacturers, infrastructure developers, and metallurgical companies across the globe. Partnerships built on consistent, certified copper supply, batch after batch."
+    },
+    "range": {
+      "eyebrow": "Product Range",
+      "headline": "Copper & Brass. Every Form. Every Grade.",
+      "highlight": "Every Grade",
+      "subheadline": "High-conductivity copper busbars for power distribution, pure quality brass strips for component manufacturing. Keshan has the product, the grade, and the capacity to deliver.",
+      "explore": "Explore range",
+      "copperTitle": "Copper Products",
+      "copperBody": "Ingots, Busbars, Strips, Sheets & Circles, Upcast Rod, Wires, Rods, Foils, Phosphorous grades, Profiles, Scrap, Anode Plates & Cathodes. Manufactured to international specification.",
+      "copperSpecs": "Cu-ETP · Cu-OF · Busbars · Profiles · Anode Plates · Cathodes",
+      "brassTitle": "Brass Products",
+      "brassBody": "Ingots, Sheets, Plates, Strips, Circles, Wires & Scrap. Alloyed for strength, machinability, and finish across every application.",
+      "brassSpecs": "Ingots · Sheets · Plates · Strips · Circles · Wires · Scrap"
+    },
+    "process": {
+      "eyebrow": "Manufacturing Process",
+      "headline": "Pure Quality at Every Stage.",
+      "highlight": "Every Stage",
+      "subtitle": "From raw material to final dispatch, every step of the Keshan manufacturing process is specification-led and monitored by experienced metallurgists.",
+      "footer": "7 stations · specification-led · batch certified",
+      "steps": {
+        "01": {
+          "title": "Sorting",
+          "description": "Incoming raw material is sorted and graded to ensure consistent feedstock quality before it enters the production line."
+        },
+        "02": {
+          "title": "Baling",
+          "description": "Sorted material is baled and prepared for charging, improving furnace efficiency and melt consistency."
+        },
+        "03": {
+          "title": "Melting & Casting",
+          "description": "High-purity material melted in modern induction furnaces, with controlled composition from the first pour."
+        },
+        "04": {
+          "title": "Rolling & Processing",
+          "description": "Multi-pass rolling lines for precise dimensional control. Consistent cross-section. Tight tolerances."
+        },
+        "05": {
+          "title": "Cutting & Finishing",
+          "description": "Slitting, shearing, and surface finishing to customer specification. Cut-to-length. Custom dimensions."
+        },
+        "06": {
+          "title": "Testing & Inspection",
+          "description": "Every batch is batch-tested for conductivity, chemical composition, tensile strength, and dimensional accuracy. Certified results."
+        },
+        "07": {
+          "title": "Packaging & Dispatch",
+          "description": "Industrial-grade packaging, moisture protection, and complete quality documentation with every shipment."
+        }
+      }
+    },
+    "quality": {
+      "eyebrow": "Quality Assurance",
+      "headline": "Quality Assurance Built Into Every Production Stage.",
+      "highlight": "Production Stage",
+      "body": "Our in-house testing laboratory runs conductivity, hardness, chemical composition, and dimensional checks on every production batch. No product leaves our facility without a test certificate. Every certificate is traceable, every standard is verifiable.",
+      "cta": "View Our Quality Standards",
+      "pillars": {
+        "purity": {
+          "title": "Purity",
+          "description": "99.9%+ copper purity on all electrolytic grades"
+        },
+        "certified": {
+          "title": "Certified",
+          "description": "ISO 9001:2015, ISO 14001:2015, and ISO 45001 certified"
+        },
+        "testing": {
+          "title": "Testing",
+          "description": "Chemical composition, conductivity, and tensile testing per batch"
+        },
+        "standards": {
+          "title": "Standards",
+          "description": "Compliance with IS, ASTM, DIN, JIS, and BS standards"
+        }
+      }
+    },
+    "industries": {
+      "eyebrow": "Industries Served",
+      "headline": "Copper at the Core of Critical Industries.",
+      "highlight": "Critical Industries",
+      "subheadline": "From the substation that feeds a city to the motor inside an electric vehicle, Keshan copper is part of the infrastructure that keeps everyday life running. Thirteen industries. One consistent standard.",
+      "cta": "Explore All Industries"
+    },
+    "knowledge": {
+      "eyebrow": "Knowledge Centre",
+      "headline": "The Keshan Knowledge Centre",
+      "highlight": "Knowledge Centre",
+      "subheadline": "Copper and brass market notes, technical guides, and mill-floor insight from Keshan metallurgists. Written for buyers, not traders.",
+      "cta": "Visit the Knowledge Centre"
+    },
+    "cta": {
+      "eyebrow": "Global Supply",
+      "headline": "Ready to Source Premium Copper & Brass?",
+      "highlight": "Copper & Brass",
+      "subheadline": "Tell us your specification. Our team will respond within 24 business hours with product availability, pricing, and lead time.",
+      "primary": "Request a Quote",
+      "secondary": "Browse Products"
+    }
+  },
+  "footer": {
+    "description": "Keshan Industries manufactures pure quality copper and brass for power, energy, automotive, electronics, and industrial applications. 24,000+ MT annual capacity. ISO 9001, 14001 and 45001 certified. Made in India. Supplied to 30+ countries.",
+    "company": "Company",
+    "contact": "Contact",
+    "copper": "Copper",
+    "brass": "Brass",
+    "copyright": "Copyright © 2026",
+    "reserved": "All rights reserved.",
+    "developed": "Developed & Marketed by"
+  },
+  "aboutPage": {
+    "label": "About Keshan",
+    "title": "Built on the Belief That Quality Is Not Negotiable.",
+    "highlight": "Quality Is Not Negotiable",
+    "storyEyebrow": "01 - Company Story",
+    "storyTitle": "From a Single Conviction to a Global Manufacturing Partner.",
+    "storyHighlight": "Global Manufacturing Partner.",
+    "body": "Keshan Industries was founded with a single conviction: that Indian manufacturing could meet and exceed the quality standards demanded by the world's most exacting industries.\n\nWhat began in 2016 as a focused copper manufacturing operation has grown into a respected name in India's non-ferrous metals industry. We manufacture pure quality copper and brass for power utilities, infrastructure developers, EV manufacturers, and industrial groups, with supply reaching more than 30 countries.\n\nThe journey has been stepwise: copper ingot capacity in 2021, ISO systems in 2022, Manufacturing Unit-2 in 2023, export reach across 30+ countries by 2025, and an anode plates setup in 2026. Every tonne we produce reflects our commitment to purity, quality, and end-use performance.\n\nToday, Keshan Industries operates manufacturing units in Telangana equipped with modern melting, rolling, and testing infrastructure. Capable of producing the full range of copper and brass products to international specifications and customer requirements.",
+    "imageAlt": "Keshan facility",
+    "visionEyebrow": "Vision",
+    "visionTitle": "To Touch Every Copper Wire Lighting Our Future.",
+    "visionBody": "Every light that switches on, every vehicle that charges, every solar panel that feeds the grid. Somewhere in that chain is copper made right. Keshan exists to be part of that chain: pure quality copper and brass, manufactured with integrity, for a future that runs on electricity.",
+    "missionEyebrow": "Mission",
+    "missionBody": "To manufacture pure quality copper and brass products of consistent, certified specification, delivered on time, backed by quality documentation, and supported by the technical consistency our customers need to build with confidence.",
+    "values": {
+      "quality": {
+        "title": "Pure Quality",
+        "description": "Dimensional accuracy and metallurgical control in every batch."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "description": "Traceable quality, transparent documentation, and honest commitments."
+      },
+      "reliability": {
+        "title": "Reliability",
+        "description": "On-time delivery, specification-led production, and responsive service."
+      },
+      "responsible": {
+        "title": "Responsible Manufacturing",
+        "description": "Certified processes, safe operations, and efficient resource use."
+      },
+      "improvement": {
+        "title": "Continuous Improvement",
+        "description": "Better processes, tighter tolerances, and stronger partnerships."
+      }
+    },
+    "leadershipEyebrow": "Leadership",
+    "leadershipSection": "02 - Leadership",
+    "leadershipTitle": "The Team Behind the Standard.",
+    "leadershipBody": "Keshan Industries is led by a management team that combines metallurgical expertise with commercial experience and a long-term view of the industry. Their commitment to quality is not a management directive. It is a personal standard.",
+    "visionSection": "03 - Vision",
+    "milestonesSection": "05 - Milestones",
+    "workWith": "Work With Keshan",
+    "knowMore": "Know More",
+    "linkedIn": "LinkedIn Profile",
+    "close": "Close",
+    "closeProfile": "Close profile",
+    "stats": {
+      "years": {
+        "title": "Years",
+        "label": "Years of Manufacturing Excellence"
+      },
+      "countries": {
+        "title": "Countries",
+        "label": "Countries Supplied"
+      },
+      "capacity": {
+        "title": "Capacity",
+        "label": "MT Annual Production Capacity"
+      },
+      "quality": {
+        "title": "Quality",
+        "label": "Quality Tested Before Dispatch"
+      }
+    },
+    "team": {
+      "vikash": {
+        "title": "Managing Director, Keshan Industries",
+        "shortBio": "A builder twice over, of enterprise and of community, whose path from trading to manufacturing has shaped Keshan Industries since 2016.",
+        "fullBio": [
+          "Few careers reveal as clean an arc between grit and foresight as that of Vikash Kumar Keshan. A commerce graduate of Calcutta University, Class of 1997, he began on the conventional path of chartered accountancy before choosing, deliberately, to forge his own. In 2005, that conviction gave rise to Keshan Trading Corporation, a venture in structural steel, GI and MS pipes, tubes, and specialty steel products, through which he cultivated a rare, granular command of the metals trade.",
+          "In 2016, Mr. Keshan and his brother, Rajneesh Keshan, together founded Keshan Industries, a deliberate evolution from trading to manufacturing, animated by the Make in India ethos and a shared conviction that domestic production, fortified by genuine innovation, is India's most enduring advantage. Under his stewardship, the enterprise has grown to command a workforce exceeding 300, distinguished by a dedicated research and innovation team and a leadership ethos rooted in technical mastery, clarity of purpose, and collective endeavour.",
+          "His influence extends well beyond the enterprise. A member of the Agarwal Samaj for fifteen years, he has ascended through its ranks by merit and trust alike, serving as President, North Secunderabad Agarwal Samaj (2023); President, Bihar Agarwal Samaj, Secunderabad (2024); and currently, Secretary, Agarwal Samaj Telangana (2025).",
+          "Vikash Kumar Keshan is, in essence, a builder twice over, of enterprise, and of community, a leader whose ambitions have always pointed outward."
+        ]
+      },
+      "yash": {
+        "title": "Next-Generation Leader, Keshan Industries",
+        "shortBio": "Numbers first, opinions second. Building a corporation on people, product quality, and data-backed conviction.",
+        "fullBio": [
+          "Yash Keshan holds a B.Sc. (Honours) in Mathematics, a four-year degree from Ashoka University, following his schooling at Mayo College, Ajmer, where he served as College Academics Captain and was awarded the President's Medal for Academics. It is not a pedigree handed to him lightly, and it shows in how he approaches business: with numbers first, opinions second.",
+          "His early career has been deliberately unglamorous: trade documentation at Global Aluminium, regulatory compliance, and supply-chain coordination across the metals sector, alongside investment research built on fundamental analysis rather than instinct. A student investor in the forex markets on the side, he treats it as another discipline that punishes sloppy thinking and rewards conviction backed by data.",
+          "Yash does not lead by consensus. His view is unambiguous: people and product quality are the two pillars crucial for manufacturing. He holds to Rosalynn Carter's distinction that a great leader takes people not where they want to go, but where they ought to be, and draws his operating model from industrialists like Narotam Sekhsaria, where scale is never an excuse to compromise on sustainability or pollution control. He is here to build a corporation, not manage a comfortable legacy."
+        ]
+      },
+      "suren": {
+        "title": "Chief Executive Officer, Keshan Industries",
+        "shortBio": "A senior business leader with 25 years across manufacturing, international trading, and Fortune 500 global sourcing.",
+        "fullBio": [
+          "Suren Reddy is Chief Executive Officer at Keshan Industries and a senior business leader with 25 years of diverse experience across manufacturing in metallurgy, building materials, beverages, automotive components, international trading, and global sourcing in Fortune 500 companies.",
+          "His leadership approach is centered on building efficient processes, developing capable teams, leveraging technology, and creating measurable improvements in Cost, Quality and Delivery. He is a commercially driven and transformation-oriented leader capable of taking ownership of complex business operations, strengthening the supply chain, reducing structural costs, improving service levels and building scalable systems.",
+          "With an MBA in International Business from a Tier 1 institute, the Indian Institute of Foreign Trade, New Delhi, he combines business education with extensive practical experience across diverse industries.",
+          "At Keshan, he spearheaded the development of integrated manufacturing capabilities for Copper Ingots, Strips, Bus Bars, and the entire Wiring Division, covering the complete value chain from raw material to finished products."
+        ]
+      }
+    },
+    "milestonesEyebrow": "Journey",
+    "milestonesTitle": "Growing Stronger Since 2016.",
+    "events": {
+      "2016": {
+        "title": "Founded",
+        "description": "Keshan Industries founded; first manufacturing facility commissioned in Telangana."
+      },
+      "2021": {
+        "title": "Copper Ingots",
+        "description": "Expanded product segments with integrated copper ingot manufacturing across the value chain."
+      },
+      "2022": {
+        "title": "Certifications",
+        "description": "Achieved ISO 9001:2015, ISO 14001:2015, and ISO 45001 certification."
+      },
+      "2023": {
+        "title": "Manufacturing Unit-2",
+        "description": "Commissioned Manufacturing Unit-2 at TSIIC Automotive Park to add capacity and new product lines."
+      },
+      "2025": {
+        "title": "30+ Countries",
+        "description": "Supplying copper and brass to 30+ countries across six regions."
+      },
+      "2026": {
+        "title": "Anodes Setup",
+        "description": "Commissioned copper anode plates manufacturing to complete the electroplating and refining range."
+      }
+    }
+  },
+  "productsPage": {
+    "label": "Product Range",
+    "title": "Copper & Brass. Pure Quality-Engineered.",
+    "highlight": "Pure Quality-Engineered",
+    "description": "From high-conductivity copper busbars for power distribution to pure quality brass strips for component manufacturing. Keshan manufactures every form, every grade, to the standards your application demands.",
+    "selectCategory": "Select category",
+    "copper": "Copper Products",
+    "brass": "Brass Products",
+    "viewProduct": "View product",
+    "sheet": "Product sheet",
+    "overview": "Product Overview",
+    "applications": "Applications",
+    "industries": "Industries Served",
+    "scrapGrades": "Scrap Grades",
+    "specs": "Technical Specifications",
+    "specProduct": "Product",
+    "specRanges": "Specification — Ranges / Types",
+    "whyTitle": "Why Source From Keshan?",
+    "whyBody": "Every batch is traceable, every certificate is verifiable, and every delivery is backed by our technical team. We support custom dimensions, international standards, and complete export documentation.",
+    "allProducts": "All Products",
+    "requestQuote": "Request a Quote",
+    "category": "Category",
+    "purity": "Purity",
+    "standards": "Standards",
+    "origin": "Origin",
+    "originValue": "Made in India",
+    "copperLabel": "Copper",
+    "brassLabel": "Brass"
+  },
+  "industriesPage": {
+    "label": "Industries Served",
+    "title": "Copper at the Core of Critical Industries.",
+    "highlight": "Critical Industries",
+    "description": "From the substation that feeds a city to the motor inside an electric vehicle, Keshan copper is part of the infrastructure that keeps everyday life running. Thirteen industries. One consistent standard.",
+    "intro": "Thirteen sectors. One metallurgical standard. Specification-led copper and brass, batch after batch.",
+    "productWiseTitle": "Product-wise Industries",
+    "map": {
+      "copper-ingots": "Electronics & PCB, Construction, Automotive & Industrial",
+      "copper-busbars": "Electrical & Power, Switchgear & Panels, Renewable Energy, Rail",
+      "copper-strips": "Switchgear & Panels, Electronics & PCB, Rail",
+      "copper-sheets-plates": "Construction, Defence & Aerospace, Heat Exchangers",
+      "copper-upcast-rod": "Cable, Electrical & Power",
+      "bare-copper-wire": "Cable, Electrical & Power, Telecommunications",
+      "copper-rod": "Cable, Automotive & Industrial",
+      "copper-hex-square-round-rods": "Switchgear & Panels, Automotive & Industrial, Defence & Aerospace",
+      "enamel-copper-wire": "EV Charging, Electrical & Power, Automotive (motor windings)",
+      "paper-insulated-copper-conductors-strips": "Rail, Power Transmission / Electrical & Power",
+      "copper-foils": "Electronics & PCB, Telecommunications",
+      "copper-bar-1kg-5kg": "Foundries, Automotive & Industrial, Small-scale manufacturing",
+      "brass-ingots": "Foundries & Die-Casting, Plumbing & Sanitaryware, Automotive & Industrial",
+      "brass-sheets-plates": "Architectural & Decorative Hardware, Construction",
+      "brass-strips": "Electrical & Electronics, Switchgear & Electrical Accessories, Telecommunications",
+      "brass-circles": "Plumbing & Sanitaryware, Foundries & Die-Casting"
+    },
+    "items": {
+      "electrical": {
+        "name": "Electrical & Power Distribution",
+        "application": "Busbars, conductors, and distribution components for reliable power flow."
+      },
+      "switchgear": {
+        "name": "Switchgear, Panels & Busducts",
+        "application": "Pure quality copper for switchgear, panel boards, and busbar trunking systems."
+      },
+      "renewable": {
+        "name": "Renewable Energy & Solar Infrastructure",
+        "application": "High-conductivity copper for solar inverters, panels, and energy systems."
+      },
+      "ev": {
+        "name": "EV, Charging & Mobility",
+        "application": "Copper for EV motors, batteries, charging stations, and power electronics."
+      },
+      "cables": {
+        "name": "Cables, Conductors & Wire Manufacturing",
+        "application": "CCR, wire rod, and drawn copper for cable and wire producers."
+      },
+      "construction": {
+        "name": "Construction & Building Infrastructure",
+        "application": "Sheets, plates, and rods for cladding, earthing, and building systems."
+      },
+      "electronics": {
+        "name": "Electronics & PCB Manufacturing",
+        "application": "Fine copper strip and foil-ready feedstock for PCB and electronic component lines."
+      },
+      "automotive": {
+        "name": "Automotive & Industrial Components",
+        "application": "Brass and copper forms for terminals, connectors, and precision stamped parts."
+      },
+      "thermal": {
+        "name": "Heat Exchangers & Thermal Systems",
+        "application": "Conductive copper for coils, fins, and thermal management assemblies."
+      },
+      "defence": {
+        "name": "Defence & Aerospace Applications",
+        "application": "Traceable, high-purity copper and brass for mission-critical assemblies."
+      },
+      "rail": {
+        "name": "Rail & Transportation Infrastructure",
+        "application": "Conductors and contact materials for rail electrification and rolling stock."
+      },
+      "telecom": {
+        "name": "Telecommunications & Data Networks",
+        "application": "Copper conductors supporting telecom cabling and network infrastructure."
+      },
+      "hardware": {
+        "name": "Hardware, Sanitaryware & Decorative",
+        "application": "Brass sheets, strips, and circles for fittings, sanitaryware, and decorative work."
+      }
+    }
+  },
+  "knowledgePage": {
+    "label": "Knowledge Centre",
+    "title": "Copper & Brass Desk. Notes, Charts, Live Rates.",
+    "highlight": "Copper & Brass Desk",
+    "news": "Copper & brass news",
+    "readArticle": "Read article",
+    "latest": "Latest from the mill desk",
+    "ask": "Ask Our Metallurgists",
+    "chartsNote": "Charts via TradingView. Rates refresh every two minutes when the metals feed is configured.",
+    "categories": {
+      "Market": "Market",
+      "Application": "Application",
+      "Technical": "Technical",
+      "Industry": "Industry"
+    },
+    "articles": {
+      "copper-highs": {
+        "title": "Copper trapped near highs: what mill buyers should watch this week",
+        "excerpt": "Spot vs 3-month structure, cathode availability, and how a tight contango changes busbar and rod lead times."
+      },
+      "brass-vs-copper": {
+        "title": "Brass vs copper: when alloy premium is worth the spec change",
+        "excerpt": "Machinability, colour, and conductivity trade-offs for strips, circles, and sanitaryware feedstock."
+      },
+      "iacs": {
+        "title": "Understanding copper conductivity standards (IACS)",
+        "excerpt": "A practical guide to IACS, conductivity testing, and why it matters for electrical applications."
+      },
+      "copper-grade": {
+        "title": "How to choose the right copper grade for your application",
+        "excerpt": "Cu-ETP, Cu-OF, Cu-FRHC. What sets them apart and when to specify each grade."
+      },
+      "lme-cathodes": {
+        "title": "LME copper cathodes: what buyers should know",
+        "excerpt": "Grade A cathodes, warehouse standards, and the role of cathodes in downstream manufacturing."
+      },
+      "ev-charging": {
+        "title": "EV charging copper: busbars, enamel wire, and thermal load",
+        "excerpt": "Why charging hardware punishes underspecified copper, and which mill forms actually ship on time."
+      },
+      "switchgear-copper": {
+        "title": "Switchgear copper: dimensional tolerance vs conductivity",
+        "excerpt": "Panel builders lose days to warped busbar. How Keshan batches keep both IACS and millimetres honest."
+      },
+      "building-copper": {
+        "title": "Building copper: earthing, cladding, and site-ready lengths",
+        "excerpt": "Sheets, plates, and rods for infrastructure work. What contractors should put on the RFQ."
+      }
+    }
+  },
+  "qualityPage": {
+    "label": "Quality & Media",
+    "title": "Proof Behind Every Batch We Ship.",
+    "highlight": "Every Batch We Ship",
+    "subheadline": "Certifications that back our quality systems, and a media library of plant, product, and partnership moments (coming soon).",
+    "certifiedEyebrow": "Certified systems",
+    "certifiedTitle": "ISO Compliant, Traceable, Batch-Tested",
+    "certifiedBody": "Full process documentation and test certificates with every dispatch.",
+    "mediaEyebrow": "Media",
+    "mediaTitle": "Media Gallery",
+    "mediaBody": "Facility, product, and event photography will appear here shortly. Check back soon for the full media library.",
+    "comingSoon": "Coming soon",
+    "comingSoonBody": "Plant, product, and partnership imagery will be published in this gallery.",
+    "certsEyebrow": "Certifications",
+    "certsTitle": "Certificates",
+    "certsBody": "Official certifications and quality credentials issued to Keshan Industries. ISO systems, compliance, and verified standards."
+  },
+  "contactPage": {
+    "label": "Contact",
+    "title": "Request a Quote or Speak to Our Team.",
+    "highlight": "Request a Quote",
+    "description": "Tell us your specification, quantity, and delivery terms. Our team will respond within 24 business hours with product availability, pricing, and lead time.",
+    "dispatch": "Dispatch Label",
+    "modes": "Export · Domestic · Technical",
+    "headOffice": "Head Office",
+    "phone": "Phone",
+    "email": "Email",
+    "hours": "Hours",
+    "hoursValue": "Mon - Sat: 10:00am - 19:00 IST / Sun: Closed",
+    "unit1": "Manufacturing Unit-1",
+    "unit2": "Manufacturing Unit-2",
+    "inquiryEyebrow": "Inquiry Form",
+    "inquiryTitle": "Send an Inquiry",
+    "inquiryBody": "Specification, quantity, and delivery terms help us reply faster.",
+    "name": "Full Name *",
+    "company": "Company",
+    "emailField": "Email *",
+    "phoneField": "Phone",
+    "product": "Product / Requirement",
+    "message": "Message *",
+    "namePh": "John Smith",
+    "companyPh": "Company name",
+    "emailPh": "email@company.com",
+    "phonePh": "+1 234 567 890",
+    "productPh": "e.g. Copper busbars, Cu-ETP, custom dimensions",
+    "messagePh": "Tell us your specifications, quantities, delivery terms, and any standards required.",
+    "submit": "Submit Inquiry",
+    "sending": "Sending…",
+    "required": "Name, email, and message are required.",
+    "invalidEmail": "Enter a valid email address.",
+    "sendFail": "Could not send right now. Please try again later.",
+    "received": "Inquiry received",
+    "receivedBody": "Our team will respond within 24 business hours with availability, pricing, and lead time.",
+    "another": "Send another inquiry",
+    "preferEmail": "Prefer email? Write to",
+    "locationsTitle": "Our Locations",
+    "locationsBody": "Head Office, Manufacturing Unit-1 and Manufacturing Unit-2 across Telangana.",
+    "reach": {
+      "eyebrow": "Global Reach",
+      "regionBody": "Active supply routes and distributor partnerships.",
+      "regions": {
+        "southAsia": "South Asia",
+        "middleEast": "Middle East",
+        "southeastAsia": "Southeast Asia",
+        "china": "China",
+        "africa": "Africa",
+        "europe": "Europe"
+      },
+      "headline": "Made in India. Trusted Across the World.",
+      "body": "From our manufacturing base in India, Keshan Industries is one of India's largest exporters of copper ingots, supplying pure quality copper and brass to customers across South Asia, the Middle East, Southeast Asia, China, Africa, and Europe. Our export capability is backed by experienced logistics partners, complete quality documentation, and a customer service team fluent in the requirements of cross-border industrial trade.",
+      "capabilities": [
+        "CIF, FOB, and DAP delivery terms available",
+        "Complete export documentation: Certificate of Origin, Mill Test Certificate, Packing List, Invoice",
+        "Experience with Letter of Credit (LC) and TT payment structures",
+        "Customs clearance support for key markets",
+        "Port delivery coordination: JNPT, Mundra, Chennai, Vizag"
+      ]
+    }
+  },
+  "meta": {
+    "home": {
+      "title": "Keshan Industries | Pure Quality Copper & Brass Manufacturer",
+      "description": "Keshan Industries manufactures and supplies pure quality copper and brass products from India to 30+ countries."
+    },
+    "about": {
+      "title": "About Keshan Industries | Copper Manufacturer | Made in India",
+      "description": "Keshan Industries is a pure quality copper and brass manufacturer based in India, and one of the country's largest exporters of copper ingots. ISO 9001, ISO 14001 & ISO 45001 certified."
+    },
+    "products": {
+      "title": "Copper & Brass Products | Keshan Industries",
+      "description": "Explore Keshan copper and brass products: ingots, busbars, strips, rods, wires, foils, profiles, scrap, and more."
+    },
+    "industries": {
+      "title": "Industries Served | Keshan Industries | Copper & Brass Applications",
+      "description": "Keshan copper and brass serve electrical, power, solar, EV, cable, construction, automotive, electronics, and more."
+    },
+    "knowledge": {
+      "title": "Knowledge Centre | Keshan Industries | Copper Insights & Technical Guides",
+      "description": "Copper and brass market notes, live rates, charts, and technical guides from Keshan metallurgists."
+    },
+    "quality": {
+      "title": "Quality & Media | Keshan Industries",
+      "description": "View Keshan Industries certifications and quality credentials. Media gallery coming soon."
+    },
+    "contact": {
+      "title": "Contact Keshan Industries | Request a Quote | Copper & Brass Manufacturer",
+      "description": "Get in touch with Keshan Industries for copper and brass product inquiries, quotes, and export support. Hyderabad, India."
+    }
+  },
+  "catalog": {
+    "copper-ingots": {
+      "name": "Copper Ingots",
+      "headline": "The Foundation of Every Copper Application.",
+      "description": "As one of India’s largest exporters of copper ingots, Keshan produces ingots from high-grade electrolytic copper, melted and cast to precise dimensional and compositional standards. Available as pure copper and alloy grades across a range of weights, they serve as the primary feedstock for downstream copper processing — from rolling and drawing to alloying.",
+      "applications": [
+        "Wire rod and strip rolling mills",
+        "Copper alloy and brass manufacturers",
+        "Foundry and casting operations",
+        "Export and re-melt customers"
+      ],
+      "cta": "Request a Quote for Copper Ingots"
+    },
+    "copper-busbars": {
+      "name": "Copper Busbars",
+      "headline": "The Conductor at the Heart of Every Switchboard.",
+      "description": "Keshan copper busbars are manufactured to tight dimensional tolerances for use in switchgear, panel boards, busduct systems, transformers, and high-current distribution equipment — offering high-conductivity performance, precise cross-sections, and a clean surface finish for reliable contact performance in every installation.",
+      "applications": [
+        "LV and MV switchgear and control gear",
+        "Busduct and busbar trunking systems",
+        "Power transformers and distribution transformers",
+        "Industrial panel boards and MCC panels",
+        "Battery energy storage systems (BESS)",
+        "EV charging stations and power electronics"
+      ],
+      "cta": "Request a Quote for Copper Busbars"
+    },
+    "copper-strips": {
+      "name": "Copper Strips",
+      "headline": "The Strip Your Transformer Winding Depends On.",
+      "description": "Keshan copper strips are produced on modern slitting lines from high-purity copper coil, delivering consistent width tolerance, smooth edges, and uniform thickness across every metre — application-ready for transformer winding, motor coil manufacturing, and precision stamping.",
+      "applications": [
+        "Transformer winding (distribution and power transformers)",
+        "Motor coil and armature winding",
+        "Electrical contact and terminal manufacturing",
+        "Heat exchanger fins and heating elements",
+        "Electronic components and PCB fabrication"
+      ],
+      "cta": "Request a Quote for Copper Strips"
+    },
+    "copper-sheets-plates": {
+      "name": "Copper Sheet, Plates & Circles",
+      "headline": "Flat, True, and Application-Ready.",
+      "description": "Keshan copper sheets, plates, and circles are produced to precise thickness and flatness tolerances, with a clean mill finish or polished surface as required — suited to applications from architectural cladding and heat transfer equipment to electrical shielding, cookware blanks, and precision fabrication.",
+      "applications": [
+        "Architectural cladding, roofing, and decorative applications",
+        "Heat exchangers and thermal management systems",
+        "Electrical shielding and EMI enclosures",
+        "Circle blanks for spinning, pressing, and deep drawing",
+        "Chemical process equipment and custom fabrication"
+      ],
+      "cta": "Request a Quote for Copper Sheet, Plates & Circles"
+    },
+    "copper-upcast-rod": {
+      "name": "Copper Upcast Rod",
+      "headline": "The Rod That Draws Clean. Every Coil. Every Time.",
+      "description": "Keshan Copper Upcast Rod is produced via the Upcast continuous casting process from high-purity electrolytic copper, delivering superior surface quality, consistent grain structure, and excellent drawability — the preferred input material for wire and cable manufacturers.",
+      "applications": [
+        "Enamelled winding wire (magnet wire) production",
+        "Electrical cables and conductors",
+        "Fine wire drawing for electronics",
+        "Flexible conductors and braided cables"
+      ],
+      "cta": "Request a Quote for Copper Upcast Rod"
+    },
+    "bare-copper-wire": {
+      "name": "Bare Copper Wire",
+      "headline": "Drawn to Spec. Conductivity Without Compromise.",
+      "description": "Keshan bare copper wire is drawn from continuously cast rod through precision dies, delivering consistent diameter, smooth surface finish, and high-conductivity performance for power cables, building wire, earthing, and telecommunications.",
+      "applications": [
+        "Power cables and flexible cords",
+        "Building and construction wiring",
+        "Overhead conductors and earthing systems",
+        "Telecommunications and data cables"
+      ],
+      "cta": "Request a Quote for Bare Copper Wire"
+    },
+    "copper-rod": {
+      "name": "Copper Rod",
+      "headline": "Solid Section. Reliable Conductivity.",
+      "description": "Keshan copper rod is produced for electrical and industrial applications that demand consistent diameter, high conductivity, and clean surface quality — from earthing and bus connections to machining stock and fabrication.",
+      "applications": [
+        "Earthing and grounding systems",
+        "Electrical connectors and terminals",
+        "Machining and fabrication stock",
+        "Industrial current-carrying components"
+      ],
+      "cta": "Request a Quote for Copper Rod"
+    },
+    "copper-hex-square-round-rods": {
+      "name": "Copper Hex, Square, Round Rods",
+      "headline": "Shaped Stock. Ready for Pure Quality Machining.",
+      "description": "Keshan supplies copper rods in hexagonal, square, and round sections for machining, forging, and component manufacturing — with controlled chemistry, consistent cross-section, and finish suited to CNC and conventional machine shops.",
+      "applications": [
+        "CNC and conventional machining stock",
+        "Electrical hardware and fasteners",
+        "Valve, fitting, and connector blanks",
+        "Industrial and decorative fabricated parts"
+      ],
+      "cta": "Request a Quote for Copper Hex, Square & Round Rods"
+    },
+    "enamel-copper-wire": {
+      "name": "Enamel Copper Wire",
+      "headline": "Magnet Wire Built for Windings That Last.",
+      "description": "Keshan enamel copper wire (magnet wire) is produced from high-purity copper with uniform enamel insulation for motors, transformers, generators, and coil windings — delivering dielectric integrity, thermal class performance, and consistent drawability.",
+      "applications": [
+        "Motor and generator windings",
+        "Transformer and inductor coils",
+        "Solenoids and electromagnetic devices",
+        "Automotive and appliance motors"
+      ],
+      "cta": "Request a Quote for Enamel Copper Wire"
+    },
+    "copper-blister": {
+      "name": "Copper Blister",
+      "headline": "Intermediate Copper. Ready for the Next Refine.",
+      "description": "Keshan copper blister is supplied as an intermediate refined copper form for further pyro-metallurgical or electrolytic refining, alloying, and remelt operations — with controlled impurity levels suited to downstream processing.",
+      "applications": [
+        "Electrolytic refining feedstock",
+        "Secondary copper refining",
+        "Alloy and brass manufacturing charge",
+        "Export remelt customers"
+      ],
+      "cta": "Request a Quote for Copper Blister"
+    },
+    "paper-insulated-copper-conductors-strips": {
+      "name": "Paper Insulated Copper Conductors Strips",
+      "headline": "Insulated Strip for High-Reliability Windings.",
+      "description": "Keshan paper-insulated copper conductor (PICC) strips combine high-conductivity copper strip with kraft or specialized paper insulation for transformer and reactor windings — delivering dielectric strength, oil compatibility, and dimensional consistency.",
+      "applications": [
+        "Power and distribution transformer windings",
+        "Reactor and choke coils",
+        "Oil-immersed electrical equipment",
+        "Specialty high-voltage winding applications"
+      ],
+      "cta": "Request a Quote for Paper Insulated Copper Conductor Strips"
+    },
+    "copper-foils": {
+      "name": "Copper Foils",
+      "headline": "Thin Gauge. Uniform Thickness. Clean Surface.",
+      "description": "Keshan copper foils are rolled and slit to thin gauges for electronics, shielding, flexible circuits, and precision laminates — with tight thickness tolerance, clean edges, and surface finish suited to downstream lamination and etching.",
+      "applications": [
+        "PCB and flexible circuit manufacturing",
+        "EMI / RFI shielding",
+        "Battery and energy storage components",
+        "Decorative and architectural laminates"
+      ],
+      "cta": "Request a Quote for Copper Foils"
+    },
+    "phosphorous-copper-bar": {
+      "name": "Phosphorous Copper Bar",
+      "headline": "Deoxidised Copper. Controlled Phosphorus. Clean Melts.",
+      "description": "Keshan phosphorous copper bars are formulated with controlled phosphorus content for deoxidation and alloying additions in foundries and melt shops — delivering consistent P levels and reliable melt behaviour batch after batch.",
+      "applications": [
+        "Copper and brass melt deoxidation",
+        "Alloy manufacturing charge additions",
+        "Foundry phosphorus master alloy use",
+        "Electroplating and specialty melts"
+      ],
+      "cta": "Request a Quote for Phosphorous Copper Bar"
+    },
+    "phosphorous-copper-nuggets": {
+      "name": "Phosphorous Copper Nuggets",
+      "headline": "Consistent Chemistry. Clean Charge. Every Batch.",
+      "description": "Keshan phosphorous copper nuggets are produced with controlled phosphorus levels for foundry and alloy charge applications. Their compact form ensures easy handling and consistent charging in induction and reverberatory furnaces.",
+      "applications": [
+        "Brass and copper alloy manufacturing",
+        "Foundry charge and deoxidation additions",
+        "Electroplating bath chemistry adjustments",
+        "Chemical copper applications"
+      ],
+      "cta": "Request a Quote for Phosphorous Copper Nuggets"
+    },
+    "copper-bar-1kg-5kg": {
+      "name": "Copper Bar 1kg & 5kg",
+      "headline": "Stamped for Purity. Sized for Flexible Charging.",
+      "description": "Keshan copper bars in 1kg and 5kg formats are cast to precise weight and purity standards for foundries, electroplating, laboratory use, and small-to-medium remelt charging. Each bar is batch-traceable for dependable chemistry and clean handling.",
+      "applications": [
+        "Foundries and remelt charging",
+        "Automotive and industrial component remelt stock",
+        "Electroplating and surface treatment baths",
+        "Laboratory and small-scale manufacturing"
+      ],
+      "cta": "Request a Quote for Copper Bar 1kg & 5kg"
+    },
+    "copper-anode-plates": {
+      "name": "Copper Anode Plates",
+      "headline": "The Starting Point for Every Electrodeposited Copper Surface.",
+      "description": "Keshan copper anode plates are manufactured from high-purity oxygen-free copper, cast to precise dimensional specifications for use in electroplating, electrolytic refining, and printed circuit board manufacturing. A controlled microstructure and high purity ensure smooth, consistent dissolution during the plating process.",
+      "applications": [
+        "Electroplating of copper onto ferrous and non-ferrous substrates",
+        "PCB copper electrodeposition",
+        "Electrolytic copper refining baths",
+        "Electroforming and electrotyping"
+      ],
+      "cta": "Request a Quote for Copper Anode Plates"
+    },
+    "copper-cathodes": {
+      "name": "Copper Cathodes",
+      "headline": "The Purest Form of Copper. The Benchmark Grade.",
+      "description": "Keshan copper cathodes represent the highest level of copper purity available — the primary traded form of refined copper on the London Metal Exchange and the feedstock for all downstream copper manufacturing. Our cathodes meet Grade A LME standards and serve as input material for our own production lines as well as supply to other manufacturers.",
+      "applications": [
+        "Downstream copper processing (wire drawing, rolling)",
+        "Copper alloy and brass manufacturing",
+        "Export and commodity trading",
+        "Electroplating bath replenishment"
+      ],
+      "cta": "Request a Quote for Copper Cathodes"
+    },
+    "copper-profile": {
+      "name": "Copper Profile",
+      "headline": "Custom Sections. Drawn and Extruded to Spec.",
+      "description": "Keshan copper profiles are produced in custom cross-sections for electrical, architectural, and industrial fabrication. Tight dimensional control, high conductivity, and a clean mill finish make them ready for machining, assembly, and installation without extra dressing.",
+      "applications": [
+        "Electrical switchgear and bus assemblies",
+        "Architectural and decorative metalwork",
+        "Heat transfer and thermal management sections",
+        "Industrial machine components and fittings"
+      ],
+      "cta": "Request a Quote for Copper Profile"
+    },
+    "copper-scrap": {
+      "name": "Copper Scrap",
+      "headline": "Sorted. Graded. Ready for the Furnace.",
+      "description": "Keshan copper scrap is sourced from verified suppliers, then inspected, sorted, and graded for remelt and recycling streams. We support circular manufacturing with transparent grade classification and lot-level quality checks before processing.",
+      "applications": [
+        "Secondary copper remelt",
+        "Foundry charge material",
+        "Brass and alloy manufacturing",
+        "Recycling and circular supply chains"
+      ],
+      "cta": "Request a Quote for Copper Scrap"
+    },
+    "brass-ingots": {
+      "name": "Brass Ingots",
+      "headline": "Precisely Alloyed. Ready to Cast.",
+      "description": "Keshan brass ingots are manufactured using high-purity copper and zinc with precisely controlled alloying additions to ensure consistent chemical composition and metallurgical quality. Each batch is spectrometrically analysed for composition and trace element control to match customer and international standards.",
+      "applications": [
+        "Brass foundries and gravity die casting",
+        "Pressure die casting for hardware and engineering components",
+        "Sanitary fittings, valves, faucets, and plumbing accessories",
+        "Electrical and electronic components",
+        "Decorative and architectural hardware",
+        "Automotive and industrial engineering applications"
+      ],
+      "cta": "Request a Quote for Brass Ingots"
+    },
+    "brass-sheets-plates": {
+      "name": "Brass Sheets & Plates",
+      "headline": "Flat, Bright, and Built for Fabrication.",
+      "description": "Keshan brass sheets and plates are produced with tight thickness tolerances, consistent alloy composition, and a smooth surface finish — the preferred choice for architects, decorative fabricators, and component manufacturers who need brass that performs and looks the part.",
+      "applications": [
+        "Architectural cladding, facades, and decorative panels",
+        "Musical instruments and acoustic components",
+        "Electrical components and connector blanks",
+        "Engraving plates and name plates",
+        "Chemical process vessels and liners"
+      ],
+      "cta": "Request a Quote for Brass Sheets & Plates"
+    },
+    "brass-strips": {
+      "name": "Brass Strips",
+      "headline": "Pure Quality Slit. Press-Ready. Stamp-Ready.",
+      "description": "Keshan brass strips are slit to precise widths from high-quality brass coil, delivering consistent width tolerance and edge quality for stamping, pressing, and deep drawing operations. Uniform mechanical properties across the coil make them suited to high-volume parts manufacturing.",
+      "applications": [
+        "Electrical contacts and connectors",
+        "Terminals, clips, and springs",
+        "Zipper and fastener manufacturing",
+        "Radiator fins and heat exchanger components",
+        "Decorative trim and furniture hardware"
+      ],
+      "cta": "Request a Quote for Brass Strips"
+    },
+    "brass-circles": {
+      "name": "Brass Circles",
+      "headline": "Blanked to Your Diameter. Press-Ready. Burr-Free.",
+      "description": "Keshan brass circles are blanked from precision brass sheet to custom dimensions — diameter and thickness — ready for deep drawing, spinning, and press forming operations. Widely used in cookware manufacturing, sanitaryware fittings, and decorative pressed components.",
+      "applications": [
+        "Cookware — pots, pans, and vessels",
+        "Sanitaryware — taps, valves, and fittings",
+        "Decorative pressed components",
+        "Automotive and industrial housings"
+      ],
+      "cta": "Request a Quote for Brass Circles"
+    },
+    "brass-wires": {
+      "name": "Brass Wires",
+      "headline": "Drawn Brass. Consistent Diameter. Clean Finish.",
+      "description": "Keshan brass wires are drawn from controlled brass rod for electrical hardware, fasteners, decorative work, and industrial weaving. Uniform diameter, Quarter Hard temper, and a clean surface finish support high-volume forming and winding.",
+      "applications": [
+        "Electrical pins, terminals, and connectors",
+        "Fasteners, rivets, and formed hardware",
+        "Decorative and architectural wire work",
+        "Industrial mesh, springs, and brushes"
+      ],
+      "cta": "Request a Quote for Brass Wires"
+    },
+    "brass-scrap": {
+      "name": "Brass Scrap",
+      "headline": "Sorted Brass. Graded for Remelt.",
+      "description": "Keshan brass scrap is sorted and graded for foundries, remelters, and recycling partners, supplying consistent Cu/Zn feedstock with transparent grade classification for efficient melting and alloying.",
+      "applications": [
+        "Brass foundry remelt",
+        "Secondary alloy manufacturing",
+        "Recycling and circular supply chains",
+        "Hardware and sanitaryware melt shops"
+      ],
+      "cta": "Request a Quote for Brass Scrap"
+    }
   }
 }

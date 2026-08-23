@@ -50,6 +50,868 @@
     "discussApplication": "Hablar de su aplicación",
     "browseProducts": "Ver gama de productos →",
     "englishSpecs": "Especificaciones técnicas en inglés",
-    "comingSoon": "Próximamente"
+    "comingSoon": "Próximamente",
+    "requestQuote": "Solicitar cotización",
+    "viewProduct": "Ver producto",
+    "selectCategory": "Seleccionar categoría",
+    "allRights": "Todos los derechos reservados.",
+    "copyright": "Copyright © 2026",
+    "developedBy": "Desarrollado y comercializado por",
+    "company": "Empresa",
+    "copper": "Cobre",
+    "brass": "Latón",
+    "toggleMenu": "Abrir o cerrar menú",
+    "locationHyderabad": "Hyderabad, Telangana, India",
+    "copperDesk": "Mesa de cobre",
+    "pin": "Fijar",
+    "unpin": "Soltar",
+    "pinMarket": "Fijar el panel de mercado de cobre",
+    "unpinMarket": "Soltar el panel de mercado de cobre",
+    "marketSidebar": "Barra lateral del mercado de cobre",
+    "liveQuotes": "Cotizaciones en vivo de TradingView. Solo orientativas.",
+    "madeInIndia": "Hecho en India"
+  },
+  "home": {
+    "hero": {
+      "headline": "Toda gran innovación comienza con el cobre.",
+      "subheadline": "Keshan Industries fabrica y suministra productos de cobre y latón de calidad pura, de confianza para fabricantes, ingenieros y contratistas que construyen la red eléctrica del mañana, los vehículos eléctricos, la infraestructura de energía renovable y más.",
+      "primaryCta": "Explorar nuestra fabricación",
+      "secondaryCta": "Ver productos"
+    },
+    "about": {
+      "eyebrow": "Sobre Keshan",
+      "headline": "Fabricación de cobre de calidad pura, hecha para el mundo.",
+      "highlight": "hecha para el mundo",
+      "body": "Desde 2016, Keshan Industries fabrica cobre y latón de calidad pura para algunas de las industrias más exigentes del mundo. Desde fabricantes de aparamenta hasta desarrolladores solares, somos un socio de fabricación, no un proveedor de commodities: control metalúrgico, calidad ensayada por lote y entrega a tiempo en cada pedido.",
+      "quote": "Somos un socio de fabricación, no un proveedor de commodities.",
+      "quoteHighlight": "ensayada por lote",
+      "quoteEnd": "calidad en cada pedido.",
+      "imageAlt": "Planta de fabricación de Keshan",
+      "stats": {
+        "yearsTitle": "Años",
+        "yearsBody": "Años de excelencia en fabricación desde 2016.",
+        "countriesTitle": "Países",
+        "countriesBody": "Entrega a tiempo a más de 30 países en el mundo.",
+        "capacityTitle": "MT / año",
+        "capacityBody": "Capacidad anual de producción de cobre y latón.",
+        "qcTitle": "QC ensayado",
+        "qcBody": "Calidad ensayada por lote antes de cada despacho."
+      }
+    },
+    "partners": {
+      "eyebrow": "Nuestros socios",
+      "headline": "Alianzas a largo plazo con empresas metalúrgicas líderes en el mundo.",
+      "caption": "Keshan suministra a fabricantes, desarrolladores de infraestructura y empresas metalúrgicas en todo el mundo. Alianzas construidas sobre un suministro de cobre certificado y constante, lote tras lote."
+    },
+    "range": {
+      "eyebrow": "Gama de productos",
+      "headline": "Cobre y latón. Todas las formas. Todos los grados.",
+      "highlight": "Todos los grados",
+      "subheadline": "Barras colectoras de cobre de alta conductividad para distribución de energía, tiras de latón de calidad pura para fabricación de componentes. Keshan tiene el producto, el grado y la capacidad para entregar.",
+      "explore": "Explorar gama",
+      "copperTitle": "Productos de cobre",
+      "copperBody": "Lingotes, barras colectoras, tiras, láminas y círculos, varilla Upcast, alambres, barras, láminas finas, grados fosforosos, perfiles, chatarra, placas de ánodo y cátodos. Fabricados según especificación internacional.",
+      "copperSpecs": "Cu-ETP · Cu-OF · Barras colectoras · Perfiles · Placas de ánodo · Cátodos",
+      "brassTitle": "Productos de latón",
+      "brassBody": "Lingotes, láminas, placas, tiras, círculos, alambres y chatarra. Aleados para resistencia, maquinabilidad y acabado en cada aplicación.",
+      "brassSpecs": "Lingotes · Láminas · Placas · Tiras · Círculos · Alambres · Chatarra"
+    },
+    "process": {
+      "eyebrow": "Proceso de fabricación",
+      "headline": "Calidad pura en cada etapa.",
+      "highlight": "cada etapa",
+      "subtitle": "Desde la materia prima hasta el despacho final, cada paso del proceso de fabricación de Keshan está guiado por la especificación y supervisado por metalúrgicos experimentados.",
+      "footer": "7 estaciones · guiado por especificación · certificado por lote",
+      "steps": {
+        "01": {
+          "title": "Clasificación",
+          "description": "La materia prima entrante se clasifica y gradúa para asegurar una calidad de carga constante antes de entrar en la línea de producción."
+        },
+        "02": {
+          "title": "Empacado",
+          "description": "El material clasificado se empaca y se prepara para la carga, lo que mejora la eficiencia del horno y la consistencia de la fusión."
+        },
+        "03": {
+          "title": "Fusión y colada",
+          "description": "Material de alta pureza fundido en hornos de inducción modernos, con composición controlada desde el primer vaciado."
+        },
+        "04": {
+          "title": "Laminación y procesamiento",
+          "description": "Líneas de laminación multipaso para un control dimensional preciso. Sección constante. Tolerancias estrictas."
+        },
+        "05": {
+          "title": "Corte y acabado",
+          "description": "Corte longitudinal, cizallado y acabado superficial según la especificación del cliente. Corte a medida. Dimensiones personalizadas."
+        },
+        "06": {
+          "title": "Ensayo e inspección",
+          "description": "Cada lote se ensaya por lote en conductividad, composición química, resistencia a la tracción y precisión dimensional. Resultados certificados."
+        },
+        "07": {
+          "title": "Embalaje y despacho",
+          "description": "Embalaje de grado industrial, protección contra la humedad y documentación de calidad completa con cada envío."
+        }
+      }
+    },
+    "quality": {
+      "eyebrow": "Aseguramiento de calidad",
+      "headline": "Aseguramiento de calidad integrado en cada etapa de producción.",
+      "highlight": "etapa de producción",
+      "body": "Nuestro laboratorio de ensayo interno realiza controles de conductividad, dureza, composición química y dimensiones en cada lote de producción. Ningún producto sale de nuestra planta sin un certificado de ensayo. Cada certificado es trazable y cada estándar es verificable.",
+      "cta": "Ver nuestros estándares de calidad",
+      "pillars": {
+        "purity": {
+          "title": "Pureza",
+          "description": "Más del 99,9 % de pureza de cobre en todos los grados electrolíticos"
+        },
+        "certified": {
+          "title": "Certificado",
+          "description": "Certificado ISO 9001:2015, ISO 14001:2015 e ISO 45001"
+        },
+        "testing": {
+          "title": "Ensayos",
+          "description": "Composición química, conductividad y ensayo de tracción por lote"
+        },
+        "standards": {
+          "title": "Estándares",
+          "description": "Cumplimiento de los estándares IS, ASTM, DIN, JIS y BS"
+        }
+      }
+    },
+    "industries": {
+      "eyebrow": "Industrias atendidas",
+      "headline": "Cobre en el núcleo de las industrias críticas.",
+      "highlight": "industrias críticas",
+      "subheadline": "Desde la subestación que alimenta una ciudad hasta el motor de un vehículo eléctrico, el cobre de Keshan forma parte de la infraestructura que mantiene la vida cotidiana en marcha. Trece industrias. Un estándar constante.",
+      "cta": "Explorar todas las industrias"
+    },
+    "knowledge": {
+      "eyebrow": "Centro de conocimiento",
+      "headline": "El Centro de conocimiento de Keshan",
+      "highlight": "Centro de conocimiento",
+      "subheadline": "Notas de mercado de cobre y latón, guías técnicas y perspectivas de planta de los metalúrgicos de Keshan. Escritas para compradores, no para traders.",
+      "cta": "Visitar el Centro de conocimiento"
+    },
+    "cta": {
+      "eyebrow": "Suministro global",
+      "headline": "¿Listo para abastecerse de cobre y latón premium?",
+      "highlight": "cobre y latón",
+      "subheadline": "Indíquenos su especificación. Nuestro equipo responderá en 24 horas hábiles con disponibilidad de producto, precios y plazo de entrega.",
+      "primary": "Solicitar cotización",
+      "secondary": "Ver productos"
+    }
+  },
+  "footer": {
+    "description": "Keshan Industries fabrica cobre y latón de calidad pura para aplicaciones de energía, automoción, electrónica e industria. Capacidad anual de más de 24.000 MT. Certificado ISO 9001, 14001 y 45001. Hecho en India. Suministrado a más de 30 países.",
+    "company": "Empresa",
+    "contact": "Contacto",
+    "copper": "Cobre",
+    "brass": "Latón",
+    "copyright": "Copyright © 2026",
+    "reserved": "Todos los derechos reservados.",
+    "developed": "Desarrollado y comercializado por"
+  },
+  "aboutPage": {
+    "label": "Sobre Keshan",
+    "title": "Construido sobre la convicción de que la calidad no es negociable.",
+    "highlight": "la calidad no es negociable",
+    "storyEyebrow": "01. Historia de la empresa",
+    "storyTitle": "De una sola convicción a un socio de fabricación global.",
+    "storyHighlight": "socio de fabricación global.",
+    "body": "Keshan Industries se fundó con una sola convicción: que la fabricación india podía cumplir y superar los estándares de calidad que exigen las industrias más rigurosas del mundo.\n\nLo que comenzó en 2016 como una operación centrada en la fabricación de cobre se ha convertido en un nombre respetado en la industria de metales no ferrosos de India. Fabricamos cobre y latón de calidad pura para empresas eléctricas, desarrolladores de infraestructura, fabricantes de VE y grupos industriales, con suministro a más de 30 países.\n\nEl recorrido ha sido por etapas: capacidad de lingotes de cobre en 2021, sistemas ISO en 2022, Manufacturing Unit-2 en 2023, alcance de exportación a más de 30 países en 2025 y una línea de placas de ánodo en 2026. Cada tonelada que producimos refleja nuestro compromiso con la pureza, la calidad y el desempeño en el uso final.\n\nHoy, Keshan Industries opera plantas de fabricación en Telangana, equipadas con infraestructura moderna de fusión, laminación y ensayo. Capaces de producir la gama completa de productos de cobre y latón según especificaciones internacionales y requisitos del cliente.",
+    "imageAlt": "Planta de Keshan",
+    "visionEyebrow": "Visión",
+    "visionTitle": "Tocar cada cable de cobre que ilumina nuestro futuro.",
+    "visionBody": "Cada luz que se enciende, cada vehículo que se carga, cada panel solar que alimenta la red. En algún punto de esa cadena hay cobre bien fabricado. Keshan existe para formar parte de esa cadena: cobre y latón de calidad pura, fabricados con integridad, para un futuro que funciona con electricidad.",
+    "missionEyebrow": "Misión",
+    "missionBody": "Fabricar productos de cobre y latón de calidad pura, de especificación constante y certificada, entregados a tiempo, respaldados por documentación de calidad y apoyados por la consistencia técnica que nuestros clientes necesitan para construir con confianza.",
+    "values": {
+      "quality": {
+        "title": "Calidad pura",
+        "description": "Precisión dimensional y control metalúrgico en cada lote."
+      },
+      "integrity": {
+        "title": "Integridad",
+        "description": "Calidad trazable, documentación transparente y compromisos honestos."
+      },
+      "reliability": {
+        "title": "Fiabilidad",
+        "description": "Entrega a tiempo, producción guiada por especificación y servicio receptivo."
+      },
+      "responsible": {
+        "title": "Fabricación responsable",
+        "description": "Procesos certificados, operaciones seguras y uso eficiente de recursos."
+      },
+      "improvement": {
+        "title": "Mejora continua",
+        "description": "Mejores procesos, tolerancias más estrictas y alianzas más sólidas."
+      }
+    },
+    "leadershipEyebrow": "Liderazgo",
+    "leadershipTitle": "El equipo detrás del estándar.",
+    "leadershipBody": "Keshan Industries está dirigida por un equipo de gestión que combina experiencia metalúrgica con trayectoria comercial y una visión a largo plazo de la industria. Su compromiso con la calidad no es una directiva de gestión. Es un estándar personal.",
+    "milestonesEyebrow": "Trayectoria",
+    "milestonesTitle": "Más fuertes desde 2016.",
+    "events": {
+      "2016": {
+        "title": "Fundación",
+        "description": "Se funda Keshan Industries; se pone en marcha la primera planta de fabricación en Telangana."
+      },
+      "2021": {
+        "title": "Lingotes de cobre",
+        "description": "Se ampliaron los segmentos de producto con fabricación integrada de lingotes de cobre a lo largo de la cadena de valor."
+      },
+      "2022": {
+        "title": "Certificaciones",
+        "description": "Se obtuvieron las certificaciones ISO 9001:2015, ISO 14001:2015 e ISO 45001."
+      },
+      "2023": {
+        "title": "Manufacturing Unit-2",
+        "description": "Se puso en marcha Manufacturing Unit-2 en TSIIC Automotive Park para sumar capacidad y nuevas líneas de producto."
+      },
+      "2025": {
+        "title": "Más de 30 países",
+        "description": "Suministro de cobre y latón a más de 30 países en seis regiones."
+      },
+      "2026": {
+        "title": "Línea de ánodos",
+        "description": "Se puso en marcha la fabricación de placas de ánodo de cobre para completar la gama de galvanoplastia y refinación."
+      }
+    },
+    "leadershipSection": "02 - Liderazgo",
+    "visionSection": "03 - Visión",
+    "milestonesSection": "05 - Hitos",
+    "workWith": "Trabajar con Keshan",
+    "knowMore": "Saber más",
+    "linkedIn": "Perfil de LinkedIn",
+    "close": "Cerrar",
+    "closeProfile": "Cerrar perfil",
+    "stats": {
+      "years": {
+        "title": "Años",
+        "label": "Años de excelencia manufacturera"
+      },
+      "countries": {
+        "title": "Países",
+        "label": "Países abastecidos"
+      },
+      "capacity": {
+        "title": "Capacidad",
+        "label": "MT de capacidad anual"
+      },
+      "quality": {
+        "title": "Calidad",
+        "label": "Calidad ensayada antes del envío"
+      }
+    },
+    "team": {
+      "vikash": {
+        "title": "Director general, Keshan Industries",
+        "shortBio": "Constructor dos veces, de empresa y de comunidad, cuyo paso del comercio a la fabricación ha dado forma a Keshan Industries desde 2016.",
+        "fullBio": [
+          "Pocas carreras trazan un arco tan claro entre tenacidad y visión como la de Vikash Kumar Keshan. Licenciado en comercio por Calcutta University, promoción de 1997, empezó en la vía convencional de la contaduría pública antes de elegir, a propósito, su propio camino. En 2005 esa convicción dio lugar a Keshan Trading Corporation, en acero estructural, tubos GI y MS y aceros especiales, donde adquirió un dominio excepcional del comercio de metales.",
+          "En 2016, el Sr. Keshan y su hermano Rajneesh Keshan fundaron juntos Keshan Industries, una evolución deliberada del comercio a la fabricación, animada por el espíritu Make in India y la convicción de que la producción nacional, reforzada por innovación real, es la ventaja más duradera de India. Bajo su dirección, la empresa supera los 300 empleados, con un equipo de investigación e innovación y un liderazgo basado en maestría técnica, claridad de propósito y esfuerzo colectivo.",
+          "Su influencia va más allá de la empresa. Miembro de Agarwal Samaj durante quince años, ha ascendido por mérito y confianza: presidente de North Secunderabad Agarwal Samaj (2023); presidente de Bihar Agarwal Samaj, Secunderabad (2024); y actualmente secretario de Agarwal Samaj Telangana (2025).",
+          "Vikash Kumar Keshan es, en esencia, un constructor dos veces: de empresa y de comunidad, un líder cuyas ambiciones siempre han apuntado hacia afuera."
+        ]
+      },
+      "yash": {
+        "title": "Líder de la próxima generación, Keshan Industries",
+        "shortBio": "Primero los números, después las opiniones. Construye una corporación sobre personas, calidad de producto y convicción respaldada por datos.",
+        "fullBio": [
+          "Yash Keshan tiene un B.Sc. (Honours) en Matemáticas, un grado de cuatro años de Ashoka University, tras su formación en Mayo College, Ajmer, donde fue capitán académico y recibió la President's Medal for Academics. No es un currículum entregado a la ligera, y se nota en cómo aborda el negocio: primero los números, después las opiniones.",
+          "Su carrera inicial ha sido deliberadamente austera: documentación comercial en Global Aluminium, cumplimiento normativo y coordinación de la cadena de suministro en metales, junto con investigación de inversiones basada en análisis fundamental y no en instinto. Inversor estudiante en divisas, lo trata como otra disciplina que castiga el pensamiento descuidado y premia la convicción respaldada por datos.",
+          "Yash no lidera por consenso. Su visión es clara: las personas y la calidad del producto son los dos pilares de la fabricación. Comparte la distinción de Rosalynn Carter de que un gran líder lleva a las personas no donde quieren ir, sino donde deben estar, y toma su modelo de industriales como Narotam Sekhsaria, donde la escala nunca justifica comprometer la sostenibilidad o el control de la contaminación. Está aquí para construir una corporación, no para administrar un legado cómodo."
+        ]
+      },
+      "suren": {
+        "title": "Director ejecutivo, Keshan Industries",
+        "shortBio": "Líder senior con 25 años en fabricación, comercio internacional y sourcing global en Fortune 500.",
+        "fullBio": [
+          "Suren Reddy es director ejecutivo de Keshan Industries y un líder senior con 25 años de experiencia en fabricación metalúrgica, materiales de construcción, bebidas, componentes de automoción, comercio internacional y sourcing global en empresas Fortune 500.",
+          "Su liderazgo se centra en procesos eficientes, equipos capaces, tecnología y mejoras medibles en coste, calidad y entrega. Es un líder comercial y orientado a la transformación, capaz de asumir operaciones complejas, reforzar la cadena de suministro, reducir costes estructurales, mejorar el servicio y construir sistemas escalables.",
+          "Con un MBA en Negocios Internacionales del Indian Institute of Foreign Trade en New Delhi, combina formación empresarial con experiencia práctica en sectores diversos.",
+          "En Keshan impulsó capacidades de fabricación integradas para lingotes de cobre, tiras, barras colectoras y toda la división de cableado, de la materia prima al producto terminado."
+        ]
+      }
+    }
+  },
+  "productsPage": {
+    "label": "Gama de productos",
+    "title": "Cobre y latón. Ingeniería de calidad pura.",
+    "highlight": "Ingeniería de calidad pura",
+    "description": "Desde barras colectoras de cobre de alta conductividad para distribución de energía hasta tiras de latón de calidad pura para fabricación de componentes. Keshan fabrica cada forma y cada grado según los estándares que exige su aplicación.",
+    "selectCategory": "Seleccionar categoría",
+    "copper": "Productos de cobre",
+    "brass": "Productos de latón",
+    "viewProduct": "Ver producto",
+    "sheet": "Ficha de producto",
+    "overview": "Descripción del producto",
+    "applications": "Aplicaciones",
+    "industries": "Industrias atendidas",
+    "scrapGrades": "Grados de chatarra",
+    "specs": "Especificaciones técnicas",
+    "specProduct": "Producto",
+    "specRanges": "Especificación. Rangos / tipos",
+    "whyTitle": "¿Por qué abastecerse de Keshan?",
+    "whyBody": "Cada lote es trazable, cada certificado es verificable y cada entrega cuenta con el respaldo de nuestro equipo técnico. Apoyamos dimensiones a medida, estándares internacionales y documentación de exportación completa.",
+    "allProducts": "Todos los productos",
+    "requestQuote": "Solicitar cotización",
+    "category": "Categoría",
+    "purity": "Pureza",
+    "standards": "Estándares",
+    "origin": "Origen",
+    "originValue": "Hecho en India",
+    "copperLabel": "Cobre",
+    "brassLabel": "Latón"
+  },
+  "industriesPage": {
+    "label": "Industrias atendidas",
+    "title": "Cobre en el núcleo de las industrias críticas.",
+    "highlight": "industrias críticas",
+    "description": "Desde la subestación que alimenta una ciudad hasta el motor de un vehículo eléctrico, el cobre de Keshan forma parte de la infraestructura que mantiene la vida cotidiana en marcha. Trece industrias. Un estándar constante.",
+    "intro": "Trece sectores. Un estándar metalúrgico. Cobre y latón guiados por especificación, lote tras lote.",
+    "items": {
+      "electrical": {
+        "name": "Electricidad y distribución de energía",
+        "application": "Barras colectoras, conductores y componentes de distribución para un flujo de energía fiable."
+      },
+      "switchgear": {
+        "name": "Aparamenta, paneles y busducts",
+        "application": "Cobre de calidad pura para aparamenta, tableros y sistemas de canalización de barras."
+      },
+      "renewable": {
+        "name": "Energía renovable e infraestructura solar",
+        "application": "Cobre de alta conductividad para inversores solares, paneles y sistemas de energía."
+      },
+      "ev": {
+        "name": "VE, recarga y movilidad",
+        "application": "Cobre para motores de VE, baterías, estaciones de recarga y electrónica de potencia."
+      },
+      "cables": {
+        "name": "Cables, conductores y fabricación de alambre",
+        "application": "CCR, varilla y cobre trefilado para productores de cables y alambres."
+      },
+      "construction": {
+        "name": "Construcción e infraestructura de edificios",
+        "application": "Láminas, placas y barras para revestimiento, puesta a tierra y sistemas de edificación."
+      },
+      "electronics": {
+        "name": "Electrónica y fabricación de PCB",
+        "application": "Tira fina de cobre y materia prima lista para foil para líneas de PCB y componentes electrónicos."
+      },
+      "automotive": {
+        "name": "Componentes automotrices e industriales",
+        "application": "Formas de latón y cobre para terminales, conectores y piezas estampadas de precisión."
+      },
+      "thermal": {
+        "name": "Intercambiadores de calor y sistemas térmicos",
+        "application": "Cobre conductor para serpentines, aletas y conjuntos de gestión térmica."
+      },
+      "defence": {
+        "name": "Aplicaciones de defensa y aeroespacial",
+        "application": "Cobre y latón de alta pureza y trazables para conjuntos de misión crítica."
+      },
+      "rail": {
+        "name": "Infraestructura ferroviaria y de transporte",
+        "application": "Conductores y materiales de contacto para electrificación ferroviaria y material rodante."
+      },
+      "telecom": {
+        "name": "Telecomunicaciones y redes de datos",
+        "application": "Conductores de cobre que sustentan el cableado de telecomunicaciones y la infraestructura de red."
+      },
+      "hardware": {
+        "name": "Herrajes, sanitarios y decoración",
+        "application": "Láminas, tiras y círculos de latón para accesorios, sanitarios y trabajo decorativo."
+      }
+    },
+    "productWiseTitle": "Industrias por producto",
+    "map": {
+      "copper-ingots": "Electrónica y PCB, construcción, automoción e industrial",
+      "copper-busbars": "Eléctrica y potencia, aparamenta y paneles, renovables, ferrocarril",
+      "copper-strips": "Aparamenta y paneles, electrónica y PCB, ferrocarril",
+      "copper-sheets-plates": "Construcción, defensa y aeroespacial, intercambiadores de calor",
+      "copper-upcast-rod": "Cables, eléctrica y potencia",
+      "bare-copper-wire": "Cables, eléctrica y potencia, telecomunicaciones",
+      "copper-rod": "Cables, automoción e industrial",
+      "copper-hex-square-round-rods": "Aparamenta y paneles, automoción e industrial, defensa y aeroespacial",
+      "enamel-copper-wire": "Carga EV, eléctrica y potencia, automoción (devanados de motor)",
+      "paper-insulated-copper-conductors-strips": "Ferrocarril, transmisión / eléctrica y potencia",
+      "copper-foils": "Electrónica y PCB, telecomunicaciones",
+      "copper-bar-1kg-5kg": "Fundiciones, automoción e industrial, fabricación a pequeña escala",
+      "brass-ingots": "Fundición y troquelado, fontanería y sanitarios, automoción e industrial",
+      "brass-sheets-plates": "Herrajes arquitectónicos y decorativos, construcción",
+      "brass-strips": "Eléctrica y electrónica, accesorios de aparamenta, telecomunicaciones",
+      "brass-circles": "Fontanería y sanitarios, fundición y troquelado"
+    }
+  },
+  "knowledgePage": {
+    "label": "Centro de conocimiento",
+    "title": "Mesa de cobre y latón. Notas, gráficos, precios en vivo.",
+    "highlight": "Mesa de cobre y latón",
+    "news": "Noticias de cobre y latón",
+    "latest": "Lo último desde la mesa de planta",
+    "ask": "Consulte a nuestros metalúrgicos",
+    "chartsNote": "Gráficos a través de TradingView. Los precios se actualizan cada dos minutos cuando el feed de metales está configurado.",
+    "categories": {
+      "Market": "Mercado",
+      "Application": "Aplicación",
+      "Technical": "Técnico",
+      "Industry": "Industria"
+    },
+    "articles": {
+      "copper-highs": {
+        "title": "Cobre cerca de máximos: qué deben vigilar esta semana los compradores de planta",
+        "excerpt": "Estructura spot frente a 3 meses, disponibilidad de cátodos y cómo un contango ajustado cambia los plazos de barras colectoras y varilla."
+      },
+      "brass-vs-copper": {
+        "title": "Latón frente a cobre: cuándo la prima de aleación justifica el cambio de especificación",
+        "excerpt": "Compromisos de maquinabilidad, color y conductividad para tiras, círculos y materia prima para sanitarios."
+      },
+      "iacs": {
+        "title": "Cómo entender los estándares de conductividad del cobre (IACS)",
+        "excerpt": "Una guía práctica de IACS, ensayos de conductividad y por qué importan en aplicaciones eléctricas."
+      },
+      "copper-grade": {
+        "title": "Cómo elegir el grado de cobre adecuado para su aplicación",
+        "excerpt": "Cu-ETP, Cu-OF, Cu-FRHC. Qué los diferencia y cuándo especificar cada grado."
+      },
+      "lme-cathodes": {
+        "title": "Cátodos de cobre LME: lo que deben saber los compradores",
+        "excerpt": "Cátodos Grade A, estándares de almacén y el papel de los cátodos en la fabricación posterior."
+      },
+      "ev-charging": {
+        "title": "Cobre para recarga de VE: barras colectoras, alambre esmaltado y carga térmica",
+        "excerpt": "Por qué el hardware de recarga castiga el cobre subespecificado, y qué formas de planta realmente se entregan a tiempo."
+      },
+      "switchgear-copper": {
+        "title": "Cobre para aparamenta: tolerancia dimensional frente a conductividad",
+        "excerpt": "Los constructores de paneles pierden días por barras colectoras deformadas. Cómo los lotes de Keshan mantienen honestos tanto el IACS como los milímetros."
+      },
+      "building-copper": {
+        "title": "Cobre para edificación: puesta a tierra, revestimiento y longitudes listas para obra",
+        "excerpt": "Láminas, placas y barras para obra de infraestructura. Qué deben incluir los contratistas en la RFQ."
+      }
+    },
+    "readArticle": "Leer artículo"
+  },
+  "qualityPage": {
+    "label": "Calidad y medios",
+    "title": "La prueba detrás de cada lote que despachamos.",
+    "highlight": "cada lote que despachamos",
+    "subheadline": "Certificaciones que respaldan nuestros sistemas de calidad, y una biblioteca de medios de planta, producto y momentos de alianza (próximamente).",
+    "certifiedEyebrow": "Sistemas certificados",
+    "certifiedTitle": "Conforme a ISO, trazable y ensayado por lote",
+    "certifiedBody": "Documentación completa del proceso y certificados de ensayo con cada despacho.",
+    "mediaEyebrow": "Medios",
+    "mediaTitle": "Galería de medios",
+    "mediaBody": "La fotografía de planta, producto y eventos aparecerá aquí en breve. Vuelva pronto para ver la biblioteca completa de medios.",
+    "comingSoon": "Próximamente",
+    "comingSoonBody": "Las imágenes de planta, producto y alianzas se publicarán en esta galería.",
+    "certsEyebrow": "Certificaciones",
+    "certsTitle": "Certificados",
+    "certsBody": "Certificaciones oficiales y credenciales de calidad emitidas a Keshan Industries. Sistemas ISO, cumplimiento y estándares verificados."
+  },
+  "contactPage": {
+    "label": "Contacto",
+    "title": "Solicite una cotización o hable con nuestro equipo.",
+    "highlight": "Solicite una cotización",
+    "description": "Indíquenos su especificación, cantidad y términos de entrega. Nuestro equipo responderá en 24 horas hábiles con disponibilidad de producto, precios y plazo de entrega.",
+    "dispatch": "Etiqueta de despacho",
+    "modes": "Exportación · Nacional · Técnico",
+    "headOffice": "Oficina central",
+    "phone": "Teléfono",
+    "email": "Correo",
+    "hours": "Horario",
+    "hoursValue": "Lun - sáb: 10:00 - 19:00 IST / Dom: Cerrado",
+    "unit1": "Manufacturing Unit-1",
+    "unit2": "Manufacturing Unit-2",
+    "inquiryEyebrow": "Formulario de consulta",
+    "inquiryTitle": "Enviar una consulta",
+    "inquiryBody": "La especificación, la cantidad y los términos de entrega nos ayudan a responder más rápido.",
+    "name": "Nombre completo *",
+    "company": "Empresa",
+    "emailField": "Correo *",
+    "phoneField": "Teléfono",
+    "product": "Producto / Requisito",
+    "message": "Mensaje *",
+    "namePh": "Juan Pérez",
+    "companyPh": "Nombre de la empresa",
+    "emailPh": "email@company.com",
+    "phonePh": "+1 234 567 890",
+    "productPh": "p. ej. Barras colectoras de cobre, Cu-ETP, dimensiones a medida",
+    "messagePh": "Indíquenos sus especificaciones, cantidades, términos de entrega y cualquier estándar requerido.",
+    "submit": "Enviar consulta",
+    "sending": "Enviando…",
+    "required": "El nombre, el correo y el mensaje son obligatorios.",
+    "invalidEmail": "Introduzca una dirección de correo válida.",
+    "sendFail": "No se pudo enviar ahora. Inténtelo de nuevo más tarde.",
+    "received": "Consulta recibida",
+    "receivedBody": "Nuestro equipo responderá en 24 horas hábiles con disponibilidad, precios y plazo de entrega.",
+    "another": "Enviar otra consulta",
+    "preferEmail": "¿Prefiere correo? Escriba a",
+    "reach": {
+      "headline": "Hecho en India. De confianza en el mundo.",
+      "body": "Desde nuestra base de fabricación en India, Keshan Industries es uno de los mayores exportadores de lingotes de cobre de India, y suministra cobre y latón de calidad pura a clientes en el sur de Asia, Oriente Medio, el sudeste asiático, China, África y Europa. Nuestra capacidad de exportación está respaldada por socios logísticos experimentados, documentación de calidad completa y un equipo de servicio al cliente que conoce los requisitos del comercio industrial transfronterizo.",
+      "capabilities": [
+        "Términos de entrega CIF, FOB y DAP disponibles",
+        "Documentación de exportación completa: Certificate of Origin, Mill Test Certificate, Packing List, Invoice",
+        "Experiencia con estructuras de pago Letter of Credit (LC) y TT",
+        "Apoyo en despacho de aduanas para mercados clave",
+        "Coordinación de entrega portuaria: JNPT, Mundra, Chennai, Vizag"
+      ],
+      "eyebrow": "Alcance global",
+      "regionBody": "Rutas de suministro activas y alianzas con distribuidores.",
+      "regions": {
+        "southAsia": "Asia del Sur",
+        "middleEast": "Oriente Medio",
+        "southeastAsia": "Sudeste asiático",
+        "china": "China",
+        "africa": "África",
+        "europe": "Europa"
+      }
+    },
+    "locationsTitle": "Nuestras ubicaciones",
+    "locationsBody": "Oficina central, Unidad de fabricación-1 y Unidad de fabricación-2 en Telangana."
+  },
+  "meta": {
+    "home": {
+      "title": "Keshan Industries | Fabricante de cobre y latón de calidad pura",
+      "description": "Keshan Industries fabrica y suministra productos de cobre y latón de calidad pura desde India a más de 30 países."
+    },
+    "about": {
+      "title": "Sobre Keshan Industries | Fabricante de cobre | Hecho en India",
+      "description": "Keshan Industries es un fabricante de cobre y latón de calidad pura con sede en India, y uno de los mayores exportadores de lingotes de cobre del país. Certificado ISO 9001, ISO 14001 e ISO 45001."
+    },
+    "products": {
+      "title": "Productos de cobre y latón | Keshan Industries",
+      "description": "Explore los productos de cobre y latón de Keshan: lingotes, barras colectoras, tiras, barras, alambres, láminas finas, perfiles, chatarra y más."
+    },
+    "industries": {
+      "title": "Industrias atendidas | Keshan Industries | Aplicaciones de cobre y latón",
+      "description": "El cobre y el latón de Keshan sirven a electricidad, energía, solar, VE, cables, construcción, automoción, electrónica y más."
+    },
+    "knowledge": {
+      "title": "Centro de conocimiento | Keshan Industries | Perspectivas y guías técnicas de cobre",
+      "description": "Notas de mercado de cobre y latón, precios en vivo, gráficos y guías técnicas de los metalúrgicos de Keshan."
+    },
+    "quality": {
+      "title": "Calidad y medios | Keshan Industries",
+      "description": "Consulte las certificaciones y credenciales de calidad de Keshan Industries. Galería de medios próximamente."
+    },
+    "contact": {
+      "title": "Contactar a Keshan Industries | Solicitar cotización | Fabricante de cobre y latón",
+      "description": "Póngase en contacto con Keshan Industries para consultas de productos de cobre y latón, cotizaciones y apoyo a la exportación. Hyderabad, India."
+    }
+  },
+  "catalog": {
+    "copper-ingots": {
+      "name": "Lingotes de cobre",
+      "headline": "La base de cada aplicación de cobre.",
+      "description": "Como uno de los mayores exportadores de lingotes de cobre de India, Keshan produce lingotes a partir de cobre electrolítico de alto grado, fundido y colado según estándares precisos de dimensión y composición. Disponibles como cobre puro y grados de aleación en una gama de pesos, sirven como materia prima principal para el procesamiento posterior de cobre, desde laminación y trefilado hasta aleación.",
+      "applications": [
+        "Laminadores de varilla y tira",
+        "Fabricantes de aleaciones de cobre y latón",
+        "Operaciones de fundición y colada",
+        "Clientes de exportación y refundición"
+      ],
+      "cta": "Solicitar cotización de lingotes de cobre"
+    },
+    "copper-busbars": {
+      "name": "Barras colectoras de cobre",
+      "headline": "El conductor en el corazón de cada tablero.",
+      "description": "Las barras colectoras de cobre de Keshan se fabrican con tolerancias dimensionales estrictas para uso en aparamenta, tableros, sistemas de busduct, transformadores y equipos de distribución de alta corriente, ofreciendo alto desempeño de conductividad, secciones precisas y un acabado superficial limpio para un contacto fiable en cada instalación.",
+      "applications": [
+        "Aparamenta y equipo de control de BT y MT",
+        "Sistemas de busduct y canalización de barras",
+        "Transformadores de potencia y de distribución",
+        "Tableros industriales y paneles MCC",
+        "Sistemas de almacenamiento de energía en baterías (BESS)",
+        "Estaciones de recarga de VE y electrónica de potencia"
+      ],
+      "cta": "Solicitar cotización de barras colectoras de cobre"
+    },
+    "copper-strips": {
+      "name": "Tiras de cobre",
+      "headline": "La tira de la que depende el bobinado de su transformador.",
+      "description": "Las tiras de cobre de Keshan se producen en líneas modernas de corte a partir de bobina de cobre de alta pureza, con tolerancia de ancho constante, bordes lisos y espesor uniforme en cada metro, listas para bobinado de transformadores, fabricación de bobinas de motor y estampado de precisión.",
+      "applications": [
+        "Bobinado de transformadores (distribución y potencia)",
+        "Bobinado de bobinas de motor y armaduras",
+        "Fabricación de contactos eléctricos y terminales",
+        "Aletas de intercambiadores de calor y elementos calefactores",
+        "Componentes electrónicos y fabricación de PCB"
+      ],
+      "cta": "Solicitar cotización de tiras de cobre"
+    },
+    "copper-sheets-plates": {
+      "name": "Láminas, placas y círculos de cobre",
+      "headline": "Planas, verdaderas y listas para la aplicación.",
+      "description": "Las láminas, placas y círculos de cobre de Keshan se producen con tolerancias precisas de espesor y planitud, con acabado de laminación limpio o superficie pulida según se requiera, adecuados para aplicaciones desde revestimiento arquitectónico y equipos de transferencia de calor hasta apantallamiento eléctrico, discos para menaje y fabricación de precisión.",
+      "applications": [
+        "Revestimiento arquitectónico, cubiertas y aplicaciones decorativas",
+        "Intercambiadores de calor y sistemas de gestión térmica",
+        "Apantallamiento eléctrico y recintos EMI",
+        "Discos para embutición, prensado y embutido profundo",
+        "Equipos de proceso químico y fabricación a medida"
+      ],
+      "cta": "Solicitar cotización de láminas, placas y círculos de cobre"
+    },
+    "copper-upcast-rod": {
+      "name": "Varilla de cobre Upcast",
+      "headline": "La varilla que se trefila limpia. Cada bobina. Cada vez.",
+      "description": "La varilla de cobre Upcast de Keshan se produce mediante el proceso de colada continua Upcast a partir de cobre electrolítico de alta pureza, con calidad superficial superior, estructura de grano constante y excelente trefilabilidad: el material de entrada preferido para fabricantes de alambre y cable.",
+      "applications": [
+        "Producción de alambre de bobinado esmaltado (alambre magnético)",
+        "Cables y conductores eléctricos",
+        "Trefilado fino para electrónica",
+        "Conductores flexibles y cables trenzados"
+      ],
+      "cta": "Solicitar cotización de varilla de cobre Upcast"
+    },
+    "bare-copper-wire": {
+      "name": "Alambre de cobre desnudo",
+      "headline": "Trefilado a especificación. Conductividad sin compromisos.",
+      "description": "El alambre de cobre desnudo de Keshan se trefila a partir de varilla de colada continua a través de hileras de precisión, con diámetro constante, acabado superficial liso y alto desempeño de conductividad para cables de potencia, cableado de edificación, puesta a tierra y telecomunicaciones.",
+      "applications": [
+        "Cables de potencia y cordones flexibles",
+        "Cableado de edificación y construcción",
+        "Conductores aéreos y sistemas de puesta a tierra",
+        "Cables de telecomunicaciones y datos"
+      ],
+      "cta": "Solicitar cotización de alambre de cobre desnudo"
+    },
+    "copper-rod": {
+      "name": "Barra de cobre",
+      "headline": "Sección sólida. Conductividad fiable.",
+      "description": "La barra de cobre de Keshan se produce para aplicaciones eléctricas e industriales que exigen diámetro constante, alta conductividad y calidad superficial limpia, desde puesta a tierra y conexiones de barras hasta stock de mecanizado y fabricación.",
+      "applications": [
+        "Sistemas de puesta a tierra",
+        "Conectores y terminales eléctricos",
+        "Stock de mecanizado y fabricación",
+        "Componentes industriales portadores de corriente"
+      ],
+      "cta": "Solicitar cotización de barra de cobre"
+    },
+    "copper-hex-square-round-rods": {
+      "name": "Barras de cobre hexagonales, cuadradas y redondas",
+      "headline": "Stock perfilado. Listo para mecanizado de calidad pura.",
+      "description": "Keshan suministra barras de cobre en secciones hexagonal, cuadrada y redonda para mecanizado, forja y fabricación de componentes, con química controlada, sección constante y acabado adecuado para talleres CNC y convencionales.",
+      "applications": [
+        "Stock de mecanizado CNC y convencional",
+        "Herrajes eléctricos y fijaciones",
+        "Piezas en bruto para válvulas, accesorios y conectores",
+        "Piezas fabricadas industriales y decorativas"
+      ],
+      "cta": "Solicitar cotización de barras de cobre hexagonales, cuadradas y redondas"
+    },
+    "enamel-copper-wire": {
+      "name": "Alambre de cobre esmaltado",
+      "headline": "Alambre magnético para bobinados que duran.",
+      "description": "El alambre de cobre esmaltado de Keshan (alambre magnético) se produce a partir de cobre de alta pureza con aislamiento de esmalte uniforme para motores, transformadores, generadores y bobinados, ofreciendo integridad dieléctrica, desempeño de clase térmica y trefilabilidad constante.",
+      "applications": [
+        "Bobinados de motores y generadores",
+        "Bobinas de transformadores e inductores",
+        "Solenoides y dispositivos electromagnéticos",
+        "Motores automotrices y de electrodomésticos"
+      ],
+      "cta": "Solicitar cotización de alambre de cobre esmaltado"
+    },
+    "copper-blister": {
+      "name": "Cobre blíster",
+      "headline": "Cobre intermedio. Listo para la siguiente refinación.",
+      "description": "El cobre blíster de Keshan se suministra como forma intermedia de cobre refinado para posterior refinación pirometalúrgica o electrolítica, aleación y operaciones de refundición, con niveles de impureza controlados adecuados para el procesamiento posterior.",
+      "applications": [
+        "Materia prima para refinación electrolítica",
+        "Refinación secundaria de cobre",
+        "Carga para fabricación de aleaciones y latón",
+        "Clientes de exportación para refundición"
+      ],
+      "cta": "Solicitar cotización de cobre blíster"
+    },
+    "paper-insulated-copper-conductors-strips": {
+      "name": "Tiras de conductores de cobre aislados con papel",
+      "headline": "Tira aislada para bobinados de alta fiabilidad.",
+      "description": "Las tiras de conductor de cobre aislado con papel (PICC) de Keshan combinan tira de cobre de alta conductividad con aislamiento de papel kraft o especializado para bobinados de transformadores y reactores, ofreciendo resistencia dieléctrica, compatibilidad con aceite y consistencia dimensional.",
+      "applications": [
+        "Bobinados de transformadores de potencia y distribución",
+        "Bobinas de reactores y choques",
+        "Equipos eléctricos inmersos en aceite",
+        "Aplicaciones especializadas de bobinado de alta tensión"
+      ],
+      "cta": "Solicitar cotización de tiras de conductor de cobre aislado con papel"
+    },
+    "copper-foils": {
+      "name": "Láminas finas de cobre",
+      "headline": "Calibre fino. Espesor uniforme. Superficie limpia.",
+      "description": "Las láminas finas de cobre de Keshan se laminan y cortan a calibres finos para electrónica, apantallamiento, circuitos flexibles y laminados de precisión, con tolerancia de espesor estricta, bordes limpios y acabado superficial adecuado para laminación y grabado posteriores.",
+      "applications": [
+        "Fabricación de PCB y circuitos flexibles",
+        "Apantallamiento EMI / RFI",
+        "Componentes de baterías y almacenamiento de energía",
+        "Laminados decorativos y arquitectónicos"
+      ],
+      "cta": "Solicitar cotización de láminas finas de cobre"
+    },
+    "phosphorous-copper-bar": {
+      "name": "Barra de cobre fosforoso",
+      "headline": "Cobre desoxidado. Fósforo controlado. Fusiones limpias.",
+      "description": "Las barras de cobre fosforoso de Keshan se formularon con contenido controlado de fósforo para desoxidación y adiciones de aleación en fundiciones y plantas de fusión, ofreciendo niveles de P constantes y un comportamiento de fusión fiable, lote tras lote.",
+      "applications": [
+        "Desoxidación de fusiones de cobre y latón",
+        "Adiciones de carga para fabricación de aleaciones",
+        "Uso como aleación madre de fósforo en fundición",
+        "Galvanoplastia y fusiones especiales"
+      ],
+      "cta": "Solicitar cotización de barra de cobre fosforoso"
+    },
+    "phosphorous-copper-nuggets": {
+      "name": "Nuggets de cobre fosforoso",
+      "headline": "Química constante. Carga limpia. Cada lote.",
+      "description": "Los nuggets de cobre fosforoso de Keshan se producen con niveles controlados de fósforo para aplicaciones de carga en fundición y aleación. Su forma compacta facilita el manejo y una carga constante en hornos de inducción y reverberatorios.",
+      "applications": [
+        "Fabricación de aleaciones de latón y cobre",
+        "Adiciones de carga y desoxidación en fundición",
+        "Ajustes de química de baños de galvanoplastia",
+        "Aplicaciones químicas de cobre"
+      ],
+      "cta": "Solicitar cotización de nuggets de cobre fosforoso"
+    },
+    "copper-bar-1kg-5kg": {
+      "name": "Barra de cobre de 1 kg y 5 kg",
+      "headline": "Estampada por pureza. Dimensionada para carga flexible.",
+      "description": "Las barras de cobre de Keshan en formatos de 1 kg y 5 kg se cuelan según estándares precisos de peso y pureza para fundiciones, galvanoplastia, uso de laboratorio y carga de refundición de pequeña y mediana escala. Cada barra es trazable por lote para una química fiable y un manejo limpio.",
+      "applications": [
+        "Fundiciones y carga de refundición",
+        "Stock de refundición para componentes automotrices e industriales",
+        "Baños de galvanoplastia y tratamiento de superficies",
+        "Laboratorio y fabricación a pequeña escala"
+      ],
+      "cta": "Solicitar cotización de barra de cobre de 1 kg y 5 kg"
+    },
+    "copper-anode-plates": {
+      "name": "Placas de ánodo de cobre",
+      "headline": "El punto de partida de cada superficie de cobre electrodepositada.",
+      "description": "Las placas de ánodo de cobre de Keshan se fabrican a partir de cobre de alta pureza libre de oxígeno, coladas según especificaciones dimensionales precisas para uso en galvanoplastia, refinación electrolítica y fabricación de placas de circuito impreso. Una microestructura controlada y alta pureza aseguran una disolución suave y constante durante el proceso de recubrimiento.",
+      "applications": [
+        "Galvanoplastia de cobre sobre sustratos ferrosos y no ferrosos",
+        "Electrodeposición de cobre para PCB",
+        "Baños de refinación electrolítica de cobre",
+        "Electroconformado y electrotipia"
+      ],
+      "cta": "Solicitar cotización de placas de ánodo de cobre"
+    },
+    "copper-cathodes": {
+      "name": "Cátodos de cobre",
+      "headline": "La forma más pura de cobre. El grado de referencia.",
+      "description": "Los cátodos de cobre de Keshan representan el nivel más alto de pureza de cobre disponible, la forma primaria de cobre refinado negociada en la London Metal Exchange y la materia prima de toda la fabricación posterior de cobre. Nuestros cátodos cumplen los estándares Grade A LME y sirven como material de entrada para nuestras propias líneas de producción, así como suministro a otros fabricantes.",
+      "applications": [
+        "Procesamiento posterior de cobre (trefilado, laminación)",
+        "Fabricación de aleaciones de cobre y latón",
+        "Exportación y comercio de commodities",
+        "Reposición de baños de galvanoplastia"
+      ],
+      "cta": "Solicitar cotización de cátodos de cobre"
+    },
+    "copper-profile": {
+      "name": "Perfil de cobre",
+      "headline": "Secciones a medida. Trefiladas y extruidas a especificación.",
+      "description": "Los perfiles de cobre de Keshan se producen en secciones transversales a medida para fabricación eléctrica, arquitectónica e industrial. El control dimensional estricto, la alta conductividad y un acabado de laminación limpio los dejan listos para mecanizado, ensamblaje e instalación sin acabado extra.",
+      "applications": [
+        "Aparamenta eléctrica y conjuntos de barras",
+        "Metalistería arquitectónica y decorativa",
+        "Secciones de transferencia de calor y gestión térmica",
+        "Componentes y accesorios de maquinaria industrial"
+      ],
+      "cta": "Solicitar cotización de perfil de cobre"
+    },
+    "copper-scrap": {
+      "name": "Chatarra de cobre",
+      "headline": "Clasificada. Graduada. Lista para el horno.",
+      "description": "La chatarra de cobre de Keshan se obtiene de proveedores verificados, luego se inspecciona, clasifica y gradúa para corrientes de refundición y reciclaje. Apoyamos la fabricación circular con clasificación transparente de grados y controles de calidad por lote antes del procesamiento.",
+      "applications": [
+        "Refundición secundaria de cobre",
+        "Material de carga para fundición",
+        "Fabricación de latón y aleaciones",
+        "Cadenas de suministro de reciclaje y circularidad"
+      ],
+      "cta": "Solicitar cotización de chatarra de cobre"
+    },
+    "brass-ingots": {
+      "name": "Lingotes de latón",
+      "headline": "Aleados con precisión. Listos para colar.",
+      "description": "Los lingotes de latón de Keshan se fabrican con cobre y zinc de alta pureza y adiciones de aleación controladas con precisión para asegurar una composición química constante y calidad metalúrgica. Cada lote se analiza por espectrometría para el control de composición y elementos traza, de modo que coincida con los estándares del cliente e internacionales.",
+      "applications": [
+        "Fundiciones de latón y colada por gravedad",
+        "Colada a presión para herrajes y componentes de ingeniería",
+        "Accesorios sanitarios, válvulas, grifería y plomería",
+        "Componentes eléctricos y electrónicos",
+        "Herrajes decorativos y arquitectónicos",
+        "Aplicaciones automotrices e industriales de ingeniería"
+      ],
+      "cta": "Solicitar cotización de lingotes de latón"
+    },
+    "brass-sheets-plates": {
+      "name": "Láminas y placas de latón",
+      "headline": "Planas, brillantes y hechas para fabricar.",
+      "description": "Las láminas y placas de latón de Keshan se producen con tolerancias de espesor estrictas, composición de aleación constante y un acabado superficial liso: la opción preferida de arquitectos, fabricantes decorativos y fabricantes de componentes que necesitan un latón que rinda y se vea a la altura.",
+      "applications": [
+        "Revestimiento arquitectónico, fachadas y paneles decorativos",
+        "Instrumentos musicales y componentes acústicos",
+        "Componentes eléctricos y piezas en bruto para conectores",
+        "Placas de grabado y placas de identificación",
+        "Recipientes y revestimientos de proceso químico"
+      ],
+      "cta": "Solicitar cotización de láminas y placas de latón"
+    },
+    "brass-strips": {
+      "name": "Tiras de latón",
+      "headline": "Corte de calidad pura. Listas para prensar. Listas para estampar.",
+      "description": "Las tiras de latón de Keshan se cortan a anchos precisos a partir de bobina de latón de alta calidad, con tolerancia de ancho constante y calidad de borde para operaciones de estampado, prensado y embutido profundo. Las propiedades mecánicas uniformes a lo largo de la bobina las hacen adecuadas para fabricación de piezas en alto volumen.",
+      "applications": [
+        "Contactos y conectores eléctricos",
+        "Terminales, clips y muelles",
+        "Fabricación de cremalleras y fijaciones",
+        "Aletas de radiador y componentes de intercambiadores de calor",
+        "Molduras decorativas y herrajes para mobiliario"
+      ],
+      "cta": "Solicitar cotización de tiras de latón"
+    },
+    "brass-circles": {
+      "name": "Círculos de latón",
+      "headline": "Troquelados a su diámetro. Listos para prensar. Sin rebabas.",
+      "description": "Los círculos de latón de Keshan se troquelan a partir de lámina de latón de precisión a dimensiones a medida (diámetro y espesor), listos para operaciones de embutido profundo, hilado y prensado. Ampliamente usados en fabricación de menaje, accesorios sanitarios y componentes prensados decorativos.",
+      "applications": [
+        "Menaje: ollas, sartenes y recipientes",
+        "Sanitarios: grifos, válvulas y accesorios",
+        "Componentes prensados decorativos",
+        "Carcasas automotrices e industriales"
+      ],
+      "cta": "Solicitar cotización de círculos de latón"
+    },
+    "brass-wires": {
+      "name": "Alambres de latón",
+      "headline": "Latón trefilado. Diámetro constante. Acabado limpio.",
+      "description": "Los alambres de latón de Keshan se trefilan a partir de varilla de latón controlada para herrajes eléctricos, fijaciones, trabajo decorativo y tejido industrial. Diámetro uniforme, temple Quarter Hard y un acabado superficial limpio respaldan el conformado y el bobinado en alto volumen.",
+      "applications": [
+        "Pines, terminales y conectores eléctricos",
+        "Fijaciones, remaches y herrajes conformados",
+        "Trabajo de alambre decorativo y arquitectónico",
+        "Mallas, muelles y cepillos industriales"
+      ],
+      "cta": "Solicitar cotización de alambres de latón"
+    },
+    "brass-scrap": {
+      "name": "Chatarra de latón",
+      "headline": "Latón clasificado. Graduado para refundición.",
+      "description": "La chatarra de latón de Keshan se clasifica y gradúa para fundiciones, refundidores y socios de reciclaje, y suministra materia prima Cu/Zn constante con clasificación transparente de grados para una fusión y aleación eficientes.",
+      "applications": [
+        "Refundición en fundiciones de latón",
+        "Fabricación secundaria de aleaciones",
+        "Cadenas de suministro de reciclaje y circularidad",
+        "Plantas de fusión de herrajes y sanitarios"
+      ],
+      "cta": "Solicitar cotización de chatarra de latón"
+    }
   }
 }

@@ -3,7 +3,9 @@
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { X } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { leadership } from "@/lib/data";
+import { teamKeyByName } from "@/lib/i18n-keys";
 
 type TeamMember = (typeof leadership.team)[number];
 
@@ -49,6 +51,12 @@ function TeamMemberModal({
   member: TeamMember;
   onClose: () => void;
 }) {
+  const t = useTranslations("aboutPage");
+  const teamKey = teamKeyByName[member.name];
+  const title = teamKey ? t(`team.${teamKey}.title`) : member.title;
+  const fullBio = teamKey
+    ? (t.raw(`team.${teamKey}.fullBio`) as string[])
+    : member.fullBio;
   const titleId = useId();
   const closeRef = useRef<HTMLButtonElement>(null);
 
@@ -75,7 +83,7 @@ function TeamMemberModal({
       <button
         type="button"
         className="absolute inset-0 bg-dark-950/80 backdrop-blur-sm"
-        aria-label="Close profile"
+        aria-label={t("closeProfile")}
         onClick={onClose}
       />
       <div
@@ -90,7 +98,7 @@ function TeamMemberModal({
               {member.name}
             </h3>
             <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-              {member.title}
+              {title}
             </p>
           </div>
           <button
@@ -98,14 +106,14 @@ function TeamMemberModal({
             type="button"
             onClick={onClose}
             className="flex h-10 w-10 shrink-0 items-center justify-center border border-dark-100/15 text-text-muted transition-colors hover:border-copper-base hover:text-copper-base"
-            aria-label="Close"
+            aria-label={t("close")}
           >
             <X className="h-4 w-4" />
           </button>
         </div>
         <div className="overflow-y-auto px-6 py-6 sm:px-8 sm:py-8">
           <div className="space-y-4">
-            {member.fullBio.map((paragraph) => (
+            {fullBio.map((paragraph) => (
               <p key={paragraph.slice(0, 48)} className="text-body text-text-secondary">
                 {paragraph}
               </p>
@@ -118,7 +126,7 @@ function TeamMemberModal({
             className="mt-8 inline-flex items-center gap-2 border border-copper-base/40 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base transition-colors hover:bg-copper-base hover:text-dark-900"
           >
             <LinkedInIcon className="h-3.5 w-3.5" />
-            LinkedIn Profile
+            {t("linkedIn")}
           </a>
         </div>
       </div>
@@ -133,6 +141,10 @@ function TeamCard({
   member: TeamMember;
   onKnowMore: () => void;
 }) {
+  const t = useTranslations("aboutPage");
+  const teamKey = teamKeyByName[member.name];
+  const title = teamKey ? t(`team.${teamKey}.title`) : member.title;
+  const shortBio = teamKey ? t(`team.${teamKey}.shortBio`) : member.shortBio;
   const reduceMotion = useReducedMotion();
 
   return (
@@ -153,7 +165,7 @@ function TeamCard({
                 : "translate-y-3 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 group-focus-within:translate-y-0 group-focus-within:opacity-100"
             }`}
           >
-            {member.shortBio}
+            {shortBio}
           </p>
           <div
             className={`flex flex-wrap gap-2 ${
@@ -167,7 +179,7 @@ function TeamCard({
               onClick={onKnowMore}
               className="inline-flex h-10 items-center bg-copper-gradient px-4 text-[10px] font-bold uppercase tracking-[0.14em] text-dark-900 transition-shadow hover:shadow-[0_0_20px_rgba(232,166,89,0.35)]"
             >
-              Know More
+              {t("knowMore")}
             </button>
             <a
               href={member.linkedIn}
@@ -176,7 +188,7 @@ function TeamCard({
               className="inline-flex h-10 items-center gap-1.5 border border-copper-base/50 px-4 text-[10px] font-bold uppercase tracking-[0.14em] text-copper-base transition-colors hover:border-copper-base hover:bg-copper-base/10"
             >
               <LinkedInIcon className="h-3 w-3" />
-              LinkedIn Profile
+              {t("linkedIn")}
             </a>
           </div>
         </div>
@@ -185,7 +197,7 @@ function TeamCard({
       <div className="border-t border-copper-base/20 px-5 py-4">
         <h3 className="text-lg text-text-primary sm:text-xl">{member.name}</h3>
         <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-          {member.title}
+          {title}
         </p>
         {/* Mobile: always-visible actions (hover limited on touch) */}
         <div className="mt-4 flex flex-wrap gap-2 sm:hidden">
@@ -194,7 +206,7 @@ function TeamCard({
             onClick={onKnowMore}
             className="inline-flex h-9 items-center bg-copper-gradient px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-dark-900"
           >
-            Know More
+            {t("knowMore")}
           </button>
           <a
             href={member.linkedIn}
@@ -203,7 +215,7 @@ function TeamCard({
             className="inline-flex h-9 items-center gap-1.5 border border-copper-base/50 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-copper-base"
           >
             <LinkedInIcon className="h-3 w-3" />
-            LinkedIn Profile
+            {t("linkedIn")}
           </a>
         </div>
       </div>

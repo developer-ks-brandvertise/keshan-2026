@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { redirect } from "next/navigation";
 import Image from "next/image";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   products,
   getProductBySlug,
@@ -32,17 +33,19 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: ProductPageProps): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug, locale } = await params;
   const product = getProductBySlug(slug);
   if (!product) return { title: "Product Not Found" };
+  const t = await getTranslations({ locale });
   return {
-    title: product.metaTitle,
-    description: product.metaDescription,
+    title: `${t(`catalog.${product.slug}.name`)} | Keshan Industries`,
+    description: t(`catalog.${product.slug}.headline`),
   };
 }
 
 export default async function ProductPage({ params }: ProductPageProps) {
   const { slug, locale } = await params;
+  setRequestLocale(locale);
   if (slug === "copper-1kg-bars" || slug === "copper-5kg-biscuits") {
     redirect(`/${locale}/products/copper-bar-1kg-5kg`);
   }
@@ -51,6 +54,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
   const product = getProductBySlug(slug);
   if (!product) return notFound();
+  const t = await getTranslations();
+  const tp = await getTranslations("productsPage");
+  const name = t(`catalog.${product.slug}.name`);
+  const headline = t(`catalog.${product.slug}.headline`);
+  const description = t(`catalog.${product.slug}.description`);
+  const applications = t.raw(`catalog.${product.slug}.applications`) as string[];
   const industriesBlock = productIndustriesMap[product.slug];
   const gradeRows = scrapGrades[product.slug];
 
@@ -61,20 +70,20 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
   const infoRows = [
     {
-      label: "Category",
-      value: product.category.charAt(0).toUpperCase() + product.category.slice(1),
+      label: tp("category"),
+      value: product.category === "copper" ? tp("copperLabel") : tp("brassLabel"),
     },
-    { label: "Purity", value: "99.5% – 99.99%" },
-    { label: "Standards", value: "IS, ASTM, EN, JIS" },
-    { label: "Origin", value: "Made in India" },
+    { label: tp("purity"), value: "99.5% – 99.99%" },
+    { label: tp("standards"), value: "IS, ASTM, EN, JIS" },
+    { label: tp("origin"), value: tp("originValue") },
   ];
 
   return (
     <main>
       <PageHero
-        label={product.category}
-        title={product.name}
-        description={product.headline}
+        label={product.category === "copper" ? tp("copperLabel") : tp("brassLabel")}
+        title={name}
+        description={headline}
         backgroundImage={
           product.category === "copper"
             ? copperHeaderImage
@@ -92,7 +101,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               <div className="lg:sticky lg:top-28 space-y-8">
                 <div>
                   <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                    Product sheet
+                    {tp("sheet")}
                   </p>
                   <div className="border-t border-copper-base/30">
                     {infoRows.map((row) => (
@@ -112,12 +121,12 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 </div>
 
                 <MagneticButton
-                  href={`/contact?product=${encodeURIComponent(product.name)}`}
+                  href={`/contact?product=${encodeURIComponent(name)}`}
                   variant="primary"
                   size="lg"
                   className="w-full"
                 >
-                  Request a Quote
+                  {tp("requestQuote")}
                 </MagneticButton>
               </div>
             </AnimatedSection>
@@ -127,7 +136,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <div className="relative aspect-[16/10] overflow-hidden border border-copper-base/25 bg-dark-950">
                   <Image
                     src={product.imageSrc}
-                    alt={product.name}
+                    alt={name}
                     fill
                     sizes="(max-width: 1024px) 100vw, 640px"
                     className="object-cover"
@@ -137,18 +146,18 @@ export default async function ProductPage({ params }: ProductPageProps) {
               ) : null}
 
               <div>
-                <h2 className="text-h3">Product Overview</h2>
+                <h2 className="text-h3">{tp("overview")}</h2>
                 <p className="mt-4 text-body-lg text-text-secondary">
-                  {product.description}
+                  {description}
                 </p>
               </div>
 
               <div>
                 <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                  Applications
+                  {tp("applications")}
                 </h3>
                 <div className="border-t border-copper-base/30">
-                  {product.applications.map((item, i) => (
+                  {applications.map((item, i) => (
                     <div
                       key={item}
                       className="grid grid-cols-[48px_1fr] gap-4 border-b border-dark-100/10 py-3.5"
@@ -164,7 +173,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
               <div>
                 <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                  Industries Served
+                  {tp("industries")}
                 </h3>
                 {industriesBlock?.industries?.length ? (
                   <div className="flex flex-wrap gap-2">
@@ -188,7 +197,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
               {gradeRows?.length ? (
                 <div>
                   <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                    Scrap Grades
+                    {tp("scrapGrades")}
                   </h3>
                   <ScrapGradeCards items={gradeRows} />
                 </div>
@@ -196,20 +205,20 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
               <div>
                 <h3 className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                  Technical Specifications — Ranges / Types
+                  {tp("specs")}
                 </h3>
                 <div className="overflow-hidden border border-copper-base/25">
                   <div className="grid grid-cols-[140px_1fr] border-b border-copper-base/30 bg-copper-base/15 sm:grid-cols-[180px_1fr]">
                     <span className="border-r border-copper-base/25 px-4 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
-                      Product
+                      {tp("specProduct")}
                     </span>
                     <span className="px-4 py-3 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base">
-                      Specification — Ranges / Types
+                      {tp("specRanges")}
                     </span>
                   </div>
                   {(product.specGroups?.length
                     ? product.specGroups
-                    : [{ label: product.name, items: product.specs }]
+                    : [{ label: name, items: product.specs }]
                   ).map((group, groupIndex, groups) => (
                     <div
                       key={group.label}
@@ -242,12 +251,9 @@ export default async function ProductPage({ params }: ProductPageProps) {
               </div>
 
               <div className="border-l-2 border-copper-base pl-6">
-                <h3 className="text-h3">Why Source From Keshan?</h3>
+                <h3 className="text-h3">{tp("whyTitle")}</h3>
                 <p className="mt-3 text-body text-text-secondary">
-                  Every batch is traceable, every certificate is verifiable, and
-                  every delivery is backed by our technical team. We support
-                  custom dimensions, international standards, and complete export
-                  documentation.
+                  {tp("whyBody")}
                 </p>
               </div>
             </AnimatedSection>
@@ -260,7 +266,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 className="group inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.14em] text-text-primary transition-colors hover:text-copper-base"
               >
                 <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-                {prev.name}
+                {t(`catalog.${prev.slug}.name`)}
               </Link>
             ) : (
               <span />
@@ -269,14 +275,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
               href="/products"
               className="text-xs font-bold uppercase tracking-[0.14em] text-copper-base"
             >
-              All Products
+              {tp("allProducts")}
             </Link>
             {next ? (
               <Link
                 href={`/products/${next.slug}`}
                 className="group inline-flex items-center gap-3 text-xs font-bold uppercase tracking-[0.14em] text-text-primary transition-colors hover:text-copper-base"
               >
-                {next.name}
+                {t(`catalog.${next.slug}.name`)}
                 <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             ) : (

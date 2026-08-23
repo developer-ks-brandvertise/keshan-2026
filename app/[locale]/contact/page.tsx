@@ -1,21 +1,28 @@
-import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { contactHeaderImage } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import { ContactPageSections } from "@/components/contact/ContactPageSections";
 
-export const metadata: Metadata = {
-  title: "Contact Keshan Industries | Request a Quote | Copper & Brass Manufacturer",
-  description:
-    "Get in touch with Keshan Industries for copper and brass product inquiries, quotes, and export support. Hyderabad, India.",
+type Props = {
+  params: Promise<{ locale: string }>;
+  searchParams: Promise<{ product?: string | string[] }>;
 };
 
-interface ContactPageProps {
-  searchParams: Promise<{ product?: string | string[] }>;
+export async function generateMetadata({ params }: Pick<Props, "params">) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.contact" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
 }
 
-export default async function ContactPage({ searchParams }: ContactPageProps) {
-  const params = await searchParams;
-  const productParam = params.product;
+export default async function ContactPage({ params, searchParams }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("contactPage");
+  const query = await searchParams;
+  const productParam = query.product;
   const defaultProduct = Array.isArray(productParam)
     ? productParam[0]
     : productParam;
@@ -23,10 +30,10 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
   return (
     <main>
       <PageHero
-        label="Contact"
-        title="Request a Quote or Speak to Our Team."
-        highlight="Request a Quote"
-        description="Tell us your specification, quantity, and delivery terms. Our team will respond within 24 business hours with product availability, pricing, and lead time."
+        label={t("label")}
+        title={t("title")}
+        highlight={t("highlight")}
+        description={t("description")}
         backgroundImage={contactHeaderImage}
         backgroundPriority
       />

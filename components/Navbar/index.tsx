@@ -49,6 +49,7 @@ function ProductsDropdown({
   pathname: string;
 }) {
   const t = useTranslations("nav");
+  const tc = useTranslations();
   const [open, setOpen] = useState(false);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -165,7 +166,7 @@ function ProductsDropdown({
                                 : "text-text-secondary"
                             }`}
                           >
-                            {product.name}
+                            {tc(`catalog.${product.slug}.name`)}
                           </Link>
                         </li>
                       );
@@ -189,6 +190,7 @@ function MobileProductsAccordion({
   onNavigate: () => void;
 }) {
   const t = useTranslations("nav");
+  const tc = useTranslations();
   const [open, setOpen] = useState(() => pathname.startsWith("/products"));
   const productsActive = pathname.startsWith("/products");
 
@@ -242,7 +244,7 @@ function MobileProductsAccordion({
                             : "text-text-secondary hover:text-copper-base"
                         }`}
                       >
-                        {product.name}
+                        {tc(`catalog.${product.slug}.name`)}
                       </Link>
                     </li>
                   );
@@ -260,6 +262,7 @@ export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
   const t = useTranslations("nav");
+  const tCommon = useTranslations("common");
 
   useEffect(() => {
     setMobileOpen(false);
@@ -286,7 +289,7 @@ export default function Navbar() {
             </a>
             <div className="hidden items-center gap-2 xl:flex">
               <MapPin className="h-3 w-3 text-copper-base" strokeWidth={2} />
-              <span>{topBar.address}</span>
+              <span>{tCommon("locationHyderabad")}</span>
             </div>
           </div>
           <div className="flex items-center gap-2 text-[11px] tracking-wide text-text-muted">
@@ -353,7 +356,7 @@ export default function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="flex h-10 w-10 items-center justify-center text-text-primary lg:hidden"
-            aria-label="Toggle menu"
+            aria-label={tCommon("toggleMenu")}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { clients } from "@/lib/data";
+import { useTranslations } from "next-intl";
 import { Reveal } from "@/components/ui/Reveal";
 
 export const partnerLogos = [
@@ -84,6 +84,7 @@ export function ClientsSection({
   index = "06",
   tone = "dark-950",
 }: ClientsSectionProps) {
+  const t = useTranslations("home.partners");
   const bg = tone === "dark-900" ? "bg-dark-900" : "bg-dark-950";
   const fadeFrom = tone === "dark-900" ? "from-dark-900" : "from-dark-950";
 
@@ -99,15 +100,15 @@ export function ClientsSection({
                 </span>
                 <span className="h-px w-6 bg-copper-base/40" />
                 <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
-                  Our Partners
+                  {t("eyebrow")}
                 </p>
               </div>
               <h2 className="max-w-xl text-h3 text-text-primary">
-                {clients.headline}
+                {t("headline")}
               </h2>
             </div>
             <p className="max-w-sm text-body-sm text-text-secondary sm:text-right">
-              {clients.caption}
+              {t("caption")}
             </p>
           </div>
         </Reveal>

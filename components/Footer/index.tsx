@@ -1,13 +1,33 @@
-import Link from "next/link";
-import { footer, contact, navLinks, intro } from "@/lib/data";
+import { contact, intro, navLinks } from "@/lib/data";
 import { getProductsByCategory } from "@/lib/products";
+import { locationKeys } from "@/lib/i18n-keys";
+import { Link } from "@/i18n/routing";
+import { getTranslations } from "next-intl/server";
 import Container from "@/components/ui/Container";
 import Logo from "@/components/Logo";
 
 const copperProducts = getProductsByCategory("copper");
 const brassProducts = getProductsByCategory("brass");
 
-export default function Footer() {
+const navLabelKey: Record<string, string> = {
+  "/": "home",
+  "/about": "about",
+  "/products": "products",
+  "/industries": "industries",
+  "/knowledge-centre": "knowledge",
+  "/media-certificates": "media",
+  "/contact": "contact",
+};
+
+const footerStatKeys = ["countriesTitle", "capacityTitle", "qcTitle"] as const;
+
+export default async function Footer() {
+  const t = await getTranslations("footer");
+  const tn = await getTranslations("nav");
+  const tc = await getTranslations();
+  const tContact = await getTranslations("contactPage");
+  const tStats = await getTranslations("home.about.stats");
+
   return (
     <footer className="relative overflow-hidden bg-dark-950 text-text-primary">
       <div
@@ -20,16 +40,16 @@ export default function Footer() {
           <div className="lg:col-span-5">
             <Logo className="my-2 h-[4.8rem]" />
             <p className="mt-5 max-w-md text-body-sm leading-relaxed text-text-secondary">
-              {footer.description}
+              {t("description")}
             </p>
             <dl className="mt-6 grid grid-cols-3 gap-3 border-t border-copper-base/20 pt-5">
-              {intro.stats.slice(1, 4).map((stat) => (
-                <div key={stat.label}>
+              {intro.stats.slice(1, 4).map((stat, index) => (
+                <div key={footerStatKeys[index]}>
                   <dt className="font-heading text-lg text-copper-base sm:text-xl">
                     {stat.value}
                   </dt>
                   <dd className="mt-1 text-[11px] leading-snug text-text-muted">
-                    {stat.label}
+                    {tStats(footerStatKeys[index])}
                   </dd>
                 </div>
               ))}
@@ -38,54 +58,60 @@ export default function Footer() {
 
           <div className="lg:col-span-3">
             <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-text-primary">
-              Company
+              {t("company")}
             </h4>
             <ul className="mt-4 columns-2 gap-x-6 space-y-2 text-sm text-text-secondary">
-              {navLinks.map((link) => (
-                <li key={link.label} className="break-inside-avoid">
-                  <Link
-                    href={link.href}
-                    className="transition-colors hover:text-copper-base"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+              {navLinks.map((link) => {
+                const key = navLabelKey[link.href] ?? "home";
+                return (
+                  <li key={link.href} className="break-inside-avoid">
+                    <Link
+                      href={link.href as "/"}
+                      className="transition-colors hover:text-copper-base"
+                    >
+                      {tn(key as "home")}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
           <div className="lg:col-span-4">
             <h4 className="text-sm font-semibold uppercase tracking-[0.16em] text-text-primary">
-              Contact
+              {t("contact")}
             </h4>
             <ul className="mt-4 space-y-2 text-sm text-text-secondary">
               <li>{contact.phones.join(" / ")}</li>
               <li className="break-all">{contact.emails.join(" | ")}</li>
-              <li>{contact.hours}</li>
+              <li>{tContact("hoursValue")}</li>
             </ul>
           </div>
         </div>
 
         <div className="mt-10 grid gap-4 border-t border-dark-100/10 pt-8 sm:grid-cols-2 lg:grid-cols-3">
-          {contact.locations.map((location) => (
-            <div
-              key={location.label}
-              className="border border-copper-base/20 bg-dark-900/60 p-4"
-            >
-              <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-                {location.label}
-              </p>
-              <p className="mt-2 text-sm leading-relaxed text-text-primary/90">
-                {location.address}
-              </p>
-            </div>
-          ))}
+          {contact.locations.map((location, index) => {
+            const key = locationKeys[index];
+            return (
+              <div
+                key={key}
+                className="border border-copper-base/20 bg-dark-900/60 p-4"
+              >
+                <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
+                  {tContact(key)}
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-text-primary/90">
+                  {location.address}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         <div className="mt-8 grid gap-6 border-t border-dark-100/10 pt-8 lg:grid-cols-2">
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-              Copper
+              {t("copper")}
             </p>
             <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
               {copperProducts.map((product) => (
@@ -94,7 +120,7 @@ export default function Footer() {
                     href={`/products/${product.slug}`}
                     className="transition-colors hover:text-copper-base"
                   >
-                    {product.name}
+                    {tc(`catalog.${product.slug}.name`)}
                   </Link>
                 </li>
               ))}
@@ -102,7 +128,7 @@ export default function Footer() {
           </div>
           <div>
             <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-              Brass
+              {t("brass")}
             </p>
             <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-text-secondary">
               {brassProducts.map((product) => (
@@ -111,7 +137,7 @@ export default function Footer() {
                     href={`/products/${product.slug}`}
                     className="transition-colors hover:text-copper-base"
                   >
-                    {product.name}
+                    {tc(`catalog.${product.slug}.name`)}
                   </Link>
                 </li>
               ))}
@@ -123,14 +149,14 @@ export default function Footer() {
       <div className="relative z-10 border-t border-dark-100/10">
         <Container className="flex flex-col items-center justify-between gap-4 py-6 text-xs text-text-secondary sm:flex-row">
           <p>
-            Copyright © 2026{" "}
+            {t("copyright")}{" "}
             <Link href="/" className="text-copper-base hover:underline">
               Keshan Industries
             </Link>
-            . All rights reserved.
+            . {t("reserved")}
           </p>
           <p className="text-center text-[10px] leading-relaxed sm:text-right">
-            Developed & Marketed by{" "}
+            {t("developed")}{" "}
             <a
               href="https://brandvertiseagency.com"
               target="_blank"

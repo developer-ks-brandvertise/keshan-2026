@@ -3,11 +3,15 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { useReducedMotion } from "framer-motion";
+import { useTranslations } from "next-intl";
 import { industries } from "@/lib/data";
+import { industryKeys } from "@/lib/i18n-keys";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 
 export function IndustriesSection() {
+  const t = useTranslations("home.industries");
+  const ti = useTranslations("industriesPage.items");
   const [active, setActive] = useState(0);
   const hoverTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const reduceMotion = useReducedMotion();
@@ -34,15 +38,15 @@ export function IndustriesSection() {
         <div className="mb-12 flex flex-col gap-6 lg:mb-14 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             index="06"
-            eyebrow="Industries Served"
-            title={industries.headline}
-            highlight="Critical Industries"
-            subtitle={industries.subheadline}
+            eyebrow={t("eyebrow")}
+            title={t("headline")}
+            highlight={t("highlight")}
+            subtitle={t("subheadline")}
             align="left"
             className="max-w-2xl"
           />
           <MagneticButton href="/industries" variant="primary" className="shrink-0">
-            {industries.cta}
+            {t("cta")}
           </MagneticButton>
         </div>
 
@@ -52,10 +56,13 @@ export function IndustriesSection() {
         >
           {industries.featured.map((item, index) => {
             const isOpen = active === index;
+            const key = industryKeys[index];
+            const name = ti(`${key}.name`);
+            const application = ti(`${key}.application`);
 
             return (
               <button
-                key={item.name}
+                key={key}
                 type="button"
                 onMouseEnter={() => activate(index)}
                 onFocus={() => setActive(index)}
@@ -100,7 +107,7 @@ export function IndustriesSection() {
                       transform: "rotate(180deg)",
                     }}
                   >
-                    {item.name}
+                    {name}
                   </span>
                 </div>
 
@@ -111,9 +118,9 @@ export function IndustriesSection() {
                       : "pointer-events-none translate-y-6 opacity-0"
                   }`}
                 >
-                  <h3 className="max-w-md text-h2 text-text-primary">{item.name}</h3>
+                  <h3 className="max-w-md text-h2 text-text-primary">{name}</h3>
                   <p className="mt-4 max-w-md text-body text-text-secondary">
-                    {item.application}
+                    {application}
                   </p>
                 </div>
               </button>
@@ -124,10 +131,13 @@ export function IndustriesSection() {
         <div className="flex flex-col gap-2 md:hidden">
           {industries.featured.map((item, index) => {
             const isOpen = active === index;
+            const key = industryKeys[index];
+            const name = ti(`${key}.name`);
+            const application = ti(`${key}.application`);
 
             return (
               <button
-                key={item.name}
+                key={key}
                 type="button"
                 onClick={() => setActive(index)}
                 aria-expanded={isOpen}
@@ -153,12 +163,12 @@ export function IndustriesSection() {
                   }`}
                 />
                 <div className="relative z-10 px-4 py-5">
-                  <span className="block text-lg text-text-primary">{item.name}</span>
+                  <span className="block text-lg text-text-primary">{name}</span>
                 </div>
                 {isOpen ? (
                   <div className="relative z-10 px-4 pb-6">
                     <p className="text-body-sm text-text-secondary">
-                      {item.application}
+                      {application}
                     </p>
                   </div>
                 ) : null}

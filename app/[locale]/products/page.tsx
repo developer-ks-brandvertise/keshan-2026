@@ -1,129 +1,36 @@
-"use client";
-
-import { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import { products } from "@/lib/products";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import PageHero from "@/components/ui/PageHero";
-import AnimatedSection from "@/components/ui/AnimatedSection";
 import { ProductsSilkBackground } from "@/components/products/ProductsSilkBackground";
+import { ProductsListing } from "@/components/products/ProductsListing";
 
-const copperProducts = products.filter((p) => p.category === "copper");
-const brassProducts = products.filter((p) => p.category === "brass");
+type Props = {
+  params: Promise<{ locale: string }>;
+};
 
-const tabs = [
-  { id: "copper" as const, label: "Copper Products", count: copperProducts.length },
-  { id: "brass" as const, label: "Brass Products", count: brassProducts.length },
-];
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.products" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
 
-export default function ProductsPage() {
-  const [activeTab, setActiveTab] = useState<"copper" | "brass">("copper");
-  const activeProducts = activeTab === "copper" ? copperProducts : brassProducts;
+export default async function ProductsPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("productsPage");
 
   return (
     <main>
       <PageHero
-        label="Product Range"
-        title="Copper & Brass. Pure Quality-Engineered."
-        highlight="Pure Quality-Engineered"
-        description="From high-conductivity copper busbars for power distribution to pure quality brass strips for component manufacturing — Keshan manufactures every form, every grade, to the standards your application demands."
+        label={t("label")}
+        title={t("title")}
+        highlight={t("highlight")}
+        description={t("description")}
         background={<ProductsSilkBackground />}
       />
-
-      <section className="bg-dark-900 py-section px-gutter">
-        <div className="mx-auto max-w-6xl">
-          <AnimatedSection>
-            <div className="mb-12 flex flex-col items-center text-center">
-              <p className="mb-4 text-[11px] font-semibold uppercase tracking-[0.2em] text-text-muted">
-                Select category
-              </p>
-              <div
-                className="inline-flex rounded-none border border-copper-base/30 bg-dark-950 p-1.5"
-                role="tablist"
-                aria-label="Product category"
-              >
-                {tabs.map((tab) => {
-                  const isActive = activeTab === tab.id;
-                  return (
-                    <button
-                      key={tab.id}
-                      type="button"
-                      role="tab"
-                      aria-selected={isActive}
-                      onClick={() => setActiveTab(tab.id)}
-                      className={`inline-flex items-center gap-2.5 px-6 py-3.5 text-xs font-bold uppercase tracking-[0.14em] transition-all duration-300 sm:px-8 ${
-                        isActive
-                          ? "bg-copper-gradient text-dark-900 shadow-[0_0_24px_rgba(232,166,89,0.25)]"
-                          : "text-text-secondary hover:text-text-primary"
-                      }`}
-                    >
-                      {tab.label}
-                      <span
-                        className={`border px-1.5 py-0.5 text-[10px] ${
-                          isActive
-                            ? "border-dark-900/30 text-dark-900"
-                            : "border-current"
-                        }`}
-                      >
-                        {tab.count}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </AnimatedSection>
-
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-            {activeProducts.map((product, index) => (
-              <AnimatedSection
-                key={product.slug}
-                delay={Math.min(index * 0.04, 0.24)}
-              >
-                <Link
-                  href={`/products/${product.slug}`}
-                  className="group flex h-full flex-col overflow-hidden border border-copper-base/20 bg-dark-950 transition-all duration-300 hover:border-copper-base/50 hover:bg-copper-base/[0.04] hover:shadow-[0_12px_40px_rgba(0,0,0,0.35)]"
-                >
-                  <div className="relative aspect-[16/11] overflow-hidden bg-dark-900">
-                    {product.imageSrc ? (
-                      <Image
-                        src={product.imageSrc}
-                        alt={product.name}
-                        fill
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                      />
-                    ) : null}
-                    <span className="absolute left-4 top-4 font-heading text-[10px] tracking-[0.22em] text-copper-base">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="absolute bottom-4 right-4 flex h-10 w-10 items-center justify-center bg-copper-base text-dark-900 transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                      <ArrowUpRight className="h-4 w-4" strokeWidth={2.25} />
-                    </span>
-                  </div>
-
-                  <div className="flex flex-1 flex-col px-5 py-5 sm:px-6 sm:py-6">
-                    <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-copper-base">
-                      {product.category}
-                    </p>
-                    <h2 className="mt-2 text-lg text-text-primary transition-colors group-hover:text-copper-light sm:text-xl">
-                      {product.name}
-                    </h2>
-                    <p className="mt-2 line-clamp-2 flex-1 text-body-sm text-text-secondary">
-                      {product.headline}
-                    </p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.14em] text-text-muted transition-colors group-hover:text-copper-base">
-                      View product
-                      <ArrowUpRight className="h-3.5 w-3.5" />
-                    </span>
-                  </div>
-                </Link>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ProductsListing />
     </main>
   );
 }

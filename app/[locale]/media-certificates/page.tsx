@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { mediaCertificates, qualityMediaHeaderImage } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
@@ -6,38 +6,47 @@ import CopperHighlight from "@/components/ui/CopperHighlight";
 import { CertificatesGallery } from "@/components/media/CertificatesGallery";
 import { QualityLogoMarquee } from "@/components/media/QualityLogoMarquee";
 
-export const metadata: Metadata = {
-  title: "Quality & Media | Keshan Industries",
-  description:
-    "View Keshan Industries certifications and quality credentials. Media gallery coming soon.",
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function MediaCertificatesPage() {
-  const { media, certificates } = mediaCertificates;
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.quality" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function MediaCertificatesPage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("qualityPage");
+  const { certificates } = mediaCertificates;
 
   return (
     <main>
       <PageHero
-        label="Quality & Media"
-        title={mediaCertificates.headline}
-        highlight="Every Batch We Ship"
-        description={mediaCertificates.subheadline}
+        label={t("label")}
+        title={t("title")}
+        highlight={t("highlight")}
+        description={t("subheadline")}
         backgroundImage={qualityMediaHeaderImage}
         backgroundPriority
       />
 
-      {/* Quality logos — scrolling, same motion language as partners */}
       <section className="overflow-hidden border-b border-dark-100/10 bg-dark-950 py-section">
         <div className="mx-auto max-w-6xl px-gutter">
           <AnimatedSection>
             <p className="text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-              Certified systems
+              {t("certifiedEyebrow")}
             </p>
             <h2 className="mt-3 text-center text-h3 text-text-primary">
-              ISO Compliant, Traceable, Batch-Tested
+              {t("certifiedTitle")}
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-center text-body-sm text-text-secondary">
-              Full process documentation and test certificates with every dispatch.
+              {t("certifiedBody")}
             </p>
           </AnimatedSection>
         </div>
@@ -46,7 +55,6 @@ export default function MediaCertificatesPage() {
         </AnimatedSection>
       </section>
 
-      {/* Media — placeholder until assets are ready */}
       <section className="border-b border-dark-100/10 bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
           <AnimatedSection>
@@ -56,14 +64,14 @@ export default function MediaCertificatesPage() {
               </span>
               <span className="h-px w-6 bg-copper-base/40" aria-hidden />
               <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
-                Media
+                {t("mediaEyebrow")}
               </p>
             </div>
             <h2 className="text-h2 max-w-2xl text-balance">
-              <CopperHighlight>{media.headline}</CopperHighlight>
+              <CopperHighlight>{t("mediaTitle")}</CopperHighlight>
             </h2>
             <p className="mt-4 max-w-xl text-body-lg text-text-secondary">
-              {media.body}
+              {t("mediaBody")}
             </p>
           </AnimatedSection>
 
@@ -74,18 +82,16 @@ export default function MediaCertificatesPage() {
                 aria-hidden
               />
               <p className="relative text-[11px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-                Coming soon
+                {t("comingSoon")}
               </p>
               <p className="relative mx-auto mt-3 max-w-md text-body-sm text-text-secondary">
-                Plant, product, and partnership imagery will be published in this
-                gallery.
+                {t("comingSoonBody")}
               </p>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Certificates */}
       <section className="bg-dark-950 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
           <AnimatedSection>
@@ -95,14 +101,12 @@ export default function MediaCertificatesPage() {
               </span>
               <span className="h-px w-6 bg-copper-base/40" aria-hidden />
               <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
-                Certifications
+                {t("certsEyebrow")}
               </p>
             </div>
-            <h2 className="text-h2 max-w-2xl text-balance">
-              {certificates.headline}
-            </h2>
+            <h2 className="text-h2 max-w-2xl text-balance">{t("certsTitle")}</h2>
             <p className="mt-4 max-w-xl text-body-lg text-text-secondary">
-              {certificates.body}
+              {t("certsBody")}
             </p>
           </AnimatedSection>
 

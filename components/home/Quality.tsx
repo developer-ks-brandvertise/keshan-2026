@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import {
   Award,
   Beaker,
@@ -7,23 +8,17 @@ import {
   FileBadge,
   ShieldCheck,
 } from "lucide-react";
-import { quality } from "@/lib/data";
+import { qualityPillarKeys } from "@/lib/i18n-keys";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { Reveal } from "@/components/ui/Reveal";
-import CopperHighlight from "@/components/ui/CopperHighlight";
 import { CertifiedSystems } from "@/components/ui/CertifiedSystems";
 import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 
 const pillarIcons = [Beaker, Award, ClipboardCheck, FileBadge];
 
-const pillarMeta = [
-  { title: "Purity", description: "99.9%+ copper purity on all electrolytic grades" },
-  { title: "Certified", description: "ISO 9001:2015, ISO 14001:2015, and ISO 45001 certified" },
-  { title: "Testing", description: "Chemical composition, conductivity, and tensile testing per batch" },
-  { title: "Standards", description: "Compliance with IS, ASTM, DIN, JIS, and BS standards" },
-];
-
 export function QualitySection() {
+  const t = useTranslations("home.quality");
+
   return (
     <section className="relative overflow-hidden bg-dark-950">
       <div
@@ -45,32 +40,31 @@ export function QualitySection() {
                 </span>
                 <span className="h-px w-6 bg-copper-base/40" />
                 <p className="text-xs font-semibold uppercase tracking-widest text-copper-base">
-                  Quality Assurance
+                  {t("eyebrow")}
                 </p>
               </div>
             </Reveal>
 
             <Reveal variant="slide">
               <h2 className="text-h2 text-balance text-text-primary">
-                Quality Assurance Built Into Every{" "}
-                <CopperHighlight>Production Stage</CopperHighlight>.
+                {t("headline")}
               </h2>
             </Reveal>
 
             <Reveal variant="fade" delay={0.12}>
               <p className="mt-5 max-w-lg text-body-lg text-text-secondary">
-                {quality.body}
+                {t("body")}
               </p>
             </Reveal>
 
             <Reveal variant="fade" delay={0.18}>
               <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                {pillarMeta.map((pillar, i) => (
+                {qualityPillarKeys.map((key, i) => (
                   <IconFeatureCard
-                    key={pillar.title}
+                    key={key}
                     icon={pillarIcons[i] ?? ShieldCheck}
-                    title={pillar.title}
-                    description={pillar.description}
+                    title={t(`pillars.${key}.title`)}
+                    description={t(`pillars.${key}.description`)}
                   />
                 ))}
               </div>
@@ -78,7 +72,7 @@ export function QualitySection() {
 
             <Reveal variant="fade" delay={0.24} className="mt-8">
               <MagneticButton href="/media-certificates" variant="primary">
-                {quality.cta}
+                {t("cta")}
               </MagneticButton>
             </Reveal>
           </div>

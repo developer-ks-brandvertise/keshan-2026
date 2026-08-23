@@ -1,23 +1,26 @@
 "use client";
 
-import { processSteps } from "@/lib/data";
+import { useTranslations } from "next-intl";
+import { processKeys } from "@/lib/i18n-keys";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RollingText3D } from "@/components/ui/RollingText3D";
 
-const rollingItems = processSteps.map((step) => ({
-  id: step.number,
-  label: (
-    <>
-      <span className="mr-3 align-middle font-heading text-base tracking-[0.22em] md:mr-5 md:text-lg">
-        {step.number}
-      </span>
-      <span className="align-middle">{step.title}</span>
-    </>
-  ),
-  detail: step.description,
-}));
-
 export function ProcessSection() {
+  const t = useTranslations("home.process");
+
+  const rollingItems = processKeys.map((key) => ({
+    id: key,
+    label: (
+      <>
+        <span className="mr-3 align-middle font-heading text-base tracking-[0.22em] md:mr-5 md:text-lg">
+          {key}
+        </span>
+        <span className="align-middle">{t(`steps.${key}.title`)}</span>
+      </>
+    ),
+    detail: t(`steps.${key}.description`),
+  }));
+
   return (
     <section className="relative overflow-x-clip bg-dark-900">
       <div
@@ -38,10 +41,10 @@ export function ProcessSection() {
         header={
           <SectionHeading
             index="04"
-            eyebrow="Manufacturing Process"
-            title="Pure Quality at Every Stage."
-            highlight="Every Stage"
-            subtitle="From raw material to final dispatch, every step of the Keshan manufacturing process is specification-led and monitored by experienced metallurgists."
+            eyebrow={t("eyebrow")}
+            title={t("headline")}
+            highlight={t("highlight")}
+            subtitle={t("subtitle")}
             align="left"
             className="max-w-3xl"
           />
@@ -50,7 +53,7 @@ export function ProcessSection() {
 
       <div className="relative mx-auto max-w-6xl px-gutter pb-section">
         <p className="border-t border-copper-base/20 pt-8 text-center font-heading text-[10px] uppercase tracking-[0.3em] text-text-muted">
-          {processSteps.length} stations · specification-led · batch certified
+          {t("footer")}
         </p>
       </div>
     </section>

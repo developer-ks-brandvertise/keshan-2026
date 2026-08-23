@@ -50,6 +50,868 @@
     "discussApplication": "讨论您的应用",
     "browseProducts": "浏览产品系列 →",
     "englishSpecs": "技术规格以英文显示",
-    "comingSoon": "即将推出"
+    "comingSoon": "即将推出",
+    "requestQuote": "获取报价",
+    "viewProduct": "查看产品",
+    "selectCategory": "选择类别",
+    "allRights": "版权所有。",
+    "copyright": "版权所有 © 2026",
+    "developedBy": "开发与市场推广",
+    "company": "公司",
+    "copper": "铜",
+    "brass": "黄铜",
+    "toggleMenu": "切换菜单",
+    "locationHyderabad": "Hyderabad, Telangana, India",
+    "copperDesk": "铜市工作台",
+    "pin": "固定",
+    "unpin": "取消固定",
+    "pinMarket": "固定铜市面板",
+    "unpinMarket": "取消固定铜市面板",
+    "marketSidebar": "铜市侧栏",
+    "liveQuotes": "TradingView 实时报价，仅供参考。",
+    "madeInIndia": "印度制造"
+  },
+  "home": {
+    "hero": {
+      "headline": "每一项伟大创新，都始于铜。",
+      "subheadline": "Keshan Industries 制造并供应高品质铜与黄铜产品，深受制造商、工程师和承包商信赖，广泛应用于未来电网、电动汽车、可再生能源基础设施及其他领域。",
+      "primaryCta": "了解我们的制造",
+      "secondaryCta": "浏览产品"
+    },
+    "about": {
+      "eyebrow": "关于 Keshan",
+      "headline": "高品质铜材制造，服务全球。",
+      "highlight": "服务全球",
+      "body": "自 2016 年起，Keshan Industries 为全球要求最严苛的行业制造高品质铜与黄铜。从开关设备制造商到太阳能开发商，我们是制造合作伙伴，而非大宗商品供应商：冶金控制、批次检测质量，以及每笔订单的准时交付。",
+      "quote": "我们是制造合作伙伴，而非大宗商品供应商。",
+      "quoteHighlight": "批次检测",
+      "quoteEnd": "每笔订单的质量。",
+      "imageAlt": "Keshan 制造工厂",
+      "stats": {
+        "yearsTitle": "年",
+        "yearsBody": "自 2016 年以来的卓越制造历程。",
+        "countriesTitle": "国家",
+        "countriesBody": "准时交付至全球 30 多个国家。",
+        "capacityTitle": "吨 / 年",
+        "capacityBody": "铜与黄铜的年产能。",
+        "qcTitle": "质检合格",
+        "qcBody": "每批出货前均经批次检测。"
+      }
+    },
+    "partners": {
+      "eyebrow": "合作伙伴",
+      "headline": "与全球领先冶金企业建立长期合作。",
+      "caption": "Keshan 为全球制造商、基础设施开发商和冶金企业供货。合作建立在持续、经认证的铜材供应之上，批次稳定。"
+    },
+    "range": {
+      "eyebrow": "产品系列",
+      "headline": "铜与黄铜。各种形态。各种牌号。",
+      "highlight": "各种牌号",
+      "subheadline": "用于配电的高导电铜母线，用于零部件制造的高品质黄铜带。Keshan 具备相应产品、牌号与产能，确保交付。",
+      "explore": "探索系列",
+      "copperTitle": "铜产品",
+      "copperBody": "锭、母线、带材、板材与圆片、上引杆、线材、棒材、箔材、磷铜牌号、型材、废料、阳极板与阴极。按国际规范制造。",
+      "copperSpecs": "Cu-ETP · Cu-OF · 母线 · 型材 · 阳极板 · 阴极",
+      "brassTitle": "黄铜产品",
+      "brassBody": "锭、板材、厚板、带材、圆片、线材与废料。合金化兼顾强度、可加工性与表面效果，覆盖各类应用。",
+      "brassSpecs": "锭 · 板材 · 厚板 · 带材 · 圆片 · 线材 · 废料"
+    },
+    "process": {
+      "eyebrow": "制造工艺",
+      "headline": "每一工序都坚持高品质。",
+      "highlight": "每一工序",
+      "subtitle": "从原材料到最终发运，Keshan 制造流程的每一步均以规范为导向，并由经验丰富的冶金工程师监控。",
+      "footer": "7 个工位 · 规范导向 · 批次认证",
+      "steps": {
+        "01": {
+          "title": "分选",
+          "description": "对进厂原材料进行分选和分级，确保进入生产线前的原料质量稳定。"
+        },
+        "02": {
+          "title": "打包",
+          "description": "将分选后的物料打包并准备入炉，提高炉效并改善熔炼一致性。"
+        },
+        "03": {
+          "title": "熔炼与铸造",
+          "description": "在现代感应炉中熔炼高纯度物料，从首次浇注起即控制成分。"
+        },
+        "04": {
+          "title": "轧制与加工",
+          "description": "多道次轧制线实现精确尺寸控制。截面稳定。公差严格。"
+        },
+        "05": {
+          "title": "切割与精整",
+          "description": "按客户规范进行分条、剪切与表面精整。定尺切割。定制尺寸。"
+        },
+        "06": {
+          "title": "检测与检验",
+          "description": "每批次均检测电导率、化学成分、抗拉强度和尺寸精度。结果可认证。"
+        },
+        "07": {
+          "title": "包装与发运",
+          "description": "工业级包装、防潮保护，以及随每批货物提供的完整质量文件。"
+        }
+      }
+    },
+    "quality": {
+      "eyebrow": "质量保证",
+      "headline": "质量保证贯穿每一个生产环节。",
+      "highlight": "生产环节",
+      "body": "我们的内部检测实验室对每一生产批次进行电导率、硬度、化学成分和尺寸检测。没有检测证书的产品不得出厂。每份证书可追溯，每项标准可核验。",
+      "cta": "查看我们的质量标准",
+      "pillars": {
+        "purity": {
+          "title": "纯度",
+          "description": "所有电解级铜纯度达 99.9% 以上"
+        },
+        "certified": {
+          "title": "认证",
+          "description": "通过 ISO 9001:2015、ISO 14001:2015 和 ISO 45001 认证"
+        },
+        "testing": {
+          "title": "检测",
+          "description": "每批次进行化学成分、电导率和拉伸检测"
+        },
+        "standards": {
+          "title": "标准",
+          "description": "符合 IS、ASTM、DIN、JIS 和 BS 标准"
+        }
+      }
+    },
+    "industries": {
+      "eyebrow": "服务行业",
+      "headline": "铜，关键产业的核心材料。",
+      "highlight": "关键产业",
+      "subheadline": "从为城市供电的变电站，到电动汽车内部的电机，Keshan 铜材是维持日常生活运转的基础设施的一部分。十三个行业。同一套稳定标准。",
+      "cta": "探索全部行业"
+    },
+    "knowledge": {
+      "eyebrow": "知识中心",
+      "headline": "Keshan 知识中心",
+      "highlight": "知识中心",
+      "subheadline": "来自 Keshan 冶金工程师的铜与黄铜市场笔记、技术指南和车间洞察。写给采购方，而非交易商。",
+      "cta": "访问知识中心"
+    },
+    "cta": {
+      "eyebrow": "全球供应",
+      "headline": "准备采购优质铜与黄铜？",
+      "highlight": "铜与黄铜",
+      "subheadline": "告诉我们您的规格。我们的团队将在 24 个工作小时内回复产品可用性、价格和交期。",
+      "primary": "获取报价",
+      "secondary": "浏览产品"
+    }
+  },
+  "footer": {
+    "description": "Keshan Industries 为电力、能源、汽车、电子和工业应用制造高品质铜与黄铜。年产能超过 24,000 吨。通过 ISO 9001、14001 和 45001 认证。印度制造。供应 30 多个国家。",
+    "company": "公司",
+    "contact": "联系我们",
+    "copper": "铜",
+    "brass": "黄铜",
+    "copyright": "版权所有 © 2026",
+    "reserved": "版权所有。",
+    "developed": "开发与市场推广"
+  },
+  "aboutPage": {
+    "label": "关于 Keshan",
+    "title": "我们始终坚信：质量不可妥协。",
+    "highlight": "质量不可妥协",
+    "storyEyebrow": "01 · 公司故事",
+    "storyTitle": "从一份信念，成长为全球制造合作伙伴。",
+    "storyHighlight": "全球制造合作伙伴。",
+    "body": "Keshan Industries 创立于一份信念：印度制造能够达到并超越全球最严苛行业所要求的质量标准。\n\n2016 年起步的专注铜材制造业务，现已成为印度有色金属行业的知名企业。我们为电力公司、基础设施开发商、电动汽车制造商和工业集团制造高品质铜与黄铜，供应覆盖 30 多个国家。\n\n发展循序渐进：2021 年铜锭产能、2022 年 ISO 体系、2023 年第二制造工厂、2025 年出口覆盖 30 多个国家，以及 2026 年阳极板产线。我们生产的每一吨产品，都体现对纯度、质量和终端性能的承诺。\n\n如今，Keshan Industries 在 Telangana 运营制造工厂，配备现代化熔炼、轧制和检测设施，能够按国际规范和客户要求生产全系列铜与黄铜产品。",
+    "imageAlt": "Keshan 工厂",
+    "visionEyebrow": "愿景",
+    "visionTitle": "让每一根照亮未来的铜线，都有我们的印记。",
+    "visionBody": "每一盏亮起的灯、每一辆充电的汽车、每一块向电网供电的太阳能板。这条链路中，都有被正确制造的铜。Keshan 的存在，就是成为这条链路的一部分：以诚信制造高品质铜与黄铜，服务一个靠电力运转的未来。",
+    "missionEyebrow": "使命",
+    "missionBody": "制造规格稳定、经过认证的高品质铜与黄铜产品，准时交付，附带质量文件，并以客户建立信心所需的技术一致性提供支持。",
+    "values": {
+      "quality": {
+        "title": "高品质",
+        "description": "每一批次都做到尺寸精确、冶金受控。"
+      },
+      "integrity": {
+        "title": "诚信",
+        "description": "质量可追溯、文件透明、承诺诚实。"
+      },
+      "reliability": {
+        "title": "可靠",
+        "description": "准时交付、规范导向生产、响应迅速的服务。"
+      },
+      "responsible": {
+        "title": "负责任制造",
+        "description": "认证流程、安全运营、高效利用资源。"
+      },
+      "improvement": {
+        "title": "持续改进",
+        "description": "更好的工艺、更严的公差、更稳固的合作。"
+      }
+    },
+    "leadershipEyebrow": "领导团队",
+    "leadershipTitle": "支撑标准的团队。",
+    "leadershipBody": "Keshan Industries 由兼具冶金专业能力、商业经验和行业长期视野的管理团队领导。他们对质量的承诺不是管理指令，而是个人标准。",
+    "milestonesEyebrow": "历程",
+    "milestonesTitle": "自 2016 年以来持续壮大。",
+    "events": {
+      "2016": {
+        "title": "创立",
+        "description": "Keshan Industries 成立；首座制造工厂在 Telangana 投产。"
+      },
+      "2021": {
+        "title": "铜锭",
+        "description": "沿价值链整合铜锭制造，拓展产品板块。"
+      },
+      "2022": {
+        "title": "认证",
+        "description": "获得 ISO 9001:2015、ISO 14001:2015 和 ISO 45001 认证。"
+      },
+      "2023": {
+        "title": "第二制造工厂",
+        "description": "在 TSIIC 汽车产业园投产第二制造工厂，增加产能并引入新产品线。"
+      },
+      "2025": {
+        "title": "30 多个国家",
+        "description": "向六大区域 30 多个国家供应铜与黄铜。"
+      },
+      "2026": {
+        "title": "阳极产线",
+        "description": "投产铜阳极板制造，完善电镀与精炼产品系列。"
+      }
+    },
+    "leadershipSection": "02 - 领导团队",
+    "visionSection": "03 - 愿景",
+    "milestonesSection": "05 - 里程碑",
+    "workWith": "与 Keshan 合作",
+    "knowMore": "了解更多",
+    "linkedIn": "LinkedIn 主页",
+    "close": "关闭",
+    "closeProfile": "关闭简介",
+    "stats": {
+      "years": {
+        "title": "年",
+        "label": "制造卓越年数"
+      },
+      "countries": {
+        "title": "国家",
+        "label": "供应国家"
+      },
+      "capacity": {
+        "title": "产能",
+        "label": "年产能（吨）"
+      },
+      "quality": {
+        "title": "质量",
+        "label": "发货前质量检测"
+      }
+    },
+    "team": {
+      "vikash": {
+        "title": "董事总经理，Keshan Industries",
+        "shortBio": "既建设企业也建设社群。从贸易到制造的路径，自 2016 年起塑造了 Keshan Industries。",
+        "fullBio": [
+          "很少有职业生涯能像 Vikash Kumar Keshan 那样，把坚韧与远见连成一条清晰的弧线。他是 Calcutta University 1997 届商科毕业生，起初走注册会计师的常规道路，后来刻意选择自己开路。2005 年，这一信念催生了 Keshan Trading Corporation，业务覆盖结构钢、GI 与 MS 管材及特种钢材，他也因此建立起对金属贸易少见的细致把握。",
+          "2016 年，Keshan 先生与弟弟 Rajneesh Keshan 共同创立 Keshan Industries，从贸易转向制造，秉持 Make in India 精神，并坚信受真正创新支撑的本土生产是 India 最持久的优势。在他的领导下，企业员工超过 300 人，拥有专职研发团队，并以技术精通、目标清晰和集体协作为领导原则。",
+          "他的影响远超企业本身。加入 Agarwal Samaj 十五年，凭实绩与信任晋升：2023 年任 North Secunderabad Agarwal Samaj 主席；2024 年任 Secunderabad 的 Bihar Agarwal Samaj 主席；现任 Agarwal Samaj Telangana 秘书（2025）。",
+          "Vikash Kumar Keshan 本质上是双重建设者：建设企业，也建设社群。他的志向始终向外。"
+        ]
+      },
+      "yash": {
+        "title": "新一代领导者，Keshan Industries",
+        "shortBio": "数字在前，意见在后。以人才、产品质量和数据支撑的信念建设企业。",
+        "fullBio": [
+          "Yash Keshan 拥有 Ashoka University 四年制数学荣誉学士学位，此前就读 Mayo College, Ajmer，曾任学院学术队长并获 President's Medal for Academics。这份履历并非轻易得来，也体现在他做生意的方式：数字在前，意见在后。",
+          "早期职业刻意朴实：在 Global Aluminium 做贸易单证、合规，以及金属行业的供应链协调，同时以基本面分析而非直觉做投资研究。他也是外汇市场的学生投资者，把这当作另一门惩罚草率思考、奖励数据信念的学科。",
+          "Yash 不以共识领导。他的观点明确：人和产品质量是制造的两大支柱。他认同 Rosalynn Carter 的区分：伟大的领导者把人带到他们应当去的地方，而不是他们想去的地方。运营模型借鉴 Narotam Sekhsaria 等实业家：规模绝不能成为牺牲可持续性或污染控制的借口。他来这里是为了建设一家企业，而不是打理安逸的遗产。"
+        ]
+      },
+      "suren": {
+        "title": "首席执行官，Keshan Industries",
+        "shortBio": "拥有 25 年制造、国际贸易及 Fortune 500 全球采购经验的资深商业领袖。",
+        "fullBio": [
+          "Suren Reddy 是 Keshan Industries 首席执行官，拥有 25 年跨冶金制造、建材、饮料、汽车零部件、国际贸易以及 Fortune 500 全球采购的多元经验。",
+          "他的领导方式聚焦高效流程、培养团队、运用技术，并在成本、质量与交付上取得可衡量的改进。他以商业结果为导向、面向转型，能够接手复杂业务、强化供应链、降低结构性成本、提升服务并建设可扩展系统。",
+          "他拥有 New Delhi 的 Indian Institute of Foreign Trade 国际商务 MBA，将商科教育与跨行业实践结合。",
+          "在 Keshan，他主导建设了铜锭、带材、母线及整条电线事业的一体化制造能力，覆盖从原料到成品的完整价值链。"
+        ]
+      }
+    }
+  },
+  "productsPage": {
+    "label": "产品系列",
+    "title": "铜与黄铜。高品质工程制造。",
+    "highlight": "高品质工程制造",
+    "description": "从用于配电的高导电铜母线，到用于零部件制造的高品质黄铜带。Keshan 按您应用所需的标准，制造各种形态、各种牌号。",
+    "selectCategory": "选择类别",
+    "copper": "铜产品",
+    "brass": "黄铜产品",
+    "viewProduct": "查看产品",
+    "sheet": "产品资料",
+    "overview": "产品概述",
+    "applications": "应用",
+    "industries": "服务行业",
+    "scrapGrades": "废料等级",
+    "specs": "技术规格",
+    "specProduct": "产品",
+    "specRanges": "规格 · 范围 / 类型",
+    "whyTitle": "为何向 Keshan 采购？",
+    "whyBody": "每一批次可追溯，每一份证书可核验，每一次交付都有技术团队支持。我们支持定制尺寸、国际标准和完整出口文件。",
+    "allProducts": "全部产品",
+    "requestQuote": "获取报价",
+    "category": "类别",
+    "purity": "纯度",
+    "standards": "标准",
+    "origin": "产地",
+    "originValue": "印度制造",
+    "copperLabel": "铜",
+    "brassLabel": "黄铜"
+  },
+  "industriesPage": {
+    "label": "服务行业",
+    "title": "铜，关键产业的核心材料。",
+    "highlight": "关键产业",
+    "description": "从为城市供电的变电站，到电动汽车内部的电机，Keshan 铜材是维持日常生活运转的基础设施的一部分。十三个行业。同一套稳定标准。",
+    "intro": "十三个领域。同一套冶金标准。规范导向的铜与黄铜，批次稳定。",
+    "items": {
+      "electrical": {
+        "name": "电气与配电",
+        "application": "母线、导体和配电部件，保障可靠电力输送。"
+      },
+      "switchgear": {
+        "name": "开关设备、配电盘与母线槽",
+        "application": "用于开关设备、配电盘和母线槽系统的高品质铜材。"
+      },
+      "renewable": {
+        "name": "可再生能源与太阳能基础设施",
+        "application": "用于太阳能逆变器、光伏组件和能源系统的高导电铜材。"
+      },
+      "ev": {
+        "name": "电动汽车、充电与出行",
+        "application": "用于电动汽车电机、电池、充电站和电力电子的铜材。"
+      },
+      "cables": {
+        "name": "电缆、导体与线材制造",
+        "application": "供电缆和线材生产商使用的连铸杆、线杆和拉制铜材。"
+      },
+      "construction": {
+        "name": "建筑与楼宇基础设施",
+        "application": "用于包覆、接地和建筑系统的板材、厚板和棒材。"
+      },
+      "electronics": {
+        "name": "电子与印制电路板制造",
+        "application": "适用于印制电路板和电子元件产线的精细铜带及箔材原料。"
+      },
+      "automotive": {
+        "name": "汽车与工业零部件",
+        "application": "用于端子、连接器和精密冲压件的黄铜与铜材形态。"
+      },
+      "thermal": {
+        "name": "热交换器与热管理系统",
+        "application": "用于盘管、翅片和热管理组件的导电铜材。"
+      },
+      "defence": {
+        "name": "国防与航空航天应用",
+        "application": "用于关键任务组件的可追溯高纯度铜与黄铜。"
+      },
+      "rail": {
+        "name": "轨道交通与运输基础设施",
+        "application": "用于铁路电气化和车辆的导体与接触材料。"
+      },
+      "telecom": {
+        "name": "电信与数据网络",
+        "application": "支撑电信布线和网络基础设施的铜导体。"
+      },
+      "hardware": {
+        "name": "五金、卫浴与装饰",
+        "application": "用于管件、卫浴和装饰加工的黄铜板、带材和圆片。"
+      }
+    },
+    "productWiseTitle": "按产品划分的行业",
+    "map": {
+      "copper-ingots": "电子与 PCB、建筑、汽车与工业",
+      "copper-busbars": "电力配电、开关柜与盘柜、可再生能源、轨道交通",
+      "copper-strips": "开关柜与盘柜、电子与 PCB、轨道交通",
+      "copper-sheets-plates": "建筑、国防与航空、换热器",
+      "copper-upcast-rod": "电缆、电力配电",
+      "bare-copper-wire": "电缆、电力配电、电信",
+      "copper-rod": "电缆、汽车与工业",
+      "copper-hex-square-round-rods": "开关柜与盘柜、汽车与工业、国防与航空",
+      "enamel-copper-wire": "电动汽车充电、电力配电、汽车（电机绕组）",
+      "paper-insulated-copper-conductors-strips": "轨道交通、电力传输 / 电力配电",
+      "copper-foils": "电子与 PCB、电信",
+      "copper-bar-1kg-5kg": "铸造、汽车与工业、小规模制造",
+      "brass-ingots": "铸造与压铸、卫浴五金、汽车与工业",
+      "brass-sheets-plates": "建筑装饰五金、建筑",
+      "brass-strips": "电气与电子、开关附件、电信",
+      "brass-circles": "卫浴五金、铸造与压铸"
+    }
+  },
+  "knowledgePage": {
+    "label": "知识中心",
+    "title": "铜与黄铜工作台。笔记、图表、实时价格。",
+    "highlight": "铜与黄铜工作台",
+    "news": "铜与黄铜资讯",
+    "latest": "车间工作台最新动态",
+    "ask": "咨询我们的冶金工程师",
+    "chartsNote": "图表由 TradingView 提供。在金属行情源配置完成后，价格每两分钟刷新一次。",
+    "categories": {
+      "Market": "市场",
+      "Application": "应用",
+      "Technical": "技术",
+      "Industry": "行业"
+    },
+    "articles": {
+      "copper-highs": {
+        "title": "铜价徘徊高位：本周工厂采购应关注什么",
+        "excerpt": "现货与三月结构、阴极供应，以及窄幅升水如何影响母线和杆材交期。"
+      },
+      "brass-vs-copper": {
+        "title": "黄铜与铜：何时合金溢价值得调整规格",
+        "excerpt": "带材、圆片和卫浴原料在可加工性、色泽和电导率上的取舍。"
+      },
+      "iacs": {
+        "title": "理解铜导电率标准（IACS）",
+        "excerpt": "关于 IACS、电导率检测及其对电气应用重要性的实用指南。"
+      },
+      "copper-grade": {
+        "title": "如何为您的应用选择正确的铜牌号",
+        "excerpt": "Cu-ETP、Cu-OF、Cu-FRHC。它们有何不同，以及何时指定各牌号。"
+      },
+      "lme-cathodes": {
+        "title": "LME 铜阴极：采购方应了解的要点",
+        "excerpt": "A 级阴极、仓库标准，以及阴极在下游制造中的作用。"
+      },
+      "ev-charging": {
+        "title": "电动汽车充电用铜：母线、漆包线和热负荷",
+        "excerpt": "为何充电硬件会惩罚规格不足的铜材，以及哪些工厂形态能准时发货。"
+      },
+      "switchgear-copper": {
+        "title": "开关设备用铜：尺寸公差与电导率",
+        "excerpt": "配电盘制造商常因母线翘曲损失数日。Keshan 批次如何同时保证 IACS 和毫米精度。"
+      },
+      "building-copper": {
+        "title": "建筑用铜：接地、包覆和现场可用长度",
+        "excerpt": "基础设施工程用的板材、厚板和棒材。承包商应在询价单中写明什么。"
+      }
+    },
+    "readArticle": "阅读文章"
+  },
+  "qualityPage": {
+    "label": "质量与媒体",
+    "title": "我们发出的每一批次，都有依据。",
+    "highlight": "发出的每一批次",
+    "subheadline": "支撑质量体系的认证，以及工厂、产品和合作瞬间的媒体库（即将推出）。",
+    "certifiedEyebrow": "认证体系",
+    "certifiedTitle": "符合 ISO、可追溯、批次检测",
+    "certifiedBody": "每次发运均附完整工艺文件和检测证书。",
+    "mediaEyebrow": "媒体",
+    "mediaTitle": "媒体图库",
+    "mediaBody": "工厂、产品和活动摄影即将在此呈现。请稍后查看完整媒体库。",
+    "comingSoon": "即将推出",
+    "comingSoonBody": "工厂、产品和合作影像将发布于本图库。",
+    "certsEyebrow": "认证",
+    "certsTitle": "证书",
+    "certsBody": "颁发给 Keshan Industries 的官方认证和质量资质。ISO 体系、合规性与经核验的标准。"
+  },
+  "contactPage": {
+    "label": "联系我们",
+    "title": "获取报价，或与我们的团队沟通。",
+    "highlight": "获取报价",
+    "description": "告诉我们您的规格、数量和交货条件。我们的团队将在 24 个工作小时内回复产品可用性、价格和交期。",
+    "dispatch": "发运标签",
+    "modes": "出口 · 国内 · 技术",
+    "headOffice": "总部",
+    "phone": "电话",
+    "email": "邮箱",
+    "hours": "工作时间",
+    "hoursValue": "周一至周六：10:00 - 19:00 IST / 周日：休息",
+    "unit1": "第一制造工厂",
+    "unit2": "第二制造工厂",
+    "inquiryEyebrow": "询盘表单",
+    "inquiryTitle": "发送询盘",
+    "inquiryBody": "规格、数量和交货条件有助于我们更快回复。",
+    "name": "姓名 *",
+    "company": "公司",
+    "emailField": "邮箱 *",
+    "phoneField": "电话",
+    "product": "产品 / 需求",
+    "message": "留言 *",
+    "namePh": "张三",
+    "companyPh": "公司名称",
+    "emailPh": "email@company.com",
+    "phonePh": "+1 234 567 890",
+    "productPh": "例如：铜母线，Cu-ETP，定制尺寸",
+    "messagePh": "请告知规格、数量、交货条件及所需标准。",
+    "submit": "提交询盘",
+    "sending": "发送中…",
+    "required": "姓名、邮箱和留言为必填项。",
+    "invalidEmail": "请输入有效的电子邮箱地址。",
+    "sendFail": "暂时无法发送。请稍后再试。",
+    "received": "询盘已收到",
+    "receivedBody": "我们的团队将在 24 个工作小时内回复可用性、价格和交期。",
+    "another": "再发一条询盘",
+    "preferEmail": "更想发邮件？请写信至",
+    "reach": {
+      "headline": "印度制造。全球信赖。",
+      "body": "依托印度制造基地，Keshan Industries 是印度最大的铜锭出口商之一，向南亚、中东、东南亚、中国、非洲和欧洲的客户供应高品质铜与黄铜。我们的出口能力由经验丰富的物流合作伙伴、完整质量文件，以及熟悉跨境工业贸易要求的客户服务团队提供支持。",
+      "capabilities": [
+        "可提供 CIF、FOB 和 DAP 交货条件",
+        "完整出口文件：原产地证书、出厂检测证书、装箱单、发票",
+        "熟悉信用证 (LC) 和电汇 (TT) 付款结构",
+        "主要市场清关支持",
+        "港口交货协调：JNPT、Mundra、Chennai、Vizag"
+      ],
+      "eyebrow": "全球覆盖",
+      "regionBody": "活跃的供应线路与经销合作。",
+      "regions": {
+        "southAsia": "南亚",
+        "middleEast": "中东",
+        "southeastAsia": "东南亚",
+        "china": "中国",
+        "africa": "非洲",
+        "europe": "欧洲"
+      }
+    },
+    "locationsTitle": "我们的地点",
+    "locationsBody": "总部、制造一厂与制造二厂分布于 Telangana。"
+  },
+  "meta": {
+    "home": {
+      "title": "Keshan Industries | 高品质铜与黄铜制造商",
+      "description": "Keshan Industries 从印度制造并供应高品质铜与黄铜产品，覆盖 30 多个国家。"
+    },
+    "about": {
+      "title": "关于 Keshan Industries | 铜材制造商 | 印度制造",
+      "description": "Keshan Industries 是总部位于印度的高品质铜与黄铜制造商，也是该国最大的铜锭出口商之一。通过 ISO 9001、ISO 14001 和 ISO 45001 认证。"
+    },
+    "products": {
+      "title": "铜与黄铜产品 | Keshan Industries",
+      "description": "了解 Keshan 铜与黄铜产品：锭、母线、带材、棒材、线材、箔材、型材、废料等。"
+    },
+    "industries": {
+      "title": "服务行业 | Keshan Industries | 铜与黄铜应用",
+      "description": "Keshan 铜与黄铜服务于电气、电力、太阳能、电动汽车、电缆、建筑、汽车、电子等领域。"
+    },
+    "knowledge": {
+      "title": "知识中心 | Keshan Industries | 铜材洞察与技术指南",
+      "description": "来自 Keshan 冶金工程师的铜与黄铜市场笔记、实时价格、图表和技术指南。"
+    },
+    "quality": {
+      "title": "质量与媒体 | Keshan Industries",
+      "description": "查看 Keshan Industries 认证和质量资质。媒体图库即将推出。"
+    },
+    "contact": {
+      "title": "联系 Keshan Industries | 获取报价 | 铜与黄铜制造商",
+      "description": "就铜与黄铜产品询盘、报价和出口支持联系 Keshan Industries。Hyderabad, India。"
+    }
+  },
+  "catalog": {
+    "copper-ingots": {
+      "name": "铜锭",
+      "headline": "每项铜应用的基础。",
+      "description": "作为印度最大的铜锭出口商之一，Keshan 以高品位电解铜为原料生产铜锭，熔炼并浇铸至精确的尺寸与成分标准。提供纯铜及合金牌号，覆盖多种重量，是下游铜加工的主要原料，从轧制、拉拔到合金化均可使用。",
+      "applications": [
+        "线杆与带材轧制厂",
+        "铜合金与黄铜制造商",
+        "铸造与浇铸作业",
+        "出口与再熔客户"
+      ],
+      "cta": "索取铜锭报价"
+    },
+    "copper-busbars": {
+      "name": "铜母线",
+      "headline": "每面配电柜核心的导体。",
+      "description": "Keshan 铜母线按严格尺寸公差制造，用于开关设备、配电盘、母线槽系统、变压器和高电流配电设备，具备高导电性能、精确截面和洁净表面，确保每次安装的可靠接触。",
+      "applications": [
+        "低压和中压开关设备与控制设备",
+        "母线槽与母线干线系统",
+        "电力变压器与配电变压器",
+        "工业配电盘和 MCC 盘柜",
+        "电池储能系统 (BESS)",
+        "电动汽车充电站与电力电子"
+      ],
+      "cta": "索取铜母线报价"
+    },
+    "copper-strips": {
+      "name": "铜带",
+      "headline": "变压器绕组所依赖的带材。",
+      "description": "Keshan 铜带由高纯度铜卷在现代分条线上生产，宽度公差稳定、边缘光滑、厚度均匀，适用于变压器绕组、电机线圈制造和精密冲压。",
+      "applications": [
+        "变压器绕组（配电变压器和电力变压器）",
+        "电机线圈与电枢绕组",
+        "电接触件与端子制造",
+        "热交换器翅片与加热元件",
+        "电子元件与印制电路板制造"
+      ],
+      "cta": "索取铜带报价"
+    },
+    "copper-sheets-plates": {
+      "name": "铜板、厚板与圆片",
+      "headline": "平整、准确、即用。",
+      "description": "Keshan 铜板、厚板和圆片按精确厚度与平面度公差生产，可提供洁净轧制表面或抛光表面，适用于建筑包覆、传热设备、电气屏蔽、厨具坯料和精密加工等应用。",
+      "applications": [
+        "建筑包覆、屋面和装饰应用",
+        "热交换器与热管理系统",
+        "电气屏蔽与电磁干扰机箱",
+        "旋压、冲压和深拉伸用圆片坯料",
+        "化工工艺设备与定制加工"
+      ],
+      "cta": "索取铜板、厚板与圆片报价"
+    },
+    "copper-upcast-rod": {
+      "name": "上引铜杆",
+      "headline": "拉拔干净。每一卷。每一次。",
+      "description": "Keshan 上引铜杆采用 Upcast 连续铸造工艺，以高纯度电解铜生产，表面质量优异、晶粒结构稳定、拉拔性能出色，是线缆制造商的首选原料。",
+      "applications": [
+        "漆包绕组线（电磁线）生产",
+        "电缆与导体",
+        "电子用细线拉拔",
+        "软导体与编织电缆"
+      ],
+      "cta": "索取上引铜杆报价"
+    },
+    "bare-copper-wire": {
+      "name": "裸铜线",
+      "headline": "按规格拉拔。导电毫不妥协。",
+      "description": "Keshan 裸铜线由连铸杆经精密模具拉拔而成，直径稳定、表面光滑、导电性能高，适用于电力电缆、建筑电线、接地和电信。",
+      "applications": [
+        "电力电缆与软线",
+        "建筑与施工布线",
+        "架空导体与接地系统",
+        "电信与数据电缆"
+      ],
+      "cta": "索取裸铜线报价"
+    },
+    "copper-rod": {
+      "name": "铜棒",
+      "headline": "实心截面。可靠导电。",
+      "description": "Keshan 铜棒面向需要稳定直径、高导电性和洁净表面的电气与工业应用，从接地和母线连接，到机加工坯料和加工制造。",
+      "applications": [
+        "接地与接地系统",
+        "电气连接器与端子",
+        "机加工与加工坯料",
+        "工业载流部件"
+      ],
+      "cta": "索取铜棒报价"
+    },
+    "copper-hex-square-round-rods": {
+      "name": "铜六角棒、方棒、圆棒",
+      "headline": "型材坯料。适合高品质机加工。",
+      "description": "Keshan 供应六角、方形和圆形截面铜棒，用于机加工、锻造和零部件制造，化学成分受控、截面稳定，表面适合数控和传统机加工车间。",
+      "applications": [
+        "数控与传统机加工坯料",
+        "电气五金与紧固件",
+        "阀门、管件和连接器坯料",
+        "工业与装饰加工件"
+      ],
+      "cta": "索取铜六角棒、方棒与圆棒报价"
+    },
+    "enamel-copper-wire": {
+      "name": "漆包铜线",
+      "headline": "为持久绕组打造的电磁线。",
+      "description": "Keshan 漆包铜线（电磁线）由高纯度铜制成，漆膜绝缘均匀，用于电机、变压器、发电机和线圈绕组，具备介电完整性、热级性能和稳定的拉拔性。",
+      "applications": [
+        "电机与发电机绕组",
+        "变压器与电感器线圈",
+        "电磁阀与电磁装置",
+        "汽车与家电电机"
+      ],
+      "cta": "索取漆包铜线报价"
+    },
+    "copper-blister": {
+      "name": "粗铜",
+      "headline": "中间铜材。准备下一道精炼。",
+      "description": "Keshan 粗铜作为中间精炼铜形态供应，用于进一步火法或电解精炼、合金化和再熔作业，杂质水平受控，适合下游加工。",
+      "applications": [
+        "电解精炼原料",
+        "二次铜精炼",
+        "合金与黄铜制造炉料",
+        "出口再熔客户"
+      ],
+      "cta": "索取粗铜报价"
+    },
+    "paper-insulated-copper-conductors-strips": {
+      "name": "纸绝缘铜导体带",
+      "headline": "用于高可靠性绕组的绝缘带材。",
+      "description": "Keshan 纸绝缘铜导体 (PICC) 带将高导电铜带与牛皮纸或专用纸绝缘结合，用于变压器和电抗器绕组，具备介电强度、油相容性和尺寸一致性。",
+      "applications": [
+        "电力与配电变压器绕组",
+        "电抗器与扼流圈",
+        "油浸电气设备",
+        "特种高压绕组应用"
+      ],
+      "cta": "索取纸绝缘铜导体带报价"
+    },
+    "copper-foils": {
+      "name": "铜箔",
+      "headline": "薄规格。厚度均匀。表面洁净。",
+      "description": "Keshan 铜箔经轧制和分条至薄规格，用于电子、屏蔽、柔性电路和精密层压，厚度公差严格、边缘洁净，表面适合下游层压和蚀刻。",
+      "applications": [
+        "印制电路板与柔性电路制造",
+        "电磁 / 射频干扰屏蔽",
+        "电池与储能部件",
+        "装饰与建筑层压材料"
+      ],
+      "cta": "索取铜箔报价"
+    },
+    "phosphorous-copper-bar": {
+      "name": "磷铜棒",
+      "headline": "脱氧铜。磷含量受控。熔炼洁净。",
+      "description": "Keshan 磷铜棒按受控磷含量配制，用于铸造厂和熔炼车间的脱氧与合金添加，磷含量稳定，熔炼行为可靠，批次一致。",
+      "applications": [
+        "铜与黄铜熔体脱氧",
+        "合金制造炉料添加",
+        "铸造磷中间合金使用",
+        "电镀与特种熔炼"
+      ],
+      "cta": "索取磷铜棒报价"
+    },
+    "phosphorous-copper-nuggets": {
+      "name": "磷铜粒",
+      "headline": "成分稳定。炉料洁净。每一批次。",
+      "description": "Keshan 磷铜粒按受控磷含量生产，用于铸造和合金炉料应用。紧凑形态便于操作，并在感应炉和反射炉中稳定加料。",
+      "applications": [
+        "黄铜与铜合金制造",
+        "铸造炉料与脱氧添加",
+        "电镀槽化学调整",
+        "化工铜应用"
+      ],
+      "cta": "索取磷铜粒报价"
+    },
+    "copper-bar-1kg-5kg": {
+      "name": "铜棒 1kg 与 5kg",
+      "headline": "纯度标识。灵活加料尺寸。",
+      "description": "Keshan 1kg 和 5kg 规格铜棒按精确重量和纯度标准浇铸，用于铸造、电镀、实验室以及中小规模再熔加料。每根棒均可批次追溯，化学成分可靠、操作洁净。",
+      "applications": [
+        "铸造厂与再熔加料",
+        "汽车与工业零部件再熔坯料",
+        "电镀与表面处理槽",
+        "实验室与小规模制造"
+      ],
+      "cta": "索取 1kg 与 5kg 铜棒报价"
+    },
+    "copper-anode-plates": {
+      "name": "铜阳极板",
+      "headline": "每一电沉积铜表面的起点。",
+      "description": "Keshan 铜阳极板由高纯度无氧铜制造，按精确尺寸规范浇铸，用于电镀、电解精炼和印制电路板制造。受控微观结构和高纯度确保电镀过程中溶解平滑、稳定。",
+      "applications": [
+        "在铁基和非铁基材上电镀铜",
+        "印制电路板铜电沉积",
+        "电解铜精炼槽",
+        "电铸与电铸印刷"
+      ],
+      "cta": "索取铜阳极板报价"
+    },
+    "copper-cathodes": {
+      "name": "铜阴极",
+      "headline": "最纯形态的铜。基准牌号。",
+      "description": "Keshan 铜阴极代表可获得的最高铜纯度，是伦敦金属交易所的主要精炼铜交易形态，也是所有下游铜制造的原料。我们的阴极符合 LME A 级标准，既作为自有产线的投入材料，也供应其他制造商。",
+      "applications": [
+        "下游铜加工（拉丝、轧制）",
+        "铜合金与黄铜制造",
+        "出口与大宗交易",
+        "电镀槽补料"
+      ],
+      "cta": "索取铜阴极报价"
+    },
+    "copper-profile": {
+      "name": "铜型材",
+      "headline": "定制截面。按规格拉拔与挤压。",
+      "description": "Keshan 铜型材按定制截面生产，用于电气、建筑和工业加工。严格的尺寸控制、高导电性和洁净轧制表面，使其无需额外修整即可用于机加工、装配和安装。",
+      "applications": [
+        "电气开关设备与母线组件",
+        "建筑与装饰金属加工",
+        "传热与热管理截面",
+        "工业机械部件与管件"
+      ],
+      "cta": "索取铜型材报价"
+    },
+    "copper-scrap": {
+      "name": "铜废料",
+      "headline": "分选。分级。可入炉。",
+      "description": "Keshan 铜废料来自经核实的供应商，经检验、分选和分级后进入再熔与回收流程。我们以透明的等级划分和批次级质量检查，在加工前支持循环制造。",
+      "applications": [
+        "二次铜再熔",
+        "铸造炉料",
+        "黄铜与合金制造",
+        "回收与循环供应链"
+      ],
+      "cta": "索取铜废料报价"
+    },
+    "brass-ingots": {
+      "name": "黄铜锭",
+      "headline": "精确合金化。即可浇铸。",
+      "description": "Keshan 黄铜锭采用高纯度铜和锌，并精确控制合金添加，以确保化学成分和冶金质量稳定。每批次均进行光谱分析，控制成分和微量元素，以符合客户及国际标准。",
+      "applications": [
+        "黄铜铸造厂与重力金属型铸造",
+        "五金与工程部件的压力铸造",
+        "卫浴配件、阀门、龙头和管道附件",
+        "电气与电子元件",
+        "装饰与建筑五金",
+        "汽车与工业工程应用"
+      ],
+      "cta": "索取黄铜锭报价"
+    },
+    "brass-sheets-plates": {
+      "name": "黄铜板与厚板",
+      "headline": "平整、光亮，适合加工。",
+      "description": "Keshan 黄铜板与厚板厚度公差严格、合金成分稳定、表面光滑，是建筑师、装饰加工商和零部件制造商的首选，既要性能，也要外观。",
+      "applications": [
+        "建筑包覆、立面和装饰板",
+        "乐器与声学部件",
+        "电气元件与连接器坯料",
+        "雕刻板与铭牌",
+        "化工工艺容器与衬里"
+      ],
+      "cta": "索取黄铜板与厚板报价"
+    },
+    "brass-strips": {
+      "name": "黄铜带",
+      "headline": "高品质分条。可冲压。可落料。",
+      "description": "Keshan 黄铜带由高品质黄铜卷精确分条，宽度公差和边缘质量稳定，适用于冲压、压制和深拉伸作业。整卷机械性能均匀，适合大批量零件制造。",
+      "applications": [
+        "电接触件与连接器",
+        "端子、卡簧和弹簧",
+        "拉链与紧固件制造",
+        "散热器翅片与热交换器部件",
+        "装饰饰条与家具五金"
+      ],
+      "cta": "索取黄铜带报价"
+    },
+    "brass-circles": {
+      "name": "黄铜圆片",
+      "headline": "按直径落料。可压制。无毛刺。",
+      "description": "Keshan 黄铜圆片由精密黄铜板按定制尺寸落料（直径和厚度），可用于深拉伸、旋压和冲压成型。广泛用于厨具制造、卫浴配件和装饰冲压件。",
+      "applications": [
+        "厨具：锅、盘和器皿",
+        "卫浴：龙头、阀门和管件",
+        "装饰冲压件",
+        "汽车与工业壳体"
+      ],
+      "cta": "索取黄铜圆片报价"
+    },
+    "brass-wires": {
+      "name": "黄铜线",
+      "headline": "拉拔黄铜。直径稳定。表面洁净。",
+      "description": "Keshan 黄铜线由受控黄铜杆拉拔而成，用于电气五金、紧固件、装饰加工和工业编织。直径均匀、四分之一硬回火、表面洁净，适合大批量成型和绕制。",
+      "applications": [
+        "电气插针、端子和连接器",
+        "紧固件、铆钉和成型五金",
+        "装饰与建筑线材加工",
+        "工业网、弹簧和刷丝"
+      ],
+      "cta": "索取黄铜线报价"
+    },
+    "brass-scrap": {
+      "name": "黄铜废料",
+      "headline": "分选黄铜。按再熔分级。",
+      "description": "Keshan 黄铜废料经分选和分级，供应铸造厂、再熔商和回收合作伙伴，提供成分稳定的铜/锌原料，等级划分透明，便于高效熔炼和合金化。",
+      "applications": [
+        "黄铜铸造再熔",
+        "二次合金制造",
+        "回收与循环供应链",
+        "五金与卫浴熔炼车间"
+      ],
+      "cta": "索取黄铜废料报价"
+    }
   }
 }

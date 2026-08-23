@@ -1,27 +1,40 @@
-import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { knowledge, knowledgeCentreHeaderImage } from "@/lib/data";
+import { articleKeys } from "@/lib/i18n-keys";
+import { Link } from "@/i18n/routing";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { CopperMarketChart } from "@/components/knowledge/CopperMarketChart";
 import { LiveRatesPanel } from "@/components/knowledge/LiveRatesPanel";
 
-export const metadata: Metadata = {
-  title: "Knowledge Centre | Keshan Industries | Copper Insights & Technical Guides",
-  description:
-    "Copper and brass market notes, live rates, charts, and technical guides from Keshan metallurgists.",
+type Props = {
+  params: Promise<{ locale: string }>;
 };
 
-export default function KnowledgePage() {
+export async function generateMetadata({ params }: Props) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta.knowledge" });
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function KnowledgePage({ params }: Props) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations("knowledgePage");
+  const th = await getTranslations("home.knowledge");
+
   return (
     <main>
       <PageHero
-        label="Knowledge Centre"
-        title="Copper & Brass Desk — Notes, Charts, Live Rates."
-        highlight="Copper & Brass Desk"
-        description={knowledge.subheadline}
+        label={t("label")}
+        title={t("title")}
+        highlight={t("highlight")}
+        description={th("subheadline")}
         backgroundImage={knowledgeCentreHeaderImage}
         backgroundPriority
       />
@@ -37,46 +50,49 @@ export default function KnowledgePage() {
               <AnimatedSection className="mt-10 mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
                 <div>
                   <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
-                    Copper & brass news
+                    {t("news")}
                   </p>
-                  <h2 className="mt-2 text-h3">Latest from the mill desk</h2>
+                  <h2 className="mt-2 text-h3">{t("latest")}</h2>
                 </div>
                 <MagneticButton href="/contact" variant="primary" className="shrink-0">
-                  Ask Our Metallurgists
+                  {t("ask")}
                 </MagneticButton>
               </AnimatedSection>
 
               <div className="grid gap-0 sm:grid-cols-2 sm:gap-x-8">
-                {knowledge.articles.map((article, index) => (
-                  <AnimatedSection key={article.title} delay={Math.min(index * 0.04, 0.2)}>
-                    <Link
-                      href="/knowledge-centre"
-                      className="group grid grid-cols-[1fr_92px] items-start gap-4 border-b border-dark-100/10 py-5 sm:grid-cols-[1fr_108px]"
-                    >
-                      <div className="min-w-0">
-                        <h3 className="text-lg leading-snug text-text-primary transition-colors group-hover:text-copper-light">
-                          {article.title}
-                        </h3>
-                        <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-text-muted">
-                          <span className="text-copper-base">{article.source}</span>
-                          <span aria-hidden> · </span>
-                          <span>{article.date}</span>
-                          <span aria-hidden> · </span>
-                          <span>{article.category}</span>
-                        </p>
-                      </div>
-                      <div className="relative h-[72px] w-[92px] shrink-0 overflow-hidden border border-copper-base/20 sm:h-[80px] sm:w-[108px]">
-                        <Image
-                          src={article.image}
-                          alt=""
-                          fill
-                          sizes="108px"
-                          className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        />
-                      </div>
-                    </Link>
-                  </AnimatedSection>
-                ))}
+                {knowledge.articles.map((article, index) => {
+                  const key = articleKeys[index];
+                  return (
+                    <AnimatedSection key={key} delay={Math.min(index * 0.04, 0.2)}>
+                      <Link
+                        href="/knowledge-centre"
+                        className="group grid grid-cols-[1fr_92px] items-start gap-4 border-b border-dark-100/10 py-5 sm:grid-cols-[1fr_108px]"
+                      >
+                        <div className="min-w-0">
+                          <h3 className="text-lg leading-snug text-text-primary transition-colors group-hover:text-copper-light">
+                            {t(`articles.${key}.title`)}
+                          </h3>
+                          <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-text-muted">
+                            <span className="text-copper-base">{article.source}</span>
+                            <span aria-hidden> · </span>
+                            <span>{article.date}</span>
+                            <span aria-hidden> · </span>
+                            <span>{t(`categories.${article.category}`)}</span>
+                          </p>
+                        </div>
+                        <div className="relative h-[72px] w-[92px] shrink-0 overflow-hidden border border-copper-base/20 sm:h-[80px] sm:w-[108px]">
+                          <Image
+                            src={article.image}
+                            alt=""
+                            fill
+                            sizes="108px"
+                            className="object-cover transition-transform duration-500 group-hover:scale-105"
+                          />
+                        </div>
+                      </Link>
+                    </AnimatedSection>
+                  );
+                })}
               </div>
             </div>
 
@@ -84,7 +100,7 @@ export default function KnowledgePage() {
               <div className="lg:sticky lg:top-28">
                 <LiveRatesPanel />
                 <p className="mt-4 text-[11px] leading-relaxed text-text-muted">
-                  Charts via TradingView. Rates refresh every two minutes when the metals feed is configured.
+                  {t("chartsNote")}
                 </p>
               </div>
             </div>
