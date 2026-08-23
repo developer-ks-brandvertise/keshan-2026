@@ -55,6 +55,15 @@ export const aboutHeaderImage =
 export const industriesHeaderImage =
   "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787429209/Industries_tyeivv.png";
 
+export const contactHeaderImage =
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787476045/Contact-Us_tquiz7.png";
+
+export const qualityMediaHeaderImage =
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787476045/Quality_zp1vyv.png";
+
+export const knowledgeCentreHeaderImage =
+  "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787476045/Knowledge-Center_sz1gt5.png";
+
 export const productCategories = {
   headline: "Copper & Brass. Every Form. Every Grade.",
   subheadline:

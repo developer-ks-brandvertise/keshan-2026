@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { mediaCertificates } from "@/lib/data";
+import { mediaCertificates, qualityMediaHeaderImage } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import CopperHighlight from "@/components/ui/CopperHighlight";
@@ -22,6 +22,8 @@ export default function MediaCertificatesPage() {
         title={mediaCertificates.headline}
         highlight="Every Batch We Ship"
         description={mediaCertificates.subheadline}
+        backgroundImage={qualityMediaHeaderImage}
+        backgroundPriority
       />
 
       {/* Quality logos — scrolling, same motion language as partners */}

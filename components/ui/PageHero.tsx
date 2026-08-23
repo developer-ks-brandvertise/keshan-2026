@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import Container from "./Container";
@@ -9,6 +10,7 @@ interface PageHeroProps {
   description?: string;
   highlight?: string;
   className?: string;
+  background?: ReactNode;
   backgroundImage?: string;
   backgroundPriority?: boolean;
 }
@@ -19,6 +21,7 @@ export default function PageHero({
   description,
   highlight,
   className = "",
+  background,
   backgroundImage,
   backgroundPriority = false,
 }: PageHeroProps) {
@@ -29,7 +32,17 @@ export default function PageHero({
     <section
       className={`relative overflow-hidden border-b border-dark-100/10 bg-dark-900 pt-24 pb-16 lg:pt-32 lg:pb-24 ${className}`}
     >
-      {backgroundImage ? (
+      {background ? (
+        <>
+          <div className="pointer-events-none absolute inset-0" aria-hidden>
+            {background}
+          </div>
+          <div
+            className="page-hero-photo-overlay pointer-events-none absolute inset-0"
+            aria-hidden
+          />
+        </>
+      ) : backgroundImage ? (
         <>
           <Image
             src={backgroundImage}

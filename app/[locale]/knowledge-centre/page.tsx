@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { knowledge } from "@/lib/data";
+import { knowledge, knowledgeCentreHeaderImage } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { MagneticButton } from "@/components/ui/MagneticButton";
@@ -22,6 +22,8 @@ export default function KnowledgePage() {
         title="Copper & Brass Desk — Notes, Charts, Live Rates."
         highlight="Copper & Brass Desk"
         description={knowledge.subheadline}
+        backgroundImage={knowledgeCentreHeaderImage}
+        backgroundPriority
       />
 
       <section className="bg-dark-900 py-section px-gutter">

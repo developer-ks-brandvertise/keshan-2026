@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { contactHeaderImage } from "@/lib/data";
 import PageHero from "@/components/ui/PageHero";
 import { ContactPageSections } from "@/components/contact/ContactPageSections";
 
@@ -26,6 +27,8 @@ export default async function ContactPage({ searchParams }: ContactPageProps) {
         title="Request a Quote or Speak to Our Team."
         highlight="Request a Quote"
         description="Tell us your specification, quantity, and delivery terms. Our team will respond within 24 business hours with product availability, pricing, and lead time."
+        backgroundImage={contactHeaderImage}
+        backgroundPriority
       />
 
       <ContactPageSections defaultProduct={defaultProduct} />

@@ -7,6 +7,7 @@ import { ArrowUpRight } from "lucide-react";
 import { products } from "@/lib/products";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
+import { ProductsSilkBackground } from "@/components/products/ProductsSilkBackground";
 
 const copperProducts = products.filter((p) => p.category === "copper");
 const brassProducts = products.filter((p) => p.category === "brass");
@@ -27,6 +28,7 @@ export default function ProductsPage() {
         title="Copper & Brass. Pure Quality-Engineered."
         highlight="Pure Quality-Engineered"
         description="From high-conductivity copper busbars for power distribution to pure quality brass strips for component manufacturing — Keshan manufactures every form, every grade, to the standards your application demands."
+        background={<ProductsSilkBackground />}
       />
 
       <section className="bg-dark-900 py-section px-gutter">
