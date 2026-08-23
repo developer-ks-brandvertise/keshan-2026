@@ -129,17 +129,16 @@ export default function Footer() {
             </Link>
             . All rights reserved.
           </p>
-          <p className="text-center sm:text-right">
-            Developed & Marketed by Brandvertise Agency (
+          <p className="text-center text-[10px] leading-relaxed sm:text-right">
+            Developed & Marketed by{" "}
             <a
               href="https://brandvertiseagency.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-copper-base hover:underline"
             >
-              brandvertiseagency.com
+              Brandvertise Agency
             </a>
-            )
           </p>
         </Container>
       </div>
