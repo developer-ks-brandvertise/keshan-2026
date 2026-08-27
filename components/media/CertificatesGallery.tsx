@@ -19,69 +19,51 @@ export function CertificatesGallery({
   items,
   label = "Certificates",
 }: CertificatesGalleryProps) {
-  const [offset, setOffset] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
-  const [isDesktop, setIsDesktop] = useState(false);
   const [hovered, setHovered] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [lightboxIndex, setLightboxIndex] = useState(0);
-  const titleId = useId();
   const [reduceMotion, setReduceMotion] = useState(false);
+  const titleId = useId();
 
-  const visible = isDesktop ? 2 : 1;
-  const maxOffset = Math.max(0, items.length - visible);
-  const active = items[lightboxIndex] ?? items[0];
+  const count = items.length;
+  const active = items[activeIndex] ?? items[0];
+  const prevIndex = count > 0 ? (activeIndex - 1 + count) % count : 0;
+  const nextIndex = count > 0 ? (activeIndex + 1) % count : 0;
+  const prevItem = items[prevIndex];
+  const nextItem = items[nextIndex];
 
-  const next = useCallback(() => {
-    setOffset((i) => (i >= maxOffset ? 0 : i + 1));
-  }, [maxOffset]);
+  const goNext = useCallback(() => {
+    setActiveIndex((i) => (i + 1) % Math.max(count, 1));
+  }, [count]);
 
-  const prev = useCallback(() => {
-    setOffset((i) => (i <= 0 ? maxOffset : i - 1));
-  }, [maxOffset]);
+  const goPrev = useCallback(() => {
+    setActiveIndex((i) => (i - 1 + count) % Math.max(count, 1));
+  }, [count]);
 
   const close = useCallback(() => setLightboxOpen(false), []);
-  const lightboxNext = useCallback(
-    () => setLightboxIndex((i) => (i + 1) % items.length),
-    [items.length],
-  );
-  const lightboxPrev = useCallback(
-    () => setLightboxIndex((i) => (i - 1 + items.length) % items.length),
-    [items.length],
-  );
 
   useEffect(() => {
-    const desktopMq = window.matchMedia("(min-width: 768px)");
     const motionMq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const syncDesktop = () => setIsDesktop(desktopMq.matches);
     const syncMotion = () => setReduceMotion(motionMq.matches);
-    syncDesktop();
     syncMotion();
-    desktopMq.addEventListener("change", syncDesktop);
     motionMq.addEventListener("change", syncMotion);
-    return () => {
-      desktopMq.removeEventListener("change", syncDesktop);
-      motionMq.removeEventListener("change", syncMotion);
-    };
+    return () => motionMq.removeEventListener("change", syncMotion);
   }, []);
 
   useEffect(() => {
-    setOffset((i) => Math.min(i, maxOffset));
-  }, [maxOffset]);
-
-  useEffect(() => {
-    if (!isPlaying || hovered || reduceMotion || items.length <= visible) return;
-    const timer = window.setInterval(next, 4500);
+    if (!isPlaying || hovered || reduceMotion || count <= 1) return;
+    const timer = window.setInterval(goNext, 4500);
     return () => window.clearInterval(timer);
-  }, [hovered, isPlaying, items.length, next, reduceMotion, visible]);
+  }, [count, goNext, hovered, isPlaying, reduceMotion]);
 
   useEffect(() => {
     if (!lightboxOpen) return;
 
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === "Escape") close();
-      if (event.key === "ArrowRight") lightboxNext();
-      if (event.key === "ArrowLeft") lightboxPrev();
+      if (event.key === "ArrowRight") goNext();
+      if (event.key === "ArrowLeft") goPrev();
     };
 
     const prevOverflow = document.body.style.overflow;
@@ -92,7 +74,9 @@ export function CertificatesGallery({
       document.body.style.overflow = prevOverflow;
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [lightboxOpen, close, lightboxNext, lightboxPrev]);
+  }, [lightboxOpen, close, goNext, goPrev]);
+
+  if (!active || count === 0) return null;
 
   return (
     <>
@@ -103,30 +87,35 @@ export function CertificatesGallery({
           onMouseLeave={() => setHovered(false)}
         >
           <div className="flex items-center justify-between border-b border-dark-100/10 px-4 py-3">
-            <span className="font-heading text-xs tracking-[0.18em] text-copper-base">
-              {label}
-            </span>
+            <div className="flex items-center gap-3">
+              <span className="font-heading text-xs tracking-[0.18em] text-copper-base">
+                {label}
+              </span>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted">
+                {activeIndex + 1} / {count}
+              </span>
+            </div>
             <div className="flex items-center gap-2">
               <button
                 type="button"
                 onClick={() => setIsPlaying((v) => !v)}
-                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base"
+                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base transition-colors hover:border-copper-base"
                 aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
               >
                 {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
               </button>
               <button
                 type="button"
-                onClick={prev}
-                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base"
+                onClick={goPrev}
+                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base transition-colors hover:border-copper-base"
                 aria-label={`Previous ${label.toLowerCase()}`}
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
               <button
                 type="button"
-                onClick={next}
-                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base"
+                onClick={goNext}
+                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base transition-colors hover:border-copper-base"
                 aria-label={`Next ${label.toLowerCase()}`}
               >
                 <ChevronRight className="h-4 w-4" />
@@ -134,33 +123,91 @@ export function CertificatesGallery({
             </div>
           </div>
 
-          <div className="overflow-hidden bg-dark-950">
-            <div
-              className="flex transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:transition-none"
-              style={{ transform: `translateX(-${offset * (100 / visible)}%)` }}
+          {/* Main single-image stage */}
+          <div className="relative bg-dark-950">
+            <button
+              type="button"
+              className="group relative block h-[min(62vh,560px)] w-full"
+              onClick={() => setLightboxOpen(true)}
+              aria-label={`Open ${active.alt}`}
             >
-              {items.map((cert, index) => (
-                <button
-                  key={cert.src}
-                  type="button"
-                  className="relative h-[70vh] shrink-0 border-r border-dark-100/10 last:border-r-0"
-                  style={{ width: `${100 / visible}%` }}
-                  onClick={() => {
-                    setLightboxIndex(index);
-                    setLightboxOpen(true);
-                  }}
-                >
-                  <Image
-                    src={cert.src}
-                    alt={cert.alt}
-                    fill
-                    sizes={isDesktop ? "50vw" : "100vw"}
-                    className="object-contain p-4 sm:p-6"
-                  />
-                </button>
-              ))}
-            </div>
+              <Image
+                key={active.src}
+                src={active.src}
+                alt={active.alt}
+                fill
+                sizes="(max-width: 1152px) 100vw, 1152px"
+                className={`object-contain p-4 sm:p-8 ${
+                  reduceMotion ? "" : "animate-fade-in"
+                }`}
+                priority
+              />
+              <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-dark-950/80 to-transparent px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.16em] text-text-muted opacity-0 transition-opacity group-hover:opacity-100">
+                {active.alt}
+              </span>
+            </button>
+
+            <button
+              type="button"
+              onClick={goPrev}
+              className="absolute left-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-copper-base/40 bg-dark-950/80 text-copper-base backdrop-blur-sm transition-colors hover:border-copper-base hover:bg-dark-900 sm:inline-flex"
+              aria-label={`Previous ${label.toLowerCase()}`}
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              onClick={goNext}
+              className="absolute right-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-copper-base/40 bg-dark-950/80 text-copper-base backdrop-blur-sm transition-colors hover:border-copper-base hover:bg-dark-900 sm:inline-flex"
+              aria-label={`Next ${label.toLowerCase()}`}
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
           </div>
+
+          {/* Previous + next previews below */}
+          {count > 1 && prevItem && nextItem ? (
+            <div className="grid grid-cols-2 gap-px border-t border-copper-base/20 bg-copper-base/20">
+              <button
+                type="button"
+                onClick={goPrev}
+                className="group relative bg-dark-950 p-3 text-left transition-colors hover:bg-dark-900 sm:p-4"
+                aria-label={`Show previous: ${prevItem.alt}`}
+              >
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-text-muted">
+                  Previous
+                </p>
+                <div className="relative h-28 w-full overflow-hidden border border-copper-base/15 sm:h-36">
+                  <Image
+                    src={prevItem.src}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 50vw, 480px"
+                    className="object-contain p-2 opacity-80 transition-opacity group-hover:opacity-100 sm:p-3"
+                  />
+                </div>
+              </button>
+              <button
+                type="button"
+                onClick={goNext}
+                className="group relative bg-dark-950 p-3 text-left transition-colors hover:bg-dark-900 sm:p-4"
+                aria-label={`Show next: ${nextItem.alt}`}
+              >
+                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-text-muted">
+                  Next
+                </p>
+                <div className="relative h-28 w-full overflow-hidden border border-copper-base/15 sm:h-36">
+                  <Image
+                    src={nextItem.src}
+                    alt=""
+                    fill
+                    sizes="(max-width: 768px) 50vw, 480px"
+                    className="object-contain p-2 opacity-80 transition-opacity group-hover:opacity-100 sm:p-3"
+                  />
+                </div>
+              </button>
+            </div>
+          ) : null}
         </div>
       </AnimatedSection>
 
@@ -193,6 +240,7 @@ export function CertificatesGallery({
             </p>
             <div className="relative mx-auto h-[min(78vh,900px)] w-full overflow-hidden border border-copper-base/25 bg-dark-900">
               <Image
+                key={active.src}
                 src={active.src}
                 alt={active.alt}
                 fill
@@ -204,15 +252,18 @@ export function CertificatesGallery({
             <div className="mt-3 flex items-center justify-center gap-3">
               <button
                 type="button"
-                onClick={lightboxPrev}
+                onClick={goPrev}
                 className="inline-flex h-8 w-8 items-center justify-center border border-copper-base/30 text-copper-base"
                 aria-label={`Previous ${label.toLowerCase()}`}
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
+              <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted">
+                {activeIndex + 1} / {count}
+              </span>
               <button
                 type="button"
-                onClick={lightboxNext}
+                onClick={goNext}
                 className="inline-flex h-8 w-8 items-center justify-center border border-copper-base/30 text-copper-base"
                 aria-label={`Next ${label.toLowerCase()}`}
               >
