@@ -30,7 +30,7 @@ export default function PageHero({
 
   return (
     <section
-      className={`relative overflow-hidden border-b border-dark-100/10 bg-dark-900 pt-24 pb-16 lg:pt-32 lg:pb-24 ${className}`}
+      className={`page-hero relative overflow-hidden border-b border-white/10 bg-[#0a0a0a] pt-24 pb-16 text-[#f5f5f5] lg:pt-32 lg:pb-24 ${className}`}
     >
       {background ? (
         <>
@@ -63,7 +63,7 @@ export default function PageHero({
             className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-[0.12]"
             style={{ backgroundImage: "url('/images/bg-page-title1.jpg')" }}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-dark-900 via-dark-900/85 to-dark-900/40" />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#0a0a0a] via-[#0a0a0a]/85 to-[#0a0a0a]/40" />
         </>
       )}
       <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-px hairline-copper" />
@@ -78,7 +78,7 @@ export default function PageHero({
               </span>
             </div>
           )}
-          <h1 className="max-w-4xl text-h1 text-balance">
+          <h1 className="page-hero-title max-w-4xl text-h1 text-balance">
             {highlight
               ? parts.map((part, i) =>
                   i % 2 === 1 ? (
@@ -90,7 +90,7 @@ export default function PageHero({
               : title}
           </h1>
           {description && (
-            <p className="mt-6 max-w-2xl text-body-lg text-text-secondary">
+            <p className="mt-6 max-w-2xl text-body-lg text-[#a1a1a1]">
               {description}
             </p>
           )}

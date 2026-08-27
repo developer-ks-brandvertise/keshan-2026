@@ -229,28 +229,41 @@ html.light {
     text-wrap: balance;
   }
 
-  /* Product hero: keep title readable on the left, copper photo clear on the right */
+  /* Page heroes stay cinematic dark in both themes (images + title readability) */
   .page-hero-photo-overlay {
     background-image: linear-gradient(
       to right,
-      color-mix(in srgb, var(--dark-950) 68%, transparent) 0%,
-      color-mix(in srgb, var(--dark-950) 22%, transparent) 34%,
+      color-mix(in srgb, #080808 68%, transparent) 0%,
+      color-mix(in srgb, #080808 22%, transparent) 34%,
       transparent 58%
     );
   }
 
-  html.light .page-hero-photo-overlay {
+  .page-hero-silk-overlay {
     background-image: linear-gradient(
       to right,
-      color-mix(in srgb, var(--dark-950) 80%, transparent) 0%,
-      color-mix(in srgb, var(--dark-950) 28%, transparent) 36%,
-      transparent 60%
+      color-mix(in srgb, #080808 72%, transparent) 0%,
+      color-mix(in srgb, #080808 28%, transparent) 38%,
+      transparent 62%
     );
   }
 
-  /* Silk header: theme overlay becomes a paper wash in light mode and hides the title */
-  html.light .page-hero-silk-overlay {
-    background-image: none;
+  .page-hero-title.text-h1,
+  .page-hero .page-hero-title {
+    background-image: linear-gradient(
+      115deg,
+      #6b6b6b 0%,
+      #c8c8c8 18%,
+      #f2f2f2 38%,
+      #9a9a9a 52%,
+      #e8e8e8 68%,
+      #7a7a7a 82%,
+      #d4d4d4 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
   }
 
   .text-copper-gradient {

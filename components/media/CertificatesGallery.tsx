@@ -104,7 +104,7 @@ export function CertificatesGallery({
             </p>
 
             <div
-              className="relative mx-auto h-[340px] w-full max-w-5xl sm:h-[400px] lg:h-[440px]"
+              className="relative mx-auto h-[280px] w-full max-w-5xl sm:h-[320px] lg:h-[360px]"
               style={{ perspective: reduceMotion ? undefined : "1200px" }}
             >
               <div
@@ -133,7 +133,7 @@ export function CertificatesGallery({
                         if (isActive) setLightboxOpen(true);
                         else setActiveIndex(index);
                       }}
-                      className="absolute left-1/2 top-1/2 w-[min(58vw,320px)] origin-center sm:w-[300px] lg:w-[340px]"
+                      className="absolute left-1/2 top-1/2 w-[min(72vw,420px)] origin-center sm:w-[400px] lg:w-[460px]"
                       style={{
                         transform: `translate(-50%, -50%) translateX(${translateX}%) rotateY(${rotateY}deg) scale(${scale})`,
                         zIndex: 20 - abs,
@@ -145,31 +145,21 @@ export function CertificatesGallery({
                       }}
                     >
                       <div
-                        className={`overflow-hidden bg-white shadow-[0_18px_50px_rgba(0,0,0,0.45)] ${
+                        className={`overflow-hidden bg-white p-2 shadow-[0_18px_50px_rgba(0,0,0,0.45)] sm:p-2.5 ${
                           isActive
                             ? "ring-1 ring-copper-base/30"
                             : "brightness-[0.92]"
                         }`}
                       >
-                        <div className="relative aspect-[4/5] w-full bg-[#f4f1ec]">
+                        <div className="relative aspect-[16/10] w-full bg-[#f4f1ec]">
                           <Image
                             src={item.src}
                             alt={item.alt}
                             fill
-                            sizes="340px"
-                            className="object-contain p-3 sm:p-4"
+                            sizes="460px"
+                            className="object-contain p-1.5"
                             priority={isActive}
                           />
-                        </div>
-                        <div className="bg-white px-3 pb-4 pt-3 text-center">
-                          <p
-                            className={`truncate text-[13px] italic leading-snug text-[#2a241f] sm:text-sm ${
-                              isActive ? "opacity-100" : "opacity-70"
-                            }`}
-                            style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
-                          >
-                            {item.alt}
-                          </p>
                         </div>
                       </div>
                     </button>
