@@ -68,7 +68,7 @@
     "pinMarket": "تثبيت لوحة سوق النحاس",
     "unpinMarket": "إلغاء تثبيت لوحة سوق النحاس",
     "marketSidebar": "الشريط الجانبي لسوق النحاس",
-    "liveQuotes": "مباشر LME · MCX · USD/INR",
+    "liveQuotes": "للبيانات الحية، اعرض LME / Moneycontrol.",
     "madeInIndia": "صنع في India"
   },
   "home": {
@@ -462,7 +462,7 @@
     "news": "أخبار النحاس والنحاس الأصفر",
     "latest": "الأحدث من مكتب المصنع",
     "ask": "اسأل معدنيينا",
-    "chartsNote": "أسعار مرجعية مباشرة لـ LME و MCX و USD/INR للمشترين.",
+    "chartsNote": "الأسعار المعروضة للمراجعة. للاطلاع على بيانات السوق الحية الحالية، يُرجى عرض المصدر الأصلي على <lme>LME</lme> و <mcx>Moneycontrol</mcx>.",
     "categories": {
       "Market": "السوق",
       "Application": "التطبيق",

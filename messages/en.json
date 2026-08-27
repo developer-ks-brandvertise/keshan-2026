@@ -69,7 +69,7 @@
     "pinMarket": "Pin copper market panel",
     "unpinMarket": "Unpin copper market panel",
     "marketSidebar": "Copper market sidebar",
-    "liveQuotes": "Live LME · MCX · USD/INR"
+    "liveQuotes": "For live data, view LME / Moneycontrol."
   },
   "home": {
     "hero": {
@@ -463,7 +463,7 @@
     "readArticle": "Read article",
     "latest": "Latest from the mill desk",
     "ask": "Ask Our Metallurgists",
-    "chartsNote": "Live LME, MCX, and USD/INR reference rates for buyers.",
+    "chartsNote": "Reference rates for convenience. For current live market data, please view the original source on <lme>LME</lme> and <mcx>Moneycontrol</mcx>.",
     "categories": {
       "Market": "Market",
       "Application": "Application",

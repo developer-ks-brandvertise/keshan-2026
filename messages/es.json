@@ -68,7 +68,7 @@
     "pinMarket": "Fijar el panel de mercado de cobre",
     "unpinMarket": "Soltar el panel de mercado de cobre",
     "marketSidebar": "Barra lateral del mercado de cobre",
-    "liveQuotes": "LME · MCX · USD/INR en vivo",
+    "liveQuotes": "Para datos en vivo, vea LME / Moneycontrol.",
     "madeInIndia": "Hecho en India"
   },
   "home": {
@@ -462,7 +462,7 @@
     "news": "Noticias de cobre y latón",
     "latest": "Lo último desde la mesa de planta",
     "ask": "Consulte a nuestros metalúrgicos",
-    "chartsNote": "Tipos de referencia LME, MCX y USD/INR en vivo para compradores.",
+    "chartsNote": "Cotizaciones de referencia por comodidad. Para datos de mercado en vivo, consulte la fuente original en <lme>LME</lme> y <mcx>Moneycontrol</mcx>.",
     "categories": {
       "Market": "Mercado",
       "Application": "Aplicación",

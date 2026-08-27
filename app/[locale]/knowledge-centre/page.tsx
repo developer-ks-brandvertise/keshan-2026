@@ -44,6 +44,30 @@ export default async function KnowledgePage({ params }: Props) {
           <AnimatedSection className="mb-12 space-y-6">
             <MarketRateCards />
             <CopperPriceChart />
+            <p className="text-[11px] leading-relaxed text-text-muted">
+              {t.rich("chartsNote", {
+                lme: (chunks) => (
+                  <a
+                    href="https://www.lme.com/metals/non-ferrous/lme-copper#Overview"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-copper-base transition-colors hover:text-copper-light"
+                  >
+                    {chunks}
+                  </a>
+                ),
+                mcx: (chunks) => (
+                  <a
+                    href="https://www.moneycontrol.com/commodity/mcx-copper-price/?type=futures&exp=2026-08-31"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-copper-base transition-colors hover:text-copper-light"
+                  >
+                    {chunks}
+                  </a>
+                ),
+              })}
+            </p>
           </AnimatedSection>
 
           <AnimatedSection className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

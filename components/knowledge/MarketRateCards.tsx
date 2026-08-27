@@ -185,6 +185,30 @@ export function MarketRateCards({
           );
         })}
       </div>
+
+      {compact ? (
+        <p className="border-t border-copper-base/15 px-4 py-3 text-[10px] leading-relaxed text-text-muted">
+          For current live market data, view the original source on{" "}
+          <a
+            href="https://www.lme.com/metals/non-ferrous/lme-copper#Overview"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-copper-base transition-colors hover:text-copper-light"
+          >
+            LME
+          </a>{" "}
+          /{" "}
+          <a
+            href="https://www.moneycontrol.com/commodity/mcx-copper-price/?type=futures&exp=2026-08-31"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-copper-base transition-colors hover:text-copper-light"
+          >
+            Moneycontrol
+          </a>
+          .
+        </p>
+      ) : null}
     </div>
   );
 }

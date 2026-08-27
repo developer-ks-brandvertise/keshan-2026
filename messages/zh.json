@@ -68,7 +68,7 @@
     "pinMarket": "固定铜市面板",
     "unpinMarket": "取消固定铜市面板",
     "marketSidebar": "铜市侧栏",
-    "liveQuotes": "实时 LME · MCX · USD/INR",
+    "liveQuotes": "实时数据请查看 LME / Moneycontrol。",
     "madeInIndia": "印度制造"
   },
   "home": {
@@ -462,7 +462,7 @@
     "news": "铜与黄铜资讯",
     "latest": "车间工作台最新动态",
     "ask": "咨询我们的冶金工程师",
-    "chartsNote": "面向采购的 LME、MCX 与 USD/INR 实时参考行情。",
+    "chartsNote": "此处为参考行情。如需当前实时市场数据，请查看原站 <lme>LME</lme> 与 <mcx>Moneycontrol</mcx>。",
     "categories": {
       "Market": "市场",
       "Application": "应用",
