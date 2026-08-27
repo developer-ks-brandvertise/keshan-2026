@@ -46,8 +46,8 @@
     },
     "bubbleTitle": "Keshan AI Support",
     "bubbleBody": "Ask anything",
-    "fullView": "Open full view",
-    "exitFull": "Exit full view"
+    "fullView": "Portrait full view",
+    "exitFull": "Exit portrait view"
   },
   "common": {
     "exploreManufacturing": "Explore Our Manufacturing",

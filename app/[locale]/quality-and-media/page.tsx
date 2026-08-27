@@ -55,8 +55,8 @@ export default async function QualityAndMediaPage({ params }: Props) {
         </AnimatedSection>
       </section>
 
-      <section className="border-b border-dark-100/10 bg-dark-900 py-section px-gutter">
-        <div className="mx-auto max-w-6xl">
+      <section className="overflow-x-clip border-b border-dark-100/10 bg-dark-900 py-section px-gutter">
+        <div className="mx-auto max-w-6xl overflow-x-clip">
           <AnimatedSection>
             <div className="mb-4 flex items-center gap-3">
               <span className="font-heading text-xs tracking-[0.25em] text-copper-base">
@@ -79,8 +79,8 @@ export default async function QualityAndMediaPage({ params }: Props) {
         </div>
       </section>
 
-      <section className="bg-dark-950 py-section px-gutter">
-        <div className="mx-auto max-w-6xl">
+      <section className="overflow-x-clip bg-dark-950 py-section px-gutter">
+        <div className="mx-auto max-w-6xl overflow-x-clip">
           <AnimatedSection>
             <div className="mb-4 flex items-center gap-3">
               <span className="font-heading text-xs tracking-[0.25em] text-copper-base">

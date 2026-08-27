@@ -46,8 +46,8 @@
     },
     "bubbleTitle": "Keshan AI Support",
     "bubbleBody": "何でも聞いてください",
-    "fullView": "フル表示",
-    "exitFull": "フル表示を終了"
+    "fullView": "縦フル表示",
+    "exitFull": "縦表示を終了"
   },
   "common": {
     "exploreManufacturing": "製造について見る",

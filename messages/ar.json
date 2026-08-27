@@ -46,8 +46,8 @@
     },
     "bubbleTitle": "Keshan AI Support",
     "bubbleBody": "اسأل أي شيء",
-    "fullView": "عرض كامل",
-    "exitFull": "الخروج من العرض الكامل"
+    "fullView": "عرض عمودي",
+    "exitFull": "الخروج من العرض العمودي"
   },
   "common": {
     "exploreManufacturing": "استكشف التصنيع لدينا",

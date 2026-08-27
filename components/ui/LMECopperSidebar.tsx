@@ -17,30 +17,34 @@ export function LMECopperSidebar() {
       aria-label={t("marketSidebar")}
     >
       <div
-        className={`pointer-events-auto flex items-center transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "translate-x-[calc(100%-2rem)]"
-        }`}
+        className="pointer-events-auto relative"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
         <button
           type="button"
           onClick={() => setIsPinned((v) => !v)}
-          className="group flex h-28 w-8 flex-col items-center justify-center gap-1.5 rounded-l-md border border-r-0 border-copper-base/40 bg-[#0a0a0a]/95 text-copper-base shadow-[0_0_16px_rgba(184,115,51,0.22)] backdrop-blur-md transition-colors hover:text-copper-light"
+          className="relative z-10 flex w-10 flex-col items-center justify-center gap-2 rounded-l-lg border border-border bg-card py-4 text-copper-base shadow-[-4px_0_18px_rgba(0,0,0,0.12)] backdrop-blur-md transition-colors hover:text-copper-light"
           aria-expanded={isOpen}
           aria-label={isPinned ? t("unpinMarket") : t("pinMarket")}
         >
           {isOpen ? (
-            <ChevronRight className="h-3.5 w-3.5" strokeWidth={2.2} />
+            <ChevronRight className="h-3.5 w-3.5 shrink-0" strokeWidth={2.2} />
           ) : (
-            <ChevronLeft className="h-3.5 w-3.5" strokeWidth={2.2} />
+            <ChevronLeft className="h-3.5 w-3.5 shrink-0" strokeWidth={2.2} />
           )}
-          <span className="font-heading text-[8px] uppercase tracking-[0.18em] [writing-mode:vertical-rl]">
+          <span className="font-heading text-[10px] uppercase tracking-[0.22em] whitespace-nowrap [writing-mode:vertical-rl]">
             {t("copperDesk")}
           </span>
         </button>
 
-        <div className="w-[20rem] border border-copper-base/35 bg-[#0a0a0a]/96 p-2.5 shadow-[-8px_0_28px_rgba(0,0,0,0.35)] backdrop-blur-md sm:w-[21rem]">
+        <div
+          className={`absolute right-full top-1/2 z-0 w-[20rem] -translate-y-1/2 border border-r-0 border-border bg-card p-2.5 shadow-[-8px_0_28px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-300 sm:w-[21rem] ${
+            isOpen
+              ? "visible translate-x-0 opacity-100"
+              : "invisible translate-x-2 opacity-0 pointer-events-none"
+          }`}
+        >
           <div className="mb-2 flex items-center justify-between px-1">
             <p className="font-heading text-[10px] uppercase tracking-[0.16em] text-copper-base">
               LME · MCX · USD/INR
@@ -48,7 +52,7 @@ export function LMECopperSidebar() {
             <button
               type="button"
               onClick={() => setIsPinned((v) => !v)}
-              className="inline-flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#8a8a8a] transition-colors hover:text-copper-base"
+              className="inline-flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-text-muted transition-colors hover:text-copper-base"
             >
               {isPinned ? (
                 <>
