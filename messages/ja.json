@@ -509,13 +509,13 @@
     "label": "品質とメディア",
     "title": "出荷するすべてのバッチを裏付ける品質。",
     "highlight": "すべてのバッチ",
-    "subheadline": "品質体制を支える認証と、工場、製品、パートナーシップのメディアライブラリ（近日公開）。",
+    "subheadline": "品質システムを支える認証と、工場・製品・パートナーシップのメディアライブラリ。",
     "certifiedEyebrow": "認証された体制",
     "certifiedTitle": "ISO 適合、追跡可能、バッチ検査済み",
     "certifiedBody": "すべての出荷に工程書類一式と試験証明書を添付。",
     "mediaEyebrow": "メディア",
     "mediaTitle": "メディアギャラリー",
-    "mediaBody": "施設、製品、イベントの写真はまもなくこちらに掲載されます。完全なメディアライブラリをご覧ください。",
+    "mediaBody": "Keshan の製造現場などから、施設・製品・パートナーシップの写真を掲載しています。",
     "comingSoon": "近日公開",
     "comingSoonBody": "工場、製品、パートナーシップの画像をこのギャラリーに公開します。",
     "certsEyebrow": "認証",
@@ -608,7 +608,7 @@
     },
     "quality": {
       "title": "品質とメディア | Keshan Industries",
-      "description": "Keshan Industries の認証と品質証明をご覧ください。メディアギャラリーは近日公開。"
+      "description": "Keshan Industries の認証、品質資格、メディアギャラリーをご覧ください。"
     },
     "contact": {
       "title": "Keshan Industries お問い合わせ | お見積り依頼 | 銅・黄銅メーカー",

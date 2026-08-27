@@ -20,6 +20,16 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/media-certificates",
+        destination: "/quality-and-media",
+        permanent: true,
+      },
+      {
+        source: "/:locale(ar|zh|es|ja)/media-certificates",
+        destination: "/:locale/quality-and-media",
+        permanent: true,
+      },
+      {
         source: "/products/continuous-cast-rod",
         destination: "/products/copper-upcast-rod",
         permanent: true,

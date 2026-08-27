@@ -19,11 +19,11 @@ export async function generateMetadata({ params }: Props) {
   };
 }
 
-export default async function MediaCertificatesPage({ params }: Props) {
+export default async function QualityAndMediaPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("qualityPage");
-  const { certificates } = mediaCertificates;
+  const { media, certificates } = mediaCertificates;
 
   return (
     <main>
@@ -75,20 +75,7 @@ export default async function MediaCertificatesPage({ params }: Props) {
             </p>
           </AnimatedSection>
 
-          <AnimatedSection delay={0.08} className="mt-10">
-            <div className="relative overflow-hidden border border-dashed border-copper-base/30 bg-dark-950/60 px-6 py-16 text-center sm:py-20">
-              <div
-                className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(184,115,51,0.12),transparent_55%)]"
-                aria-hidden
-              />
-              <p className="relative text-[11px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-                {t("comingSoon")}
-              </p>
-              <p className="relative mx-auto mt-3 max-w-md text-body-sm text-text-secondary">
-                {t("comingSoonBody")}
-              </p>
-            </div>
-          </AnimatedSection>
+          <CertificatesGallery items={media.items} label={t("mediaTitle")} />
         </div>
       </section>
 
@@ -110,7 +97,10 @@ export default async function MediaCertificatesPage({ params }: Props) {
             </p>
           </AnimatedSection>
 
-          <CertificatesGallery items={certificates.items} />
+          <CertificatesGallery
+            items={certificates.items}
+            label={t("certsTitle")}
+          />
         </div>
       </section>
     </main>

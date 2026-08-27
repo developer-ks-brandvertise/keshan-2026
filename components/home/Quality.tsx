@@ -71,7 +71,7 @@ export function QualitySection() {
             </Reveal>
 
             <Reveal variant="fade" delay={0.24} className="mt-8">
-              <MagneticButton href="/media-certificates" variant="primary">
+              <MagneticButton href="/quality-and-media" variant="primary">
                 {t("cta")}
               </MagneticButton>
             </Reveal>

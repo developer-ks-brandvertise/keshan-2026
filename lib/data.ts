@@ -15,7 +15,7 @@ export const navLinks = [
   { label: "Products", href: "/products" },
   { label: "Industries", href: "/industries" },
   { label: "Knowledge Centre", href: "/knowledge-centre" },
-  { label: "Quality & Media", href: "/media-certificates" },
+  { label: "Quality & Media", href: "/quality-and-media" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -148,10 +148,40 @@ export const quality = {
 export const mediaCertificates = {
   headline: "Proof Behind Every Batch We Ship.",
   subheadline:
-    "Certifications that back our quality systems — and a media library of plant, product, and partnership moments (coming soon).",
+    "Certifications that back our quality systems — and a media library of plant, product, and partnership moments.",
   media: {
     headline: "Media Gallery",
-    body: "Facility, product, and event photography will appear here shortly. Check back soon for the full media library.",
+    body: "Facility, product, and partnership photography from the Keshan manufacturing floor and beyond.",
+    items: [
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787823424/1_rwhgnw.png",
+        alt: "Keshan Industries media 01",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787823424/2_frgp6b.png",
+        alt: "Keshan Industries media 02",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787823424/3_psljbo.png",
+        alt: "Keshan Industries media 03",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787823424/4_qo9ll8.png",
+        alt: "Keshan Industries media 04",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787823424/5_ytorot.png",
+        alt: "Keshan Industries media 05",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787823425/6_jiw5bv.png",
+        alt: "Keshan Industries media 06",
+      },
+      {
+        src: "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787823424/7_bjjaof.png",
+        alt: "Keshan Industries media 07",
+      },
+    ],
   },
   certificates: {
     headline: "Certificates",

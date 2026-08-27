@@ -12,9 +12,13 @@ export type CertificateItem = {
 
 type CertificatesGalleryProps = {
   items: CertificateItem[];
+  label?: string;
 };
 
-export function CertificatesGallery({ items }: CertificatesGalleryProps) {
+export function CertificatesGallery({
+  items,
+  label = "Certificates",
+}: CertificatesGalleryProps) {
   const [offset, setOffset] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -100,7 +104,7 @@ export function CertificatesGallery({ items }: CertificatesGalleryProps) {
         >
           <div className="flex items-center justify-between border-b border-dark-100/10 px-4 py-3">
             <span className="font-heading text-xs tracking-[0.18em] text-copper-base">
-              Certificates
+              {label}
             </span>
             <div className="flex items-center gap-2">
               <button
@@ -115,7 +119,7 @@ export function CertificatesGallery({ items }: CertificatesGalleryProps) {
                 type="button"
                 onClick={prev}
                 className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base"
-                aria-label="Previous certificates"
+                aria-label={`Previous ${label.toLowerCase()}`}
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -123,7 +127,7 @@ export function CertificatesGallery({ items }: CertificatesGalleryProps) {
                 type="button"
                 onClick={next}
                 className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base"
-                aria-label="Next certificates"
+                aria-label={`Next ${label.toLowerCase()}`}
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
@@ -172,7 +176,7 @@ export function CertificatesGallery({ items }: CertificatesGalleryProps) {
             type="button"
             onClick={close}
             className="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center border border-dark-100/20 bg-dark-900 text-text-primary transition-colors hover:border-copper-base hover:text-copper-base sm:right-8 sm:top-8"
-            aria-label="Close certificate preview"
+            aria-label={`Close ${label.toLowerCase()} preview`}
           >
             <X className="h-5 w-5" strokeWidth={2} />
           </button>
@@ -202,7 +206,7 @@ export function CertificatesGallery({ items }: CertificatesGalleryProps) {
                 type="button"
                 onClick={lightboxPrev}
                 className="inline-flex h-8 w-8 items-center justify-center border border-copper-base/30 text-copper-base"
-                aria-label="Previous certificate"
+                aria-label={`Previous ${label.toLowerCase()}`}
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
@@ -210,7 +214,7 @@ export function CertificatesGallery({ items }: CertificatesGalleryProps) {
                 type="button"
                 onClick={lightboxNext}
                 className="inline-flex h-8 w-8 items-center justify-center border border-copper-base/30 text-copper-base"
-                aria-label="Next certificate"
+                aria-label={`Next ${label.toLowerCase()}`}
               >
                 <ChevronRight className="h-4 w-4" />
               </button>
