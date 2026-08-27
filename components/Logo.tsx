@@ -9,8 +9,10 @@ interface LogoProps {
   className?: string;
 }
 
-const LOGO_DARK = "/images/Keshan-Industries-Logo-Latest.png";
-const LOGO_LIGHT = "/images/Keshan-Industries-Logo-Latest-Light.png";
+/** Bump when logo assets are replaced so browsers/CDN skip stale cache. */
+const LOGO_VERSION = "20260827";
+const LOGO_DARK = `/images/Keshan-Industries-Logo-Latest.png?v=${LOGO_VERSION}`;
+const LOGO_LIGHT = `/images/Keshan-Industries-Logo-Latest-Light.png?v=${LOGO_VERSION}`;
 
 export default function Logo({ className = "" }: LogoProps) {
   const { resolvedTheme } = useTheme();
@@ -35,6 +37,7 @@ export default function Logo({ className = "" }: LogoProps) {
         height={72}
         className="h-full w-auto"
         priority
+        unoptimized
       />
     </Link>
   );

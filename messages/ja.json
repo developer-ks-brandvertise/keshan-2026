@@ -68,7 +68,7 @@
     "pinMarket": "銅市場パネルを固定",
     "unpinMarket": "銅市場パネルの固定を解除",
     "marketSidebar": "銅市場サイドバー",
-    "liveQuotes": "TradingView のライブ相場。参考値です。",
+    "liveQuotes": "参考相場。キャッシュ表示。販売の申し出ではありません。",
     "madeInIndia": "Made in India"
   },
   "home": {
@@ -82,14 +82,14 @@
       "eyebrow": "Keshan について",
       "headline": "高純度銅の製造、世界のために。",
       "highlight": "世界のために",
-      "body": "2016年以降、Keshan Industries は世界でも最も要求の厳しい産業向けに、高純度の銅・黄銅を製造してきました。開閉装置メーカーから太陽光発電事業者まで、私たちはコモディティの供給者ではなく製造パートナーです。冶金管理、バッチ検査済みの品質、そしてすべてのご注文での納期遵守。",
+      "body": "2019年以降、Keshan Industries は世界でも最も要求の厳しい産業向けに、高純度の銅・黄銅を製造してきました。開閉装置メーカーから太陽光発電事業者まで、私たちはコモディティの供給者ではなく製造パートナーです。冶金管理、バッチ検査済みの品質、そしてすべてのご注文での納期遵守。",
       "quote": "私たちはコモディティの供給者ではなく、製造パートナーです。",
       "quoteHighlight": "バッチ検査済み",
       "quoteEnd": "すべてのご注文で品質を。",
       "imageAlt": "Keshan 製造施設",
       "stats": {
         "yearsTitle": "年",
-        "yearsBody": "2016年からの製造の卓越性。",
+        "yearsBody": "2019年からの製造の卓越性。",
         "countriesTitle": "カ国",
         "countriesBody": "世界30カ国以上への納期遵守。",
         "capacityTitle": "MT / 年",
@@ -202,7 +202,7 @@
     }
   },
   "footer": {
-    "description": "Keshan Industries は、電力、エネルギー、自動車、エレクトロニクス、産業用途向けに高純度の銅・黄銅を製造しています。年間能力 24,000 MT 以上。ISO 9001、14001、45001 認証。Made in India。30カ国以上へ供給。",
+    "description": "Keshan Industries は、電力、エネルギー、自動車、エレクトロニクス、産業用途向けに高純度の銅・黄銅を製造しています。年間能力 25,000 MT 以上。ISO 9001、14001、45001 認証。Made in India。30カ国以上へ供給。",
     "company": "会社情報",
     "contact": "お問い合わせ",
     "copper": "銅",
@@ -218,7 +218,7 @@
     "storyEyebrow": "01 会社の歩み",
     "storyTitle": "ひとつの確信から、グローバルな製造パートナーへ。",
     "storyHighlight": "グローバルな製造パートナーへ。",
-    "body": "Keshan Industries は、ひとつの確信のもとに設立されました。インドの製造は、世界で最も厳しい産業が求める品質基準を満たし、それを超えることができる、という確信です。\n\n2016年に銅製造に特化した操業として始まった事業は、インドの非鉄金属業界で信頼される名へと成長しました。電力事業者、インフラ開発事業者、EVメーカー、産業グループ向けに高純度の銅・黄銅を製造し、供給は30カ国以上に達しています。\n\n歩みは段階的です。2021年の銅インゴット能力、2022年のISO体制、2023年の Manufacturing Unit-2、2025年までに30カ国以上への輸出、そして2026年のアノードプレート設備。私たちが生産する1トンごとに、純度、品質、最終用途性能へのコミットメントが表れています。\n\n現在、Keshan Industries は Telangana に、最新の溶解、圧延、試験インフラを備えた製造拠点を運営しています。国際仕様とお客様要件に応じた、銅・黄銅のフルレンジを生産できます。",
+    "body": "Keshan Industries は、ひとつの確信のもとに設立されました。インドの製造は、世界で最も厳しい産業が求める品質基準を満たし、それを超えることができる、という確信です。\n\n2019年に銅製造に特化した操業として始まった事業は、インドの非鉄金属業界で信頼される名へと成長しました。電力事業者、インフラ開発事業者、EVメーカー、産業グループ向けに高純度の銅・黄銅を製造し、供給は30カ国以上に達しています。\n\n歩みは段階的です。2021年の銅インゴット能力、2022年のISO体制、2023年の Manufacturing Unit-2、2025年までに30カ国以上への輸出、そして2026年のアノードプレート設備。私たちが生産する1トンごとに、純度、品質、最終用途性能へのコミットメントが表れています。\n\n現在、Keshan Industries は Telangana に、最新の溶解、圧延、試験インフラを備えた製造拠点を運営しています。国際仕様とお客様要件に応じた、銅・黄銅のフルレンジを生産できます。",
     "imageAlt": "Keshan 施設",
     "visionEyebrow": "ビジョン",
     "visionTitle": "未来を照らす、すべての銅線に触れること。",
@@ -251,9 +251,9 @@
     "leadershipTitle": "基準を支えるチーム。",
     "leadershipBody": "Keshan Industries は、冶金の専門知識と商業経験、そして業界の長期的な視点を兼ね備えた経営チームが率いています。品質へのコミットメントは経営指示ではありません。個人の基準です。",
     "milestonesEyebrow": "歩み",
-    "milestonesTitle": "2016年から、さらに強く。",
+    "milestonesTitle": "2019年から、さらに強く。",
     "events": {
-      "2016": {
+      "2019": {
         "title": "創業",
         "description": "Keshan Industries 創業。Telangana に最初の製造施設を稼働。"
       },
@@ -306,13 +306,23 @@
     },
     "team": {
       "vikash": {
-        "title": "マネージングディレクター、Keshan Industries",
-        "shortBio": "企業とコミュニティ、二つの意味で築く人。商社から製造へ進んだ道が、2016年から Keshan Industries を形づくってきました。",
+        "title": "マネージング・パートナー、Keshan Industries",
+        "shortBio": "企業とコミュニティ、二つの意味で築く人。商社から製造へ進んだ道が、2019年から Keshan Industries を形づくってきました。",
         "fullBio": [
           "粘り強さと先見性が一本の弧を描くキャリアは多くありません。Vikash Kumar Keshan はその一人です。Calcutta University 1997年卒の商学士で、公認会計士の定石から始め、意図して自らの道を選びました。2005年、その信念から Keshan Trading Corporation が生まれ、構造用鋼、GI・MS 管、特殊鋼を扱い、金属取引への稀有な現場感覚を培いました。",
-          "2016年、Keshan 氏は弟の Rajneesh Keshan と共に Keshan Industries を創業し、商社から製造へ意識的に転換しました。Make in India の精神と、本物の革新に支えられた国内生産こそ India の最も持続する優位であるという共有の信念に基づきます。彼の指揮の下、従業員は300人を超え、専任の研究開発チームと、技術習熟・目的の明確さ・協働を根とするリーダーシップが特徴です。",
+          "2019年、Keshan 氏は弟の Rajneesh Keshan と共に Keshan Industries を創業し、商社から製造へ意識的に転換しました。Make in India の精神と、本物の革新に支えられた国内生産こそ India の最も持続する優位であるという共有の信念に基づきます。彼の指揮の下、従業員は300人を超え、専任の研究開発チームと、技術習熟・目的の明確さ・協働を根とするリーダーシップが特徴です。",
           "影響力は企業の外にも及びます。Agarwal Samaj のメンバーとして15年、実力と信頼で役職を重ね、North Secunderabad Agarwal Samaj 会長（2023）、Secunderabad の Bihar Agarwal Samaj 会長（2024）、現在は Agarwal Samaj Telangana 事務局長（2025）を務めています。",
           "Vikash Kumar Keshan は本質的に、企業とコミュニティの両方を築く人であり、常に外へ向かう志を持つリーダーです。"
+        ]
+      },
+      "rajneesh": {
+        "title": "マネージング・パートナー、Keshan Industries",
+        "shortBio": "From the sourcing floor to the plant floor — a Managing Partner who believes discipline compounds faster than capital.",
+        "fullBio": [
+          "Rajneesh Keshan's early education ran across Ranikhet and DPS Mathura, followed by a foundation in commerce from Symbiosis — a grounding that, for two consecutive years, was tested against the country's civil services interviews before he chose industry over administration.",
+          "In 2007, he joined Keshan Trading Corporation, learning the metals trade the only way it can be learned: from the sourcing floor up, through cycles that reward discipline and punish error in equal measure. That apprenticeship matured into conviction by 2019, when he co-founded Keshan Industries alongside Vikash Keshan, built on a simple thesis — that discipline compounds faster than capital.",
+          "As Managing Partner, Rajneesh brings a rare pairing to the boardroom: a macro-level read on markets and finance, and an operator's instinct for translating vision into execution on the plant floor. His approach to leadership mirrors his approach to fitness — unhurried, self-disciplined, and relentlessly consistent — and it extends to a conviction that real growth is symbiotic, never extractive.",
+          "He protects the line between work and life with the same rigor he applies to the company's standards, on the belief that an institution built to last is, first, built by people built to last."
         ]
       },
       "yash": {
@@ -452,7 +462,7 @@
     "news": "銅・黄銅ニュース",
     "latest": "ミルデスクからの最新情報",
     "ask": "冶金技術者に聞く",
-    "chartsNote": "チャートは TradingView 経由。金属フィードが設定されている場合、レートは2分ごとに更新されます。",
+    "chartsNote": "Rzzro（LME銅）と無料FXフィードによる参考相場。MCXは第三者の参考値です。API負荷軽減のためキャッシュしています。販売の申し出ではありません。",
     "categories": {
       "Market": "市場",
       "Application": "用途",
@@ -572,7 +582,8 @@
       }
     },
     "locationsTitle": "所在地",
-    "locationsBody": "本社、製造ユニット-1、製造ユニット-2 が Telangana にあります。"
+    "locationsBody": "本社、製造ユニット-1、製造ユニット-2 が Telangana にあります。",
+    "openMap": "Google マップで開く"
   },
   "meta": {
     "home": {

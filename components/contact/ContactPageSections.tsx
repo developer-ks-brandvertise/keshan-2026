@@ -205,27 +205,41 @@ export function ContactPageSections({
               {t("locationsBody")}
             </p>
           </AnimatedSection>
-          <div className="grid gap-8 lg:grid-cols-3">
+          <div className="grid items-stretch gap-8 lg:grid-cols-3">
             {contact.locations.map((location, index) => {
               const key = locationKeys[index];
               const label = t(key);
               return (
-                <AnimatedSection key={key} delay={Math.min(index * 0.06, 0.18)}>
-                  <article className="overflow-hidden border border-copper-base/25 bg-dark-950">
+                <AnimatedSection key={key} delay={Math.min(index * 0.06, 0.18)} className="h-full">
+                  <article className="flex h-full flex-col overflow-hidden border border-copper-base/25 bg-dark-950">
                     <div className="flex items-center gap-2 border-b border-copper-base/25 px-4 py-3">
                       <MapPin className="h-4 w-4 text-copper-base" />
                       <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
                         {label}
                       </p>
                     </div>
-                    <p className="px-4 py-4 text-body-sm text-text-primary">{location.address}</p>
-                    <iframe
-                      title={`${label} map`}
-                      src={location.mapEmbed}
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      className="h-56 w-full border-0"
-                    />
+                    <p className="min-h-[7.5rem] flex-1 px-4 py-4 text-body-sm text-text-primary">
+                      {location.address}
+                    </p>
+                    <div className="relative h-56 w-full shrink-0 border-t border-copper-base/20">
+                      <iframe
+                        title={`${label} map`}
+                        src={location.mapEmbed}
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="absolute inset-0 h-full w-full border-0"
+                      />
+                    </div>
+                    {"mapLink" in location && location.mapLink ? (
+                      <a
+                        href={location.mapLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border-t border-copper-base/20 px-4 py-2.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base transition-colors hover:bg-copper-base/10"
+                      >
+                        {t("openMap")}
+                      </a>
+                    ) : null}
                   </article>
                 </AnimatedSection>
               );

@@ -40,7 +40,7 @@ export function QualityLogoGrid({ className = "", size = "default" }: QualityLog
               />
             ) : null}
 
-            <div className={`relative z-[1] h-full w-full overflow-hidden rounded-full bg-dark-900 ${isLarge ? "p-3 sm:p-3.5" : "p-2 sm:p-2.5"}`}>
+            <div className={`relative z-[1] h-full w-full overflow-hidden rounded-full bg-white ${isLarge ? "p-3 sm:p-3.5" : "p-2 sm:p-2.5"}`}>
               <Image
                 src={src}
                 alt={`Certification logo ${i + 1}`}

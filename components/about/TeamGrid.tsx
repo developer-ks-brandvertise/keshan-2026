@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useReducedMotion } from "framer-motion";
 import { X } from "lucide-react";
@@ -41,6 +42,28 @@ function MemberPlaceholder({ name }: { name: string }) {
       </span>
       <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,transparent_40%,rgba(232,166,89,0.08)_100%)]" />
     </div>
+  );
+}
+
+function MemberPhoto({ member }: { member: TeamMember }) {
+  if (!member.image) {
+    return <MemberPlaceholder name={member.name} />;
+  }
+
+  return (
+    <>
+      <Image
+        src={member.image}
+        alt={member.name}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+        className="object-cover object-top grayscale transition-[filter] duration-500 group-hover:grayscale-0 group-focus-within:grayscale-0"
+      />
+      <div
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark-950/50 via-transparent to-transparent"
+        aria-hidden
+      />
+    </>
   );
 }
 
@@ -93,13 +116,26 @@ function TeamMemberModal({
         className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden border border-copper-base/30 bg-dark-900 shadow-[0_24px_80px_rgba(0,0,0,0.55)]"
       >
         <div className="flex items-start justify-between gap-4 border-b border-copper-base/20 px-6 py-5 sm:px-8">
-          <div>
-            <h3 id={titleId} className="text-xl text-text-primary sm:text-2xl">
-              {member.name}
-            </h3>
-            <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-              {title}
-            </p>
+          <div className="flex min-w-0 items-start gap-4">
+            {member.image ? (
+              <div className="relative h-16 w-16 shrink-0 overflow-hidden border border-copper-base/30">
+                <Image
+                  src={member.image}
+                  alt=""
+                  fill
+                  sizes="64px"
+                  className="object-cover object-top"
+                />
+              </div>
+            ) : null}
+            <div className="min-w-0">
+              <h3 id={titleId} className="text-xl text-text-primary sm:text-2xl">
+                {member.name}
+              </h3>
+              <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
+                {title}
+              </p>
+            </div>
           </div>
           <button
             ref={closeRef}
@@ -150,9 +186,8 @@ function TeamCard({
   return (
     <article className="group relative flex flex-col overflow-hidden border border-copper-base/25 bg-dark-950 transition-colors hover:border-copper-base/50">
       <div className="relative aspect-[4/5] overflow-hidden">
-        <MemberPlaceholder name={member.name} />
+        <MemberPhoto member={member} />
 
-        {/* Hover / focus overlay */}
         <div
           className={`absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-dark-950 via-dark-950/90 to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-within:opacity-100 ${
             reduceMotion ? "duration-0" : ""
@@ -199,7 +234,6 @@ function TeamCard({
         <p className="mt-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-base">
           {title}
         </p>
-        {/* Mobile: always-visible actions (hover limited on touch) */}
         <div className="mt-4 flex flex-wrap gap-2 sm:hidden">
           <button
             type="button"
@@ -229,7 +263,7 @@ export default function TeamGrid() {
 
   return (
     <>
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+      <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-4 xl:gap-6">
         {leadership.team.map((member) => (
           <TeamCard
             key={member.name}

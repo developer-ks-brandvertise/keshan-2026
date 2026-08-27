@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, Pin, PinOff } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { liveQuoteSymbols, tradingViewMiniSrc } from "@/lib/market-symbols";
+import { MarketRateCards } from "@/components/knowledge/MarketRateCards";
 
 export function LMECopperSidebar() {
   const t = useTranslations("common");
@@ -40,7 +40,7 @@ export function LMECopperSidebar() {
           </span>
         </button>
 
-        <div className="w-80 rounded-l-none rounded-r-xl border border-copper-base/35 bg-dark-950/95 p-3 backdrop-blur-md">
+        <div className="w-[22rem] rounded-l-none rounded-r-xl border border-copper-base/35 bg-dark-950/95 p-3 backdrop-blur-md">
           <div className="mb-2 flex items-center justify-between px-1">
             <p className="font-heading text-xs uppercase tracking-[0.18em] text-copper-base">
               LME · MCX · USD/INR
@@ -64,22 +64,7 @@ export function LMECopperSidebar() {
             </button>
           </div>
 
-          <div className="space-y-2">
-            {liveQuoteSymbols.map((item) => (
-              <div
-                key={item.id}
-                className="overflow-hidden border border-copper-base/15 bg-dark-900/80"
-              >
-                <iframe
-                  title={`${item.label} quote`}
-                  src={tradingViewMiniSrc(item.symbol)}
-                  className="h-[132px] w-full border-0"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
-            ))}
-          </div>
+          <MarketRateCards compact />
 
           <p className="mt-3 px-1 text-[10px] text-text-muted">
             {t("liveQuotes")}

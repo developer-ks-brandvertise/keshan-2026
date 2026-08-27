@@ -50,7 +50,7 @@ export const aboutStatKeys = [
 ] as const;
 
 export const milestoneYears = [
-  "2016",
+  "2019",
   "2021",
   "2022",
   "2023",
@@ -69,10 +69,11 @@ export const regionKeys = [
   "europe",
 ] as const;
 
-export const teamKeys = ["vikash", "yash", "suren"] as const;
+export const teamKeys = ["vikash", "rajneesh", "yash", "suren"] as const;
 
 export const teamKeyByName: Record<string, (typeof teamKeys)[number]> = {
   "Vikash Kumar Keshan": "vikash",
+  "Rajneesh Keshan": "rajneesh",
   "Yash Keshan": "yash",
   "Suren Reddy": "suren",
 };

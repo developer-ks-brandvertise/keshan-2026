@@ -6,8 +6,7 @@ import { Link } from "@/i18n/routing";
 import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { CopperMarketChart } from "@/components/knowledge/CopperMarketChart";
-import { LiveRatesPanel } from "@/components/knowledge/LiveRatesPanel";
+import { MarketRateCards } from "@/components/knowledge/MarketRateCards";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -41,69 +40,59 @@ export default async function KnowledgePage({ params }: Props) {
 
       <section className="bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-8 lg:grid-cols-12 lg:gap-10">
-            <div className="lg:col-span-8">
-              <AnimatedSection>
-                <CopperMarketChart />
-              </AnimatedSection>
+          <AnimatedSection className="mb-12">
+            <MarketRateCards />
+            <p className="mt-4 text-[11px] leading-relaxed text-text-muted">
+              {t("chartsNote")}
+            </p>
+          </AnimatedSection>
 
-              <AnimatedSection className="mt-10 mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
-                    {t("news")}
-                  </p>
-                  <h2 className="mt-2 text-h3">{t("latest")}</h2>
-                </div>
-                <MagneticButton href="/contact" variant="primary" className="shrink-0">
-                  {t("ask")}
-                </MagneticButton>
-              </AnimatedSection>
-
-              <div className="grid gap-0 sm:grid-cols-2 sm:gap-x-8">
-                {knowledge.articles.map((article, index) => {
-                  const key = articleKeys[index];
-                  return (
-                    <AnimatedSection key={key} delay={Math.min(index * 0.04, 0.2)}>
-                      <Link
-                        href="/knowledge-centre"
-                        className="group grid grid-cols-[1fr_92px] items-start gap-4 border-b border-dark-100/10 py-5 sm:grid-cols-[1fr_108px]"
-                      >
-                        <div className="min-w-0">
-                          <h3 className="text-lg leading-snug text-text-primary transition-colors group-hover:text-copper-light">
-                            {t(`articles.${key}.title`)}
-                          </h3>
-                          <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-text-muted">
-                            <span className="text-copper-base">{article.source}</span>
-                            <span aria-hidden> · </span>
-                            <span>{article.date}</span>
-                            <span aria-hidden> · </span>
-                            <span>{t(`categories.${article.category}`)}</span>
-                          </p>
-                        </div>
-                        <div className="relative h-[72px] w-[92px] shrink-0 overflow-hidden border border-copper-base/20 sm:h-[80px] sm:w-[108px]">
-                          <Image
-                            src={article.image}
-                            alt=""
-                            fill
-                            sizes="108px"
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                          />
-                        </div>
-                      </Link>
-                    </AnimatedSection>
-                  );
-                })}
-              </div>
+          <AnimatedSection className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
+                {t("news")}
+              </p>
+              <h2 className="mt-2 text-h3">{t("latest")}</h2>
             </div>
+            <MagneticButton href="/contact" variant="primary" className="shrink-0">
+              {t("ask")}
+            </MagneticButton>
+          </AnimatedSection>
 
-            <div className="lg:col-span-4">
-              <div className="lg:sticky lg:top-28">
-                <LiveRatesPanel />
-                <p className="mt-4 text-[11px] leading-relaxed text-text-muted">
-                  {t("chartsNote")}
-                </p>
-              </div>
-            </div>
+          <div className="grid gap-0 sm:grid-cols-2 sm:gap-x-8 lg:grid-cols-3 lg:gap-x-10">
+            {knowledge.articles.map((article, index) => {
+              const key = articleKeys[index];
+              return (
+                <AnimatedSection key={key} delay={Math.min(index * 0.04, 0.2)}>
+                  <Link
+                    href="/knowledge-centre"
+                    className="group grid grid-cols-[1fr_92px] items-start gap-4 border-b border-dark-100/10 py-5 sm:grid-cols-[1fr_108px]"
+                  >
+                    <div className="min-w-0">
+                      <h3 className="text-lg leading-snug text-text-primary transition-colors group-hover:text-copper-light">
+                        {t(`articles.${key}.title`)}
+                      </h3>
+                      <p className="mt-2 text-[11px] uppercase tracking-[0.14em] text-text-muted">
+                        <span className="text-copper-base">{article.source}</span>
+                        <span aria-hidden> · </span>
+                        <span>{article.date}</span>
+                        <span aria-hidden> · </span>
+                        <span>{t(`categories.${article.category}`)}</span>
+                      </p>
+                    </div>
+                    <div className="relative h-[72px] w-[92px] shrink-0 overflow-hidden border border-copper-base/20 sm:h-[80px] sm:w-[108px]">
+                      <Image
+                        src={article.image}
+                        alt=""
+                        fill
+                        sizes="108px"
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
+                  </Link>
+                </AnimatedSection>
+              );
+            })}
           </div>
         </div>
       </section>

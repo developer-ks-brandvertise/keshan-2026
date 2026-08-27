@@ -68,7 +68,7 @@
     "pinMarket": "Fijar el panel de mercado de cobre",
     "unpinMarket": "Soltar el panel de mercado de cobre",
     "marketSidebar": "Barra lateral del mercado de cobre",
-    "liveQuotes": "Cotizaciones en vivo de TradingView. Solo orientativas.",
+    "liveQuotes": "Datos de mercado indicativos. Cotizaciones en caché. No es una oferta de venta.",
     "madeInIndia": "Hecho en India"
   },
   "home": {
@@ -82,14 +82,14 @@
       "eyebrow": "Sobre Keshan",
       "headline": "Fabricación de cobre de calidad pura, hecha para el mundo.",
       "highlight": "hecha para el mundo",
-      "body": "Desde 2016, Keshan Industries fabrica cobre y latón de calidad pura para algunas de las industrias más exigentes del mundo. Desde fabricantes de aparamenta hasta desarrolladores solares, somos un socio de fabricación, no un proveedor de commodities: control metalúrgico, calidad ensayada por lote y entrega a tiempo en cada pedido.",
+      "body": "Desde 2019, Keshan Industries fabrica cobre y latón de calidad pura para algunas de las industrias más exigentes del mundo. Desde fabricantes de aparamenta hasta desarrolladores solares, somos un socio de fabricación, no un proveedor de commodities: control metalúrgico, calidad ensayada por lote y entrega a tiempo en cada pedido.",
       "quote": "Somos un socio de fabricación, no un proveedor de commodities.",
       "quoteHighlight": "ensayada por lote",
       "quoteEnd": "calidad en cada pedido.",
       "imageAlt": "Planta de fabricación de Keshan",
       "stats": {
         "yearsTitle": "Años",
-        "yearsBody": "Años de excelencia en fabricación desde 2016.",
+        "yearsBody": "Años de excelencia en fabricación desde 2019.",
         "countriesTitle": "Países",
         "countriesBody": "Entrega a tiempo a más de 30 países en el mundo.",
         "capacityTitle": "MT / año",
@@ -218,7 +218,7 @@
     "storyEyebrow": "01. Historia de la empresa",
     "storyTitle": "De una sola convicción a un socio de fabricación global.",
     "storyHighlight": "socio de fabricación global.",
-    "body": "Keshan Industries se fundó con una sola convicción: que la fabricación india podía cumplir y superar los estándares de calidad que exigen las industrias más rigurosas del mundo.\n\nLo que comenzó en 2016 como una operación centrada en la fabricación de cobre se ha convertido en un nombre respetado en la industria de metales no ferrosos de India. Fabricamos cobre y latón de calidad pura para empresas eléctricas, desarrolladores de infraestructura, fabricantes de VE y grupos industriales, con suministro a más de 30 países.\n\nEl recorrido ha sido por etapas: capacidad de lingotes de cobre en 2021, sistemas ISO en 2022, Manufacturing Unit-2 en 2023, alcance de exportación a más de 30 países en 2025 y una línea de placas de ánodo en 2026. Cada tonelada que producimos refleja nuestro compromiso con la pureza, la calidad y el desempeño en el uso final.\n\nHoy, Keshan Industries opera plantas de fabricación en Telangana, equipadas con infraestructura moderna de fusión, laminación y ensayo. Capaces de producir la gama completa de productos de cobre y latón según especificaciones internacionales y requisitos del cliente.",
+    "body": "Keshan Industries se fundó con una sola convicción: que la fabricación india podía cumplir y superar los estándares de calidad que exigen las industrias más rigurosas del mundo.\n\nLo que comenzó en 2019 como una operación centrada en la fabricación de cobre se ha convertido en un nombre respetado en la industria de metales no ferrosos de India. Fabricamos cobre y latón de calidad pura para empresas eléctricas, desarrolladores de infraestructura, fabricantes de VE y grupos industriales, con suministro a más de 30 países.\n\nEl recorrido ha sido por etapas: capacidad de lingotes de cobre en 2021, sistemas ISO en 2022, Manufacturing Unit-2 en 2023, alcance de exportación a más de 30 países en 2025 y una línea de placas de ánodo en 2026. Cada tonelada que producimos refleja nuestro compromiso con la pureza, la calidad y el desempeño en el uso final.\n\nHoy, Keshan Industries opera plantas de fabricación en Telangana, equipadas con infraestructura moderna de fusión, laminación y ensayo. Capaces de producir la gama completa de productos de cobre y latón según especificaciones internacionales y requisitos del cliente.",
     "imageAlt": "Planta de Keshan",
     "visionEyebrow": "Visión",
     "visionTitle": "Tocar cada cable de cobre que ilumina nuestro futuro.",
@@ -251,9 +251,9 @@
     "leadershipTitle": "El equipo detrás del estándar.",
     "leadershipBody": "Keshan Industries está dirigida por un equipo de gestión que combina experiencia metalúrgica con trayectoria comercial y una visión a largo plazo de la industria. Su compromiso con la calidad no es una directiva de gestión. Es un estándar personal.",
     "milestonesEyebrow": "Trayectoria",
-    "milestonesTitle": "Más fuertes desde 2016.",
+    "milestonesTitle": "Más fuertes desde 2019.",
     "events": {
-      "2016": {
+      "2019": {
         "title": "Fundación",
         "description": "Se funda Keshan Industries; se pone en marcha la primera planta de fabricación en Telangana."
       },
@@ -306,13 +306,23 @@
     },
     "team": {
       "vikash": {
-        "title": "Director general, Keshan Industries",
-        "shortBio": "Constructor dos veces, de empresa y de comunidad, cuyo paso del comercio a la fabricación ha dado forma a Keshan Industries desde 2016.",
+        "title": "Socio Director, Keshan Industries",
+        "shortBio": "Constructor dos veces, de empresa y de comunidad, cuyo paso del comercio a la fabricación ha dado forma a Keshan Industries desde 2019.",
         "fullBio": [
           "Pocas carreras trazan un arco tan claro entre tenacidad y visión como la de Vikash Kumar Keshan. Licenciado en comercio por Calcutta University, promoción de 1997, empezó en la vía convencional de la contaduría pública antes de elegir, a propósito, su propio camino. En 2005 esa convicción dio lugar a Keshan Trading Corporation, en acero estructural, tubos GI y MS y aceros especiales, donde adquirió un dominio excepcional del comercio de metales.",
-          "En 2016, el Sr. Keshan y su hermano Rajneesh Keshan fundaron juntos Keshan Industries, una evolución deliberada del comercio a la fabricación, animada por el espíritu Make in India y la convicción de que la producción nacional, reforzada por innovación real, es la ventaja más duradera de India. Bajo su dirección, la empresa supera los 300 empleados, con un equipo de investigación e innovación y un liderazgo basado en maestría técnica, claridad de propósito y esfuerzo colectivo.",
+          "En 2019, el Sr. Keshan y su hermano Rajneesh Keshan fundaron juntos Keshan Industries, una evolución deliberada del comercio a la fabricación, animada por el espíritu Make in India y la convicción de que la producción nacional, reforzada por innovación real, es la ventaja más duradera de India. Bajo su dirección, la empresa supera los 300 empleados, con un equipo de investigación e innovación y un liderazgo basado en maestría técnica, claridad de propósito y esfuerzo colectivo.",
           "Su influencia va más allá de la empresa. Miembro de Agarwal Samaj durante quince años, ha ascendido por mérito y confianza: presidente de North Secunderabad Agarwal Samaj (2023); presidente de Bihar Agarwal Samaj, Secunderabad (2024); y actualmente secretario de Agarwal Samaj Telangana (2025).",
           "Vikash Kumar Keshan es, en esencia, un constructor dos veces: de empresa y de comunidad, un líder cuyas ambiciones siempre han apuntado hacia afuera."
+        ]
+      },
+      "rajneesh": {
+        "title": "Socio Director, Keshan Industries",
+        "shortBio": "From the sourcing floor to the plant floor — a Managing Partner who believes discipline compounds faster than capital.",
+        "fullBio": [
+          "Rajneesh Keshan's early education ran across Ranikhet and DPS Mathura, followed by a foundation in commerce from Symbiosis — a grounding that, for two consecutive years, was tested against the country's civil services interviews before he chose industry over administration.",
+          "In 2007, he joined Keshan Trading Corporation, learning the metals trade the only way it can be learned: from the sourcing floor up, through cycles that reward discipline and punish error in equal measure. That apprenticeship matured into conviction by 2019, when he co-founded Keshan Industries alongside Vikash Keshan, built on a simple thesis — that discipline compounds faster than capital.",
+          "As Managing Partner, Rajneesh brings a rare pairing to the boardroom: a macro-level read on markets and finance, and an operator's instinct for translating vision into execution on the plant floor. His approach to leadership mirrors his approach to fitness — unhurried, self-disciplined, and relentlessly consistent — and it extends to a conviction that real growth is symbiotic, never extractive.",
+          "He protects the line between work and life with the same rigor he applies to the company's standards, on the belief that an institution built to last is, first, built by people built to last."
         ]
       },
       "yash": {
@@ -452,7 +462,7 @@
     "news": "Noticias de cobre y latón",
     "latest": "Lo último desde la mesa de planta",
     "ask": "Consulte a nuestros metalúrgicos",
-    "chartsNote": "Gráficos a través de TradingView. Los precios se actualizan cada dos minutos cuando el feed de metales está configurado.",
+    "chartsNote": "Datos de mercado indicativos vía Rzzro (cobre LME) y feeds FX gratuitos. MCX como cotización indicativa de terceros. Con caché para limitar solicitudes. No es una oferta de venta.",
     "categories": {
       "Market": "Mercado",
       "Application": "Aplicación",
@@ -572,7 +582,8 @@
       }
     },
     "locationsTitle": "Nuestras ubicaciones",
-    "locationsBody": "Oficina central, Unidad de fabricación-1 y Unidad de fabricación-2 en Telangana."
+    "locationsBody": "Oficina central, Unidad de fabricación-1 y Unidad de fabricación-2 en Telangana.",
+    "openMap": "Abrir en Google Maps"
   },
   "meta": {
     "home": {

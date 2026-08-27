@@ -68,7 +68,7 @@
     "pinMarket": "تثبيت لوحة سوق النحاس",
     "unpinMarket": "إلغاء تثبيت لوحة سوق النحاس",
     "marketSidebar": "الشريط الجانبي لسوق النحاس",
-    "liveQuotes": "أسعار TradingView مباشرة. للإشارة فقط.",
+    "liveQuotes": "بيانات سوق إرشادية. أسعار مخزّنة. ليست عرض بيع.",
     "madeInIndia": "صنع في India"
   },
   "home": {
@@ -82,14 +82,14 @@
       "eyebrow": "عن Keshan",
       "headline": "تصنيع نحاس بجودة نقية، مصمم للعالم.",
       "highlight": "مصمم للعالم",
-      "body": "منذ عام 2016، تصنّع Keshan Industries نحاساً ونحاساً أصفراً بجودة نقية لبعض أكثر القطاعات تطلباً في العالم. من مصنّعي أجهزة التوزيع إلى مطوّري الطاقة الشمسية، نحن شريك تصنيع لا مورّد سلع: تحكم معدني، جودة مختبرة لكل دفعة، وتسليم في الموعد في كل طلب.",
+      "body": "منذ عام 2019، تصنّع Keshan Industries نحاساً ونحاساً أصفراً بجودة نقية لبعض أكثر القطاعات تطلباً في العالم. من مصنّعي أجهزة التوزيع إلى مطوّري الطاقة الشمسية، نحن شريك تصنيع لا مورّد سلع: تحكم معدني، جودة مختبرة لكل دفعة، وتسليم في الموعد في كل طلب.",
       "quote": "نحن شريك تصنيع لا مورّد سلع.",
       "quoteHighlight": "مختبرة لكل دفعة",
       "quoteEnd": "الجودة في كل طلب.",
       "imageAlt": "منشأة تصنيع Keshan",
       "stats": {
         "yearsTitle": "سنوات",
-        "yearsBody": "سنوات من التميز في التصنيع منذ 2016.",
+        "yearsBody": "سنوات من التميز في التصنيع منذ 2019.",
         "countriesTitle": "دول",
         "countriesBody": "تسليم في الموعد إلى أكثر من 30 دولة حول العالم.",
         "capacityTitle": "MT / سنة",
@@ -202,7 +202,7 @@
     }
   },
   "footer": {
-    "description": "تصنّع Keshan Industries نحاساً ونحاساً أصفراً بجودة نقية لتطبيقات الطاقة والكهرباء والسيارات والإلكترونيات والصناعة. طاقة سنوية تزيد على 24,000 MT. معتمدة ISO 9001 و 14001 و 45001. صنع في India. توريد إلى أكثر من 30 دولة.",
+    "description": "تصنّع Keshan Industries نحاساً ونحاساً أصفراً بجودة نقية لتطبيقات الطاقة والكهرباء والسيارات والإلكترونيات والصناعة. طاقة سنوية تزيد على 25,000 MT. معتمدة ISO 9001 و 14001 و 45001. صنع في India. توريد إلى أكثر من 30 دولة.",
     "company": "الشركة",
     "contact": "اتصل بنا",
     "copper": "النحاس",
@@ -218,7 +218,7 @@
     "storyEyebrow": "01 - قصة الشركة",
     "storyTitle": "من قناعة واحدة إلى شريك تصنيع عالمي.",
     "storyHighlight": "شريك تصنيع عالمي.",
-    "body": "تأسست Keshan Industries بقناعة واحدة: أن التصنيع في India قادر على بلوغ معايير الجودة التي تطلبها أدق الصناعات في العالم وتجاوزها.\n\nما بدأ عام 2016 كعملية تصنيع نحاس مركّزة أصبح اسماً محترماً في صناعة المعادن غير الحديدية في India. نصنّع نحاساً ونحاساً أصفراً بجودة نقية لمرافق الطاقة ومطوّري البنية التحتية ومصنّعي المركبات الكهربائية والمجموعات الصناعية، ويصل توريدنا إلى أكثر من 30 دولة.\n\nكانت المسيرة مرحلية: طاقة سبائك النحاس في 2021، أنظمة ISO في 2022، وحدة التصنيع-2 في 2023، وصول التصدير إلى أكثر من 30 دولة بحلول 2025، وتجهيز ألواح الأنود في 2026. كل طن ننتجه يعكس التزامنا بالنقاء والجودة وأداء الاستخدام النهائي.\n\nاليوم، تشغّل Keshan Industries وحدات تصنيع في Telangana مجهّزة ببنية حديثة للصهر والدرفلة والاختبار. قادرة على إنتاج المجموعة الكاملة من منتجات النحاس والنحاس الأصفر وفق المواصفات الدولية ومتطلبات العملاء.",
+    "body": "تأسست Keshan Industries بقناعة واحدة: أن التصنيع في India قادر على بلوغ معايير الجودة التي تطلبها أدق الصناعات في العالم وتجاوزها.\n\nما بدأ عام 2019 كعملية تصنيع نحاس مركّزة أصبح اسماً محترماً في صناعة المعادن غير الحديدية في India. نصنّع نحاساً ونحاساً أصفراً بجودة نقية لمرافق الطاقة ومطوّري البنية التحتية ومصنّعي المركبات الكهربائية والمجموعات الصناعية، ويصل توريدنا إلى أكثر من 30 دولة.\n\nكانت المسيرة مرحلية: طاقة سبائك النحاس في 2021، أنظمة ISO في 2022، وحدة التصنيع-2 في 2023، وصول التصدير إلى أكثر من 30 دولة بحلول 2025، وتجهيز ألواح الأنود في 2026. كل طن ننتجه يعكس التزامنا بالنقاء والجودة وأداء الاستخدام النهائي.\n\nاليوم، تشغّل Keshan Industries وحدات تصنيع في Telangana مجهّزة ببنية حديثة للصهر والدرفلة والاختبار. قادرة على إنتاج المجموعة الكاملة من منتجات النحاس والنحاس الأصفر وفق المواصفات الدولية ومتطلبات العملاء.",
     "imageAlt": "منشأة Keshan",
     "visionEyebrow": "الرؤية",
     "visionTitle": "أن نلمس كل سلك نحاس يضيء مستقبلنا.",
@@ -251,9 +251,9 @@
     "leadershipTitle": "الفريق وراء المعيار.",
     "leadershipBody": "تقود Keshan Industries فريق إدارة يجمع الخبرة المعدنية مع التجربة التجارية ونظرة طويلة الأمد للقطاع. التزامهم بالجودة ليس توجيهاً إدارياً. إنه معيار شخصي.",
     "milestonesEyebrow": "المسيرة",
-    "milestonesTitle": "نزداد قوة منذ 2016.",
+    "milestonesTitle": "نزداد قوة منذ 2019.",
     "events": {
-      "2016": {
+      "2019": {
         "title": "التأسيس",
         "description": "تأسيس Keshan Industries وتشغيل أول منشأة تصنيع في Telangana."
       },
@@ -306,13 +306,23 @@
     },
     "team": {
       "vikash": {
-        "title": "العضو المنتدب، Keshan Industries",
-        "shortBio": "بنّاء مرتين: للمؤسسة وللمجتمع. مساره من التجارة إلى التصنيع شكّل Keshan Industries منذ 2016.",
+        "title": "الشريك الإداري، Keshan Industries",
+        "shortBio": "بنّاء مرتين: للمؤسسة وللمجتمع. مساره من التجارة إلى التصنيع شكّل Keshan Industries منذ 2019.",
         "fullBio": [
           "قليل من المسارات المهنية يرسم قوساً واضحاً بين الإصرار والبصيرة كما في مسار Vikash Kumar Keshan. تخرّج في التجارة من Calcutta University دفعة 1997، وبدأ في مسار المحاسبة القانونية التقليدي قبل أن يختار، عن عمد، أن يشق طريقه بنفسه. في 2005 أفضت تلك القناعة إلى Keshan Trading Corporation في الصلب الإنشائي وأنابيب GI و MS والمنتجات الفولاذية المتخصصة، ومنها اكتسب إلماماً دقيقاً بنار تجارة المعادن.",
-          "في 2016 أسّس السيد Keshan وأخوه Rajneesh Keshan معاً Keshan Industries، تطوراً مقصوداً من التجارة إلى التصنيع، بروح Make in India وقناعة مشتركة بأن الإنتاج المحلي المدعوم بابتكار حقيقي هو أبقى مزايا India. تحت قيادته تجاوزت القوة العاملة 300 شخص، مع فريق مخصص للبحث والابتكار وثقافة قيادة قائمة على الإتقان الفني ووضوح الهدف والعمل الجماعي.",
+          "في 2019 أسّس السيد Keshan وأخوه Rajneesh Keshan معاً Keshan Industries، تطوراً مقصوداً من التجارة إلى التصنيع، بروح Make in India وقناعة مشتركة بأن الإنتاج المحلي المدعوم بابتكار حقيقي هو أبقى مزايا India. تحت قيادته تجاوزت القوة العاملة 300 شخص، مع فريق مخصص للبحث والابتكار وثقافة قيادة قائمة على الإتقان الفني ووضوح الهدف والعمل الجماعي.",
           "يمتد أثره إلى ما وراء المؤسسة. عضواً في Agarwal Samaj خمسة عشر عاماً، ارتقى بالجدارة والثقة: رئيساً لـ North Secunderabad Agarwal Samaj (2023)؛ رئيساً لـ Bihar Agarwal Samaj في Secunderabad (2024)؛ والأمين الحالي لـ Agarwal Samaj Telangana (2025).",
           "Vikash Kumar Keshan في جوهره بنّاء مرتين: للمؤسسة وللمجتمع، وقائد ظلّت طموحاته تتجه إلى الخارج."
+        ]
+      },
+      "rajneesh": {
+        "title": "الشريك الإداري، Keshan Industries",
+        "shortBio": "From the sourcing floor to the plant floor — a Managing Partner who believes discipline compounds faster than capital.",
+        "fullBio": [
+          "Rajneesh Keshan's early education ran across Ranikhet and DPS Mathura, followed by a foundation in commerce from Symbiosis — a grounding that, for two consecutive years, was tested against the country's civil services interviews before he chose industry over administration.",
+          "In 2007, he joined Keshan Trading Corporation, learning the metals trade the only way it can be learned: from the sourcing floor up, through cycles that reward discipline and punish error in equal measure. That apprenticeship matured into conviction by 2019, when he co-founded Keshan Industries alongside Vikash Keshan, built on a simple thesis — that discipline compounds faster than capital.",
+          "As Managing Partner, Rajneesh brings a rare pairing to the boardroom: a macro-level read on markets and finance, and an operator's instinct for translating vision into execution on the plant floor. His approach to leadership mirrors his approach to fitness — unhurried, self-disciplined, and relentlessly consistent — and it extends to a conviction that real growth is symbiotic, never extractive.",
+          "He protects the line between work and life with the same rigor he applies to the company's standards, on the belief that an institution built to last is, first, built by people built to last."
         ]
       },
       "yash": {
@@ -452,7 +462,7 @@
     "news": "أخبار النحاس والنحاس الأصفر",
     "latest": "الأحدث من مكتب المصنع",
     "ask": "اسأل معدنيينا",
-    "chartsNote": "الرسوم البيانية عبر TradingView. تتحدث الأسعار كل دقيقتين عند تهيئة تغذية المعادن.",
+    "chartsNote": "بيانات سوق إرشادية عبر Rzzro (نحاس LME) ومصادر صرف مجانية. MCX كعرض طرف ثالث إرشادي. تُخزَّن مؤقتاً لتقليل الطلبات. ليست عرض بيع.",
     "categories": {
       "Market": "السوق",
       "Application": "التطبيق",
@@ -572,7 +582,8 @@
       }
     },
     "locationsTitle": "مواقعنا",
-    "locationsBody": "المكتب الرئيسي ووحدة التصنيع-1 ووحدة التصنيع-2 عبر Telangana."
+    "locationsBody": "المكتب الرئيسي ووحدة التصنيع-1 ووحدة التصنيع-2 عبر Telangana.",
+    "openMap": "فتح في خرائط Google"
   },
   "meta": {
     "home": {

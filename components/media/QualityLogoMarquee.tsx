@@ -40,7 +40,7 @@ function LogoTrack({
             aria-hidden={i >= items.length || undefined}
           >
             <div className="relative h-[88px] w-[88px] overflow-hidden rounded-full bg-copper-gradient p-[3px] shadow-[0_0_20px_rgba(202,94,46,0.2)] sm:h-[104px] sm:w-[104px]">
-              <div className="relative h-full w-full overflow-hidden rounded-full bg-dark-900 p-2">
+              <div className="relative h-full w-full overflow-hidden rounded-full bg-white p-2">
                 <Image
                   src={src}
                   alt={i < items.length ? `Certification logo ${i + 1}` : ""}
