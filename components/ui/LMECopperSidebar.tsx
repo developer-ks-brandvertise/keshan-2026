@@ -17,8 +17,8 @@ export function LMECopperSidebar() {
       aria-label={t("marketSidebar")}
     >
       <div
-        className={`pointer-events-auto flex items-stretch transition-transform duration-300 ${
-          isOpen ? "translate-x-0" : "translate-x-[calc(100%-44px)]"
+        className={`pointer-events-auto flex items-center transition-transform duration-300 ${
+          isOpen ? "translate-x-0" : "translate-x-[calc(100%-2rem)]"
         }`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
@@ -26,38 +26,38 @@ export function LMECopperSidebar() {
         <button
           type="button"
           onClick={() => setIsPinned((v) => !v)}
-          className="group flex w-11 flex-col items-center justify-center gap-2 rounded-l-lg border border-r-0 border-copper-base/35 bg-dark-950/95 px-1 py-3 text-copper-base shadow-[0_0_22px_rgba(184,115,51,0.28)] backdrop-blur-md transition-colors hover:text-copper-bright"
+          className="group flex h-28 w-8 flex-col items-center justify-center gap-1.5 rounded-l-md border border-r-0 border-copper-base/40 bg-[#0a0a0a]/95 text-copper-base shadow-[0_0_16px_rgba(184,115,51,0.22)] backdrop-blur-md transition-colors hover:text-copper-light"
           aria-expanded={isOpen}
           aria-label={isPinned ? t("unpinMarket") : t("pinMarket")}
         >
           {isOpen ? (
-            <ChevronRight className="h-4 w-4" strokeWidth={2.2} />
+            <ChevronRight className="h-3.5 w-3.5" strokeWidth={2.2} />
           ) : (
-            <ChevronLeft className="h-4 w-4" strokeWidth={2.2} />
+            <ChevronLeft className="h-3.5 w-3.5" strokeWidth={2.2} />
           )}
-          <span className="font-heading text-[10px] uppercase tracking-[0.22em] [writing-mode:vertical-rl]">
+          <span className="font-heading text-[8px] uppercase tracking-[0.18em] [writing-mode:vertical-rl]">
             {t("copperDesk")}
           </span>
         </button>
 
-        <div className="w-[22rem] rounded-l-none rounded-r-xl border border-copper-base/35 bg-dark-950/95 p-3 backdrop-blur-md">
+        <div className="w-[20rem] border border-copper-base/35 bg-[#0a0a0a]/96 p-2.5 shadow-[-8px_0_28px_rgba(0,0,0,0.35)] backdrop-blur-md sm:w-[21rem]">
           <div className="mb-2 flex items-center justify-between px-1">
-            <p className="font-heading text-xs uppercase tracking-[0.18em] text-copper-base">
+            <p className="font-heading text-[10px] uppercase tracking-[0.16em] text-copper-base">
               LME · MCX · USD/INR
             </p>
             <button
               type="button"
               onClick={() => setIsPinned((v) => !v)}
-              className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted transition-colors hover:text-copper-base"
+              className="inline-flex items-center gap-1 text-[9px] font-semibold uppercase tracking-[0.12em] text-[#8a8a8a] transition-colors hover:text-copper-base"
             >
               {isPinned ? (
                 <>
-                  <PinOff className="h-3.5 w-3.5" />
+                  <PinOff className="h-3 w-3" />
                   {t("unpin")}
                 </>
               ) : (
                 <>
-                  <Pin className="h-3.5 w-3.5" />
+                  <Pin className="h-3 w-3" />
                   {t("pin")}
                 </>
               )}

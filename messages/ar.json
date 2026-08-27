@@ -28,11 +28,11 @@
     "ja": "日本語"
   },
   "chat": {
-    "title": "مساعد كيشان",
-    "subtitle": "إجابات عن المنتجات والجودة",
+    "title": "Keshan AI Support",
+    "subtitle": "اسأل عن أي شيء",
     "placeholder": "اسأل عن المنتجات أو الشهادات أو مدد التوريد…",
-    "open": "فتح المحادثة",
-    "close": "إغلاق المحادثة",
+    "open": "فتح Keshan AI Support",
+    "close": "إغلاق Keshan AI Support",
     "send": "إرسال",
     "typing": "كيشان يكتب…",
     "suggested": "مقترحات",
@@ -43,7 +43,11 @@
       "certs": "ما الشهادات التي تحملها كيشان؟",
       "quote": "كيف أطلب عرض سعر؟",
       "export": "إلى أي دول تصدرون؟"
-    }
+    },
+    "bubbleTitle": "Keshan AI Support",
+    "bubbleBody": "اسأل أي شيء",
+    "fullView": "عرض كامل",
+    "exitFull": "الخروج من العرض الكامل"
   },
   "common": {
     "exploreManufacturing": "استكشف التصنيع لدينا",

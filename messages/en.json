@@ -28,11 +28,11 @@
     "ja": "日本語"
   },
   "chat": {
-    "title": "Keshan Assist",
-    "subtitle": "Product & quality answers",
+    "title": "Keshan AI Support",
+    "subtitle": "Ask anything about Keshan",
     "placeholder": "Ask about products, certs, lead times…",
-    "open": "Open chat",
-    "close": "Close chat",
+    "open": "Open Keshan AI Support",
+    "close": "Close Keshan AI Support",
     "send": "Send",
     "typing": "Keshan is typing…",
     "suggested": "Suggested",
@@ -43,7 +43,11 @@
       "certs": "What certifications does Keshan hold?",
       "quote": "How do I request a quote?",
       "export": "Which countries do you export to?"
-    }
+    },
+    "bubbleTitle": "Keshan AI Support",
+    "bubbleBody": "Ask anything",
+    "fullView": "Open full view",
+    "exitFull": "Exit full view"
   },
   "common": {
     "exploreManufacturing": "Explore Our Manufacturing",

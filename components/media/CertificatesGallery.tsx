@@ -84,25 +84,11 @@ export function CertificatesGallery({
     <>
       <AnimatedSection className="mt-10">
         <div
-          className="relative overflow-hidden border border-copper-base/25 bg-dark-950"
+          className="relative"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          {/* Soft radial wash behind the coverflow */}
-          <div
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(202,94,46,0.18),transparent_62%)]"
-            aria-hidden
-          />
-          <div
-            className="pointer-events-none absolute inset-0 opacity-40 [background:repeating-conic-gradient(from_0deg_at_50%_50%,transparent_0deg,rgba(255,218,154,0.05)_2deg,transparent_6deg)]"
-            aria-hidden
-          />
-
-          <div className="relative px-10 py-10 sm:px-14 sm:py-12 lg:px-16">
-            <p className="mb-6 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
-              {label}
-            </p>
-
+          <div className="relative px-10 sm:px-14 lg:px-16">
             <div
               className="relative mx-auto h-[280px] w-full max-w-5xl sm:h-[320px] lg:h-[360px]"
               style={{ perspective: reduceMotion ? undefined : "1200px" }}

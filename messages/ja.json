@@ -28,11 +28,11 @@
     "ja": "日本語"
   },
   "chat": {
-    "title": "Keshan アシスタント",
-    "subtitle": "製品・品質に関する回答",
+    "title": "Keshan AI Support",
+    "subtitle": "何でもお聞きください",
     "placeholder": "製品、認証、納期についてご質問ください…",
-    "open": "チャットを開く",
-    "close": "チャットを閉じる",
+    "open": "Keshan AI Support を開く",
+    "close": "Keshan AI Support を閉じる",
     "send": "送信",
     "typing": "Keshan が入力中…",
     "suggested": "おすすめの質問",
@@ -43,7 +43,11 @@
       "certs": "Keshan はどのような認証を取得していますか？",
       "quote": "お見積りはどのように依頼できますか？",
       "export": "どの国へ輸出していますか？"
-    }
+    },
+    "bubbleTitle": "Keshan AI Support",
+    "bubbleBody": "何でも聞いてください",
+    "fullView": "フル表示",
+    "exitFull": "フル表示を終了"
   },
   "common": {
     "exploreManufacturing": "製造について見る",
