@@ -7,6 +7,7 @@ import PageHero from "@/components/ui/PageHero";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { MarketRateCards } from "@/components/knowledge/MarketRateCards";
+import { CopperPriceChart } from "@/components/knowledge/CopperPriceChart";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -40,8 +41,9 @@ export default async function KnowledgePage({ params }: Props) {
 
       <section className="bg-dark-900 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
-          <AnimatedSection className="mb-12">
+          <AnimatedSection className="mb-12 space-y-6">
             <MarketRateCards />
+            <CopperPriceChart />
           </AnimatedSection>
 
           <AnimatedSection className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
