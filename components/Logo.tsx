@@ -10,7 +10,7 @@ interface LogoProps {
 }
 
 /** Bump when logo assets are replaced so browsers/CDN skip stale cache. */
-const LOGO_VERSION = "20260827-1632";
+const LOGO_VERSION = "20260827-1635";
 const LOGO_DARK = `/images/Keshan-Industries-Logo-Latest.png?v=${LOGO_VERSION}`;
 const LOGO_LIGHT = `/images/Keshan-Industries-Logo-Latest-Light.png?v=${LOGO_VERSION}`;
 
