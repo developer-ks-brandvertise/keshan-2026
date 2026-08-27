@@ -88,9 +88,9 @@ export function CertificatesGallery({
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          <div className="relative overflow-x-clip px-8 sm:px-12 lg:px-14">
+          <div className="relative px-10 sm:px-14 lg:px-16">
             <div
-              className="relative mx-auto h-[280px] w-full max-w-5xl overflow-hidden sm:h-[320px] lg:h-[360px]"
+              className="relative mx-auto h-[300px] w-full max-w-6xl sm:h-[360px] lg:h-[420px]"
               style={{ perspective: reduceMotion ? undefined : "1200px" }}
             >
               <div
@@ -100,13 +100,13 @@ export function CertificatesGallery({
                 {items.map((item, index) => {
                   const offset = shortestOffset(index, activeIndex, count);
                   const abs = Math.abs(offset);
-                  const visible = abs <= 2;
+                  const visible = abs <= 3;
                   const isActive = offset === 0;
 
-                  const translateX = offset * (reduceMotion ? 58 : 46);
-                  const rotateY = reduceMotion ? 0 : offset * -38;
-                  const scale = isActive ? 1 : Math.max(0.66, 1 - abs * 0.12);
-                  const opacity = !visible ? 0 : isActive ? 1 : Math.max(0.4, 1 - abs * 0.2);
+                  const translateX = offset * (reduceMotion ? 72 : 58);
+                  const rotateY = reduceMotion ? 0 : offset * -42;
+                  const scale = isActive ? 1 : Math.max(0.62, 1 - abs * 0.12);
+                  const opacity = !visible ? 0 : isActive ? 1 : Math.max(0.35, 1 - abs * 0.18);
 
                   return (
                     <button
@@ -119,7 +119,7 @@ export function CertificatesGallery({
                         if (isActive) setLightboxOpen(true);
                         else setActiveIndex(index);
                       }}
-                      className="absolute left-1/2 top-1/2 w-[min(68vw,380px)] origin-center sm:w-[360px] lg:w-[420px]"
+                      className="absolute left-1/2 top-1/2 w-[min(78vw,480px)] origin-center sm:w-[460px] lg:w-[520px]"
                       style={{
                         transform: `translate(-50%, -50%) translateX(${translateX}%) rotateY(${rotateY}deg) scale(${scale})`,
                         zIndex: 20 - abs,
@@ -142,7 +142,7 @@ export function CertificatesGallery({
                             src={item.src}
                             alt={item.alt}
                             fill
-                            sizes="460px"
+                            sizes="520px"
                             className="object-contain p-1.5"
                             priority={isActive}
                           />
