@@ -65,10 +65,6 @@ export function LMECopperSidebar() {
           </div>
 
           <MarketRateCards compact />
-
-          <p className="mt-3 px-1 text-[10px] text-text-muted">
-            {t("liveQuotes")}
-          </p>
         </div>
       </div>
     </aside>

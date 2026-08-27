@@ -42,9 +42,6 @@ export default async function KnowledgePage({ params }: Props) {
         <div className="mx-auto max-w-6xl">
           <AnimatedSection className="mb-12">
             <MarketRateCards />
-            <p className="mt-4 text-[11px] leading-relaxed text-text-muted">
-              {t("chartsNote")}
-            </p>
           </AnimatedSection>
 
           <AnimatedSection className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

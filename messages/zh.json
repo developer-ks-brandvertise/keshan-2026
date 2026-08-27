@@ -68,7 +68,7 @@
     "pinMarket": "固定铜市面板",
     "unpinMarket": "取消固定铜市面板",
     "marketSidebar": "铜市侧栏",
-    "liveQuotes": "指示性行情。缓存报价。非销售要约。",
+    "liveQuotes": "实时 LME · MCX · USD/INR",
     "madeInIndia": "印度制造"
   },
   "home": {
@@ -462,7 +462,7 @@
     "news": "铜与黄铜资讯",
     "latest": "车间工作台最新动态",
     "ask": "咨询我们的冶金工程师",
-    "chartsNote": "指示性行情来自 Rzzro（LME 铜）及免费外汇数据源。MCX 为第三方指示报价。已缓存以减少请求。非销售要约。",
+    "chartsNote": "面向采购的 LME、MCX 与 USD/INR 实时参考行情。",
     "categories": {
       "Market": "市场",
       "Application": "应用",

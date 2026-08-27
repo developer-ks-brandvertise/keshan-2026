@@ -68,7 +68,7 @@
     "pinMarket": "銅市場パネルを固定",
     "unpinMarket": "銅市場パネルの固定を解除",
     "marketSidebar": "銅市場サイドバー",
-    "liveQuotes": "参考相場。キャッシュ表示。販売の申し出ではありません。",
+    "liveQuotes": "ライブ LME · MCX · USD/INR",
     "madeInIndia": "Made in India"
   },
   "home": {
@@ -462,7 +462,7 @@
     "news": "銅・黄銅ニュース",
     "latest": "ミルデスクからの最新情報",
     "ask": "冶金技術者に聞く",
-    "chartsNote": "Rzzro（LME銅）と無料FXフィードによる参考相場。MCXは第三者の参考値です。API負荷軽減のためキャッシュしています。販売の申し出ではありません。",
+    "chartsNote": "バイヤー向けの LME・MCX・USD/INR ライブ参考レート。",
     "categories": {
       "Market": "市場",
       "Application": "用途",

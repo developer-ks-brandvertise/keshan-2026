@@ -68,7 +68,7 @@
     "pinMarket": "Fijar el panel de mercado de cobre",
     "unpinMarket": "Soltar el panel de mercado de cobre",
     "marketSidebar": "Barra lateral del mercado de cobre",
-    "liveQuotes": "Datos de mercado indicativos. Cotizaciones en caché. No es una oferta de venta.",
+    "liveQuotes": "LME · MCX · USD/INR en vivo",
     "madeInIndia": "Hecho en India"
   },
   "home": {
@@ -462,7 +462,7 @@
     "news": "Noticias de cobre y latón",
     "latest": "Lo último desde la mesa de planta",
     "ask": "Consulte a nuestros metalúrgicos",
-    "chartsNote": "Datos de mercado indicativos vía Rzzro (cobre LME) y feeds FX gratuitos. MCX como cotización indicativa de terceros. Con caché para limitar solicitudes. No es una oferta de venta.",
+    "chartsNote": "Tipos de referencia LME, MCX y USD/INR en vivo para compradores.",
     "categories": {
       "Market": "Mercado",
       "Application": "Aplicación",

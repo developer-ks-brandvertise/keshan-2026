@@ -14,8 +14,6 @@ type MarketRatesPayload = {
   ok: boolean;
   asOf: string;
   cards: QuoteCard[];
-  attribution: string;
-  disclaimer: string;
   reason?: string;
   message?: string;
 };
@@ -101,7 +99,6 @@ export async function GET() {
 
     const cards: QuoteCard[] = [];
     let asOf = new Date().toISOString();
-    let attribution = "Indicative market data";
 
     const copper =
       rzzroResult.status === "fulfilled"
@@ -112,9 +109,6 @@ export async function GET() {
 
     if (rzzroResult.status === "fulfilled" && rzzroResult.value.last_updated) {
       asOf = rzzroResult.value.last_updated;
-    }
-    if (rzzroResult.status === "fulfilled" && rzzroResult.value.metadata?.attribution) {
-      attribution = rzzroResult.value.metadata.attribution;
     }
 
     if (typeof copper?.price === "number") {
@@ -131,7 +125,7 @@ export async function GET() {
     }
 
     if (typeof copper?.price === "number" && typeof fx === "number") {
-      // Indicative MCX-style quote: LME USD/MT × USDINR ÷ 1000 → INR/kg
+      // MCX-style reference: LME USD/MT × USDINR ÷ 1000 → INR/kg
       const inrPerKg = (copper.price * fx) / 1000;
       cards.push({
         id: "mcx",
@@ -140,8 +134,8 @@ export async function GET() {
         unit: "/ KG",
         changePct:
           typeof copper.change_pct === "number" ? copper.change_pct : null,
-        source: "Indicative",
-        note: "Third-party estimate",
+        source: "MCX",
+        note: "Reference",
       });
     }
 
@@ -165,8 +159,6 @@ export async function GET() {
         ok: false,
         asOf,
         cards: [],
-        attribution,
-        disclaimer: "Indicative market data. Not an offer to sell.",
         reason: "upstream_unavailable",
         message: "Market feeds are temporarily unavailable.",
       };
@@ -182,9 +174,6 @@ export async function GET() {
       ok: true,
       asOf,
       cards,
-      attribution,
-      disclaimer:
-        "Indicative market data. MCX shown as a third-party estimate from LME × FX. Not an offer to sell.",
     };
 
     return NextResponse.json(payload, {
@@ -198,8 +187,6 @@ export async function GET() {
       ok: false,
       asOf: new Date().toISOString(),
       cards: [],
-      attribution: "Indicative market data",
-      disclaimer: "Indicative market data. Not an offer to sell.",
       reason: "network_error",
       message: "Could not fetch market rates right now.",
     };

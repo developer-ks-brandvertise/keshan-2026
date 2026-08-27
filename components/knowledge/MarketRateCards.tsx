@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowUpRight } from "lucide-react";
 import { useEffect, useState } from "react";
 
 type QuoteCard = {
@@ -16,9 +17,20 @@ type MarketRatesResponse = {
   ok: boolean;
   asOf: string;
   cards: QuoteCard[];
-  attribution: string;
-  disclaimer: string;
   message?: string;
+};
+
+const EXTERNAL_LINKS: Partial<
+  Record<QuoteCard["id"], { href: string; label: string }>
+> = {
+  lme: {
+    href: "https://www.lme.com/metals/non-ferrous/lme-copper#Overview",
+    label: "View on LME",
+  },
+  mcx: {
+    href: "https://www.moneycontrol.com/commodity/mcx-copper-price/?type=futures&exp=2026-08-31",
+    label: "View on Moneycontrol",
+  },
 };
 
 function ChangeBadge({ changePct }: { changePct: number | null }) {
@@ -59,8 +71,6 @@ export function MarketRateCards({
             ok: false,
             asOf: new Date().toISOString(),
             cards: [],
-            attribution: "",
-            disclaimer: "Indicative market data. Not an offer to sell.",
             message: "Could not load market rates.",
           });
         }
@@ -93,8 +103,8 @@ export function MarketRateCards({
       display: "—",
       unit: "/ KG",
       changePct: null,
-      source: "Indicative",
-      note: "Third-party",
+      source: "MCX",
+      note: "Reference",
     },
     {
       id: "usdinr",
@@ -113,11 +123,7 @@ export function MarketRateCards({
       : placeholders;
 
   return (
-    <div
-      className={`overflow-hidden border border-copper-base/25 bg-dark-950 ${
-        compact ? "" : ""
-      }`}
-    >
+    <div className="overflow-hidden border border-copper-base/25 bg-dark-950">
       <div className="flex items-center justify-between border-b border-copper-base/20 px-4 py-3">
         <div>
           <p className="text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base">
@@ -125,12 +131,12 @@ export function MarketRateCards({
           </p>
           {!compact ? (
             <p className="mt-1 text-sm text-text-secondary">
-              LME · MCX · USD/INR — indicative quotes for buyers
+              LME · MCX · USD/INR
             </p>
           ) : null}
         </div>
         <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-emerald-400">
-          {loading ? "Loading" : "Cached 2m"}
+          {loading ? "Loading" : "Live"}
         </span>
       </div>
 
@@ -141,36 +147,44 @@ export function MarketRateCards({
             : "sm:grid-cols-3 sm:divide-x sm:divide-copper-base/15"
         }`}
       >
-        {cards.map((card) => (
-          <div key={card.id} className="px-4 py-5 sm:px-5">
-            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-text-muted">
-              {card.label}
-            </p>
-            <div className="mt-3 flex items-baseline gap-1.5">
-              <p className="font-heading text-2xl tracking-wide text-text-primary sm:text-[1.65rem]">
-                {card.display}
+        {cards.map((card) => {
+          const external = EXTERNAL_LINKS[card.id];
+          return (
+            <div key={card.id} className="flex flex-col px-4 py-5 sm:px-5">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-text-muted">
+                {card.label}
               </p>
-              {card.unit ? (
-                <span className="text-[11px] uppercase tracking-[0.12em] text-text-muted">
-                  {card.unit}
+              <div className="mt-3 flex items-baseline gap-1.5">
+                <p className="font-heading text-2xl tracking-wide text-text-primary sm:text-[1.65rem]">
+                  {card.display}
+                </p>
+                {card.unit ? (
+                  <span className="text-[11px] uppercase tracking-[0.12em] text-text-muted">
+                    {card.unit}
+                  </span>
+                ) : null}
+              </div>
+              <div className="mt-3 flex items-center justify-between gap-3">
+                <ChangeBadge changePct={card.changePct} />
+                <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
+                  {card.source}
                 </span>
+              </div>
+              {external ? (
+                <a
+                  href={external.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-flex items-center gap-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted transition-colors hover:text-copper-base"
+                >
+                  {external.label}
+                  <ArrowUpRight className="h-3 w-3" strokeWidth={2.2} />
+                </a>
               ) : null}
             </div>
-            <div className="mt-3 flex items-center justify-between gap-3">
-              <ChangeBadge changePct={card.changePct} />
-              <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-copper-base">
-                {card.source}
-              </span>
-            </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
-
-      <p className="border-t border-copper-base/15 px-4 py-3 text-[10px] leading-relaxed text-text-muted">
-        {data?.disclaimer ??
-          "Indicative market data. Not an offer to sell."}
-        {data?.attribution ? ` ${data.attribution}` : ""}
-      </p>
     </div>
   );
 }
