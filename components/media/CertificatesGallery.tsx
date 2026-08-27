@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useId, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Pause, Play, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 
 export type CertificateItem = {
@@ -15,12 +15,18 @@ type CertificatesGalleryProps = {
   label?: string;
 };
 
+function shortestOffset(index: number, active: number, count: number) {
+  let diff = index - active;
+  if (diff > count / 2) diff -= count;
+  if (diff < -count / 2) diff += count;
+  return diff;
+}
+
 export function CertificatesGallery({
   items,
   label = "Certificates",
 }: CertificatesGalleryProps) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
   const [hovered, setHovered] = useState(false);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
@@ -28,10 +34,6 @@ export function CertificatesGallery({
 
   const count = items.length;
   const active = items[activeIndex] ?? items[0];
-  const prevIndex = count > 0 ? (activeIndex - 1 + count) % count : 0;
-  const nextIndex = count > 0 ? (activeIndex + 1) % count : 0;
-  const prevItem = items[prevIndex];
-  const nextItem = items[nextIndex];
 
   const goNext = useCallback(() => {
     setActiveIndex((i) => (i + 1) % Math.max(count, 1));
@@ -52,10 +54,10 @@ export function CertificatesGallery({
   }, []);
 
   useEffect(() => {
-    if (!isPlaying || hovered || reduceMotion || count <= 1) return;
-    const timer = window.setInterval(goNext, 4500);
+    if (hovered || reduceMotion || count <= 1 || lightboxOpen) return;
+    const timer = window.setInterval(goNext, 4200);
     return () => window.clearInterval(timer);
-  }, [count, goNext, hovered, isPlaying, reduceMotion]);
+  }, [count, goNext, hovered, lightboxOpen, reduceMotion]);
 
   useEffect(() => {
     if (!lightboxOpen) return;
@@ -82,132 +84,117 @@ export function CertificatesGallery({
     <>
       <AnimatedSection className="mt-10">
         <div
-          className="overflow-hidden border border-copper-base/25 bg-dark-900"
+          className="relative overflow-hidden border border-copper-base/25 bg-dark-950"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
         >
-          <div className="flex items-center justify-between border-b border-dark-100/10 px-4 py-3">
-            <div className="flex items-center gap-3">
-              <span className="font-heading text-xs tracking-[0.18em] text-copper-base">
-                {label}
-              </span>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted">
-                {activeIndex + 1} / {count}
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => setIsPlaying((v) => !v)}
-                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base transition-colors hover:border-copper-base"
-                aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
+          {/* Soft radial wash behind the coverflow */}
+          <div
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_45%,rgba(202,94,46,0.18),transparent_62%)]"
+            aria-hidden
+          />
+          <div
+            className="pointer-events-none absolute inset-0 opacity-40 [background:repeating-conic-gradient(from_0deg_at_50%_50%,transparent_0deg,rgba(255,218,154,0.05)_2deg,transparent_6deg)]"
+            aria-hidden
+          />
+
+          <div className="relative px-10 py-10 sm:px-14 sm:py-12 lg:px-16">
+            <p className="mb-6 text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
+              {label}
+            </p>
+
+            <div
+              className="relative mx-auto h-[340px] w-full max-w-5xl sm:h-[400px] lg:h-[440px]"
+              style={{ perspective: reduceMotion ? undefined : "1200px" }}
+            >
+              <div
+                className="absolute inset-0 flex items-center justify-center"
+                style={{ transformStyle: "preserve-3d" }}
               >
-                {isPlaying ? <Pause className="h-4 w-4" /> : <Play className="h-4 w-4" />}
-              </button>
+                {items.map((item, index) => {
+                  const offset = shortestOffset(index, activeIndex, count);
+                  const abs = Math.abs(offset);
+                  const visible = abs <= 3;
+                  const isActive = offset === 0;
+
+                  const translateX = offset * (reduceMotion ? 72 : 58);
+                  const rotateY = reduceMotion ? 0 : offset * -42;
+                  const scale = isActive ? 1 : Math.max(0.62, 1 - abs * 0.12);
+                  const opacity = !visible ? 0 : isActive ? 1 : Math.max(0.35, 1 - abs * 0.18);
+
+                  return (
+                    <button
+                      key={item.src}
+                      type="button"
+                      tabIndex={isActive ? 0 : -1}
+                      aria-hidden={!visible}
+                      aria-label={isActive ? `Open ${item.alt}` : `Show ${item.alt}`}
+                      onClick={() => {
+                        if (isActive) setLightboxOpen(true);
+                        else setActiveIndex(index);
+                      }}
+                      className="absolute left-1/2 top-1/2 w-[min(58vw,320px)] origin-center sm:w-[300px] lg:w-[340px]"
+                      style={{
+                        transform: `translate(-50%, -50%) translateX(${translateX}%) rotateY(${rotateY}deg) scale(${scale})`,
+                        zIndex: 20 - abs,
+                        opacity,
+                        transition: reduceMotion
+                          ? "opacity 200ms ease"
+                          : "transform 550ms cubic-bezier(0.22, 1, 0.36, 1), opacity 450ms ease",
+                        pointerEvents: visible ? "auto" : "none",
+                      }}
+                    >
+                      <div
+                        className={`overflow-hidden bg-white shadow-[0_18px_50px_rgba(0,0,0,0.45)] ${
+                          isActive
+                            ? "ring-1 ring-copper-base/30"
+                            : "brightness-[0.92]"
+                        }`}
+                      >
+                        <div className="relative aspect-[4/5] w-full bg-[#f4f1ec]">
+                          <Image
+                            src={item.src}
+                            alt={item.alt}
+                            fill
+                            sizes="340px"
+                            className="object-contain p-3 sm:p-4"
+                            priority={isActive}
+                          />
+                        </div>
+                        <div className="bg-white px-3 pb-4 pt-3 text-center">
+                          <p
+                            className={`truncate text-[13px] italic leading-snug text-[#2a241f] sm:text-sm ${
+                              isActive ? "opacity-100" : "opacity-70"
+                            }`}
+                            style={{ fontFamily: "Georgia, 'Times New Roman', serif" }}
+                          >
+                            {item.alt}
+                          </p>
+                        </div>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+
               <button
                 type="button"
                 onClick={goPrev}
-                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base transition-colors hover:border-copper-base"
+                className="absolute left-0 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center text-copper-base/80 transition-colors hover:text-copper-light sm:-left-1"
                 aria-label={`Previous ${label.toLowerCase()}`}
               >
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="h-8 w-8" strokeWidth={1.25} />
               </button>
               <button
                 type="button"
                 onClick={goNext}
-                className="inline-flex h-9 w-9 items-center justify-center border border-copper-base/30 text-copper-base transition-colors hover:border-copper-base"
+                className="absolute right-0 top-1/2 z-30 flex h-11 w-11 -translate-y-1/2 items-center justify-center text-copper-base/80 transition-colors hover:text-copper-light sm:-right-1"
                 aria-label={`Next ${label.toLowerCase()}`}
               >
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="h-8 w-8" strokeWidth={1.25} />
               </button>
             </div>
           </div>
-
-          {/* Main single-image stage */}
-          <div className="relative bg-dark-950">
-            <button
-              type="button"
-              className="group relative block h-[min(62vh,560px)] w-full"
-              onClick={() => setLightboxOpen(true)}
-              aria-label={`Open ${active.alt}`}
-            >
-              <Image
-                key={active.src}
-                src={active.src}
-                alt={active.alt}
-                fill
-                sizes="(max-width: 1152px) 100vw, 1152px"
-                className={`object-contain p-4 sm:p-8 ${
-                  reduceMotion ? "" : "animate-fade-in"
-                }`}
-                priority
-              />
-              <span className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-dark-950/80 to-transparent px-4 py-3 text-left text-[11px] font-semibold uppercase tracking-[0.16em] text-text-muted opacity-0 transition-opacity group-hover:opacity-100">
-                {active.alt}
-              </span>
-            </button>
-
-            <button
-              type="button"
-              onClick={goPrev}
-              className="absolute left-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-copper-base/40 bg-dark-950/80 text-copper-base backdrop-blur-sm transition-colors hover:border-copper-base hover:bg-dark-900 sm:inline-flex"
-              aria-label={`Previous ${label.toLowerCase()}`}
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </button>
-            <button
-              type="button"
-              onClick={goNext}
-              className="absolute right-3 top-1/2 z-10 hidden h-10 w-10 -translate-y-1/2 items-center justify-center border border-copper-base/40 bg-dark-950/80 text-copper-base backdrop-blur-sm transition-colors hover:border-copper-base hover:bg-dark-900 sm:inline-flex"
-              aria-label={`Next ${label.toLowerCase()}`}
-            >
-              <ChevronRight className="h-5 w-5" />
-            </button>
-          </div>
-
-          {/* Previous + next previews below */}
-          {count > 1 && prevItem && nextItem ? (
-            <div className="grid grid-cols-2 gap-px border-t border-copper-base/20 bg-copper-base/20">
-              <button
-                type="button"
-                onClick={goPrev}
-                className="group relative bg-dark-950 p-3 text-left transition-colors hover:bg-dark-900 sm:p-4"
-                aria-label={`Show previous: ${prevItem.alt}`}
-              >
-                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-text-muted">
-                  Previous
-                </p>
-                <div className="relative h-28 w-full overflow-hidden border border-copper-base/15 sm:h-36">
-                  <Image
-                    src={prevItem.src}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 50vw, 480px"
-                    className="object-contain p-2 opacity-80 transition-opacity group-hover:opacity-100 sm:p-3"
-                  />
-                </div>
-              </button>
-              <button
-                type="button"
-                onClick={goNext}
-                className="group relative bg-dark-950 p-3 text-left transition-colors hover:bg-dark-900 sm:p-4"
-                aria-label={`Show next: ${nextItem.alt}`}
-              >
-                <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-text-muted">
-                  Next
-                </p>
-                <div className="relative h-28 w-full overflow-hidden border border-copper-base/15 sm:h-36">
-                  <Image
-                    src={nextItem.src}
-                    alt=""
-                    fill
-                    sizes="(max-width: 768px) 50vw, 480px"
-                    className="object-contain p-2 opacity-80 transition-opacity group-hover:opacity-100 sm:p-3"
-                  />
-                </div>
-              </button>
-            </div>
-          ) : null}
         </div>
       </AnimatedSection>
 
@@ -258,9 +245,6 @@ export function CertificatesGallery({
               >
                 <ChevronLeft className="h-4 w-4" />
               </button>
-              <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-text-muted">
-                {activeIndex + 1} / {count}
-              </span>
               <button
                 type="button"
                 onClick={goNext}
