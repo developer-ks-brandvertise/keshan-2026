@@ -73,7 +73,8 @@
     "pinMarket": "Pin copper market panel",
     "unpinMarket": "Unpin copper market panel",
     "marketSidebar": "Copper market sidebar",
-    "liveQuotes": "For live data, view LME / Moneycontrol."
+    "liveQuotes": "For live data, view LME / Moneycontrol.",
+    "discoverMore": "Discover More"
   },
   "home": {
     "hero": {
@@ -102,7 +103,8 @@
         "qcBody": "Batch-tested quality before every dispatch."
       },
       "videoLabel": "Corporate Film",
-      "videoTitle": "Keshan Industries corporate film"
+      "videoTitle": "Keshan Industries corporate film",
+      "sectionTitle": "About Keshan"
     },
     "partners": {
       "eyebrow": "Our Partners",
@@ -353,7 +355,8 @@
     },
     "storyLabel": "Company Story",
     "videoLabel": "Corporate Film",
-    "videoTitle": "Keshan Industries corporate film"
+    "videoTitle": "Keshan Industries corporate film",
+    "sectionTitle": "Company Story"
   },
   "productsPage": {
     "label": "Product Range",

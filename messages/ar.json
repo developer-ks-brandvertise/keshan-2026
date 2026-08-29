@@ -73,7 +73,8 @@
     "unpinMarket": "إلغاء تثبيت لوحة سوق النحاس",
     "marketSidebar": "الشريط الجانبي لسوق النحاس",
     "liveQuotes": "للبيانات الحية، اعرض LME / Moneycontrol.",
-    "madeInIndia": "صنع في India"
+    "madeInIndia": "صنع في India",
+    "discoverMore": "اكتشف المزيد"
   },
   "home": {
     "hero": {
@@ -102,7 +103,8 @@
         "qcBody": "جودة مختبرة لكل دفعة قبل كل شحنة."
       },
       "videoLabel": "الفيلم المؤسسي",
-      "videoTitle": "الفيلم المؤسسي لـ Keshan Industries"
+      "videoTitle": "الفيلم المؤسسي لـ Keshan Industries",
+      "sectionTitle": "عن Keshan"
     },
     "partners": {
       "eyebrow": "شركاؤنا",
@@ -353,7 +355,8 @@
     },
     "storyLabel": "قصة الشركة",
     "videoLabel": "الفيلم المؤسسي",
-    "videoTitle": "الفيلم المؤسسي لـ Keshan Industries"
+    "videoTitle": "الفيلم المؤسسي لـ Keshan Industries",
+    "sectionTitle": "قصة الشركة"
   },
   "productsPage": {
     "label": "مجموعة المنتجات",

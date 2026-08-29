@@ -3,17 +3,18 @@
 import { useTranslations } from "next-intl";
 import { StoryVideoSection } from "@/components/sections/StoryVideoSection";
 
-export function ValuePropSection() {
-  const t = useTranslations("home.about");
+export function AboutStorySection() {
+  const t = useTranslations("aboutPage");
   const tc = useTranslations("common");
+  const lead = t("body").split("\n\n")[0] ?? t("body");
 
   return (
     <StoryVideoSection
       sectionTitle={t("sectionTitle")}
-      subheading={t("headline")}
-      body={t("body")}
+      subheading={t("storyTitle")}
+      body={lead}
       ctaLabel={tc("discoverMore")}
-      ctaHref="/about"
+      ctaHref="/contact"
       videoTitle={t("videoTitle")}
     />
   );

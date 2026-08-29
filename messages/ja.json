@@ -73,7 +73,8 @@
     "unpinMarket": "銅市場パネルの固定を解除",
     "marketSidebar": "銅市場サイドバー",
     "liveQuotes": "ライブデータは LME / Moneycontrol でご確認ください。",
-    "madeInIndia": "Made in India"
+    "madeInIndia": "Made in India",
+    "discoverMore": "詳しく見る"
   },
   "home": {
     "hero": {
@@ -102,7 +103,8 @@
         "qcBody": "出荷前にすべてのバッチを検査。"
       },
       "videoLabel": "コーポレート映像",
-      "videoTitle": "Keshan Industries コーポレート映像"
+      "videoTitle": "Keshan Industries コーポレート映像",
+      "sectionTitle": "Keshan について"
     },
     "partners": {
       "eyebrow": "パートナー",
@@ -353,7 +355,8 @@
     },
     "storyLabel": "会社の歩み",
     "videoLabel": "コーポレート映像",
-    "videoTitle": "Keshan Industries コーポレート映像"
+    "videoTitle": "Keshan Industries コーポレート映像",
+    "sectionTitle": "会社の歩み"
   },
   "productsPage": {
     "label": "製品ラインナップ",

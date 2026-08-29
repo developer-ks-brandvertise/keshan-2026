@@ -73,7 +73,8 @@
     "unpinMarket": "取消固定铜市面板",
     "marketSidebar": "铜市侧栏",
     "liveQuotes": "实时数据请查看 LME / Moneycontrol。",
-    "madeInIndia": "印度制造"
+    "madeInIndia": "印度制造",
+    "discoverMore": "了解更多"
   },
   "home": {
     "hero": {
@@ -102,7 +103,8 @@
         "qcBody": "每批出货前均经批次检测。"
       },
       "videoLabel": "企业宣传片",
-      "videoTitle": "Keshan Industries 企业宣传片"
+      "videoTitle": "Keshan Industries 企业宣传片",
+      "sectionTitle": "关于 Keshan"
     },
     "partners": {
       "eyebrow": "合作伙伴",
@@ -353,7 +355,8 @@
     },
     "storyLabel": "公司故事",
     "videoLabel": "企业宣传片",
-    "videoTitle": "Keshan Industries 企业宣传片"
+    "videoTitle": "Keshan Industries 企业宣传片",
+    "sectionTitle": "公司故事"
   },
   "productsPage": {
     "label": "产品系列",
