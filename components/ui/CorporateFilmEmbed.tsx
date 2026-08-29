@@ -15,13 +15,12 @@ export function CorporateFilmEmbed({
 }: CorporateFilmEmbedProps) {
   if (variant === "hero") {
     return (
-      <div className={`w-full max-w-xl lg:max-w-none ${className}`}>
+      <div className={`w-full ${className}`}>
         <div
-          className="overflow-hidden shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
+          className="relative w-full overflow-hidden rounded-2xl shadow-[0_28px_80px_rgba(0,0,0,0.45)]"
           style={{
             clipPath:
               "polygon(0 0, calc(100% - 3.5rem) 0, 100% 3.5rem, 100% 100%, 0 100%)",
-            borderRadius: "1.25rem",
           }}
         >
           <div className="relative aspect-[4/3] w-full bg-dark-950 sm:aspect-[16/10]">
@@ -41,7 +40,7 @@ export function CorporateFilmEmbed({
 
   return (
     <div
-      className={`flex h-full flex-col overflow-hidden border border-copper-base/25 bg-dark-950 shadow-[0_28px_80px_rgba(0,0,0,0.35)] ${className}`}
+      className={`flex h-full w-full flex-col overflow-hidden border border-copper-base/25 bg-dark-950 shadow-[0_28px_80px_rgba(0,0,0,0.35)] ${className}`}
     >
       {label ? (
         <div className="flex items-center gap-2.5 border-b border-copper-base/25 px-4 py-3">

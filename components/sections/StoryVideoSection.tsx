@@ -71,9 +71,11 @@ export function StoryVideoSection({
               </Reveal>
             </div>
 
-            <Reveal variant="slide" delay={0.12} className="lg:justify-self-end">
-              <CorporateFilmEmbed title={videoTitle} variant="hero" />
-            </Reveal>
+            <div className="w-full min-w-0">
+              <Reveal variant="fade" delay={0.12} className="w-full">
+                <CorporateFilmEmbed title={videoTitle} variant="hero" />
+              </Reveal>
+            </div>
           </div>
         </div>
       </div>
