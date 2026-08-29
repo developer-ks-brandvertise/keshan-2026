@@ -52,6 +52,9 @@ export const brassHeaderImage =
 export const aboutHeaderImage =
   "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787428803/About-Us-Header_bqjzkz.png";
 
+/** Keshan Industries corporate film — https://youtu.be/SxqjwIJ41Tg */
+export const corporateFilmVideoId = "SxqjwIJ41Tg";
+
 export const industriesHeaderImage =
   "https://res.cloudinary.com/p4nrvzvp/image/upload/v1787429209/Industries_tyeivv.png";
 

@@ -100,7 +100,9 @@
         "capacityBody": "铜与黄铜的年产能。",
         "qcTitle": "质检合格",
         "qcBody": "每批出货前均经批次检测。"
-      }
+      },
+      "videoLabel": "企业宣传片",
+      "videoTitle": "Keshan Industries 企业宣传片"
     },
     "partners": {
       "eyebrow": "合作伙伴",
@@ -348,7 +350,10 @@
           "在 Keshan，他主导建设了铜锭、带材、母线及整条电线事业的一体化制造能力，覆盖从原料到成品的完整价值链。"
         ]
       }
-    }
+    },
+    "storyLabel": "公司故事",
+    "videoLabel": "企业宣传片",
+    "videoTitle": "Keshan Industries 企业宣传片"
   },
   "productsPage": {
     "label": "产品系列",

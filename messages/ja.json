@@ -100,7 +100,9 @@
         "capacityBody": "銅・黄銅を合わせた年間生産能力。",
         "qcTitle": "QC 検査済み",
         "qcBody": "出荷前にすべてのバッチを検査。"
-      }
+      },
+      "videoLabel": "コーポレート映像",
+      "videoTitle": "Keshan Industries コーポレート映像"
     },
     "partners": {
       "eyebrow": "パートナー",
@@ -348,7 +350,10 @@
           "Keshan では銅インゴット、ストリップ、ブスバー、配線事業全体の一貫製造能力の構築を主導し、原料から完成品までのバリューチェーンをカバーしました。"
         ]
       }
-    }
+    },
+    "storyLabel": "会社の歩み",
+    "videoLabel": "コーポレート映像",
+    "videoTitle": "Keshan Industries コーポレート映像"
   },
   "productsPage": {
     "label": "製品ラインナップ",

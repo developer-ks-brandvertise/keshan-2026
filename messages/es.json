@@ -100,7 +100,9 @@
         "capacityBody": "Capacidad anual de producción de cobre y latón.",
         "qcTitle": "QC ensayado",
         "qcBody": "Calidad ensayada por lote antes de cada despacho."
-      }
+      },
+      "videoLabel": "Película corporativa",
+      "videoTitle": "Película corporativa de Keshan Industries"
     },
     "partners": {
       "eyebrow": "Nuestros socios",
@@ -348,7 +350,10 @@
           "En Keshan impulsó capacidades de fabricación integradas para lingotes de cobre, tiras, barras colectoras y toda la división de cableado, de la materia prima al producto terminado."
         ]
       }
-    }
+    },
+    "storyLabel": "Historia de la empresa",
+    "videoLabel": "Película corporativa",
+    "videoTitle": "Película corporativa de Keshan Industries"
   },
   "productsPage": {
     "label": "Gama de productos",

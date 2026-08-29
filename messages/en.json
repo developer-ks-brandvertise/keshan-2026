@@ -100,7 +100,9 @@
         "capacityBody": "Annual production capacity across copper and brass.",
         "qcTitle": "QC Tested",
         "qcBody": "Batch-tested quality before every dispatch."
-      }
+      },
+      "videoLabel": "Corporate Film",
+      "videoTitle": "Keshan Industries corporate film"
     },
     "partners": {
       "eyebrow": "Our Partners",
@@ -348,7 +350,10 @@
         "title": "Anodes Setup",
         "description": "Commissioned copper anode plates manufacturing to complete the electroplating and refining range."
       }
-    }
+    },
+    "storyLabel": "Company Story",
+    "videoLabel": "Corporate Film",
+    "videoTitle": "Keshan Industries corporate film"
   },
   "productsPage": {
     "label": "Product Range",

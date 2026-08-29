@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   Award,
   Building2,
@@ -17,8 +16,9 @@ import {
   valueKeys,
 } from "@/lib/i18n-keys";
 import AnimatedSection from "@/components/ui/AnimatedSection";
-import CopperHighlight from "@/components/ui/CopperHighlight";
 import PageHero from "@/components/ui/PageHero";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CorporateFilmEmbed } from "@/components/ui/CorporateFilmEmbed";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import TeamGrid from "@/components/about/TeamGrid";
 import { ClientsSection } from "@/components/home/Clients";
@@ -61,51 +61,51 @@ export default async function AboutPage({ params }: Props) {
           className="pointer-events-none absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(202,94,46,0.14),transparent_70%)]"
           aria-hidden
         />
-        <div className="relative mx-auto grid max-w-6xl gap-12 lg:grid-cols-12 lg:gap-16">
-          <AnimatedSection className="lg:col-span-5">
-            <div className="relative h-full min-h-[420px] overflow-hidden border border-copper-base/25 shadow-[0_24px_80px_rgba(0,0,0,0.35)] sm:min-h-[480px] lg:min-h-[560px]">
-              <Image
-                src="https://res.cloudinary.com/p4nrvzvp/image/upload/v1786037495/About-Keshan-Image_kw1bkw.png"
-                alt={t("imageAlt")}
-                fill
-                className="object-cover object-center"
-                sizes="(max-width: 1024px) 100vw, 42vw"
-              />
-            </div>
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-copper-base/40 to-transparent"
+          aria-hidden
+        />
+
+        <div className="relative mx-auto max-w-6xl">
+          <AnimatedSection>
+            <SectionHeading
+              index="01"
+              eyebrow={t("storyLabel")}
+              title={t("storyTitle")}
+              highlight={t("storyHighlight")}
+              align="left"
+              className="max-w-4xl"
+            />
           </AnimatedSection>
 
-          <AnimatedSection delay={0.1} className="flex flex-col justify-center lg:col-span-7">
-            <span className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-copper-base">
-              {t("storyEyebrow")}
-            </span>
-            <h2 className="text-h2">
-              {t("storyTitle").includes(t("storyHighlight")) ? (
-                <>
-                  {t("storyTitle").replace(t("storyHighlight"), "")}{" "}
-                  <CopperHighlight>{t("storyHighlight")}</CopperHighlight>
-                </>
-              ) : (
-                t("storyTitle")
-              )}
-            </h2>
-            <p className="mt-6 whitespace-pre-line text-body-lg text-text-secondary">
-              {t("body")}
-            </p>
-            <div className="mt-10 grid gap-3 sm:grid-cols-2">
-              {intro.stats.map((stat, i) => {
-                const key = aboutStatKeys[i];
-                return (
-                  <IconFeatureCard
-                    key={key}
-                    icon={statIcons[i] ?? Calendar}
-                    highlight={stat.value}
-                    title={t(`stats.${key}.title`)}
-                    description={t(`stats.${key}.label`)}
-                  />
-                );
-              })}
-            </div>
-          </AnimatedSection>
+          <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-12 xl:gap-14">
+            <AnimatedSection className="lg:col-span-5">
+              <CorporateFilmEmbed
+                title={t("videoTitle")}
+                label={t("videoLabel")}
+              />
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.1} className="lg:col-span-7">
+              <p className="max-w-2xl whitespace-pre-line text-body-lg leading-relaxed text-text-secondary">
+                {t("body")}
+              </p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {intro.stats.map((stat, i) => {
+                  const key = aboutStatKeys[i];
+                  return (
+                    <IconFeatureCard
+                      key={key}
+                      icon={statIcons[i] ?? Calendar}
+                      highlight={stat.value}
+                      title={t(`stats.${key}.title`)}
+                      description={t(`stats.${key}.label`)}
+                    />
+                  );
+                })}
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
       </section>
 
