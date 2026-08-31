@@ -9,19 +9,23 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { aboutHeaderImage } from "@/lib/data";
+import { intro, aboutHeaderImage } from "@/lib/data";
 import {
+  aboutStatKeys,
   milestoneYears,
   valueKeys,
 } from "@/lib/i18n-keys";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CorporateFilmEmbed } from "@/components/ui/CorporateFilmEmbed";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import { AboutStorySection } from "@/components/about/AboutStorySection";
 import TeamGrid from "@/components/about/TeamGrid";
 import { ClientsSection } from "@/components/home/Clients";
+import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
 import { VisionBeams } from "@/components/about/VisionBeams";
 
+const statIcons = [Calendar, Globe2, Factory, Shield];
 const milestoneIcons = [Building2, Layers, Award, Factory, Globe2, TrendingUp];
 
 type Props = {
@@ -52,7 +56,58 @@ export default async function AboutPage({ params }: Props) {
         backgroundPriority
       />
 
-      <AboutStorySection />
+      <section className="relative overflow-hidden bg-dark-900 py-section px-gutter">
+        <div
+          className="pointer-events-none absolute -left-24 top-1/4 h-72 w-72 rounded-full bg-[radial-gradient(circle,rgba(202,94,46,0.14),transparent_70%)]"
+          aria-hidden
+        />
+        <div
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-copper-base/40 to-transparent"
+          aria-hidden
+        />
+
+        <div className="relative mx-auto max-w-6xl">
+          <AnimatedSection>
+            <SectionHeading
+              index="01"
+              eyebrow={t("storyLabel")}
+              title={t("storyTitle")}
+              highlight={t("storyHighlight")}
+              align="left"
+              className="max-w-4xl"
+            />
+          </AnimatedSection>
+
+          <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-12 xl:gap-14">
+            <AnimatedSection className="w-full min-w-0 lg:col-span-5">
+              <CorporateFilmEmbed
+                title={t("videoTitle")}
+                label={t("videoLabel")}
+              />
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.1} className="lg:col-span-7">
+              <p className="max-w-2xl whitespace-pre-line text-body-lg leading-relaxed text-text-secondary">
+                {t("body")}
+              </p>
+              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+                {intro.stats.map((stat, i) => {
+                  const key = aboutStatKeys[i];
+                  return (
+                    <IconFeatureCard
+                      key={key}
+                      icon={statIcons[i] ?? Calendar}
+                      highlight={stat.value}
+                      title={t(`stats.${key}.title`)}
+                      description={t(`stats.${key}.label`)}
+                    />
+                  );
+                })}
+              </div>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
 
       <section className="bg-dark-950 py-section px-gutter">
         <div className="mx-auto max-w-6xl">
