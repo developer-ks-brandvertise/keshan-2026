@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const eurostile = localFont({
@@ -65,6 +66,7 @@ export default function RootLayout({
         className={`${satoshi.className} flex min-h-full flex-col bg-background text-text-primary`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
