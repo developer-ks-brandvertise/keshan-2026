@@ -87,14 +87,14 @@
       "eyebrow": "关于 Keshan",
       "headline": "高品质铜材制造，服务全球。",
       "highlight": "服务全球",
-      "body": "自 2019 年起，Keshan Industries 为全球要求最严苛的行业制造高品质铜与黄铜。从开关设备制造商到太阳能开发商，我们是制造合作伙伴，而非大宗商品供应商：冶金控制、批次检测质量，以及每笔订单的准时交付。",
+      "body": "自 2016 年起，Keshan Industries 为全球要求最严苛的行业制造高品质铜与黄铜。从开关设备制造商到太阳能开发商，我们是制造合作伙伴，而非大宗商品供应商：冶金控制、批次检测质量，以及每笔订单的准时交付。",
       "quote": "我们是制造合作伙伴，而非大宗商品供应商。",
       "quoteHighlight": "批次检测",
       "quoteEnd": "每笔订单的质量。",
       "imageAlt": "Keshan 制造工厂",
       "stats": {
         "yearsTitle": "年",
-        "yearsBody": "自 2019 年以来的卓越制造历程。",
+        "yearsBody": "自 2016 年以来的卓越制造历程。",
         "countriesTitle": "国家",
         "countriesBody": "准时交付至全球 30 多个国家。",
         "capacityTitle": "吨 / 年",
@@ -226,7 +226,7 @@
     "storyEyebrow": "01 · 公司故事",
     "storyTitle": "从一份信念，成长为全球制造合作伙伴。",
     "storyHighlight": "全球制造合作伙伴。",
-    "body": "Keshan Industries 创立于一份信念：印度制造能够达到并超越全球最严苛行业所要求的质量标准。\n\n2019 年起步的专注铜材制造业务，现已成为印度有色金属行业的知名企业。我们为电力公司、基础设施开发商、电动汽车制造商和工业集团制造高品质铜与黄铜，供应覆盖 30 多个国家。\n\n发展循序渐进：2021 年铜锭产能、2022 年 ISO 体系、2023 年第二制造工厂、2025 年出口覆盖 30 多个国家，以及 2026 年阳极板产线。我们生产的每一吨产品，都体现对纯度、质量和终端性能的承诺。\n\n如今，Keshan Industries 在 Telangana 运营制造工厂，配备现代化熔炼、轧制和检测设施，能够按国际规范和客户要求生产全系列铜与黄铜产品。",
+    "body": "Keshan Industries 创立于一份信念：印度制造能够达到并超越全球最严苛行业所要求的质量标准。\n\n2016 年起步的专注铜材制造业务，现已成为印度有色金属行业的知名企业。我们为电力公司、基础设施开发商、电动汽车制造商和工业集团制造高品质铜与黄铜，供应覆盖 30 多个国家。\n\n发展循序渐进：2021 年铜锭产能、2022 年 ISO 体系、2023 年第二制造工厂、2025 年出口覆盖 30 多个国家，以及 2026 年阳极板产线。我们生产的每一吨产品，都体现对纯度、质量和终端性能的承诺。\n\n如今，Keshan Industries 在 Telangana 运营制造工厂，配备现代化熔炼、轧制和检测设施，能够按国际规范和客户要求生产全系列铜与黄铜产品。",
     "imageAlt": "Keshan 工厂",
     "visionEyebrow": "愿景",
     "visionTitle": "让每一根照亮未来的铜线，都有我们的印记。",
@@ -259,12 +259,8 @@
     "leadershipTitle": "支撑标准的团队。",
     "leadershipBody": "Keshan Industries 由兼具冶金专业能力、商业经验和行业长期视野的管理团队领导。他们对质量的承诺不是管理指令，而是个人标准。",
     "milestonesEyebrow": "历程",
-    "milestonesTitle": "自 2019 年以来持续壮大。",
+    "milestonesTitle": "自 2016 年以来持续壮大。",
     "events": {
-      "2019": {
-        "title": "创立",
-        "description": "Keshan Industries 成立；首座制造工厂在 Telangana 投产。"
-      },
       "2021": {
         "title": "铜锭",
         "description": "沿价值链整合铜锭制造，拓展产品板块。"
@@ -284,6 +280,10 @@
       "2026": {
         "title": "阳极产线",
         "description": "投产铜阳极板制造，完善电镀与精炼产品系列。"
+      },
+      "2016": {
+        "title": "创立",
+        "description": "Keshan Industries 成立；首座制造工厂在 Telangana 投产。"
       }
     },
     "leadershipSection": "02 - 领导团队",
@@ -315,10 +315,10 @@
     "team": {
       "vikash": {
         "title": "管理合伙人，Keshan Industries",
-        "shortBio": "既建设企业也建设社群。从贸易到制造的路径，自 2019 年起塑造了 Keshan Industries。",
+        "shortBio": "既建设企业也建设社群。从贸易到制造的路径，自 2016 年起塑造了 Keshan Industries。",
         "fullBio": [
           "很少有职业生涯能像 Vikash Kumar Keshan 那样，把坚韧与远见连成一条清晰的弧线。他是 Calcutta University 1997 届商科毕业生，起初走注册会计师的常规道路，后来刻意选择自己开路。2005 年，这一信念催生了 Keshan Trading Corporation，业务覆盖结构钢、GI 与 MS 管材及特种钢材，他也因此建立起对金属贸易少见的细致把握。",
-          "2019 年，Keshan 先生与弟弟 Rajneesh Keshan 共同创立 Keshan Industries，从贸易转向制造，秉持 Make in India 精神，并坚信受真正创新支撑的本土生产是 India 最持久的优势。在他的领导下，企业员工超过 300 人，拥有专职研发团队，并以技术精通、目标清晰和集体协作为领导原则。",
+          "2016 年，Keshan 先生与弟弟 Rajneesh Keshan 共同创立 Keshan Industries，从贸易转向制造，秉持 Make in India 精神，并坚信受真正创新支撑的本土生产是 India 最持久的优势。在他的领导下，企业员工超过 300 人，拥有专职研发团队，并以技术精通、目标清晰和集体协作为领导原则。",
           "他的影响远超企业本身。加入 Agarwal Samaj 十五年，凭实绩与信任晋升：2023 年任 North Secunderabad Agarwal Samaj 主席；2024 年任 Secunderabad 的 Bihar Agarwal Samaj 主席；现任 Agarwal Samaj Telangana 秘书（2025）。",
           "Vikash Kumar Keshan 本质上是双重建设者：建设企业，也建设社群。他的志向始终向外。"
         ]
@@ -328,7 +328,7 @@
         "shortBio": "From the sourcing floor to the plant floor — a Managing Partner who believes discipline compounds faster than capital.",
         "fullBio": [
           "Rajneesh Keshan's early education ran across Ranikhet and DPS Mathura, followed by a foundation in commerce from Symbiosis — a grounding that, for two consecutive years, was tested against the country's civil services interviews before he chose industry over administration.",
-          "In 2007, he joined Keshan Trading Corporation, learning the metals trade the only way it can be learned: from the sourcing floor up, through cycles that reward discipline and punish error in equal measure. That apprenticeship matured into conviction by 2019, when he co-founded Keshan Industries alongside Vikash Keshan, built on a simple thesis — that discipline compounds faster than capital.",
+          "In 2007, he joined Keshan Trading Corporation, learning the metals trade the only way it can be learned: from the sourcing floor up, through cycles that reward discipline and punish error in equal measure. That apprenticeship matured into conviction by 2016, when he co-founded Keshan Industries alongside Vikash Keshan, built on a simple thesis — that discipline compounds faster than capital.",
           "As Managing Partner, Rajneesh brings a rare pairing to the boardroom: a macro-level read on markets and finance, and an operator's instinct for translating vision into execution on the plant floor. His approach to leadership mirrors his approach to fitness — unhurried, self-disciplined, and relentlessly consistent — and it extends to a conviction that real growth is symbiotic, never extractive.",
           "He protects the line between work and life with the same rigor he applies to the company's standards, on the belief that an institution built to last is, first, built by people built to last."
         ]

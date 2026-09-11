@@ -50,7 +50,7 @@ export const aboutStatKeys = [
 ] as const;
 
 export const milestoneYears = [
-  "2019",
+  "2016",
   "2021",
   "2022",
   "2023",

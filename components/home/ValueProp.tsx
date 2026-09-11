@@ -69,7 +69,7 @@ export function ValuePropSection() {
                     <IconFeatureCard
                       key={key}
                       icon={statIcons[i]}
-                      highlight={["7+", "30+", "25k+", "100%"][i]}
+                      highlight={["10+", "30+", "25k+", "100%"][i]}
                       title={t(`stats.${key}Title`)}
                       description={t(`stats.${key}Body`)}
                     />

@@ -59,7 +59,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${eurostile.variable} ${satoshi.variable} ${inter.variable} light h-full antialiased`}
+      className={`${eurostile.variable} ${satoshi.variable} ${inter.variable} dark h-full antialiased`}
     >
       <body
         className={`${satoshi.className} flex min-h-full flex-col bg-background text-text-primary`}
