@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   title: "Keshan Industries | Copper & Brass Manufacturers",
   description:
     "Keshan Industries is a leading Indian manufacturer of copper and brass products, delivering pure quality metals to 30+ countries.",
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+  },
   keywords: [
     "Keshan Industries",
     "copper manufacturer",

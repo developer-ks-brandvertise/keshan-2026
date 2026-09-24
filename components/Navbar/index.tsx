@@ -270,32 +270,32 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-dark-100/5 bg-dark-900/90 backdrop-blur-md">
-      <div className="hidden border-b border-dark-100/5 lg:block">
-        <div className="mx-auto flex h-9 max-w-[1600px] items-center justify-between px-4 xl:px-8">
-          <div className="flex items-center gap-5 text-[11px] tracking-wide text-text-secondary">
+      <div className="hidden border-b border-[#d4c9b8] bg-[#f7f3ee] lg:block">
+        <div className="mx-auto flex h-10 max-w-[1600px] items-center justify-between px-4 xl:px-8">
+          <div className="flex items-center gap-5 text-[11px] tracking-wide text-[#3d342a]">
             <a
               href={`tel:${topBar.phone.replace(/\s/g, "")}`}
-              className="flex items-center gap-2 transition-colors hover:text-copper-base"
+              className="flex items-center gap-2 transition-colors hover:text-copper-dark"
             >
-              <Phone className="h-3 w-3 text-copper-base" strokeWidth={2} />
+              <Phone className="h-3 w-3 text-copper-dark" strokeWidth={2} />
               <span>{topBar.phone}</span>
             </a>
             <a
-              href="mailto:sales.killp@keshanindustries.com"
-              className="flex items-center gap-2 transition-colors hover:text-copper-base"
+              href={`mailto:${topBar.email}`}
+              className="flex items-center gap-2 transition-colors hover:text-copper-dark"
             >
-              <Mail className="h-3 w-3 text-copper-base" strokeWidth={2} />
+              <Mail className="h-3 w-3 text-copper-dark" strokeWidth={2} />
               <span>{topBar.email}</span>
             </a>
             <div className="hidden items-center gap-2 xl:flex">
-              <MapPin className="h-3 w-3 text-copper-base" strokeWidth={2} />
+              <MapPin className="h-3 w-3 text-copper-dark" strokeWidth={2} />
               <span>{tCommon("locationHyderabad")}</span>
             </div>
           </div>
-          <div className="flex items-center gap-2 text-[11px] tracking-wide text-text-muted">
+          <div className="flex items-center gap-2 text-[11px] tracking-wide text-[#5c534a]">
             <span className="hidden xl:inline">ISO 9001:2015 · ISO 14001:2015 · ISO 45001</span>
-            <LocaleSwitcher />
-            <ThemeToggle />
+            <LocaleSwitcher tone="onLight" />
+            <ThemeToggle tone="onLight" />
           </div>
         </div>
       </div>

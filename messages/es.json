@@ -226,7 +226,7 @@
     "storyEyebrow": "01. Historia de la empresa",
     "storyTitle": "De una sola convicción a un socio de fabricación global.",
     "storyHighlight": "socio de fabricación global.",
-    "body": "Keshan Industries se fundó con una sola convicción: que la fabricación india podía cumplir y superar los estándares de calidad que exigen las industrias más rigurosas del mundo.\n\nLo que comenzó en 2016 como una operación centrada en la fabricación de cobre se ha convertido en un nombre respetado en la industria de metales no ferrosos de India. Fabricamos cobre y latón de calidad pura para empresas eléctricas, desarrolladores de infraestructura, fabricantes de VE y grupos industriales, con suministro a más de 30 países.\n\nEl recorrido ha sido por etapas: capacidad de lingotes de cobre en 2021, sistemas ISO en 2022, Manufacturing Unit-2 en 2023, alcance de exportación a más de 30 países en 2025 y una línea de placas de ánodo en 2026. Cada tonelada que producimos refleja nuestro compromiso con la pureza, la calidad y el desempeño en el uso final.\n\nHoy, Keshan Industries opera plantas de fabricación en Telangana, equipadas con infraestructura moderna de fusión, laminación y ensayo. Capaces de producir la gama completa de productos de cobre y latón según especificaciones internacionales y requisitos del cliente.",
+    "body": "Keshan Industries se fundó con una sola convicción: que la fabricación india podía cumplir y superar los estándares de calidad que exigen las industrias más rigurosas del mundo.\n\nLo que comenzó en 2016 como una operación centrada en la fabricación de cobre se ha convertido en un nombre respetado en la industria de metales no ferrosos de India. Fabricamos cobre y latón de calidad pura para empresas eléctricas, desarrolladores de infraestructura, fabricantes de VE y grupos industriales, con suministro a más de 30 países.\n\nEl recorrido ha sido por etapas: capacidad de lingotes de cobre en 2021, sistemas ISO en 2022, Instalación de fabricación 2 en 2023, alcance de exportación a más de 30 países en 2025 y una línea de placas de ánodo en 2026. Cada tonelada que producimos refleja nuestro compromiso con la pureza, la calidad y el desempeño en el uso final.\n\nHoy, Keshan Industries opera plantas de fabricación en Telangana, equipadas con infraestructura moderna de fusión, laminación y ensayo. Capaces de producir la gama completa de productos de cobre y latón según especificaciones internacionales y requisitos del cliente.",
     "imageAlt": "Planta de Keshan",
     "visionEyebrow": "Visión",
     "visionTitle": "Tocar cada cable de cobre que ilumina nuestro futuro.",
@@ -270,8 +270,8 @@
         "description": "Se obtuvieron las certificaciones ISO 9001:2015, ISO 14001:2015 e ISO 45001."
       },
       "2023": {
-        "title": "Manufacturing Unit-2",
-        "description": "Se puso en marcha Manufacturing Unit-2 en TSIIC Automotive Park para sumar capacidad y nuevas líneas de producto."
+        "title": "Instalación de fabricación 2",
+        "description": "Se puso en marcha la Instalación de fabricación 2 en TSIIC Automotive Park para sumar capacidad y nuevas líneas de producto."
       },
       "2025": {
         "title": "Más de 30 países",
@@ -334,7 +334,7 @@
         ]
       },
       "yash": {
-        "title": "Líder de la próxima generación, Keshan Industries",
+        "title": "Analista de negocios",
         "shortBio": "Primero los números, después las opiniones. Construye una corporación sobre personas, calidad de producto y convicción respaldada por datos.",
         "fullBio": [
           "Yash Keshan tiene un B.Sc. (Honours) en Matemáticas, un grado de cuatro años de Ashoka University, tras su formación en Mayo College, Ajmer, donde fue capitán académico y recibió la President's Medal for Academics. No es un currículum entregado a la ligera, y se nota en cómo aborda el negocio: primero los números, después las opiniones.",
@@ -541,13 +541,13 @@
     "description": "Indíquenos su especificación, cantidad y términos de entrega. Nuestro equipo responderá en 24 horas hábiles con disponibilidad de producto, precios y plazo de entrega.",
     "dispatch": "Etiqueta de despacho",
     "modes": "Exportación · Nacional · Técnico",
-    "headOffice": "Oficina central",
+    "headOffice": "Oficina corporativa",
     "phone": "Teléfono",
     "email": "Correo",
     "hours": "Horario",
     "hoursValue": "Lun - sáb: 10:00 - 19:00 IST / Dom: Cerrado",
-    "unit1": "Manufacturing Unit-1",
-    "unit2": "Manufacturing Unit-2",
+    "unit1": "Instalación de fabricación 1",
+    "unit2": "Instalación de fabricación 2",
     "inquiryEyebrow": "Formulario de consulta",
     "inquiryTitle": "Enviar una consulta",
     "inquiryBody": "La especificación, la cantidad y los términos de entrega nos ayudan a responder más rápido.",
@@ -594,7 +594,7 @@
       }
     },
     "locationsTitle": "Nuestras ubicaciones",
-    "locationsBody": "Oficina central, Unidad de fabricación-1 y Unidad de fabricación-2 en Telangana.",
+    "locationsBody": "Oficina corporativa, Instalación de fabricación 1 e Instalación de fabricación 2 en Telangana.",
     "openMap": "Abrir en Google Maps"
   },
   "meta": {

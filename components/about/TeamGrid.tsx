@@ -58,6 +58,7 @@ function MemberPhoto({ member }: { member: TeamMember }) {
         fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
         className="object-cover object-top grayscale transition-[filter] duration-500 group-hover:grayscale-0 group-focus-within:grayscale-0"
+        unoptimized={member.image.includes("?")}
       />
       <div
         className="pointer-events-none absolute inset-0 bg-gradient-to-t from-dark-950/50 via-transparent to-transparent"
@@ -125,6 +126,7 @@ function TeamMemberModal({
                   fill
                   sizes="64px"
                   className="object-cover object-top"
+                  unoptimized={member.image.includes("?")}
                 />
               </div>
             ) : null}

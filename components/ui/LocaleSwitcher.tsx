@@ -20,7 +20,13 @@ function Flag({ code }: { code: Locale }) {
   );
 }
 
-export function LocaleSwitcher({ className = "" }: { className?: string }) {
+export function LocaleSwitcher({
+  className = "",
+  tone = "default",
+}: {
+  className?: string;
+  tone?: "default" | "onLight";
+}) {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
@@ -57,7 +63,11 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
         aria-expanded={open}
         aria-label={t("label")}
         onClick={() => setOpen((value) => !value)}
-        className="inline-flex h-9 items-center gap-2 border border-dark-100/15 bg-transparent px-2.5 text-[10px] font-semibold uppercase tracking-[0.12em] text-text-secondary outline-none transition-colors hover:border-copper-base hover:text-copper-base"
+        className={`inline-flex h-9 items-center gap-2 border bg-transparent px-2.5 text-[10px] font-semibold uppercase tracking-[0.12em] outline-none transition-colors ${
+          tone === "onLight"
+            ? "border-[#cfc4b6] text-[#3d342a] hover:border-copper-dark hover:text-copper-dark"
+            : "border-dark-100/15 text-text-secondary hover:border-copper-base hover:text-copper-base"
+        }`}
       >
         <Flag code={locale} />
         <span>{t(locale)}</span>
@@ -71,7 +81,11 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
         <ul
           role="listbox"
           aria-label={t("label")}
-          className="absolute end-0 z-50 mt-1 min-w-[11.5rem] border border-dark-100/15 bg-dark-900 py-1 shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          className={`absolute end-0 z-50 mt-1 min-w-[11.5rem] border py-1 shadow-[0_12px_32px_rgba(0,0,0,0.18)] ${
+            tone === "onLight"
+              ? "border-[#d4c9b8] bg-[#fffdf9]"
+              : "border-dark-100/15 bg-dark-900 shadow-[0_12px_32px_rgba(0,0,0,0.35)]"
+          }`}
         >
           {locales.map((code) => {
             const active = code === locale;
@@ -83,7 +97,9 @@ export function LocaleSwitcher({ className = "" }: { className?: string }) {
                   className={`flex w-full items-center gap-2.5 px-3 py-2 text-left text-[11px] font-semibold uppercase tracking-[0.1em] transition-colors ${
                     active
                       ? "bg-copper-base/10 text-copper-base"
-                      : "text-text-secondary hover:bg-copper-base/[0.06] hover:text-copper-base"
+                      : tone === "onLight"
+                        ? "text-[#3d342a] hover:bg-copper-base/[0.08] hover:text-copper-dark"
+                        : "text-text-secondary hover:bg-copper-base/[0.06] hover:text-copper-base"
                   }`}
                 >
                   <Flag code={code} />

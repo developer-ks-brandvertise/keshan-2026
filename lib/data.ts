@@ -5,7 +5,7 @@ export const brand = {
 
 export const topBar = {
   phone: "040-35512949 | 040-35209193 | +91 9908171560",
-  email: "sales.killp@keshanindustries.com | export@keshanindustries.com",
+  email: "marketing@keshanindustries.com",
   address: "Hyderabad, Telangana, India",
 };
 
@@ -492,7 +492,7 @@ export const about = {
 
 What began in 2016 as a focused copper manufacturing operation has grown into a respected name in India’s non-ferrous metals industry — manufacturing pure quality copper and brass for power utilities, infrastructure developers, EV manufacturers, and industrial groups, with supply reaching more than 30 countries.
 
-The journey has been stepwise: copper ingot capacity in 2021, ISO systems in 2022, Manufacturing Unit-2 in 2023, export reach across 30+ countries by 2025, and an anode plates setup in 2026. Every tonne we produce reflects our commitment to purity, quality, and end-use performance.
+The journey has been stepwise: copper ingot capacity in 2021, ISO systems in 2022, Manufacturing Facility 2 in 2023, export reach across 30+ countries by 2025, and an anode plates setup in 2026. Every tonne we produce reflects our commitment to purity, quality, and end-use performance.
 
 Today, Keshan Industries operates manufacturing units in Telangana equipped with modern melting, rolling, and testing infrastructure — capable of producing the full range of copper and brass products to international specifications and customer requirements.`,
 };
@@ -547,7 +547,7 @@ export const leadership = {
     },
     {
       name: "Yash Keshan",
-      title: "Next-Generation Leader, Keshan Industries",
+      title: "Business Analyst",
       shortBio:
         "Numbers first, opinions second — building a corporation on people, product quality, and data-backed conviction.",
       fullBio: [
@@ -555,7 +555,7 @@ export const leadership = {
         "His early career has been deliberately unglamorous — trade documentation at Global Aluminium, regulatory compliance, and supply-chain coordination across the metals sector, alongside investment research built on fundamental analysis rather than instinct. A student investor in the forex markets on the side, he treats it as another discipline that punishes sloppy thinking and rewards conviction backed by data.",
         "Yash does not lead by consensus. His view is unambiguous: people and product quality are the two pillars crucial for manufacturing. He holds to Rosalynn Carter's distinction that a great leader takes people not where they want to go, but where they ought to be, and draws his operating model from industrialists like Narotam Sekhsaria — where scale is never an excuse to compromise on sustainability or pollution control. He is here to build a corporation, not manage a comfortable legacy.",
       ],
-      image: "/images/Yash-Keshan.jpeg",
+      image: "/images/Yash-Keshan.jpeg?v=20260924",
       linkedIn: "#",
     },
     {
@@ -601,7 +601,7 @@ export const milestones = {
     { year: "2016", title: "Founded", description: "Keshan Industries founded; first manufacturing facility commissioned in Telangana." },
     { year: "2021", title: "Copper Ingots", description: "Expanded product segments with integrated copper ingot manufacturing across the value chain." },
     { year: "2022", title: "Certifications", description: "Achieved ISO 9001:2015, ISO 14001:2015, and ISO 45001 certification." },
-    { year: "2023", title: "Manufacturing Unit-2", description: "Commissioned Manufacturing Unit-2 at TSIIC Automotive Park to add capacity and new product lines." },
+    { year: "2023", title: "Manufacturing Facility 2", description: "Commissioned Manufacturing Facility 2 at TSIIC Automotive Park to add capacity and new product lines." },
     { year: "2025", title: "30+ Countries", description: "Supplying copper and brass to 30+ countries across six regions." },
     { year: "2026", title: "Anodes Setup", description: "Commissioned copper anode plates manufacturing to complete the electroplating and refining range." },
   ],
@@ -609,7 +609,7 @@ export const milestones = {
 
 export const contact = {
   address:
-    "Head Office: 1-8-271,272/504,504/A,505 & 505/A, 5th Floor, Ashok Bhoopal Chambers, S.P. Road, Begumpet, Secunderabad - 500003, Telangana, India",
+    "Corporate Office: 1-8-271,272/504,504/A,505 & 505/A, 5th Floor, Ashok Bhoopal Chambers, S.P. Road, Begumpet, Secunderabad - 500003, Telangana, India",
   phones: ["040-35512949", "040-35209193", "+91 9908171560"],
   emails: [
     "sales.killp@keshanindustries.com",
@@ -618,7 +618,7 @@ export const contact = {
   hours: "Mon - Sat: 10:00am - 19:00 IST / Sun: Closed",
   locations: [
     {
-      label: "Head Office",
+      label: "Corporate Office",
       address:
         "1-8-271,272/504,504/A,505 & 505/A, 5th Floor, Ashok Bhoopal Chambers, S.P. Road, Begumpet, Secunderabad - 500003, Telangana, India",
       mapEmbed:
@@ -626,7 +626,7 @@ export const contact = {
       mapLink: "https://maps.google.com/?q=17.442699,78.480225",
     },
     {
-      label: "Manufacturing Unit-1",
+      label: "Manufacturing Facility 1",
       address:
         "Sy No. 354, Plot No. 26/F, TSIIC Industrial Park, Muppireddy Pally (V), Toopran (M), Medak District - 502336, Telangana, India",
       mapEmbed:
@@ -634,7 +634,7 @@ export const contact = {
       mapLink: "https://maps.app.goo.gl/4L9nP11dcHPTxWPQ9",
     },
     {
-      label: "Manufacturing Unit-2",
+      label: "Manufacturing Facility 2",
       address:
         "5/B6/1, TSIIC Automotive Park, Hyderabad 502336, Telangana, India",
       mapEmbed:

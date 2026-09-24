@@ -226,7 +226,7 @@
     "storyEyebrow": "01 - Company Story",
     "storyTitle": "From a Single Conviction to a Global Manufacturing Partner.",
     "storyHighlight": "Global Manufacturing Partner.",
-    "body": "Keshan Industries was founded with a single conviction: that Indian manufacturing could meet and exceed the quality standards demanded by the world's most exacting industries.\n\nWhat began in 2016 as a focused copper manufacturing operation has grown into a respected name in India's non-ferrous metals industry. We manufacture pure quality copper and brass for power utilities, infrastructure developers, EV manufacturers, and industrial groups, with supply reaching more than 30 countries.\n\nThe journey has been stepwise: copper ingot capacity in 2021, ISO systems in 2022, Manufacturing Unit-2 in 2023, export reach across 30+ countries by 2025, and an anode plates setup in 2026. Every tonne we produce reflects our commitment to purity, quality, and end-use performance.\n\nToday, Keshan Industries operates manufacturing units in Telangana equipped with modern melting, rolling, and testing infrastructure. Capable of producing the full range of copper and brass products to international specifications and customer requirements.",
+    "body": "Keshan Industries was founded with a single conviction: that Indian manufacturing could meet and exceed the quality standards demanded by the world's most exacting industries.\n\nWhat began in 2016 as a focused copper manufacturing operation has grown into a respected name in India's non-ferrous metals industry. We manufacture pure quality copper and brass for power utilities, infrastructure developers, EV manufacturers, and industrial groups, with supply reaching more than 30 countries.\n\nThe journey has been stepwise: copper ingot capacity in 2021, ISO systems in 2022, Manufacturing Facility 2 in 2023, export reach across 30+ countries by 2025, and an anode plates setup in 2026. Every tonne we produce reflects our commitment to purity, quality, and end-use performance.\n\nToday, Keshan Industries operates manufacturing units in Telangana equipped with modern melting, rolling, and testing infrastructure. Capable of producing the full range of copper and brass products to international specifications and customer requirements.",
     "imageAlt": "Keshan facility",
     "visionEyebrow": "Vision",
     "visionTitle": "To Touch Every Copper Wire Lighting Our Future.",
@@ -306,7 +306,7 @@
         ]
       },
       "yash": {
-        "title": "Next-Generation Leader, Keshan Industries",
+        "title": "Business Analyst",
         "shortBio": "Numbers first, opinions second. Building a corporation on people, product quality, and data-backed conviction.",
         "fullBio": [
           "Yash Keshan holds a B.Sc. (Honours) in Mathematics, a four-year degree from Ashoka University, following his schooling at Mayo College, Ajmer, where he served as College Academics Captain and was awarded the President's Medal for Academics. It is not a pedigree handed to him lightly, and it shows in how he approaches business: with numbers first, opinions second.",
@@ -337,8 +337,8 @@
         "description": "Achieved ISO 9001:2015, ISO 14001:2015, and ISO 45001 certification."
       },
       "2023": {
-        "title": "Manufacturing Unit-2",
-        "description": "Commissioned Manufacturing Unit-2 at TSIIC Automotive Park to add capacity and new product lines."
+        "title": "Manufacturing Facility 2",
+        "description": "Commissioned Manufacturing Facility 2 at TSIIC Automotive Park to add capacity and new product lines."
       },
       "2025": {
         "title": "30+ Countries",
@@ -541,13 +541,13 @@
     "description": "Tell us your specification, quantity, and delivery terms. Our team will respond within 24 business hours with product availability, pricing, and lead time.",
     "dispatch": "Dispatch Label",
     "modes": "Export · Domestic · Technical",
-    "headOffice": "Head Office",
+    "headOffice": "Corporate Office",
     "phone": "Phone",
     "email": "Email",
     "hours": "Hours",
     "hoursValue": "Mon - Sat: 10:00am - 19:00 IST / Sun: Closed",
-    "unit1": "Manufacturing Unit-1",
-    "unit2": "Manufacturing Unit-2",
+    "unit1": "Manufacturing Facility 1",
+    "unit2": "Manufacturing Facility 2",
     "inquiryEyebrow": "Inquiry Form",
     "inquiryTitle": "Send an Inquiry",
     "inquiryBody": "Specification, quantity, and delivery terms help us reply faster.",
@@ -573,7 +573,7 @@
     "another": "Send another inquiry",
     "preferEmail": "Prefer email? Write to",
     "locationsTitle": "Our Locations",
-    "locationsBody": "Head Office, Manufacturing Unit-1 and Manufacturing Unit-2 across Telangana.",
+    "locationsBody": "Corporate Office, Manufacturing Facility 1 and Manufacturing Facility 2 across Telangana.",
     "reach": {
       "eyebrow": "Global Reach",
       "regionBody": "Active supply routes and distributor partnerships.",
