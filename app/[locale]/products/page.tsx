@@ -27,7 +27,6 @@ export default async function ProductsPage({ params }: Props) {
         label={t("label")}
         title={t("title")}
         highlight={t("highlight")}
-        description={t("description")}
         background={<ProductsSilkBackground />}
       />
       <ProductsListing />

@@ -31,7 +31,6 @@ export default async function QualityAndMediaPage({ params }: Props) {
         label={t("label")}
         title={t("title")}
         highlight={t("highlight")}
-        description={t("subheadline")}
         backgroundImage={qualityMediaHeaderImage}
         backgroundPriority
       />

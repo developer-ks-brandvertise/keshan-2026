@@ -57,7 +57,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const t = await getTranslations();
   const tp = await getTranslations("productsPage");
   const name = t(`catalog.${product.slug}.name`);
-  const headline = t(`catalog.${product.slug}.headline`);
   const description = t(`catalog.${product.slug}.description`);
   const applications = t.raw(`catalog.${product.slug}.applications`) as string[];
   const industriesBlock = productIndustriesMap[product.slug];
@@ -83,7 +82,6 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <PageHero
         label={product.category === "copper" ? tp("copperLabel") : tp("brassLabel")}
         title={name}
-        description={headline}
         backgroundImage={
           product.category === "copper"
             ? copperHeaderImage

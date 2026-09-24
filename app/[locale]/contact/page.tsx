@@ -33,7 +33,6 @@ export default async function ContactPage({ params, searchParams }: Props) {
         label={t("label")}
         title={t("title")}
         highlight={t("highlight")}
-        description={t("description")}
         backgroundImage={contactHeaderImage}
         backgroundPriority
       />

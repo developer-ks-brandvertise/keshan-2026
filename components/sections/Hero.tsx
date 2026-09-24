@@ -134,20 +134,6 @@ export default function Hero() {
             {t("headline")}
           </motion.h1>
 
-          <motion.p
-            initial={fadeUp}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{
-              duration: 0.7,
-              delay: 0.2,
-              ease: [0.25, 0.46, 0.45, 0.94],
-            }}
-            className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/90 drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)] sm:text-xl"
-          >
-            {t("subheadline")}
-          </motion.p>
-
           <motion.div
             initial={fadeUp}
             whileInView={{ opacity: 1, y: 0 }}

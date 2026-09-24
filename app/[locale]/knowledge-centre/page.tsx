@@ -26,7 +26,6 @@ export default async function KnowledgePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations("knowledgePage");
-  const th = await getTranslations("home.knowledge");
 
   return (
     <main>
@@ -34,7 +33,6 @@ export default async function KnowledgePage({ params }: Props) {
         label={t("label")}
         title={t("title")}
         highlight={t("highlight")}
-        description={th("subheadline")}
         backgroundImage={knowledgeCentreHeaderImage}
         backgroundPriority
       />

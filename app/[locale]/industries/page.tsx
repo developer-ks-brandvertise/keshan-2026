@@ -33,7 +33,6 @@ export default async function IndustriesPage({ params }: Props) {
         label={t("label")}
         title={t("title")}
         highlight={t("highlight")}
-        description={t("description")}
         backgroundImage={industriesHeaderImage}
         backgroundPriority
       />

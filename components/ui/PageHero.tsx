@@ -7,7 +7,6 @@ import CopperHighlight from "./CopperHighlight";
 interface PageHeroProps {
   label?: string;
   title: string;
-  description?: string;
   highlight?: string;
   className?: string;
   background?: ReactNode;
@@ -18,7 +17,6 @@ interface PageHeroProps {
 export default function PageHero({
   label,
   title,
-  description,
   highlight,
   className = "",
   background,
@@ -89,11 +87,6 @@ export default function PageHero({
                 )
               : title}
           </h1>
-          {description && (
-            <p className="mt-6 max-w-2xl text-body-lg text-[#a1a1a1]">
-              {description}
-            </p>
-          )}
         </AnimatedSection>
       </Container>
     </section>
