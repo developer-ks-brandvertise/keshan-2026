@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 const QUOTE_INQUIRY_EMAIL =
-  process.env.QUOTE_INQUIRY_EMAIL ?? "yash.keshan@keshanindustries.com";
+  process.env.QUOTE_INQUIRY_EMAIL ?? "marketing@keshanindustries.com";
 
 export async function POST(request: Request) {
   try {

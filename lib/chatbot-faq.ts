@@ -66,7 +66,7 @@ export const chatbotFaq: FaqEntry[] = [
       "عرض",
     ],
     answer:
-      "Request a quote via the Contact page with your specification, quantity, and delivery terms. Our team typically responds within 24 business hours. You can also email sales.killp@keshanindustries.com or export@keshanindustries.com.",
+      "Request a quote via the Contact page with your specification, quantity, and delivery terms. Our team typically responds within 24 business hours. You can also email marketing@keshanindustries.com.",
   },
   {
     id: "export",

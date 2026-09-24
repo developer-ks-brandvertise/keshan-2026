@@ -611,10 +611,7 @@ export const contact = {
   address:
     "Corporate Office: 1-8-271,272/504,504/A,505 & 505/A, 5th Floor, Ashok Bhoopal Chambers, S.P. Road, Begumpet, Secunderabad - 500003, Telangana, India",
   phones: ["040-35512949", "040-35209193", "+91 9908171560"],
-  emails: [
-    "sales.killp@keshanindustries.com",
-    "export@keshanindustries.com",
-  ],
+  emails: ["marketing@keshanindustries.com"],
   hours: "Mon - Sat: 10:00am - 19:00 IST / Sun: Closed",
   locations: [
     {
