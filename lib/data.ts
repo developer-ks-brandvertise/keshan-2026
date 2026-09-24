@@ -547,7 +547,7 @@ export const leadership = {
     },
     {
       name: "Yash Keshan",
-      title: "Business Analyst",
+      title: "Business Analyst, Keshan Industries",
       shortBio:
         "Numbers first, opinions second — building a corporation on people, product quality, and data-backed conviction.",
       fullBio: [
