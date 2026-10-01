@@ -92,8 +92,8 @@ function ProductsDropdown({
         onClick={() => setOpen((v) => !v)}
         className={`group relative flex items-center gap-1.5 px-3.5 py-5 text-[11px] font-semibold uppercase tracking-[0.14em] transition-colors xl:px-4 ${
           active || open
-            ? "text-text-primary"
-            : "text-text-primary/65 hover:text-text-primary"
+            ? "text-[#1c1814]"
+            : "text-[#1c1814]/65 hover:text-[#1c1814]"
         }`}
       >
         {t("products")}
@@ -116,15 +116,15 @@ function ProductsDropdown({
           onMouseEnter={clearClose}
           onMouseLeave={scheduleClose}
         >
-          <div className="max-h-[min(72vh,720px)] overflow-y-auto border border-dark-100/10 bg-dark-900/97 shadow-[0_28px_80px_rgba(0,0,0,0.6)] backdrop-blur-md">
-            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-dark-100/10 bg-dark-900/95 px-5 py-3.5">
+          <div className="max-h-[min(72vh,720px)] overflow-y-auto border border-black/10 bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12)]">
+            <div className="sticky top-0 z-10 flex items-center justify-between border-b border-black/[0.08] bg-white px-5 py-3.5">
               <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-copper-base">
                 {t("productRange")}
               </p>
               <Link
                 href="/products"
                 onClick={() => setOpen(false)}
-                className="text-[10px] font-bold uppercase tracking-[0.16em] text-text-muted transition-colors hover:text-copper-base"
+                className="text-[10px] font-bold uppercase tracking-[0.16em] text-[#5c534a] transition-colors hover:text-copper-dark"
               >
                 {t("viewAllProducts")} →
               </Link>
@@ -138,11 +138,11 @@ function ProductsDropdown({
                     group.id === "copper" ? "lg:col-span-8" : "lg:col-span-4"
                   } ${
                     groupIndex > 0
-                      ? "border-t border-dark-100/10 lg:border-l lg:border-t-0"
+                      ? "border-t border-black/[0.08] lg:border-l lg:border-t-0"
                       : ""
                   }`}
                 >
-                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-text-muted">
+                  <p className="mb-4 text-[10px] font-semibold uppercase tracking-[0.18em] text-[#5c534a]">
                     {t(group.labelKey)}
                   </p>
                   <ul
@@ -160,10 +160,10 @@ function ProductsDropdown({
                           <Link
                             href={href}
                             onClick={() => setOpen(false)}
-                            className={`block px-2 py-2.5 text-base leading-snug transition-colors hover:bg-copper-base/[0.07] hover:text-copper-base ${
+                            className={`block px-2 py-2.5 text-base leading-snug transition-colors hover:bg-copper-base/[0.07] hover:text-copper-dark ${
                               itemActive
-                                ? "bg-copper-base/[0.07] text-copper-base"
-                                : "text-text-secondary"
+                                ? "bg-copper-base/[0.07] text-copper-dark"
+                                : "text-[#3d342a]"
                             }`}
                           >
                             {tc(`catalog.${product.slug}.name`)}
@@ -195,13 +195,13 @@ function MobileProductsAccordion({
   const productsActive = pathname.startsWith("/products");
 
   return (
-    <div className="border-b border-dark-100/10">
+    <div className="border-b border-black/[0.08]">
       <button
         type="button"
         aria-expanded={open}
         onClick={() => setOpen((v) => !v)}
         className={`flex w-full items-center justify-between py-3.5 text-sm font-semibold uppercase tracking-wide transition-colors ${
-          productsActive ? "text-copper-base" : "text-text-primary"
+          productsActive ? "text-copper-dark" : "text-[#1c1814]"
         }`}
       >
         {t("products")}
@@ -217,8 +217,8 @@ function MobileProductsAccordion({
             onClick={onNavigate}
             className={`mb-3 block text-xs font-bold uppercase tracking-[0.14em] ${
               pathname === "/products"
-                ? "text-copper-base"
-                : "text-text-muted hover:text-copper-base"
+                ? "text-copper-dark"
+                : "text-[#5c534a] hover:text-copper-dark"
             }`}
           >
             {t("allProducts")}
@@ -226,10 +226,10 @@ function MobileProductsAccordion({
 
           {productGroups.map((group) => (
             <div key={group.id} className="mb-4 last:mb-0">
-              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-base/80">
+              <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.18em] text-copper-dark/80">
                 {t(group.labelKey)}
               </p>
-              <ul className="space-y-0.5 border-l border-dark-100/15 pl-3">
+              <ul className="space-y-0.5 border-l border-black/10 pl-3">
                 {group.items.map((product) => {
                   const href = `/products/${product.slug}` as const;
                   const active = pathname === href;
@@ -240,8 +240,8 @@ function MobileProductsAccordion({
                         onClick={onNavigate}
                         className={`block py-2 text-base transition-colors ${
                           active
-                            ? "text-copper-base"
-                            : "text-text-secondary hover:text-copper-base"
+                            ? "text-copper-dark"
+                            : "text-[#3d342a] hover:text-copper-dark"
                         }`}
                       >
                         {tc(`catalog.${product.slug}.name`)}
@@ -269,8 +269,8 @@ export default function Navbar() {
   }, [pathname]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-dark-100/5 bg-dark-900/90 backdrop-blur-md">
-      <div className="hidden border-b border-[#d4c9b8] bg-[#f7f3ee] lg:block">
+    <header className="sticky top-0 z-50 w-full border-b border-black/[0.08] bg-white">
+      <div className="hidden border-b border-black/[0.08] bg-white lg:block">
         <div className="mx-auto flex h-10 max-w-[1600px] items-center justify-between px-4 xl:px-8">
           <div className="flex items-center gap-5 text-[11px] tracking-wide text-[#3d342a]">
             <a
@@ -301,7 +301,7 @@ export default function Navbar() {
       </div>
 
       <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-3 xl:px-8">
-        <Logo className="my-1.5 h-[4.25rem]" />
+        <Logo tone="onLight" className="my-1.5 h-[4.25rem]" />
 
         <nav className="hidden items-center gap-0.5 lg:flex">
           {navLinks.map((link) => {
@@ -323,8 +323,8 @@ export default function Navbar() {
                 href={link.href as "/"}
                 className={`group relative flex items-center px-3.5 py-5 text-[11px] font-semibold uppercase tracking-[0.14em] transition-colors xl:px-4 ${
                   active
-                    ? "text-text-primary"
-                    : "text-text-primary/65 hover:text-text-primary"
+                    ? "text-[#1c1814]"
+                    : "text-[#1c1814]/65 hover:text-[#1c1814]"
                 }`}
               >
                 {t(key as "home")}
@@ -340,8 +340,8 @@ export default function Navbar() {
 
         <div className="flex items-center gap-2 sm:gap-3">
           <div className="flex items-center gap-1.5 lg:hidden">
-            <LocaleSwitcher />
-            <ThemeToggle />
+            <LocaleSwitcher tone="onLight" />
+            <ThemeToggle tone="onLight" />
           </div>
           <Link
             href="/contact"
@@ -355,7 +355,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="flex h-10 w-10 items-center justify-center text-text-primary lg:hidden"
+            className="flex h-10 w-10 items-center justify-center text-[#1c1814] lg:hidden"
             aria-label={tCommon("toggleMenu")}
           >
             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -364,7 +364,7 @@ export default function Navbar() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-dark-100/10 bg-dark-900 lg:hidden">
+        <div className="border-t border-black/[0.08] bg-white lg:hidden">
           <div className="mx-auto max-w-[1600px] px-4 py-4">
             <nav className="flex flex-col">
               {navLinks.map((link) => {
@@ -385,10 +385,10 @@ export default function Navbar() {
                     key={link.label}
                     href={link.href as "/"}
                     onClick={() => setMobileOpen(false)}
-                    className={`border-b border-dark-100/10 py-3.5 text-sm font-semibold uppercase tracking-wide transition-colors ${
+                    className={`border-b border-black/[0.08] py-3.5 text-sm font-semibold uppercase tracking-wide transition-colors ${
                       active
-                        ? "text-copper-base"
-                        : "text-text-primary hover:text-copper-base"
+                        ? "text-copper-dark"
+                        : "text-[#1c1814] hover:text-copper-dark"
                     }`}
                   >
                     {t(key as "home")}
