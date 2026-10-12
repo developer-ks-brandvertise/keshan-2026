@@ -479,7 +479,7 @@ export const knowledge = {
 };
 
 export const footerCta = {
-  headline: "Ready to Source Premium Copper & Brass?",
+  headline: "Ready to Source Copper & Brass?",
   subheadline:
     "Tell us your specification. Our team will respond within 24 business hours with product availability, pricing, and lead time.",
   primaryCta: "Request a Quote",
@@ -529,7 +529,7 @@ export const leadership = {
         "Vikash Kumar Keshan is, in essence, a builder twice over — of enterprise, and of community — a leader whose ambitions have always pointed outward.",
       ],
       image: "/images/VIkas-Kumar-Keshan.png",
-      linkedIn: "#",
+      linkedIn: "https://www.linkedin.com/in/vikash-kumar-keshan-032123436/",
     },
     {
       name: "Rajneesh Keshan",
@@ -543,7 +543,7 @@ export const leadership = {
         "He protects the line between work and life with the same rigor he applies to the company's standards, on the belief that an institution built to last is, first, built by people built to last.",
       ],
       image: "/images/Ranjneesh-Keshan.png",
-      linkedIn: "#",
+      linkedIn: "https://www.linkedin.com/in/rajneesh-keshan-184194436/",
     },
     {
       name: "Yash Keshan",
@@ -553,10 +553,10 @@ export const leadership = {
       fullBio: [
         "Yash Keshan holds a B.Sc. (Honours) in Mathematics, a four-year degree from Ashoka University, following his schooling at Mayo College, Ajmer, where he served as College Academics Captain and was awarded the President's Medal for Academics. It is not a pedigree handed to him lightly, and it shows in how he approaches business: with numbers first, opinions second.",
         "His early career has been deliberately unglamorous — trade documentation at Global Aluminium, regulatory compliance, and supply-chain coordination across the metals sector, alongside investment research built on fundamental analysis rather than instinct. A student investor in the forex markets on the side, he treats it as another discipline that punishes sloppy thinking and rewards conviction backed by data.",
-        "Yash does not lead by consensus. His view is unambiguous: people and product quality are the two pillars crucial for manufacturing. He holds to Rosalynn Carter's distinction that a great leader takes people not where they want to go, but where they ought to be, and draws his operating model from industrialists like Narotam Sekhsaria — where scale is never an excuse to compromise on sustainability or pollution control. He is here to build a corporation, not manage a comfortable legacy.",
+        "Yash does not lead by consensus. His view is unambiguous: people and product quality are the two pillars crucial for manufacturing. He holds to Rosalynn Carter's distinction that a great leader takes people not where they want to go, but where they ought to be, and draws his operating model from industrialists like Narotam Sekhsaria — where scale is never an excuse to compromise on sustainability or pollution control.",
       ],
       image: "/images/Yash-Keshan.jpeg?v=20260924",
-      linkedIn: "#",
+      linkedIn: "https://www.linkedin.com/in/yash-keshan-5b86081b2/",
     },
     {
       name: "Suren Reddy",

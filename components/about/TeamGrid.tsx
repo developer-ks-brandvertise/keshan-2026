@@ -10,6 +10,10 @@ import { teamKeyByName } from "@/lib/i18n-keys";
 
 type TeamMember = (typeof leadership.team)[number];
 
+function hasLinkedIn(url: string) {
+  return url.startsWith("http");
+}
+
 function LinkedInIcon({ className }: { className?: string }) {
   return (
     <svg
@@ -157,15 +161,17 @@ function TeamMemberModal({
               </p>
             ))}
           </div>
-          <a
-            href={member.linkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex items-center gap-2 border border-copper-base/40 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base transition-colors hover:bg-copper-base hover:text-dark-900"
-          >
-            <LinkedInIcon className="h-3.5 w-3.5" />
-            {t("linkedIn")}
-          </a>
+          {hasLinkedIn(member.linkedIn) ? (
+            <a
+              href={member.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex items-center gap-2 border border-copper-base/40 px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.14em] text-copper-base transition-colors hover:bg-copper-base hover:text-dark-900"
+            >
+              <LinkedInIcon className="h-3.5 w-3.5" />
+              {t("linkedIn")}
+            </a>
+          ) : null}
         </div>
       </div>
     </div>
@@ -218,15 +224,17 @@ function TeamCard({
             >
               {t("knowMore")}
             </button>
-            <a
-              href={member.linkedIn}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex h-10 items-center gap-1.5 border border-copper-base/50 px-4 text-[10px] font-bold uppercase tracking-[0.14em] text-copper-base transition-colors hover:border-copper-base hover:bg-copper-base/10"
-            >
-              <LinkedInIcon className="h-3 w-3" />
-              {t("linkedIn")}
-            </a>
+            {hasLinkedIn(member.linkedIn) ? (
+              <a
+                href={member.linkedIn}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex h-10 items-center gap-1.5 border border-copper-base/50 px-4 text-[10px] font-bold uppercase tracking-[0.14em] text-copper-base transition-colors hover:border-copper-base hover:bg-copper-base/10"
+              >
+                <LinkedInIcon className="h-3 w-3" />
+                {t("linkedIn")}
+              </a>
+            ) : null}
           </div>
         </div>
       </div>
@@ -244,15 +252,17 @@ function TeamCard({
           >
             {t("knowMore")}
           </button>
-          <a
-            href={member.linkedIn}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex h-9 items-center gap-1.5 border border-copper-base/50 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-copper-base"
-          >
-            <LinkedInIcon className="h-3 w-3" />
-            {t("linkedIn")}
-          </a>
+          {hasLinkedIn(member.linkedIn) ? (
+            <a
+              href={member.linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex h-9 items-center gap-1.5 border border-copper-base/50 px-3 text-[10px] font-bold uppercase tracking-[0.14em] text-copper-base"
+            >
+              <LinkedInIcon className="h-3 w-3" />
+              {t("linkedIn")}
+            </a>
+          ) : null}
         </div>
       </div>
     </article>

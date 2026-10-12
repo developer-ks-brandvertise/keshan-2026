@@ -18,7 +18,6 @@ import {
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import PageHero from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { CorporateFilmEmbed } from "@/components/ui/CorporateFilmEmbed";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import TeamGrid from "@/components/about/TeamGrid";
 import { ClientsSection } from "@/components/home/Clients";
@@ -78,19 +77,12 @@ export default async function AboutPage({ params }: Props) {
             />
           </AnimatedSection>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-12 xl:gap-14">
-            <AnimatedSection className="w-full min-w-0 lg:col-span-5">
-              <CorporateFilmEmbed
-                title={t("videoTitle")}
-                label={t("videoLabel")}
-              />
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.1} className="lg:col-span-7">
-              <p className="max-w-2xl whitespace-pre-line text-body-lg leading-relaxed text-text-secondary">
+          <div className="mt-10 max-w-5xl">
+            <AnimatedSection delay={0.1}>
+              <p className="max-w-3xl whitespace-pre-line text-body-lg leading-relaxed text-text-secondary">
                 {t("body")}
               </p>
-              <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                 {intro.stats.map((stat, i) => {
                   const key = aboutStatKeys[i];
                   return (

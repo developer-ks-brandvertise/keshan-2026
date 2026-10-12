@@ -7,7 +7,6 @@ import { Reveal } from "@/components/ui/Reveal";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import CopperHighlight from "@/components/ui/CopperHighlight";
 import { IconFeatureCard } from "@/components/ui/IconFeatureCard";
-import { CorporateFilmEmbed } from "@/components/ui/CorporateFilmEmbed";
 
 const statIcons = [Calendar, Globe2, Factory, ShieldCheck];
 const statKeys = ["years", "countries", "capacity", "qc"] as const;
@@ -38,17 +37,10 @@ export function ValuePropSection() {
             className="max-w-4xl"
           />
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-12 lg:items-start lg:gap-12 xl:gap-14">
-            <Reveal variant="fade" className="w-full min-w-0 lg:col-span-5">
-              <CorporateFilmEmbed
-                title={t("videoTitle")}
-                label={t("videoLabel")}
-              />
-            </Reveal>
-
-            <div className="flex flex-col lg:col-span-7">
+          <div className="mt-10 max-w-5xl">
+            <div className="flex flex-col">
               <Reveal variant="fade" delay={0.1}>
-                <p className="max-w-xl text-body-lg leading-relaxed text-text-secondary">
+                <p className="max-w-3xl text-body-lg leading-relaxed text-text-secondary">
                   {t("body")}
                 </p>
               </Reveal>
@@ -64,7 +56,7 @@ export function ValuePropSection() {
               </Reveal>
 
               <Reveal variant="fade" delay={0.2}>
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
+                <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
                   {statKeys.map((key, i) => (
                     <IconFeatureCard
                       key={key}
