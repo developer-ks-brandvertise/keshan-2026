@@ -129,7 +129,7 @@ export default function Hero() {
               delay: 0.1,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
-            className="font-heading text-4xl font-medium leading-[1.05] tracking-[-2px] text-white [background-image:none] [-webkit-text-fill-color:#fff] drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)] sm:text-5xl md:text-6xl lg:text-7xl"
+            className="font-heading text-[clamp(1.7rem,7.4vw,2.25rem)] font-medium leading-[1.08] tracking-[-0.04em] text-white [background-image:none] [-webkit-text-fill-color:#fff] drop-shadow-[0_2px_12px_rgba(0,0,0,0.75)] sm:text-5xl sm:tracking-[-2px] md:text-6xl lg:text-7xl"
           >
             {t("headline")}
           </motion.h1>
@@ -143,11 +143,11 @@ export default function Hero() {
               delay: 0.3,
               ease: [0.25, 0.46, 0.45, 0.94],
             }}
-            className="mt-8 flex flex-wrap items-center justify-center gap-4"
+            className="mt-8 flex w-full flex-col items-stretch justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center sm:gap-4"
           >
             <Link
               href="/about"
-              className="group inline-flex h-14 items-center gap-3 bg-copper-gradient px-7 text-sm font-bold uppercase tracking-wider text-[#0a0a0a] transition-all duration-300 hover:shadow-[0_0_40px_rgba(184,115,51,0.35)]"
+              className="group inline-flex h-14 max-w-full items-center justify-center gap-3 bg-copper-gradient px-4 text-center text-[11px] font-bold uppercase tracking-wider text-[#0a0a0a] transition-all duration-300 hover:shadow-[0_0_40px_rgba(184,115,51,0.35)] sm:px-7 sm:text-sm"
             >
               {t("primaryCta")}
               <span className="flex h-7 w-7 items-center justify-center rounded-full border border-[#0a0a0a]/30 transition-transform duration-300 group-hover:rotate-45">
@@ -157,7 +157,7 @@ export default function Hero() {
 
             <Link
               href="/products"
-              className="group inline-flex h-14 items-center gap-3 border border-white/35 px-7 text-sm font-bold uppercase tracking-wider text-white transition-all duration-300 hover:border-copper-light hover:text-copper-light"
+              className="group inline-flex h-14 max-w-full items-center justify-center gap-3 border border-white/35 px-4 text-center text-[11px] font-bold uppercase tracking-wider text-white transition-all duration-300 hover:border-copper-light hover:text-copper-light sm:px-7 sm:text-sm"
             >
               {t("secondaryCta")}
               <ArrowDownRight className="h-4 w-4 transition-transform duration-300 group-hover:rotate-45" />

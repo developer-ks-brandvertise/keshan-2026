@@ -42,7 +42,7 @@ export function LMECopperSidebar() {
           className={`absolute right-full top-1/2 z-0 w-[20rem] -translate-y-1/2 border border-r-0 border-border bg-card p-2.5 shadow-[-8px_0_28px_rgba(0,0,0,0.18)] backdrop-blur-md transition-all duration-300 sm:w-[21rem] ${
             isOpen
               ? "visible translate-x-0 opacity-100"
-              : "invisible translate-x-2 opacity-0 pointer-events-none"
+              : "invisible -translate-x-2 opacity-0 pointer-events-none"
           }`}
         >
           <div className="mb-2 flex items-center justify-between px-1">

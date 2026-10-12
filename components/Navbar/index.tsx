@@ -300,8 +300,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className="mx-auto flex max-w-[1600px] items-center justify-between px-4 py-3 xl:px-8">
-        <Logo tone="onLight" className="my-1.5 h-[4.25rem]" />
+      <div className="mx-auto flex max-w-[1600px] items-center justify-between gap-2 px-4 py-2.5 xl:px-8 xl:py-3">
+        <Logo
+          tone="onLight"
+          className="my-1 h-11 max-w-[46%] shrink sm:h-14 sm:max-w-[18rem] lg:my-1.5 lg:h-[4.25rem] lg:max-w-none"
+        />
 
         <nav className="hidden items-center gap-0.5 lg:flex">
           {navLinks.map((link) => {
@@ -338,7 +341,7 @@ export default function Navbar() {
           })}
         </nav>
 
-        <div className="flex items-center gap-2 sm:gap-3">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-3">
           <div className="flex items-center gap-1.5 lg:hidden">
             <LocaleSwitcher tone="onLight" />
             <ThemeToggle tone="onLight" />

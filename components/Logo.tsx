@@ -28,7 +28,7 @@ export default function Logo({ className = "", tone = "theme" }: LogoProps) {
   return (
     <Link
       href="/"
-      className={`inline-flex shrink-0 items-center ${className}`}
+      className={`inline-flex min-w-0 max-w-full items-center ${className}`}
       aria-label="Keshan Industries"
     >
       <Image
@@ -37,7 +37,7 @@ export default function Logo({ className = "", tone = "theme" }: LogoProps) {
         alt="Keshan Industries"
         width={280}
         height={72}
-        className="h-full w-auto"
+        className="h-full w-auto max-w-full object-contain object-left"
         priority
         unoptimized
       />
